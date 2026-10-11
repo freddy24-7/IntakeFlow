@@ -32,8 +32,8 @@ What exists today:
 
 | Type | Documents |
 | --- | --- |
-| Invoice | 166 |
-| Credit note | 20 |
+| Invoice | 165 |
+| Credit note | 21 |
 | Contract | 8 |
 | Other mail | 6 |
 
