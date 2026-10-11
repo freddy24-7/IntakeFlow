@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0066",
+  "filename": "doc-0066.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-009084",
+    "invoice_date": "2026-06-05",
+    "due_date": "2026-07-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "26",
+        "unit_price": "99.88",
+        "vat_rate": "21",
+        "line_total": "2596.88"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "1",
+        "unit_price": "698.29",
+        "vat_rate": "21",
+        "line_total": "698.29"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "19",
+        "unit_price": "800.98",
+        "vat_rate": "21",
+        "line_total": "15218.62"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "28.5",
+        "unit_price": "39.87",
+        "vat_rate": "21",
+        "line_total": "1136.30"
+      }
+    ],
+    "subtotal": "19650.09",
+    "vat": "4126.52",
+    "total": "23791.60",
+    "purchase_order_reference": "PO-2026-16683"
+  },
+  "contract": null
+}

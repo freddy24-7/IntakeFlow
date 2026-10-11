@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0051",
+  "filename": "doc-0051.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-001947",
+    "invoice_date": "2026-05-28",
+    "due_date": "2026-06-27",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "22",
+        "unit_price": "1031.16",
+        "vat_rate": "21",
+        "line_total": "22685.52"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "24",
+        "unit_price": "213.69",
+        "vat_rate": "21",
+        "line_total": "5128.56"
+      }
+    ],
+    "subtotal": "27814.08",
+    "vat": "5840.96",
+    "total": "33655.04",
+    "purchase_order_reference": "PO-2026-16864"
+  },
+  "contract": null
+}

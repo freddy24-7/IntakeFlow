@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0178",
+  "filename": "doc-0178.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "C00002142",
+    "invoice_date": "2026-04-28",
+    "due_date": "2026-05-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "38",
+        "unit_price": "186.02",
+        "vat_rate": "21",
+        "line_total": "7068.76"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "17",
+        "unit_price": "6.76",
+        "vat_rate": "21",
+        "line_total": "114.92"
+      }
+    ],
+    "subtotal": "7183.68",
+    "vat": "1508.57",
+    "total": "8692.25",
+    "purchase_order_reference": "PO-2026-25969"
+  },
+  "contract": null
+}

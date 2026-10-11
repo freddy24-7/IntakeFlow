@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0068",
+  "filename": "doc-0068.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/03872",
+    "invoice_date": "2026-03-21",
+    "due_date": "2026-04-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "39",
+        "unit_price": "11.13",
+        "vat_rate": "21",
+        "line_total": "434.07"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "5",
+        "unit_price": "73.04",
+        "vat_rate": "21",
+        "line_total": "365.20"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "32",
+        "unit_price": "1466.22",
+        "vat_rate": "21",
+        "line_total": "46919.04"
+      }
+    ],
+    "subtotal": "47718.31",
+    "vat": "10020.85",
+    "total": "57739.16",
+    "purchase_order_reference": "PO-2026-13474"
+  },
+  "contract": null
+}

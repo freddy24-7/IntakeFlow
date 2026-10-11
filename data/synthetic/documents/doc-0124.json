@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0124",
+  "filename": "doc-0124.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00004837",
+    "invoice_date": "2026-08-06",
+    "due_date": "2026-10-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "32",
+        "unit_price": "510.86",
+        "vat_rate": "21",
+        "line_total": "16347.52"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "22",
+        "unit_price": "3.31",
+        "vat_rate": "21",
+        "line_total": "72.82"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "32",
+        "unit_price": "1248.38",
+        "vat_rate": "21",
+        "line_total": "39948.16"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "32",
+        "unit_price": "8.35",
+        "vat_rate": "9",
+        "line_total": "267.20"
+      }
+    ],
+    "subtotal": "56635.70",
+    "vat": "11861.44",
+    "total": "68497.14",
+    "purchase_order_reference": "PO-2026-19976"
+  },
+  "contract": null
+}

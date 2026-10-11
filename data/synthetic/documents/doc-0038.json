@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0038",
+  "filename": "doc-0038.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/05054",
+    "invoice_date": "2026-07-07",
+    "due_date": "2026-08-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "21",
+        "unit_price": "101.64",
+        "vat_rate": "21",
+        "line_total": "2134.44"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "24",
+        "unit_price": "325.07",
+        "vat_rate": "21",
+        "line_total": "7801.68"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "27",
+        "unit_price": "7.46",
+        "vat_rate": "21",
+        "line_total": "201.42"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "37",
+        "unit_price": "130.78",
+        "vat_rate": "21",
+        "line_total": "4838.86"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "15",
+        "unit_price": "9.79",
+        "vat_rate": "9",
+        "line_total": "146.85"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "10",
+        "unit_price": "321.25",
+        "vat_rate": "21",
+        "line_total": "3212.50"
+      }
+    ],
+    "subtotal": "18335.75",
+    "vat": "3832.89",
+    "total": "22168.64",
+    "purchase_order_reference": "PO-2026-34283"
+  },
+  "contract": null
+}

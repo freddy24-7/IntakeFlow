@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0028",
+  "filename": "doc-0028.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Schevinghuizen Logistiek B.V.",
+    "supplier_vat_number": "NL923026480B43",
+    "iban": "NL88NZLB0983297492",
+    "invoice_number": "2026/04309",
+    "invoice_date": "2026-02-06",
+    "due_date": "2026-03-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "33",
+        "unit_price": "356.01",
+        "vat_rate": "21",
+        "line_total": "11748.33"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "4",
+        "unit_price": "12.11",
+        "vat_rate": "21",
+        "line_total": "48.44"
+      }
+    ],
+    "subtotal": "11796.77",
+    "vat": "2477.32",
+    "total": "14274.09",
+    "purchase_order_reference": "PO-2026-93365"
+  },
+  "contract": null
+}

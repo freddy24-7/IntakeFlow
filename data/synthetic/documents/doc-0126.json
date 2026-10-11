@@ -1,0 +1,83 @@
+{
+  "doc_id": "doc-0126",
+  "filename": "doc-0126.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch",
+    "stamp"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00008301",
+    "invoice_date": "2026-07-27",
+    "due_date": "2026-08-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "6",
+        "unit_price": "96.88",
+        "vat_rate": "21",
+        "line_total": "581.28"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "14",
+        "unit_price": "503.65",
+        "vat_rate": "21",
+        "line_total": "7051.10"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "35",
+        "unit_price": "9.34",
+        "vat_rate": "21",
+        "line_total": "326.90"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "26",
+        "unit_price": "133.04",
+        "vat_rate": "21",
+        "line_total": "3459.04"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "5",
+        "unit_price": "14.35",
+        "vat_rate": "21",
+        "line_total": "71.75"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "28",
+        "unit_price": "419.19",
+        "vat_rate": "21",
+        "line_total": "11737.32"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "16",
+        "unit_price": "89.74",
+        "vat_rate": "21",
+        "line_total": "1435.84"
+      }
+    ],
+    "subtotal": "24663.23",
+    "vat": "5179.28",
+    "total": "29852.97",
+    "purchase_order_reference": "PO-2026-37550"
+  },
+  "contract": null
+}

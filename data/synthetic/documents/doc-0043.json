@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0043",
+  "filename": "doc-0043.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/02094",
+    "invoice_date": "2026-06-22",
+    "due_date": "2026-07-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "24",
+        "unit_price": "56.49",
+        "vat_rate": "21",
+        "line_total": "1355.76"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "24",
+        "unit_price": "110.3",
+        "vat_rate": "21",
+        "line_total": "2647.20"
+      }
+    ],
+    "subtotal": "4002.96",
+    "vat": "840.62",
+    "total": "4843.58",
+    "purchase_order_reference": "PO-2026-87833"
+  },
+  "contract": null
+}

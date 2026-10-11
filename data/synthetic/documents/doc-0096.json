@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0096",
+  "filename": "doc-0096.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00007145",
+    "invoice_date": "2026-01-27",
+    "due_date": "2026-03-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "40",
+        "unit_price": "141.43",
+        "vat_rate": "21",
+        "line_total": "5657.20"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "8",
+        "unit_price": "79.6",
+        "vat_rate": "21",
+        "line_total": "636.80"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "33",
+        "unit_price": "9.16",
+        "vat_rate": "21",
+        "line_total": "302.28"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "27",
+        "unit_price": "363.76",
+        "vat_rate": "21",
+        "line_total": "9821.52"
+      }
+    ],
+    "subtotal": "16417.80",
+    "vat": "3447.74",
+    "total": "19865.54",
+    "purchase_order_reference": "PO-2026-00221"
+  },
+  "contract": null
+}

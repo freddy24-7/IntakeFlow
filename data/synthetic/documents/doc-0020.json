@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0020",
+  "filename": "doc-0020.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Olst & van der Velden Advies V.O.F.",
+    "supplier_vat_number": "NL502564736B68",
+    "iban": "NL40NZLB5947530309",
+    "invoice_number": "F2026-6623",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-04-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "30",
+        "unit_price": "13.23",
+        "vat_rate": "9",
+        "line_total": "396.90"
+      }
+    ],
+    "subtotal": "396.90",
+    "vat": "35.72",
+    "total": "432.62",
+    "purchase_order_reference": "PO-2026-67449"
+  },
+  "contract": null
+}

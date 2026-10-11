@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0082",
+  "filename": "doc-0082.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-002186",
+    "invoice_date": "2026-06-24",
+    "due_date": "2026-07-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "12",
+        "unit_price": "17.3",
+        "vat_rate": "9",
+        "line_total": "207.60"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "9",
+        "unit_price": "191.35",
+        "vat_rate": "21",
+        "line_total": "1722.15"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "30",
+        "unit_price": "346.95",
+        "vat_rate": "21",
+        "line_total": "10408.50"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "19",
+        "unit_price": "9.06",
+        "vat_rate": "21",
+        "line_total": "172.14"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "3",
+        "unit_price": "250.72",
+        "vat_rate": "21",
+        "line_total": "752.16"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "3",
+        "unit_price": "7.61",
+        "vat_rate": "9",
+        "line_total": "22.83"
+      }
+    ],
+    "subtotal": "13285.38",
+    "vat": "2762.28",
+    "total": "16047.66",
+    "purchase_order_reference": "PO-2026-05811"
+  },
+  "contract": null
+}

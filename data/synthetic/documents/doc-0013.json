@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0013",
+  "filename": "doc-0013.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": -3.12,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Coret-Coredo",
+    "supplier_vat_number": "NL842478695B61",
+    "iban": "NL77DELT6769777475",
+    "invoice_number": "F2026-1181",
+    "invoice_date": "2026-07-05",
+    "due_date": "2026-08-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Safety shoes S3",
+        "quantity": "2",
+        "unit_price": "92.66",
+        "vat_rate": "21",
+        "line_total": "185.32"
+      }
+    ],
+    "subtotal": "185.32",
+    "vat": "38.92",
+    "total": "224.24",
+    "purchase_order_reference": "PO-2026-52044"
+  },
+  "contract": null
+}

@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0113",
+  "filename": "doc-0113.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993261321",
+    "invoice_number": "00005063",
+    "invoice_date": "2026-05-24",
+    "due_date": "2026-06-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "2",
+        "unit_price": "52.51",
+        "vat_rate": "21",
+        "line_total": "105.02"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "34",
+        "unit_price": "813.95",
+        "vat_rate": "21",
+        "line_total": "27674.30"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "25",
+        "unit_price": "119.39",
+        "vat_rate": "21",
+        "line_total": "2984.75"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "30",
+        "unit_price": "746.81",
+        "vat_rate": "21",
+        "line_total": "22404.30"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "11",
+        "unit_price": "9.78",
+        "vat_rate": "21",
+        "line_total": "107.58"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "20",
+        "unit_price": "332.58",
+        "vat_rate": "21",
+        "line_total": "6651.60"
+      }
+    ],
+    "subtotal": "59927.55",
+    "vat": "12584.79",
+    "total": "72512.34",
+    "purchase_order_reference": "PO-2026-44541"
+  },
+  "contract": null
+}

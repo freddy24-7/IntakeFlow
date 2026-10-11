@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0098",
+  "filename": "doc-0098.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00009268",
+    "invoice_date": "2026-08-27",
+    "due_date": "2026-09-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "35",
+        "unit_price": "17.42",
+        "vat_rate": "9",
+        "line_total": "609.70"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "3.5",
+        "unit_price": "143.89",
+        "vat_rate": "21",
+        "line_total": "503.62"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "29",
+        "unit_price": "104.75",
+        "vat_rate": "21",
+        "line_total": "3037.75"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "14",
+        "unit_price": "1514.51",
+        "vat_rate": "0",
+        "line_total": "21203.14"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "7",
+        "unit_price": "13.06",
+        "vat_rate": "21",
+        "line_total": "91.42"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "20",
+        "unit_price": "342.24",
+        "vat_rate": "21",
+        "line_total": "6844.80"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "29",
+        "unit_price": "292.23",
+        "vat_rate": "21",
+        "line_total": "8474.67"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "23",
+        "unit_price": "478.02",
+        "vat_rate": "21",
+        "line_total": "10994.46"
+      }
+    ],
+    "subtotal": "51759.56",
+    "vat": "6343.68",
+    "total": "58103.24",
+    "purchase_order_reference": "PO-2026-97323"
+  },
+  "contract": null
+}

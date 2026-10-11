@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0138",
+  "filename": "doc-0138.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Goderts Verpakkingen B.V.",
+    "supplier_vat_number": "NL150519597B55",
+    "iban": "NL72DELT9406875631",
+    "invoice_number": "RN2603560",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-09-02",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "38",
+        "unit_price": "144.8",
+        "vat_rate": "21",
+        "line_total": "5502.40"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "25",
+        "unit_price": "88.79",
+        "vat_rate": "21",
+        "line_total": "2219.75"
+      }
+    ],
+    "subtotal": "7722.15",
+    "vat": "1621.65",
+    "total": "9343.80",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

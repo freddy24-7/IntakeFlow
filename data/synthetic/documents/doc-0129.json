@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0129",
+  "filename": "doc-0129.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "duplicate"
+  ],
+  "expected_failures": [
+    "duplicate_invoice"
+  ],
+  "duplicate_of": "doc-0095",
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Goderts Verpakkingen B.V.",
+    "supplier_vat_number": "NL150519597B55",
+    "iban": "NL72DELT9406875631",
+    "invoice_number": "CRN2604836",
+    "invoice_date": "2026-05-10",
+    "due_date": "2026-05-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "4",
+        "unit_price": "9.89",
+        "vat_rate": "9",
+        "line_total": "39.56"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "18",
+        "unit_price": "371.01",
+        "vat_rate": "21",
+        "line_total": "6678.18"
+      }
+    ],
+    "subtotal": "6717.74",
+    "vat": "1405.98",
+    "total": "8123.72",
+    "purchase_order_reference": "PO-2026-65390"
+  },
+  "contract": null
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0012",
+  "filename": "doc-0012.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "due_before_invoice"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2601670",
+    "invoice_date": "2026-05-09",
+    "due_date": "2026-04-29",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "24",
+        "unit_price": "580.76",
+        "vat_rate": "0",
+        "line_total": "13938.24"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "33",
+        "unit_price": "113.04",
+        "vat_rate": "21",
+        "line_total": "3730.32"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "22",
+        "unit_price": "184.14",
+        "vat_rate": "21",
+        "line_total": "4051.08"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "27",
+        "unit_price": "224.73",
+        "vat_rate": "21",
+        "line_total": "6067.71"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "32",
+        "unit_price": "63.64",
+        "vat_rate": "21",
+        "line_total": "2036.48"
+      }
+    ],
+    "subtotal": "29823.83",
+    "vat": "3335.97",
+    "total": "33159.80",
+    "purchase_order_reference": "PO-2026-91382"
+  },
+  "contract": null
+}

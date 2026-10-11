@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0130",
+  "filename": "doc-0130.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/06808",
+    "invoice_date": "2026-06-21",
+    "due_date": "2026-08-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "33",
+        "unit_price": "159.83",
+        "vat_rate": "21",
+        "line_total": "5274.39"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "18",
+        "unit_price": "17.5",
+        "vat_rate": "9",
+        "line_total": "315.00"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "11",
+        "unit_price": "132.1",
+        "vat_rate": "21",
+        "line_total": "1453.10"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "31.5",
+        "unit_price": "109.17",
+        "vat_rate": "21",
+        "line_total": "3438.86"
+      }
+    ],
+    "subtotal": "10481.35",
+    "vat": "2163.28",
+    "total": "12644.63",
+    "purchase_order_reference": "PO-2026-23021"
+  },
+  "contract": null
+}

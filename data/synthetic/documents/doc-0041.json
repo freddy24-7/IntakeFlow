@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0041",
+  "filename": "doc-0041.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": 3.28,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dam & de Vroege Techniek",
+    "supplier_vat_number": "NL738908273B72",
+    "iban": "NL50WADB5924716023",
+    "invoice_number": "INV-008992",
+    "invoice_date": "2026-03-22",
+    "due_date": "2026-04-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "27",
+        "unit_price": "112.34",
+        "vat_rate": "21",
+        "line_total": "3033.18"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "30",
+        "unit_price": "29.28",
+        "vat_rate": "21",
+        "line_total": "878.40"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "8",
+        "unit_price": "4.55",
+        "vat_rate": "21",
+        "line_total": "36.40"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "39",
+        "unit_price": "8.74",
+        "vat_rate": "9",
+        "line_total": "340.86"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "2",
+        "unit_price": "2056.63",
+        "vat_rate": "0",
+        "line_total": "4113.26"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "33",
+        "unit_price": "92.1",
+        "vat_rate": "21",
+        "line_total": "3039.30"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "16",
+        "unit_price": "214.09",
+        "vat_rate": "21",
+        "line_total": "3425.44"
+      }
+    ],
+    "subtotal": "14866.84",
+    "vat": "2217.35",
+    "total": "17084.19",
+    "purchase_order_reference": "PO-2026-95320"
+  },
+  "contract": null
+}

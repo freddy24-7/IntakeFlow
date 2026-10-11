@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "documents": 200,
+  "purchase_orders": 167,
+  "by_type": {
+    "contract": 8,
+    "credit_note": 21,
+    "invoice": 165,
+    "other": 6
+  },
+  "by_hard_case": {
+    "due_before_invoice": 4,
+    "duplicate": 6,
+    "invalid_vat_number": 4,
+    "missing_po": 9,
+    "po_amount_mismatch": 5,
+    "po_supplier_mismatch": 4,
+    "scanned": 14,
+    "scanned_skewed": 9,
+    "stamp": 9,
+    "totals_mismatch": 7,
+    "unknown_po": 4,
+    "wrong_iban": 5
+  },
+  "without_expected_failure": 138
+}

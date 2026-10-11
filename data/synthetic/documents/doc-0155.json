@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0155",
+  "filename": "doc-0155.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dam & de Vroege Techniek",
+    "supplier_vat_number": "NL738908273B72",
+    "iban": "NL50WADB5924716023",
+    "invoice_number": "INV-000497",
+    "invoice_date": "2026-08-06",
+    "due_date": "2026-08-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "30",
+        "unit_price": "29.49",
+        "vat_rate": "21",
+        "line_total": "884.70"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "4",
+        "unit_price": "223.59",
+        "vat_rate": "21",
+        "line_total": "894.36"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "29",
+        "unit_price": "4.12",
+        "vat_rate": "21",
+        "line_total": "119.48"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "31",
+        "unit_price": "908.75",
+        "vat_rate": "21",
+        "line_total": "28171.25"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "14",
+        "unit_price": "1291.79",
+        "vat_rate": "0",
+        "line_total": "18085.06"
+      }
+    ],
+    "subtotal": "48154.85",
+    "vat": "6314.66",
+    "total": "54469.51",
+    "purchase_order_reference": "PO-2026-65278"
+  },
+  "contract": null
+}

@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0059",
+  "filename": "doc-0059.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00008166",
+    "invoice_date": "2026-03-24",
+    "due_date": "2026-04-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "16.5",
+        "unit_price": "122.41",
+        "vat_rate": "21",
+        "line_total": "2019.77"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "36",
+        "unit_price": "10.96",
+        "vat_rate": "21",
+        "line_total": "394.56"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "25",
+        "unit_price": "70.61",
+        "vat_rate": "21",
+        "line_total": "1765.25"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "39",
+        "unit_price": "453.08",
+        "vat_rate": "21",
+        "line_total": "17670.12"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "9",
+        "unit_price": "583",
+        "vat_rate": "0",
+        "line_total": "5247.00"
+      }
+    ],
+    "subtotal": "27096.70",
+    "vat": "4588.44",
+    "total": "31685.14",
+    "purchase_order_reference": "PO-2026-93926"
+  },
+  "contract": null
+}

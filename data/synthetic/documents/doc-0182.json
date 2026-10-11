@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0182",
+  "filename": "doc-0182.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice van Brenen",
+    "supplier_vat_number": "NL45434090B28",
+    "iban": "NL06DELT9728344131",
+    "invoice_number": "INV-006096",
+    "invoice_date": "2026-07-13",
+    "due_date": "2026-08-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "34",
+        "unit_price": "7.87",
+        "vat_rate": "9",
+        "line_total": "267.58"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "26",
+        "unit_price": "110.75",
+        "vat_rate": "21",
+        "line_total": "2879.50"
+      }
+    ],
+    "subtotal": "3147.08",
+    "vat": "628.78",
+    "total": "3775.86",
+    "purchase_order_reference": "PO-2026-58188"
+  },
+  "contract": null
+}

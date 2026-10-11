@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0045",
+  "filename": "doc-0045.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00008117",
+    "invoice_date": "2026-07-27",
+    "due_date": "2026-08-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "19",
+        "unit_price": "328.88",
+        "vat_rate": "21",
+        "line_total": "6248.72"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "35",
+        "unit_price": "87.95",
+        "vat_rate": "21",
+        "line_total": "3078.25"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "32.5",
+        "unit_price": "30.74",
+        "vat_rate": "21",
+        "line_total": "999.05"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "33",
+        "unit_price": "98.34",
+        "vat_rate": "21",
+        "line_total": "3245.22"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "18",
+        "unit_price": "276.36",
+        "vat_rate": "21",
+        "line_total": "4974.48"
+      }
+    ],
+    "subtotal": "18545.72",
+    "vat": "3894.60",
+    "total": "22440.32",
+    "purchase_order_reference": "PO-2026-24420"
+  },
+  "contract": null
+}

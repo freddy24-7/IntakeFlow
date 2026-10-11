@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0005",
+  "filename": "doc-0005.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Driessen & Kronenberg Advies V.O.F.",
+    "supplier_vat_number": "NL710026086B30",
+    "iban": "NL88DELT3026113008",
+    "invoice_number": "2026/09871",
+    "invoice_date": "2026-04-16",
+    "due_date": "2026-06-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "31",
+        "unit_price": "127.54",
+        "vat_rate": "21",
+        "line_total": "3953.74"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "30",
+        "unit_price": "228.8",
+        "vat_rate": "21",
+        "line_total": "6864.00"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "39",
+        "unit_price": "10.57",
+        "vat_rate": "9",
+        "line_total": "412.23"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "33",
+        "unit_price": "10.43",
+        "vat_rate": "9",
+        "line_total": "344.19"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "21",
+        "unit_price": "135.22",
+        "vat_rate": "21",
+        "line_total": "2839.62"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "21",
+        "unit_price": "116.62",
+        "vat_rate": "21",
+        "line_total": "2449.02"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "26",
+        "unit_price": "1034.42",
+        "vat_rate": "21",
+        "line_total": "26894.92"
+      }
+    ],
+    "subtotal": "43757.72",
+    "vat": "9098.35",
+    "total": "52856.07",
+    "purchase_order_reference": "PO-2026-66731"
+  },
+  "contract": null
+}

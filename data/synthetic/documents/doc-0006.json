@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0006",
+  "filename": "doc-0006.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "C00009403",
+    "invoice_date": "2026-04-01",
+    "due_date": "2026-05-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "25",
+        "unit_price": "1195.5",
+        "vat_rate": "21",
+        "line_total": "29887.50"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "28",
+        "unit_price": "233.25",
+        "vat_rate": "21",
+        "line_total": "6531.00"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "23",
+        "unit_price": "62.58",
+        "vat_rate": "21",
+        "line_total": "1439.34"
+      }
+    ],
+    "subtotal": "37857.84",
+    "vat": "7950.15",
+    "total": "45807.99",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

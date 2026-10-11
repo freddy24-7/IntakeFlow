@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0171",
+  "filename": "doc-0171.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-005017",
+    "invoice_date": "2026-05-09",
+    "due_date": "2026-06-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "36",
+        "unit_price": "336.78",
+        "vat_rate": "21",
+        "line_total": "12124.08"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "23",
+        "unit_price": "16.19",
+        "vat_rate": "9",
+        "line_total": "372.37"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "30",
+        "unit_price": "107.19",
+        "vat_rate": "21",
+        "line_total": "3215.70"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "20",
+        "unit_price": "131.18",
+        "vat_rate": "21",
+        "line_total": "2623.60"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "15",
+        "unit_price": "64.88",
+        "vat_rate": "21",
+        "line_total": "973.20"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "13",
+        "unit_price": "7.61",
+        "vat_rate": "9",
+        "line_total": "98.93"
+      }
+    ],
+    "subtotal": "19407.88",
+    "vat": "4019.10",
+    "total": "23451.88",
+    "purchase_order_reference": "PO-2026-87026"
+  },
+  "contract": null
+}

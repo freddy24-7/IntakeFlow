@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0115",
+  "filename": "doc-0115.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078344",
+    "invoice_number": "RN2602148",
+    "invoice_date": "2026-06-26",
+    "due_date": "2026-07-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "140.4",
+        "vat_rate": "21",
+        "line_total": "3369.60"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "16",
+        "unit_price": "1414.44",
+        "vat_rate": "21",
+        "line_total": "22631.04"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "40",
+        "unit_price": "7.45",
+        "vat_rate": "9",
+        "line_total": "298.00"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "29",
+        "unit_price": "11.39",
+        "vat_rate": "9",
+        "line_total": "330.31"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "35",
+        "unit_price": "9.44",
+        "vat_rate": "21",
+        "line_total": "330.40"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "20",
+        "unit_price": "83.42",
+        "vat_rate": "21",
+        "line_total": "1668.40"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "13",
+        "unit_price": "135.53",
+        "vat_rate": "21",
+        "line_total": "1761.89"
+      }
+    ],
+    "subtotal": "30389.64",
+    "vat": "6306.43",
+    "total": "36696.07",
+    "purchase_order_reference": "PO-2026-78282"
+  },
+  "contract": null
+}

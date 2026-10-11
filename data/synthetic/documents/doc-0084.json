@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0084",
+  "filename": "doc-0084.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "00007369",
+    "invoice_date": "2026-01-26",
+    "due_date": "2026-02-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "4",
+        "unit_price": "445.25",
+        "vat_rate": "21",
+        "line_total": "1781.00"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "7",
+        "unit_price": "345.07",
+        "vat_rate": "21",
+        "line_total": "2415.49"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "6",
+        "unit_price": "126.33",
+        "vat_rate": "21",
+        "line_total": "757.98"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "12",
+        "unit_price": "88.2",
+        "vat_rate": "21",
+        "line_total": "1058.40"
+      }
+    ],
+    "subtotal": "6012.87",
+    "vat": "1262.70",
+    "total": "7275.57",
+    "purchase_order_reference": "PO-2026-74928"
+  },
+  "contract": null
+}

@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0070",
+  "filename": "doc-0070.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-009249",
+    "invoice_date": "2026-08-22",
+    "due_date": "2026-09-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "20",
+        "unit_price": "330.01",
+        "vat_rate": "21",
+        "line_total": "6600.20"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "38",
+        "unit_price": "89.6",
+        "vat_rate": "21",
+        "line_total": "3404.80"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "23",
+        "unit_price": "12.19",
+        "vat_rate": "21",
+        "line_total": "280.37"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "5",
+        "unit_price": "9.17",
+        "vat_rate": "21",
+        "line_total": "45.85"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "30",
+        "unit_price": "416.16",
+        "vat_rate": "21",
+        "line_total": "12484.80"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "3",
+        "unit_price": "2.29",
+        "vat_rate": "21",
+        "line_total": "6.87"
+      }
+    ],
+    "subtotal": "22822.89",
+    "vat": "4792.81",
+    "total": "27615.70",
+    "purchase_order_reference": "PO-2026-84278"
+  },
+  "contract": null
+}

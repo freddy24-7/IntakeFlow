@@ -1,0 +1,62 @@
+{
+  "doc_id": "doc-0044",
+  "filename": "doc-0044.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po",
+    "scanned"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00006482",
+    "invoice_date": "2026-08-14",
+    "due_date": "2026-09-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Used euro pallets",
+        "quantity": "1",
+        "unit_price": "9.19",
+        "vat_rate": "21",
+        "line_total": "9.19"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "14",
+        "unit_price": "7.42",
+        "vat_rate": "9",
+        "line_total": "103.88"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "5",
+        "unit_price": "102.29",
+        "vat_rate": "21",
+        "line_total": "511.45"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "7",
+        "unit_price": "1003.71",
+        "vat_rate": "21",
+        "line_total": "7025.97"
+      }
+    ],
+    "subtotal": "7650.49",
+    "vat": "1594.14",
+    "total": "9244.63",
+    "purchase_order_reference": "PO-2026-03826"
+  },
+  "contract": null
+}

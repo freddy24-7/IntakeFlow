@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0017",
+  "filename": "doc-0017.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2609156",
+    "invoice_date": "2026-02-03",
+    "due_date": "2026-02-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "38",
+        "unit_price": "50.98",
+        "vat_rate": "21",
+        "line_total": "1937.24"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "3",
+        "unit_price": "855.34",
+        "vat_rate": "21",
+        "line_total": "2566.02"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "23",
+        "unit_price": "9.3",
+        "vat_rate": "21",
+        "line_total": "213.90"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "35",
+        "unit_price": "557.95",
+        "vat_rate": "0",
+        "line_total": "19528.25"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "5",
+        "unit_price": "169.68",
+        "vat_rate": "21",
+        "line_total": "848.40"
+      }
+    ],
+    "subtotal": "25093.81",
+    "vat": "1168.77",
+    "total": "26262.58",
+    "purchase_order_reference": "PO-2026-60604"
+  },
+  "contract": null
+}

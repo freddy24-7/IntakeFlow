@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0101",
+  "filename": "doc-0101.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/03631",
+    "invoice_date": "2026-06-27",
+    "due_date": "2026-08-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "34",
+        "unit_price": "11.22",
+        "vat_rate": "21",
+        "line_total": "381.48"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "13",
+        "unit_price": "113.62",
+        "vat_rate": "21",
+        "line_total": "1477.06"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "23",
+        "unit_price": "119.58",
+        "vat_rate": "21",
+        "line_total": "2750.34"
+      }
+    ],
+    "subtotal": "4608.88",
+    "vat": "967.86",
+    "total": "5576.74",
+    "purchase_order_reference": "PO-2026-43655"
+  },
+  "contract": null
+}

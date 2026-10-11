@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0125",
+  "filename": "doc-0125.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00004574",
+    "invoice_date": "2026-02-09",
+    "due_date": "2026-04-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "17",
+        "unit_price": "9.39",
+        "vat_rate": "9",
+        "line_total": "159.63"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "7",
+        "unit_price": "540.96",
+        "vat_rate": "21",
+        "line_total": "3786.72"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "28",
+        "unit_price": "73.31",
+        "vat_rate": "21",
+        "line_total": "2052.68"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "21",
+        "unit_price": "95.74",
+        "vat_rate": "21",
+        "line_total": "2010.54"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "39",
+        "unit_price": "18.47",
+        "vat_rate": "21",
+        "line_total": "720.33"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "8",
+        "unit_price": "9.94",
+        "vat_rate": "21",
+        "line_total": "79.52"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "37.5",
+        "unit_price": "31.89",
+        "vat_rate": "21",
+        "line_total": "1195.88"
+      }
+    ],
+    "subtotal": "10005.30",
+    "vat": "2081.96",
+    "total": "12087.26",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

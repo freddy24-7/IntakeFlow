@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0185",
+  "filename": "doc-0185.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "le Gallen Software B.V.",
+    "supplier_vat_number": "NL241266931B09",
+    "iban": "NL22POLD1939118223",
+    "invoice_number": "00001495",
+    "invoice_date": "2026-02-08",
+    "due_date": "2026-02-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "24",
+        "unit_price": "65.65",
+        "vat_rate": "21",
+        "line_total": "1575.60"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "36",
+        "unit_price": "64.91",
+        "vat_rate": "21",
+        "line_total": "2336.76"
+      }
+    ],
+    "subtotal": "3912.36",
+    "vat": "821.60",
+    "total": "4733.96",
+    "purchase_order_reference": "PO-2026-11188"
+  },
+  "contract": null
+}

@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0170",
+  "filename": "doc-0170.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-009168",
+    "invoice_date": "2026-02-17",
+    "due_date": "2026-03-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "18",
+        "unit_price": "694.69",
+        "vat_rate": "21",
+        "line_total": "12504.42"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "18",
+        "unit_price": "1542.69",
+        "vat_rate": "21",
+        "line_total": "27768.42"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "10",
+        "unit_price": "90.18",
+        "vat_rate": "21",
+        "line_total": "901.80"
+      }
+    ],
+    "subtotal": "41174.64",
+    "vat": "8646.67",
+    "total": "49821.31",
+    "purchase_order_reference": "PO-2026-31816"
+  },
+  "contract": null
+}

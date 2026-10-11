@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0153",
+  "filename": "doc-0153.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2607835",
+    "invoice_date": "2026-03-14",
+    "due_date": "2026-05-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "39",
+        "unit_price": "614.61",
+        "vat_rate": "0",
+        "line_total": "23969.79"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "34",
+        "unit_price": "163.19",
+        "vat_rate": "21",
+        "line_total": "5548.46"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "34",
+        "unit_price": "84.63",
+        "vat_rate": "21",
+        "line_total": "2877.42"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "5",
+        "unit_price": "193.53",
+        "vat_rate": "21",
+        "line_total": "967.65"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "4",
+        "unit_price": "194.45",
+        "vat_rate": "21",
+        "line_total": "777.80"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "33",
+        "unit_price": "564.97",
+        "vat_rate": "21",
+        "line_total": "18644.01"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "37",
+        "unit_price": "103.96",
+        "vat_rate": "21",
+        "line_total": "3846.52"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "10",
+        "unit_price": "257.83",
+        "vat_rate": "21",
+        "line_total": "2578.30"
+      }
+    ],
+    "subtotal": "59209.95",
+    "vat": "7400.43",
+    "total": "66610.38",
+    "purchase_order_reference": "PO-2026-20078"
+  },
+  "contract": null
+}

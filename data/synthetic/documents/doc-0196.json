@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0196",
+  "filename": "doc-0196.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2607200",
+    "invoice_date": "2026-08-17",
+    "due_date": "2026-10-16",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "25",
+        "unit_price": "156.97",
+        "vat_rate": "21",
+        "line_total": "3924.25"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "22",
+        "unit_price": "2179.68",
+        "vat_rate": "0",
+        "line_total": "47952.96"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "39",
+        "unit_price": "29.07",
+        "vat_rate": "21",
+        "line_total": "1133.73"
+      }
+    ],
+    "subtotal": "53010.94",
+    "vat": "1062.18",
+    "total": "54073.12",
+    "purchase_order_reference": "PO-2026-68690"
+  },
+  "contract": null
+}

@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0031",
+  "filename": "doc-0031.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00001469",
+    "invoice_date": "2026-01-18",
+    "due_date": "2026-02-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "25",
+        "unit_price": "432.35",
+        "vat_rate": "0",
+        "line_total": "10808.75"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "19",
+        "unit_price": "421.19",
+        "vat_rate": "21",
+        "line_total": "8002.61"
+      }
+    ],
+    "subtotal": "18811.36",
+    "vat": "1680.55",
+    "total": "20491.91",
+    "purchase_order_reference": "PO-2026-46388"
+  },
+  "contract": null
+}

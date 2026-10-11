@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0086",
+  "filename": "doc-0086.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Gerritsen Transport B.V.",
+    "supplier_vat_number": "NL298362082B20",
+    "iban": "NL90DELT7293453178",
+    "invoice_number": "F2026-4391",
+    "invoice_date": "2026-02-16",
+    "due_date": "2026-03-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "20",
+        "unit_price": "121.43",
+        "vat_rate": "21",
+        "line_total": "2428.60"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "24",
+        "unit_price": "653.58",
+        "vat_rate": "21",
+        "line_total": "15685.92"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "7",
+        "unit_price": "236.83",
+        "vat_rate": "21",
+        "line_total": "1657.81"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "6",
+        "unit_price": "120.7",
+        "vat_rate": "21",
+        "line_total": "724.20"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "28",
+        "unit_price": "96.76",
+        "vat_rate": "21",
+        "line_total": "2709.28"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "36",
+        "unit_price": "361.77",
+        "vat_rate": "21",
+        "line_total": "13023.72"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "33",
+        "unit_price": "78.42",
+        "vat_rate": "21",
+        "line_total": "2587.86"
+      }
+    ],
+    "subtotal": "38817.39",
+    "vat": "8151.65",
+    "total": "46969.04",
+    "purchase_order_reference": "PO-2026-20214"
+  },
+  "contract": null
+}

@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0069",
+  "filename": "doc-0069.pdf",
+  "doc_type": "contract",
+  "language": "nl",
+  "layout": "plain",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": null,
+  "contract": {
+    "contract_number": "OVK-2024-006",
+    "title": "Dienstverleningsovereenkomst Noordzee Logistiek B.V. - van Spreuwel Koeltechniek B.V.",
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "facts": {
+      "service": "het periodiek onderhoud van de koel- en vriesinstallaties",
+      "start_date": "1 juni 2024",
+      "initial_term_months": "12",
+      "renewal_months": "12",
+      "notice_period_months": "3",
+      "payment_term_days": "45",
+      "liability_cap_eur": "50.000,00",
+      "confidentiality_years": "2",
+      "cure_period_days": "30",
+      "court": "Den Haag"
+    },
+    "clauses": [
+      {
+        "number": 1,
+        "heading": "Onderwerp van de overeenkomst",
+        "topic": "subject",
+        "page": 1,
+        "text": "Leverancier verricht voor Opdrachtgever de volgende diensten: het periodiek onderhoud van de koel- en vriesinstallaties. De diensten worden uitgevoerd op de locatie van Opdrachtgever te Rotterdam, tenzij partijen schriftelijk anders overeenkomen.\nLeverancier voert de diensten uit met de zorg die van een goed opdrachtnemer mag worden verwacht en houdt zich daarbij aan de redelijke aanwijzingen van Opdrachtgever. Wijzigingen in de omvang van de dienstverlening worden vooraf schriftelijk vastgelegd."
+      },
+      {
+        "number": 2,
+        "heading": "Looptijd",
+        "topic": "term",
+        "page": 1,
+        "text": "Deze overeenkomst gaat in op 1 juni 2024 en wordt aangegaan voor een initiële looptijd van 12 maanden. Na afloop van de initiële looptijd wordt de overeenkomst telkens stilzwijgend verlengd met een periode van 12 maanden.\nVerlenging vindt plaats onder dezelfde voorwaarden, tenzij partijen uiterlijk bij de verlenging schriftelijk andere voorwaarden zijn overeengekomen."
+      },
+      {
+        "number": 3,
+        "heading": "Opzegging",
+        "topic": "notice_period",
+        "page": 1,
+        "text": "Elk der partijen kan de overeenkomst tegen het einde van de lopende periode opzeggen met inachtneming van een opzegtermijn van 3 maanden. Opzegging geschiedt schriftelijk per aangetekende brief.\nEen opzegging die niet tijdig is ontvangen geldt als opzegging tegen het einde van de eerstvolgende periode. Opzegging laat reeds ontstane betalingsverplichtingen onverlet."
+      },
+      {
+        "number": 4,
+        "heading": "Facturering en betaling",
+        "topic": "payment",
+        "page": 1,
+        "text": "Leverancier factureert maandelijks achteraf. Opdrachtgever betaalt facturen binnen 45 dagen na factuurdatum. Op iedere factuur wordt het inkoopordernummer van Opdrachtgever vermeld.\nBij niet-tijdige betaling is Opdrachtgever na schriftelijke aanmaning de wettelijke handelsrente verschuldigd. Opdrachtgever mag betwiste factuurbedragen opschorten tot het geschil is opgelost."
+      },
+      {
+        "number": 5,
+        "heading": "Aansprakelijkheid",
+        "topic": "liability",
+        "page": 2,
+        "text": "De aansprakelijkheid van Leverancier is per gebeurtenis beperkt tot een bedrag van € 50.000,00. Deze beperking geldt niet in geval van opzet of bewuste roekeloosheid van Leverancier.\nLeverancier is niet aansprakelijk voor indirecte schade, waaronder gevolgschade, gederfde winst en gemiste besparingen. Leverancier houdt gedurende de looptijd een passende aansprakelijkheidsverzekering in stand."
+      },
+      {
+        "number": 6,
+        "heading": "Vertrouwelijkheid",
+        "topic": "confidentiality",
+        "page": 2,
+        "text": "Partijen houden alle informatie geheim die zij in het kader van deze overeenkomst van elkaar ontvangen en waarvan zij het vertrouwelijke karakter kennen of behoren te kennen. Deze verplichting blijft gelden tot 2 jaar na het einde van de overeenkomst.\nDe geheimhoudingsplicht geldt niet voor informatie die openbaar is of die op grond van een wettelijke verplichting moet worden verstrekt."
+      },
+      {
+        "number": 7,
+        "heading": "Tussentijdse beëindiging",
+        "topic": "termination",
+        "page": 2,
+        "text": "Elk der partijen kan de overeenkomst met onmiddellijke ingang ontbinden indien de andere partij in staat van faillissement wordt verklaard of surseance van betaling aanvraagt. Hetzelfde geldt indien een partij na schriftelijke ingebrekestelling met een hersteltermijn van 30 dagen blijft tekortschieten.\nBij beëindiging draagt Leverancier zorg voor een ordelijke overdracht van de werkzaamheden aan Opdrachtgever of aan een door Opdrachtgever aangewezen derde."
+      },
+      {
+        "number": 8,
+        "heading": "Toepasselijk recht en geschillen",
+        "topic": "governing_law",
+        "page": 2,
+        "text": "Op deze overeenkomst is Nederlands recht van toepassing. Geschillen die niet in onderling overleg kunnen worden opgelost, worden voorgelegd aan de bevoegde rechter van de rechtbank Den Haag."
+      }
+    ]
+  }
+}

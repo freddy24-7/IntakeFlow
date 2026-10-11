@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0190",
+  "filename": "doc-0190.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-006127",
+    "invoice_date": "2026-09-19",
+    "due_date": "2026-10-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "22",
+        "unit_price": "7.49",
+        "vat_rate": "21",
+        "line_total": "164.78"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "9",
+        "unit_price": "96.27",
+        "vat_rate": "21",
+        "line_total": "866.43"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "19",
+        "unit_price": "4.41",
+        "vat_rate": "21",
+        "line_total": "83.79"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "9",
+        "unit_price": "83.42",
+        "vat_rate": "21",
+        "line_total": "750.78"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "29",
+        "unit_price": "553.27",
+        "vat_rate": "21",
+        "line_total": "16044.83"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "1",
+        "unit_price": "7.81",
+        "vat_rate": "21",
+        "line_total": "7.81"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "2",
+        "unit_price": "263.86",
+        "vat_rate": "21",
+        "line_total": "527.72"
+      }
+    ],
+    "subtotal": "18446.14",
+    "vat": "3873.69",
+    "total": "22319.83",
+    "purchase_order_reference": "PO-2026-30903"
+  },
+  "contract": null
+}

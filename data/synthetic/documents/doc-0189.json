@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0189",
+  "filename": "doc-0189.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-009947",
+    "invoice_date": "2026-05-02",
+    "due_date": "2026-06-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "3",
+        "unit_price": "116.23",
+        "vat_rate": "21",
+        "line_total": "348.69"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "29",
+        "unit_price": "8.68",
+        "vat_rate": "21",
+        "line_total": "251.72"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "38",
+        "unit_price": "114.88",
+        "vat_rate": "21",
+        "line_total": "4365.44"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "9",
+        "unit_price": "67.38",
+        "vat_rate": "21",
+        "line_total": "606.42"
+      }
+    ],
+    "subtotal": "5572.27",
+    "vat": "1170.18",
+    "total": "6742.45",
+    "purchase_order_reference": "PO-2026-46179"
+  },
+  "contract": null
+}

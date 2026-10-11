@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0018",
+  "filename": "doc-0018.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice van Brenen",
+    "supplier_vat_number": "NL454340903B28",
+    "iban": "NL06DELT9728344131",
+    "invoice_number": "INV-005943",
+    "invoice_date": "2026-05-05",
+    "due_date": "2026-06-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "8",
+        "unit_price": "17.68",
+        "vat_rate": "9",
+        "line_total": "141.44"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "30",
+        "unit_price": "105.01",
+        "vat_rate": "21",
+        "line_total": "3150.30"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "14",
+        "unit_price": "390.27",
+        "vat_rate": "21",
+        "line_total": "5463.78"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "39",
+        "unit_price": "327.99",
+        "vat_rate": "21",
+        "line_total": "12791.61"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "4",
+        "unit_price": "14.83",
+        "vat_rate": "21",
+        "line_total": "59.32"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "16",
+        "unit_price": "70.31",
+        "vat_rate": "21",
+        "line_total": "1124.96"
+      }
+    ],
+    "subtotal": "22731.41",
+    "vat": "4756.62",
+    "total": "27488.03",
+    "purchase_order_reference": "PO-2026-13022"
+  },
+  "contract": null
+}

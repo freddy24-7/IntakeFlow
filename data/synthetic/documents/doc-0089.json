@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0089",
+  "filename": "doc-0089.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Olst & van der Velden Advies V.O.F.",
+    "supplier_vat_number": "NL502564736B68",
+    "iban": "NL40NZLB5947530309",
+    "invoice_number": "CF2026-6165",
+    "invoice_date": "2026-01-05",
+    "due_date": "2026-02-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "34.5",
+        "unit_price": "32.87",
+        "vat_rate": "21",
+        "line_total": "1134.02"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "27",
+        "unit_price": "100.3",
+        "vat_rate": "21",
+        "line_total": "2708.10"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "4",
+        "unit_price": "61.65",
+        "vat_rate": "21",
+        "line_total": "246.60"
+      }
+    ],
+    "subtotal": "4088.72",
+    "vat": "858.63",
+    "total": "4947.35",
+    "purchase_order_reference": "PO-2026-96741"
+  },
+  "contract": null
+}

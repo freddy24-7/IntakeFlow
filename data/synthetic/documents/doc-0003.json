@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0003",
+  "filename": "doc-0003.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Willems",
+    "supplier_vat_number": "NL084564737B11",
+    "iban": "NL44DELT0248786714",
+    "invoice_number": "00006364",
+    "invoice_date": "2026-03-14",
+    "due_date": "2026-05-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "6",
+        "unit_price": "190.51",
+        "vat_rate": "21",
+        "line_total": "1143.06"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "13",
+        "unit_price": "183.77",
+        "vat_rate": "21",
+        "line_total": "2389.01"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "18",
+        "unit_price": "9.86",
+        "vat_rate": "21",
+        "line_total": "177.48"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "39",
+        "unit_price": "7.4",
+        "vat_rate": "21",
+        "line_total": "288.60"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "5",
+        "unit_price": "120.82",
+        "vat_rate": "21",
+        "line_total": "604.10"
+      }
+    ],
+    "subtotal": "4602.25",
+    "vat": "966.47",
+    "total": "5568.72",
+    "purchase_order_reference": "PO-2026-31831"
+  },
+  "contract": null
+}

@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0160",
+  "filename": "doc-0160.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-008271",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-09-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "34",
+        "unit_price": "1520.34",
+        "vat_rate": "21",
+        "line_total": "51691.56"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "16",
+        "unit_price": "299.96",
+        "vat_rate": "21",
+        "line_total": "4799.36"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "29",
+        "unit_price": "7.79",
+        "vat_rate": "21",
+        "line_total": "225.91"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "19",
+        "unit_price": "12.8",
+        "vat_rate": "21",
+        "line_total": "243.20"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "18",
+        "unit_price": "3.71",
+        "vat_rate": "21",
+        "line_total": "66.78"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "21",
+        "unit_price": "99.24",
+        "vat_rate": "21",
+        "line_total": "2084.04"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "6",
+        "unit_price": "240.68",
+        "vat_rate": "21",
+        "line_total": "1444.08"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "10",
+        "unit_price": "103.94",
+        "vat_rate": "21",
+        "line_total": "1039.40"
+      }
+    ],
+    "subtotal": "61594.33",
+    "vat": "12934.81",
+    "total": "74529.14",
+    "purchase_order_reference": "PO-2026-55933"
+  },
+  "contract": null
+}

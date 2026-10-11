@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0166",
+  "filename": "doc-0166.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "CINV-009698",
+    "invoice_date": "2026-02-12",
+    "due_date": "2026-03-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "9",
+        "unit_price": "74.39",
+        "vat_rate": "21",
+        "line_total": "669.51"
+      }
+    ],
+    "subtotal": "669.51",
+    "vat": "140.60",
+    "total": "810.11",
+    "purchase_order_reference": "PO-2026-74425"
+  },
+  "contract": null
+}

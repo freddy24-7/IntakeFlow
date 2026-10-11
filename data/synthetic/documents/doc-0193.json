@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0193",
+  "filename": "doc-0193.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2600465",
+    "invoice_date": "2026-01-26",
+    "due_date": "2026-02-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "17",
+        "unit_price": "9.33",
+        "vat_rate": "9",
+        "line_total": "158.61"
+      }
+    ],
+    "subtotal": "158.61",
+    "vat": "14.27",
+    "total": "172.88",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

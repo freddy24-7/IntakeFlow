@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0169",
+  "filename": "doc-0169.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Willems",
+    "supplier_vat_number": "NL084564737B11",
+    "iban": "NL44DELT0248786714",
+    "invoice_number": "00007533",
+    "invoice_date": "2026-07-09",
+    "due_date": "2026-09-07",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "18",
+        "unit_price": "105.45",
+        "vat_rate": "21",
+        "line_total": "1898.10"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "35",
+        "unit_price": "1517.45",
+        "vat_rate": "21",
+        "line_total": "53110.75"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "30.5",
+        "unit_price": "120.68",
+        "vat_rate": "21",
+        "line_total": "3680.74"
+      }
+    ],
+    "subtotal": "58689.59",
+    "vat": "12324.81",
+    "total": "71014.40",
+    "purchase_order_reference": "PO-2026-92708"
+  },
+  "contract": null
+}

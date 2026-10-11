@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0065",
+  "filename": "doc-0065.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Schevinghuizen Logistiek B.V.",
+    "supplier_vat_number": "NL923026480B43",
+    "iban": "NL88NZLB0983297492",
+    "invoice_number": "2026/01021",
+    "invoice_date": "2026-09-03",
+    "due_date": "2026-10-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "21.5",
+        "unit_price": "139.24",
+        "vat_rate": "21",
+        "line_total": "2993.66"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "31",
+        "unit_price": "187.18",
+        "vat_rate": "21",
+        "line_total": "5802.58"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "25",
+        "unit_price": "12.21",
+        "vat_rate": "9",
+        "line_total": "305.25"
+      }
+    ],
+    "subtotal": "9101.49",
+    "vat": "1874.68",
+    "total": "10976.17",
+    "purchase_order_reference": "PO-2026-92507"
+  },
+  "contract": null
+}

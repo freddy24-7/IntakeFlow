@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0007",
+  "filename": "doc-0007.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2602003",
+    "invoice_date": "2026-06-22",
+    "due_date": "2026-07-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "37",
+        "unit_price": "96.56",
+        "vat_rate": "21",
+        "line_total": "3572.72"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "14",
+        "unit_price": "230.7",
+        "vat_rate": "21",
+        "line_total": "3229.80"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "31.5",
+        "unit_price": "32.59",
+        "vat_rate": "21",
+        "line_total": "1026.59"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "7",
+        "unit_price": "12.58",
+        "vat_rate": "9",
+        "line_total": "88.06"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "36",
+        "unit_price": "150.22",
+        "vat_rate": "21",
+        "line_total": "5407.92"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "8",
+        "unit_price": "9.9",
+        "vat_rate": "9",
+        "line_total": "79.20"
+      }
+    ],
+    "subtotal": "13404.29",
+    "vat": "2794.83",
+    "total": "16199.12",
+    "purchase_order_reference": "PO-2026-53845"
+  },
+  "contract": null
+}

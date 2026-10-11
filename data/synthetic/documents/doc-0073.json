@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0073",
+  "filename": "doc-0073.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Post Intern Transport B.V.",
+    "supplier_vat_number": "NL169820594B59",
+    "iban": "NL44HAVN4774080233",
+    "invoice_number": "00003729",
+    "invoice_date": "2026-06-10",
+    "due_date": "2026-06-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": "26",
+        "unit_price": "122.56",
+        "vat_rate": "21",
+        "line_total": "3186.56"
+      }
+    ],
+    "subtotal": "3186.56",
+    "vat": "669.18",
+    "total": "3855.74",
+    "purchase_order_reference": "PO-2026-29219"
+  },
+  "contract": null
+}

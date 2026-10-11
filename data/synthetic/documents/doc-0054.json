@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0054",
+  "filename": "doc-0054.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00003679",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-09-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "37",
+        "unit_price": "85.54",
+        "vat_rate": "21",
+        "line_total": "3164.98"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "8",
+        "unit_price": "479.01",
+        "vat_rate": "21",
+        "line_total": "3832.08"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "4",
+        "unit_price": "11.67",
+        "vat_rate": "21",
+        "line_total": "46.68"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "15",
+        "unit_price": "11.28",
+        "vat_rate": "21",
+        "line_total": "169.20"
+      }
+    ],
+    "subtotal": "7212.94",
+    "vat": "1514.72",
+    "total": "8727.66",
+    "purchase_order_reference": "PO-2026-42179"
+  },
+  "contract": null
+}

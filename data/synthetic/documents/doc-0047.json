@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0047",
+  "filename": "doc-0047.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Willems",
+    "supplier_vat_number": "NL084564737B11",
+    "iban": "NL44DELT0248786714",
+    "invoice_number": "00002291",
+    "invoice_date": "2026-06-15",
+    "due_date": "2026-08-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "20",
+        "unit_price": "8.1",
+        "vat_rate": "21",
+        "line_total": "162.00"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "34",
+        "unit_price": "5.1",
+        "vat_rate": "21",
+        "line_total": "173.40"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "33",
+        "unit_price": "10.93",
+        "vat_rate": "9",
+        "line_total": "360.69"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "26",
+        "unit_price": "34.05",
+        "vat_rate": "21",
+        "line_total": "885.30"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "4",
+        "unit_price": "64.6",
+        "vat_rate": "21",
+        "line_total": "258.40"
+      }
+    ],
+    "subtotal": "1839.79",
+    "vat": "343.07",
+    "total": "2182.86",
+    "purchase_order_reference": "PO-2026-32477"
+  },
+  "contract": null
+}

@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0039",
+  "filename": "doc-0039.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Heere Intern Transport B.V.",
+    "supplier_vat_number": "NL262950628B29",
+    "iban": "NL09NZLB8697354961",
+    "invoice_number": "CF2026-3240",
+    "invoice_date": "2026-02-07",
+    "due_date": "2026-02-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "22",
+        "unit_price": "95.03",
+        "vat_rate": "21",
+        "line_total": "2090.66"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "3",
+        "unit_price": "10.72",
+        "vat_rate": "21",
+        "line_total": "32.16"
+      }
+    ],
+    "subtotal": "2122.82",
+    "vat": "445.79",
+    "total": "2568.61",
+    "purchase_order_reference": "PO-2026-84670"
+  },
+  "contract": null
+}

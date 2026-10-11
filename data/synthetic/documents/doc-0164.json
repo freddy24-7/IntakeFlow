@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0164",
+  "filename": "doc-0164.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "00007000",
+    "invoice_date": "2026-04-04",
+    "due_date": "2026-04-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Container handling 40ft",
+        "quantity": "10",
+        "unit_price": "278.26",
+        "vat_rate": "21",
+        "line_total": "2782.60"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "25",
+        "unit_price": "120.12",
+        "vat_rate": "21",
+        "line_total": "3003.00"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "35",
+        "unit_price": "920.65",
+        "vat_rate": "21",
+        "line_total": "32222.75"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "16",
+        "unit_price": "103.46",
+        "vat_rate": "21",
+        "line_total": "1655.36"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "20",
+        "unit_price": "613.71",
+        "vat_rate": "21",
+        "line_total": "12274.20"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "10",
+        "unit_price": "10.12",
+        "vat_rate": "9",
+        "line_total": "101.20"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "30",
+        "unit_price": "33.88",
+        "vat_rate": "21",
+        "line_total": "1016.40"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "36",
+        "unit_price": "88.8",
+        "vat_rate": "21",
+        "line_total": "3196.80"
+      }
+    ],
+    "subtotal": "56252.31",
+    "vat": "11800.84",
+    "total": "68053.15",
+    "purchase_order_reference": "PO-2026-72856"
+  },
+  "contract": null
+}

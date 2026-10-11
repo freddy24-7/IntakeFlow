@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0102",
+  "filename": "doc-0102.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "CRN2603202",
+    "invoice_date": "2026-09-14",
+    "due_date": "2026-09-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "27",
+        "unit_price": "2.12",
+        "vat_rate": "21",
+        "line_total": "57.24"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "15",
+        "unit_price": "129.36",
+        "vat_rate": "21",
+        "line_total": "1940.40"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "23",
+        "unit_price": "45.78",
+        "vat_rate": "21",
+        "line_total": "1052.94"
+      }
+    ],
+    "subtotal": "3050.58",
+    "vat": "640.62",
+    "total": "3691.20",
+    "purchase_order_reference": "PO-2026-96005"
+  },
+  "contract": null
+}

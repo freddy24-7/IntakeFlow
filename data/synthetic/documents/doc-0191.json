@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0191",
+  "filename": "doc-0191.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "le Gallen Software B.V.",
+    "supplier_vat_number": "NL241266931B09",
+    "iban": "NL22POLD1939118223",
+    "invoice_number": "00002253",
+    "invoice_date": "2026-02-25",
+    "due_date": "2026-03-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "13",
+        "unit_price": "78.53",
+        "vat_rate": "21",
+        "line_total": "1020.89"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "21",
+        "unit_price": "307.04",
+        "vat_rate": "21",
+        "line_total": "6447.84"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "4",
+        "unit_price": "10.64",
+        "vat_rate": "9",
+        "line_total": "42.56"
+      }
+    ],
+    "subtotal": "7511.29",
+    "vat": "1572.26",
+    "total": "9083.55",
+    "purchase_order_reference": "PO-2026-00679"
+  },
+  "contract": null
+}

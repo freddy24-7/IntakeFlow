@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0134",
+  "filename": "doc-0134.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Olst & van der Velden Advies V.O.F.",
+    "supplier_vat_number": "NL502564736B68",
+    "iban": "NL40NZLB5947530309",
+    "invoice_number": "F2026-9548",
+    "invoice_date": "2026-02-15",
+    "due_date": "2026-03-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "9",
+        "unit_price": "187.49",
+        "vat_rate": "21",
+        "line_total": "1687.41"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "6",
+        "unit_price": "34.34",
+        "vat_rate": "21",
+        "line_total": "206.04"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "36",
+        "unit_price": "793.72",
+        "vat_rate": "21",
+        "line_total": "28573.92"
+      }
+    ],
+    "subtotal": "30467.37",
+    "vat": "6398.15",
+    "total": "36865.52",
+    "purchase_order_reference": "PO-2026-86980"
+  },
+  "contract": null
+}

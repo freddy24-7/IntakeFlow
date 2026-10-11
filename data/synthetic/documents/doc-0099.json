@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0099",
+  "filename": "doc-0099.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/08283",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-10-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "27",
+        "unit_price": "87.76",
+        "vat_rate": "21",
+        "line_total": "2369.52"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "30",
+        "unit_price": "1445.24",
+        "vat_rate": "0",
+        "line_total": "43357.20"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "27",
+        "unit_price": "16.47",
+        "vat_rate": "9",
+        "line_total": "444.69"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "7",
+        "unit_price": "117.41",
+        "vat_rate": "21",
+        "line_total": "821.87"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "28",
+        "unit_price": "80.6",
+        "vat_rate": "21",
+        "line_total": "2256.80"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "17",
+        "unit_price": "3.91",
+        "vat_rate": "21",
+        "line_total": "66.47"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "10",
+        "unit_price": "9.51",
+        "vat_rate": "9",
+        "line_total": "95.10"
+      }
+    ],
+    "subtotal": "49411.65",
+    "vat": "1206.66",
+    "total": "50618.31",
+    "purchase_order_reference": "PO-2026-79354"
+  },
+  "contract": null
+}

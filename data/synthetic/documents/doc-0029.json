@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0029",
+  "filename": "doc-0029.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-000862",
+    "invoice_date": "2026-02-17",
+    "due_date": "2026-03-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "1561.59",
+        "vat_rate": "0",
+        "line_total": "28108.62"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "28",
+        "unit_price": "339.14",
+        "vat_rate": "21",
+        "line_total": "9495.92"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "39",
+        "unit_price": "10.52",
+        "vat_rate": "21",
+        "line_total": "410.28"
+      }
+    ],
+    "subtotal": "38014.82",
+    "vat": "2080.30",
+    "total": "40095.12",
+    "purchase_order_reference": "PO-2026-20392"
+  },
+  "contract": null
+}

@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0148",
+  "filename": "doc-0148.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00001634",
+    "invoice_date": "2026-08-18",
+    "due_date": "2026-09-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "22",
+        "unit_price": "77.56",
+        "vat_rate": "21",
+        "line_total": "1706.32"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "6",
+        "unit_price": "154.77",
+        "vat_rate": "21",
+        "line_total": "928.62"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "22",
+        "unit_price": "98.71",
+        "vat_rate": "21",
+        "line_total": "2171.62"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "25",
+        "unit_price": "10.88",
+        "vat_rate": "9",
+        "line_total": "272.00"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "21",
+        "unit_price": "12.41",
+        "vat_rate": "21",
+        "line_total": "260.61"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "32",
+        "unit_price": "4.77",
+        "vat_rate": "21",
+        "line_total": "152.64"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "3",
+        "unit_price": "1109.31",
+        "vat_rate": "21",
+        "line_total": "3327.93"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "5",
+        "unit_price": "104.23",
+        "vat_rate": "21",
+        "line_total": "521.15"
+      }
+    ],
+    "subtotal": "9340.89",
+    "vat": "1928.95",
+    "total": "11269.84",
+    "purchase_order_reference": "PO-2026-68937"
+  },
+  "contract": null
+}

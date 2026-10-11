@@ -1,0 +1,83 @@
+{
+  "doc_id": "doc-0063",
+  "filename": "doc-0063.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch",
+    "scanned"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078344",
+    "invoice_number": "RN2601376",
+    "invoice_date": "2026-01-18",
+    "due_date": "2026-02-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "14",
+        "unit_price": "122.24",
+        "vat_rate": "21",
+        "line_total": "1711.36"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "21",
+        "unit_price": "10.45",
+        "vat_rate": "21",
+        "line_total": "219.45"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "25",
+        "unit_price": "979.43",
+        "vat_rate": "21",
+        "line_total": "24485.75"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "27",
+        "unit_price": "262.66",
+        "vat_rate": "21",
+        "line_total": "7091.82"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "6",
+        "unit_price": "17.63",
+        "vat_rate": "21",
+        "line_total": "105.78"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "2",
+        "unit_price": "191.75",
+        "vat_rate": "21",
+        "line_total": "383.50"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "4",
+        "unit_price": "12.58",
+        "vat_rate": "9",
+        "line_total": "50.32"
+      }
+    ],
+    "subtotal": "34047.98",
+    "vat": "7144.04",
+    "total": "41192.02",
+    "purchase_order_reference": "PO-2026-84246"
+  },
+  "contract": null
+}

@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0118",
+  "filename": "doc-0118.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Geenen Verpakkingen B.V.",
+    "supplier_vat_number": "NL061380746B07",
+    "iban": "NL72NZLB2328710672",
+    "invoice_number": "C00001525",
+    "invoice_date": "2026-05-28",
+    "due_date": "2026-06-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "27",
+        "unit_price": "142.41",
+        "vat_rate": "21",
+        "line_total": "3845.07"
+      }
+    ],
+    "subtotal": "3845.07",
+    "vat": "807.46",
+    "total": "4652.53",
+    "purchase_order_reference": "PO-2026-05754"
+  },
+  "contract": null
+}

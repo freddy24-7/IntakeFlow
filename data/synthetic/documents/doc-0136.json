@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0136",
+  "filename": "doc-0136.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Schevinghuizen Logistiek B.V.",
+    "supplier_vat_number": "NL923026480B43",
+    "iban": "NL88NZLB0983297492",
+    "invoice_number": "2026/07304",
+    "invoice_date": "2026-04-28",
+    "due_date": "2026-05-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "7",
+        "unit_price": "10.02",
+        "vat_rate": "21",
+        "line_total": "70.14"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "27",
+        "unit_price": "10.71",
+        "vat_rate": "9",
+        "line_total": "289.17"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "6",
+        "unit_price": "94.5",
+        "vat_rate": "21",
+        "line_total": "567.00"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "10",
+        "unit_price": "113.53",
+        "vat_rate": "21",
+        "line_total": "1135.30"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "20",
+        "unit_price": "146.2",
+        "vat_rate": "21",
+        "line_total": "2924.00"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "30",
+        "unit_price": "61.94",
+        "vat_rate": "21",
+        "line_total": "1858.20"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "34",
+        "unit_price": "4.47",
+        "vat_rate": "21",
+        "line_total": "151.98"
+      }
+    ],
+    "subtotal": "6995.79",
+    "vat": "1434.42",
+    "total": "8430.21",
+    "purchase_order_reference": "PO-2026-49036"
+  },
+  "contract": null
+}

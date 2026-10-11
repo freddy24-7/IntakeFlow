@@ -1,0 +1,87 @@
+{
+  "doc_id": "doc-0131",
+  "filename": "doc-0131.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": 3.19,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00002663",
+    "invoice_date": "2026-06-23",
+    "due_date": "2026-07-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "13",
+        "unit_price": "11.59",
+        "vat_rate": "21",
+        "line_total": "150.67"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "40",
+        "unit_price": "1312.96",
+        "vat_rate": "21",
+        "line_total": "52518.40"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "28",
+        "unit_price": "87.21",
+        "vat_rate": "21",
+        "line_total": "2441.88"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "21",
+        "unit_price": "206.84",
+        "vat_rate": "21",
+        "line_total": "4343.64"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "26.5",
+        "unit_price": "41.7",
+        "vat_rate": "21",
+        "line_total": "1105.05"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "7",
+        "unit_price": "241.09",
+        "vat_rate": "21",
+        "line_total": "1687.63"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "9.5",
+        "unit_price": "124.11",
+        "vat_rate": "21",
+        "line_total": "1179.05"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "21",
+        "unit_price": "625.12",
+        "vat_rate": "21",
+        "line_total": "13127.52"
+      }
+    ],
+    "subtotal": "76553.84",
+    "vat": "16076.31",
+    "total": "92630.15",
+    "purchase_order_reference": "PO-2026-95829"
+  },
+  "contract": null
+}

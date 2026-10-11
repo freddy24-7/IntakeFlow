@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0042",
+  "filename": "doc-0042.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00008190",
+    "invoice_date": "2026-02-16",
+    "due_date": "2026-03-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "37",
+        "unit_price": "8.43",
+        "vat_rate": "9",
+        "line_total": "311.91"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "18",
+        "unit_price": "63.81",
+        "vat_rate": "21",
+        "line_total": "1148.58"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "5.5",
+        "unit_price": "141.06",
+        "vat_rate": "21",
+        "line_total": "775.83"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "18",
+        "unit_price": "357.94",
+        "vat_rate": "21",
+        "line_total": "6442.92"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "37",
+        "unit_price": "5.36",
+        "vat_rate": "21",
+        "line_total": "198.32"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "3",
+        "unit_price": "870.16",
+        "vat_rate": "0",
+        "line_total": "2610.48"
+      }
+    ],
+    "subtotal": "11488.04",
+    "vat": "1826.86",
+    "total": "13314.90",
+    "purchase_order_reference": "PO-2026-56873"
+  },
+  "contract": null
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0132",
+  "filename": "doc-0132.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Heere Intern Transport B.V.",
+    "supplier_vat_number": "NL262950628B29",
+    "iban": "NL09NZLB8697354931",
+    "invoice_number": "F2026-0195",
+    "invoice_date": "2026-08-03",
+    "due_date": "2026-08-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "12",
+        "unit_price": "10.09",
+        "vat_rate": "9",
+        "line_total": "121.08"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "7",
+        "unit_price": "38.73",
+        "vat_rate": "21",
+        "line_total": "271.11"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "10",
+        "unit_price": "64.74",
+        "vat_rate": "21",
+        "line_total": "647.40"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "13",
+        "unit_price": "135.77",
+        "vat_rate": "21",
+        "line_total": "1765.01"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "34",
+        "unit_price": "75.67",
+        "vat_rate": "21",
+        "line_total": "2572.78"
+      }
+    ],
+    "subtotal": "5377.38",
+    "vat": "1114.72",
+    "total": "6492.10",
+    "purchase_order_reference": "PO-2026-02192"
+  },
+  "contract": null
+}

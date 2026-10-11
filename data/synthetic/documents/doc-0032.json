@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0032",
+  "filename": "doc-0032.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Heere Intern Transport B.V.",
+    "supplier_vat_number": "NL262950628B29",
+    "iban": "NL09NZLB8697354961",
+    "invoice_number": "F2026-3131",
+    "invoice_date": "2026-09-26",
+    "due_date": "2026-10-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "31",
+        "unit_price": "107.91",
+        "vat_rate": "21",
+        "line_total": "3345.21"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "32",
+        "unit_price": "413.71",
+        "vat_rate": "21",
+        "line_total": "13238.72"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "2",
+        "unit_price": "9.95",
+        "vat_rate": "9",
+        "line_total": "19.90"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "19",
+        "unit_price": "3.13",
+        "vat_rate": "21",
+        "line_total": "59.47"
+      }
+    ],
+    "subtotal": "16663.30",
+    "vat": "3496.90",
+    "total": "20160.20",
+    "purchase_order_reference": "PO-2026-11221"
+  },
+  "contract": null
+}

@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0199",
+  "filename": "doc-0199.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2600259",
+    "invoice_date": "2026-06-19",
+    "due_date": "2026-08-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "5",
+        "unit_price": "336.05",
+        "vat_rate": "21",
+        "line_total": "1680.25"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "29",
+        "unit_price": "148.73",
+        "vat_rate": "21",
+        "line_total": "4313.17"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "24",
+        "unit_price": "97.04",
+        "vat_rate": "21",
+        "line_total": "2328.96"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "38.5",
+        "unit_price": "93.93",
+        "vat_rate": "21",
+        "line_total": "3616.31"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "29",
+        "unit_price": "101.27",
+        "vat_rate": "21",
+        "line_total": "2936.83"
+      }
+    ],
+    "subtotal": "14875.52",
+    "vat": "3123.86",
+    "total": "17999.38",
+    "purchase_order_reference": "PO-2026-22838"
+  },
+  "contract": null
+}

@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0087",
+  "filename": "doc-0087.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078344",
+    "invoice_number": "RN2600257",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-09-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "39",
+        "unit_price": "12.88",
+        "vat_rate": "21",
+        "line_total": "502.32"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "4",
+        "unit_price": "80.04",
+        "vat_rate": "21",
+        "line_total": "320.16"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "3",
+        "unit_price": "311.81",
+        "vat_rate": "21",
+        "line_total": "935.43"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "29",
+        "unit_price": "9.39",
+        "vat_rate": "21",
+        "line_total": "272.31"
+      }
+    ],
+    "subtotal": "2030.22",
+    "vat": "426.35",
+    "total": "2456.57",
+    "purchase_order_reference": "PO-2026-31544"
+  },
+  "contract": null
+}

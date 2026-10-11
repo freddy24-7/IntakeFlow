@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0083",
+  "filename": "doc-0083.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "le Gallen Software B.V.",
+    "supplier_vat_number": "NL241266931B09",
+    "iban": "NL22POLD1939118223",
+    "invoice_number": "00003311",
+    "invoice_date": "2026-04-24",
+    "due_date": "2026-05-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "16",
+        "unit_price": "9.51",
+        "vat_rate": "9",
+        "line_total": "152.16"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "34",
+        "unit_price": "12.62",
+        "vat_rate": "21",
+        "line_total": "429.08"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "15",
+        "unit_price": "89.3",
+        "vat_rate": "21",
+        "line_total": "1339.50"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "7",
+        "unit_price": "93.85",
+        "vat_rate": "21",
+        "line_total": "656.95"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "22",
+        "unit_price": "5.67",
+        "vat_rate": "21",
+        "line_total": "124.74"
+      }
+    ],
+    "subtotal": "2702.43",
+    "vat": "549.25",
+    "total": "3251.68",
+    "purchase_order_reference": "PO-2026-70592"
+  },
+  "contract": null
+}

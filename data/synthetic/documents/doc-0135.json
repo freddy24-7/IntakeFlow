@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0135",
+  "filename": "doc-0135.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": 2.06,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Post Intern Transport B.V.",
+    "supplier_vat_number": "NL169820594B59",
+    "iban": "NL44HAVN4774080233",
+    "invoice_number": "C00001392",
+    "invoice_date": "2026-08-27",
+    "due_date": "2026-09-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "9.5",
+        "unit_price": "137.2",
+        "vat_rate": "21",
+        "line_total": "1303.40"
+      }
+    ],
+    "subtotal": "1303.40",
+    "vat": "273.71",
+    "total": "1577.11",
+    "purchase_order_reference": "PO-2026-76122"
+  },
+  "contract": null
+}

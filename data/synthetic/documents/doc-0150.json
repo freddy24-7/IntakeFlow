@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0150",
+  "filename": "doc-0150.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/06292",
+    "invoice_date": "2026-04-14",
+    "due_date": "2026-05-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "34",
+        "unit_price": "4.37",
+        "vat_rate": "21",
+        "line_total": "148.58"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "4",
+        "unit_price": "130.66",
+        "vat_rate": "21",
+        "line_total": "522.64"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "16",
+        "unit_price": "54.94",
+        "vat_rate": "21",
+        "line_total": "879.04"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "30",
+        "unit_price": "70.92",
+        "vat_rate": "21",
+        "line_total": "2127.60"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "30",
+        "unit_price": "109.68",
+        "vat_rate": "21",
+        "line_total": "3290.40"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "34.5",
+        "unit_price": "130.78",
+        "vat_rate": "21",
+        "line_total": "4511.91"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "39",
+        "unit_price": "9.24",
+        "vat_rate": "21",
+        "line_total": "360.36"
+      }
+    ],
+    "subtotal": "11840.53",
+    "vat": "2486.51",
+    "total": "14327.04",
+    "purchase_order_reference": "PO-2026-64799"
+  },
+  "contract": null
+}

@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0093",
+  "filename": "doc-0093.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078344",
+    "invoice_number": "RN2604498",
+    "invoice_date": "2026-07-26",
+    "due_date": "2026-08-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "32",
+        "unit_price": "1150.24",
+        "vat_rate": "0",
+        "line_total": "36807.68"
+      }
+    ],
+    "subtotal": "36807.68",
+    "vat": "0.00",
+    "total": "36807.68",
+    "purchase_order_reference": "PO-2026-01061"
+  },
+  "contract": null
+}

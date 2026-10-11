@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0159",
+  "filename": "doc-0159.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "CINV-007405",
+    "invoice_date": "2026-04-21",
+    "due_date": "2026-05-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "6",
+        "unit_price": "11.22",
+        "vat_rate": "21",
+        "line_total": "67.32"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "20",
+        "unit_price": "127.69",
+        "vat_rate": "21",
+        "line_total": "2553.80"
+      }
+    ],
+    "subtotal": "2621.12",
+    "vat": "550.44",
+    "total": "3171.56",
+    "purchase_order_reference": "PO-2026-40410"
+  },
+  "contract": null
+}

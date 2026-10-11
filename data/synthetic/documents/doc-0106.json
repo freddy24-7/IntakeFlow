@@ -1,0 +1,55 @@
+{
+  "doc_id": "doc-0106",
+  "filename": "doc-0106.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po",
+    "scanned"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "C00008675",
+    "invoice_date": "2026-09-03",
+    "due_date": "2026-10-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "16",
+        "unit_price": "5.36",
+        "vat_rate": "21",
+        "line_total": "85.76"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "16",
+        "unit_price": "948.68",
+        "vat_rate": "21",
+        "line_total": "15178.88"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "35",
+        "unit_price": "126.87",
+        "vat_rate": "21",
+        "line_total": "4440.45"
+      }
+    ],
+    "subtotal": "19705.09",
+    "vat": "4138.07",
+    "total": "23843.16",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

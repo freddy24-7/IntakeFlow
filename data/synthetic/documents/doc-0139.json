@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0139",
+  "filename": "doc-0139.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Driessen & Kronenberg Advies V.O.F.",
+    "supplier_vat_number": "NL710026086B30",
+    "iban": "NL88DELT3026113008",
+    "invoice_number": "2026/00610",
+    "invoice_date": "2026-01-28",
+    "due_date": "2026-03-29",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "35",
+        "unit_price": "94.33",
+        "vat_rate": "21",
+        "line_total": "3301.55"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "38",
+        "unit_price": "2345.81",
+        "vat_rate": "0",
+        "line_total": "89140.78"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "10",
+        "unit_price": "4.12",
+        "vat_rate": "21",
+        "line_total": "41.20"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "7",
+        "unit_price": "153.29",
+        "vat_rate": "21",
+        "line_total": "1073.03"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "32",
+        "unit_price": "1106.94",
+        "vat_rate": "21",
+        "line_total": "35422.08"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "27",
+        "unit_price": "11.86",
+        "vat_rate": "9",
+        "line_total": "320.22"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "3",
+        "unit_price": "1221.32",
+        "vat_rate": "21",
+        "line_total": "3663.96"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "14",
+        "unit_price": "440.57",
+        "vat_rate": "21",
+        "line_total": "6167.98"
+      }
+    ],
+    "subtotal": "139130.80",
+    "vat": "10459.48",
+    "total": "149590.28",
+    "purchase_order_reference": "PO-2026-39893"
+  },
+  "contract": null
+}

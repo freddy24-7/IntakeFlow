@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0097",
+  "filename": "doc-0097.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078144",
+    "invoice_number": "RN2604372",
+    "invoice_date": "2026-05-12",
+    "due_date": "2026-06-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "31",
+        "unit_price": "591.54",
+        "vat_rate": "21",
+        "line_total": "18337.74"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "13",
+        "unit_price": "330.83",
+        "vat_rate": "21",
+        "line_total": "4300.79"
+      }
+    ],
+    "subtotal": "22638.53",
+    "vat": "4754.09",
+    "total": "27392.62",
+    "purchase_order_reference": "PO-2026-20866"
+  },
+  "contract": null
+}

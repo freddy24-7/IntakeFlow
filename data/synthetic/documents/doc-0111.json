@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0111",
+  "filename": "doc-0111.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Post Intern Transport B.V.",
+    "supplier_vat_number": "NL169820594B59",
+    "iban": "NL44HAVN4774080233",
+    "invoice_number": "00000267",
+    "invoice_date": "2026-05-14",
+    "due_date": "2026-05-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "7",
+        "unit_price": "216.4",
+        "vat_rate": "21",
+        "line_total": "1514.80"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "38",
+        "unit_price": "5.76",
+        "vat_rate": "21",
+        "line_total": "218.88"
+      }
+    ],
+    "subtotal": "1733.68",
+    "vat": "364.07",
+    "total": "2097.75",
+    "purchase_order_reference": "PO-2026-46805"
+  },
+  "contract": null
+}

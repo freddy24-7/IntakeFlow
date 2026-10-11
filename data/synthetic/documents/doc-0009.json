@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0009",
+  "filename": "doc-0009.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "C00001732",
+    "invoice_date": "2026-03-25",
+    "due_date": "2026-04-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "27",
+        "unit_price": "8.23",
+        "vat_rate": "21",
+        "line_total": "222.21"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "35",
+        "unit_price": "384.8",
+        "vat_rate": "21",
+        "line_total": "13468.00"
+      }
+    ],
+    "subtotal": "13690.21",
+    "vat": "2874.94",
+    "total": "16565.15",
+    "purchase_order_reference": "PO-2026-21544"
+  },
+  "contract": null
+}

@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0035",
+  "filename": "doc-0035.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "C00003595",
+    "invoice_date": "2026-02-02",
+    "due_date": "2026-02-16",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "12",
+        "unit_price": "128.75",
+        "vat_rate": "21",
+        "line_total": "1545.00"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "38",
+        "unit_price": "1083.62",
+        "vat_rate": "21",
+        "line_total": "41177.56"
+      }
+    ],
+    "subtotal": "42722.56",
+    "vat": "8971.74",
+    "total": "51694.30",
+    "purchase_order_reference": "PO-2026-75457"
+  },
+  "contract": null
+}

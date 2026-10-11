@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0121",
+  "filename": "doc-0121.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-003506",
+    "invoice_date": "2026-03-24",
+    "due_date": "2026-04-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "27",
+        "unit_price": "86.9",
+        "vat_rate": "21",
+        "line_total": "2346.30"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "38",
+        "unit_price": "605.81",
+        "vat_rate": "21",
+        "line_total": "23020.78"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "2",
+        "unit_price": "17.77",
+        "vat_rate": "9",
+        "line_total": "35.54"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "37",
+        "unit_price": "10.89",
+        "vat_rate": "21",
+        "line_total": "402.93"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "31",
+        "unit_price": "415.45",
+        "vat_rate": "0",
+        "line_total": "12878.95"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "23",
+        "unit_price": "69.46",
+        "vat_rate": "21",
+        "line_total": "1597.58"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "25",
+        "unit_price": "129.91",
+        "vat_rate": "21",
+        "line_total": "3247.75"
+      }
+    ],
+    "subtotal": "43529.83",
+    "vat": "6432.42",
+    "total": "49962.25",
+    "purchase_order_reference": "PO-2026-08418"
+  },
+  "contract": null
+}

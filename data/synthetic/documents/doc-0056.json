@@ -1,0 +1,52 @@
+{
+  "doc_id": "doc-0056",
+  "filename": "doc-0056.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice van Brenen",
+    "supplier_vat_number": "NL454340903B28",
+    "iban": "NL06DELT9728344131",
+    "invoice_number": "INV-005645",
+    "invoice_date": "2026-09-26",
+    "due_date": "2026-10-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "4",
+        "unit_price": "153.1",
+        "vat_rate": "21",
+        "line_total": "612.40"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "8",
+        "unit_price": "97.44",
+        "vat_rate": "21",
+        "line_total": "779.52"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "10.5",
+        "unit_price": "109.91",
+        "vat_rate": "21",
+        "line_total": "1154.06"
+      }
+    ],
+    "subtotal": "2545.98",
+    "vat": "534.66",
+    "total": "3080.64",
+    "purchase_order_reference": "PO-2026-16821"
+  },
+  "contract": null
+}

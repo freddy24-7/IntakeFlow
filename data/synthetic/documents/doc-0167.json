@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0167",
+  "filename": "doc-0167.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Post Intern Transport B.V.",
+    "supplier_vat_number": "NL169820594B59",
+    "iban": "NL44HAVN4774080233",
+    "invoice_number": "00001258",
+    "invoice_date": "2026-05-31",
+    "due_date": "2026-06-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "25",
+        "unit_price": "1612.97",
+        "vat_rate": "0",
+        "line_total": "40324.25"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "38",
+        "unit_price": "130.4",
+        "vat_rate": "21",
+        "line_total": "4955.20"
+      }
+    ],
+    "subtotal": "45279.45",
+    "vat": "1040.59",
+    "total": "46320.04",
+    "purchase_order_reference": "PO-2026-84497"
+  },
+  "contract": null
+}

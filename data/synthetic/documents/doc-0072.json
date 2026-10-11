@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0072",
+  "filename": "doc-0072.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice van Brenen",
+    "supplier_vat_number": "NL454340903B28",
+    "iban": "NL06DELT9728344131",
+    "invoice_number": "INV-003883",
+    "invoice_date": "2026-03-06",
+    "due_date": "2026-04-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "14",
+        "unit_price": "555.6",
+        "vat_rate": "0",
+        "line_total": "7778.40"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "37",
+        "unit_price": "83.73",
+        "vat_rate": "21",
+        "line_total": "3098.01"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "35",
+        "unit_price": "986.84",
+        "vat_rate": "21",
+        "line_total": "34539.40"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "39",
+        "unit_price": "129.13",
+        "vat_rate": "21",
+        "line_total": "5036.07"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "11",
+        "unit_price": "121.05",
+        "vat_rate": "21",
+        "line_total": "1331.55"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "19",
+        "unit_price": "7.48",
+        "vat_rate": "9",
+        "line_total": "142.12"
+      }
+    ],
+    "subtotal": "51925.55",
+    "vat": "9253.85",
+    "total": "61179.40",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

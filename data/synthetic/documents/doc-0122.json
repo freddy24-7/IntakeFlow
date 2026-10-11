@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0122",
+  "filename": "doc-0122.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": 2.56,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "00005281",
+    "invoice_date": "2026-05-22",
+    "due_date": "2026-06-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "16",
+        "unit_price": "17.51",
+        "vat_rate": "21",
+        "line_total": "280.16"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "37",
+        "unit_price": "10.88",
+        "vat_rate": "21",
+        "line_total": "402.56"
+      }
+    ],
+    "subtotal": "682.72",
+    "vat": "143.37",
+    "total": "826.09",
+    "purchase_order_reference": "PO-2026-32177"
+  },
+  "contract": null
+}

@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0076",
+  "filename": "doc-0076.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00001802",
+    "invoice_date": "2026-04-04",
+    "due_date": "2026-06-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "1",
+        "unit_price": "114.34",
+        "vat_rate": "21",
+        "line_total": "114.34"
+      }
+    ],
+    "subtotal": "114.34",
+    "vat": "24.01",
+    "total": "138.35",
+    "purchase_order_reference": "PO-2026-86646"
+  },
+  "contract": null
+}

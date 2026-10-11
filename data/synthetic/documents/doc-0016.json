@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0016",
+  "filename": "doc-0016.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "C2026/05162",
+    "invoice_date": "2026-05-18",
+    "due_date": "2026-07-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "18",
+        "unit_price": "303.09",
+        "vat_rate": "21",
+        "line_total": "5455.62"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "5",
+        "unit_price": "931.39",
+        "vat_rate": "0",
+        "line_total": "4656.95"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "9",
+        "unit_price": "12.98",
+        "vat_rate": "21",
+        "line_total": "116.82"
+      }
+    ],
+    "subtotal": "10229.39",
+    "vat": "1170.21",
+    "total": "11399.60",
+    "purchase_order_reference": "PO-2026-51505"
+  },
+  "contract": null
+}

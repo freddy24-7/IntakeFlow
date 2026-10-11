@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0176",
+  "filename": "doc-0176.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/07196",
+    "invoice_date": "2026-06-01",
+    "due_date": "2026-07-31",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "3.5",
+        "unit_price": "36.84",
+        "vat_rate": "21",
+        "line_total": "128.94"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "21",
+        "unit_price": "1091.29",
+        "vat_rate": "21",
+        "line_total": "22917.09"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "17",
+        "unit_price": "8.52",
+        "vat_rate": "21",
+        "line_total": "144.84"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "6.5",
+        "unit_price": "103.75",
+        "vat_rate": "21",
+        "line_total": "674.38"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "37",
+        "unit_price": "133.59",
+        "vat_rate": "21",
+        "line_total": "4942.83"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "18",
+        "unit_price": "4.95",
+        "vat_rate": "21",
+        "line_total": "89.10"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "3",
+        "unit_price": "237.4",
+        "vat_rate": "21",
+        "line_total": "712.20"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "31",
+        "unit_price": "1760.43",
+        "vat_rate": "0",
+        "line_total": "54573.33"
+      }
+    ],
+    "subtotal": "84182.71",
+    "vat": "6217.97",
+    "total": "90400.68",
+    "purchase_order_reference": "PO-2026-16299"
+  },
+  "contract": null
+}

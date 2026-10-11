@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0165",
+  "filename": "doc-0165.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Schevinghuizen Logistiek B.V.",
+    "supplier_vat_number": "NL923026480B43",
+    "iban": "NL88NZLB0983297492",
+    "invoice_number": "2026/00745",
+    "invoice_date": "2026-06-11",
+    "due_date": "2026-07-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "9",
+        "unit_price": "1069.82",
+        "vat_rate": "0",
+        "line_total": "9628.38"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "19",
+        "unit_price": "287.51",
+        "vat_rate": "21",
+        "line_total": "5462.69"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "8",
+        "unit_price": "45.63",
+        "vat_rate": "21",
+        "line_total": "365.04"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "32",
+        "unit_price": "156.11",
+        "vat_rate": "21",
+        "line_total": "4995.52"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "12",
+        "unit_price": "30.64",
+        "vat_rate": "21",
+        "line_total": "367.68"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "25",
+        "unit_price": "103.62",
+        "vat_rate": "21",
+        "line_total": "2590.50"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "15",
+        "unit_price": "955.7",
+        "vat_rate": "21",
+        "line_total": "14335.50"
+      }
+    ],
+    "subtotal": "37745.31",
+    "vat": "5904.56",
+    "total": "43689.66",
+    "purchase_order_reference": "PO-2026-28903"
+  },
+  "contract": null
+}

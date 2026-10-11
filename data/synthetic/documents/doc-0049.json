@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0049",
+  "filename": "doc-0049.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/04090",
+    "invoice_date": "2026-05-27",
+    "due_date": "2026-06-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "32",
+        "unit_price": "1607.23",
+        "vat_rate": "21",
+        "line_total": "51431.36"
+      }
+    ],
+    "subtotal": "51431.36",
+    "vat": "10800.59",
+    "total": "62231.95",
+    "purchase_order_reference": "PO-2026-14869"
+  },
+  "contract": null
+}

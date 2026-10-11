@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0034",
+  "filename": "doc-0034.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "CINV-000803",
+    "invoice_date": "2026-09-24",
+    "due_date": "2026-10-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "2",
+        "unit_price": "16.28",
+        "vat_rate": "21",
+        "line_total": "32.56"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "29",
+        "unit_price": "1707.39",
+        "vat_rate": "21",
+        "line_total": "49514.31"
+      }
+    ],
+    "subtotal": "49546.87",
+    "vat": "10404.84",
+    "total": "59951.71",
+    "purchase_order_reference": "PO-2026-88759"
+  },
+  "contract": null
+}

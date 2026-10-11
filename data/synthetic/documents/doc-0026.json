@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0026",
+  "filename": "doc-0026.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/01211",
+    "invoice_date": "2026-03-26",
+    "due_date": "2026-05-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "20",
+        "unit_price": "7.01",
+        "vat_rate": "9",
+        "line_total": "140.20"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "25.5",
+        "unit_price": "37.89",
+        "vat_rate": "21",
+        "line_total": "966.20"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "7",
+        "unit_price": "74.43",
+        "vat_rate": "21",
+        "line_total": "521.01"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "25",
+        "unit_price": "15.35",
+        "vat_rate": "21",
+        "line_total": "383.75"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "37",
+        "unit_price": "10.02",
+        "vat_rate": "21",
+        "line_total": "370.74"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "19",
+        "unit_price": "9.22",
+        "vat_rate": "9",
+        "line_total": "175.18"
+      }
+    ],
+    "subtotal": "2557.08",
+    "vat": "499.14",
+    "total": "3056.22",
+    "purchase_order_reference": "PO-2026-57898"
+  },
+  "contract": null
+}

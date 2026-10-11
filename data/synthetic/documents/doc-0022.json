@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0022",
+  "filename": "doc-0022.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2603614",
+    "invoice_date": "2026-01-20",
+    "due_date": "2026-02-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "15",
+        "unit_price": "13.91",
+        "vat_rate": "21",
+        "line_total": "208.65"
+      }
+    ],
+    "subtotal": "208.65",
+    "vat": "43.82",
+    "total": "252.47",
+    "purchase_order_reference": "PO-2026-38284"
+  },
+  "contract": null
+}

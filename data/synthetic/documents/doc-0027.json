@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0027",
+  "filename": "doc-0027.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dam & de Vroege Techniek",
+    "supplier_vat_number": "NL738908273B72",
+    "iban": "NL50WADB5924716023",
+    "invoice_number": "INV-001277",
+    "invoice_date": "2026-09-06",
+    "due_date": "2026-09-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "22.5",
+        "unit_price": "94.87",
+        "vat_rate": "21",
+        "line_total": "2134.58"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "28",
+        "unit_price": "8.35",
+        "vat_rate": "21",
+        "line_total": "233.80"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "31",
+        "unit_price": "50.8",
+        "vat_rate": "21",
+        "line_total": "1574.80"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "15",
+        "unit_price": "12.92",
+        "vat_rate": "9",
+        "line_total": "193.80"
+      }
+    ],
+    "subtotal": "4136.98",
+    "vat": "845.51",
+    "total": "4982.49",
+    "purchase_order_reference": "PO-2026-17393"
+  },
+  "contract": null
+}

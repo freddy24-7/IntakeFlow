@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0074",
+  "filename": "doc-0074.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00005599",
+    "invoice_date": "2026-04-24",
+    "due_date": "2026-05-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "19",
+        "unit_price": "2.51",
+        "vat_rate": "21",
+        "line_total": "47.69"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "33",
+        "unit_price": "148.15",
+        "vat_rate": "21",
+        "line_total": "4888.95"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "35",
+        "unit_price": "10.27",
+        "vat_rate": "9",
+        "line_total": "359.45"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "34",
+        "unit_price": "6.38",
+        "vat_rate": "21",
+        "line_total": "216.92"
+      }
+    ],
+    "subtotal": "5513.01",
+    "vat": "1114.60",
+    "total": "6627.61",
+    "purchase_order_reference": "PO-2026-63736"
+  },
+  "contract": null
+}

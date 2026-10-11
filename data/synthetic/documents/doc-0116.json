@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0116",
+  "filename": "doc-0116.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2605433",
+    "invoice_date": "2026-07-28",
+    "due_date": "2026-08-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "17",
+        "unit_price": "63.18",
+        "vat_rate": "21",
+        "line_total": "1074.06"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "33",
+        "unit_price": "121.18",
+        "vat_rate": "21",
+        "line_total": "3998.94"
+      }
+    ],
+    "subtotal": "5073.00",
+    "vat": "1065.33",
+    "total": "6138.33",
+    "purchase_order_reference": "PO-2026-56420"
+  },
+  "contract": null
+}

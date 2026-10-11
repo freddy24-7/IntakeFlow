@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0060",
+  "filename": "doc-0060.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-009407",
+    "invoice_date": "2026-02-19",
+    "due_date": "2026-03-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "27",
+        "unit_price": "710.81",
+        "vat_rate": "21",
+        "line_total": "19191.87"
+      }
+    ],
+    "subtotal": "19191.87",
+    "vat": "4030.29",
+    "total": "23222.16",
+    "purchase_order_reference": "PO-2026-30437"
+  },
+  "contract": null
+}

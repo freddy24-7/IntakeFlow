@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0001",
+  "filename": "doc-0001.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Coret-Coredo",
+    "supplier_vat_number": "NL842478695B61",
+    "iban": "NL77DELT6769777475",
+    "invoice_number": "F2026-0925",
+    "invoice_date": "2026-04-26",
+    "due_date": "2026-05-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "20",
+        "unit_price": "2.73",
+        "vat_rate": "21",
+        "line_total": "54.60"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "34",
+        "unit_price": "7.13",
+        "vat_rate": "9",
+        "line_total": "242.42"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "27",
+        "unit_price": "346.93",
+        "vat_rate": "21",
+        "line_total": "9367.11"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "18",
+        "unit_price": "9.62",
+        "vat_rate": "9",
+        "line_total": "173.16"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "36",
+        "unit_price": "1951.01",
+        "vat_rate": "0",
+        "line_total": "70236.36"
+      }
+    ],
+    "subtotal": "80073.65",
+    "vat": "2015.96",
+    "total": "82089.61",
+    "purchase_order_reference": "PO-2026-18367"
+  },
+  "contract": null
+}

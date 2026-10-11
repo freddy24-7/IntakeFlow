@@ -1,0 +1,76 @@
+{
+  "doc_id": "doc-0078",
+  "filename": "doc-0078.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": 3.63,
+  "hard_cases": [
+    "due_before_invoice",
+    "scanned_skewed"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00008735",
+    "invoice_date": "2026-08-28",
+    "due_date": "2026-08-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "20",
+        "unit_price": "12.6",
+        "vat_rate": "21",
+        "line_total": "252.00"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "20",
+        "unit_price": "309.4",
+        "vat_rate": "21",
+        "line_total": "6188.00"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "14",
+        "unit_price": "175.23",
+        "vat_rate": "21",
+        "line_total": "2453.22"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "21",
+        "unit_price": "4.45",
+        "vat_rate": "21",
+        "line_total": "93.45"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "23",
+        "unit_price": "1869.28",
+        "vat_rate": "0",
+        "line_total": "42993.44"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "18",
+        "unit_price": "7.47",
+        "vat_rate": "9",
+        "line_total": "134.46"
+      }
+    ],
+    "subtotal": "52114.57",
+    "vat": "1899.30",
+    "total": "54013.87",
+    "purchase_order_reference": "PO-2026-44869"
+  },
+  "contract": null
+}

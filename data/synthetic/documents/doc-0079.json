@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0079",
+  "filename": "doc-0079.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00008495",
+    "invoice_date": "2026-04-11",
+    "due_date": "2026-05-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "32",
+        "unit_price": "8.24",
+        "vat_rate": "21",
+        "line_total": "263.68"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "2",
+        "unit_price": "386.44",
+        "vat_rate": "21",
+        "line_total": "772.88"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "39",
+        "unit_price": "93.41",
+        "vat_rate": "21",
+        "line_total": "3642.99"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "11",
+        "unit_price": "14.36",
+        "vat_rate": "21",
+        "line_total": "157.96"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "36",
+        "unit_price": "86.12",
+        "vat_rate": "21",
+        "line_total": "3100.32"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "36",
+        "unit_price": "1469.52",
+        "vat_rate": "0",
+        "line_total": "52902.72"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "6",
+        "unit_price": "267.25",
+        "vat_rate": "21",
+        "line_total": "1603.50"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "8",
+        "unit_price": "4.36",
+        "vat_rate": "21",
+        "line_total": "34.88"
+      }
+    ],
+    "subtotal": "62478.93",
+    "vat": "2011.00",
+    "total": "64489.93",
+    "purchase_order_reference": "PO-2026-47419"
+  },
+  "contract": null
+}

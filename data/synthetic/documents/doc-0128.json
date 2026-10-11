@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0128",
+  "filename": "doc-0128.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL60276444B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00005569",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-10-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "29",
+        "unit_price": "89.12",
+        "vat_rate": "21",
+        "line_total": "2584.48"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "31.5",
+        "unit_price": "35.06",
+        "vat_rate": "21",
+        "line_total": "1104.39"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "22",
+        "unit_price": "8.82",
+        "vat_rate": "9",
+        "line_total": "194.04"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "35",
+        "unit_price": "367.2",
+        "vat_rate": "21",
+        "line_total": "12852.00"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "30",
+        "unit_price": "111.36",
+        "vat_rate": "21",
+        "line_total": "3340.80"
+      }
+    ],
+    "subtotal": "20075.71",
+    "vat": "4192.61",
+    "total": "24268.32",
+    "purchase_order_reference": "PO-2026-66550"
+  },
+  "contract": null
+}

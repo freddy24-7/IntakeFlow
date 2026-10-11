@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0010",
+  "filename": "doc-0010.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2605365",
+    "invoice_date": "2026-03-27",
+    "due_date": "2026-05-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "20",
+        "unit_price": "177.97",
+        "vat_rate": "21",
+        "line_total": "3559.40"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "2",
+        "unit_price": "486.05",
+        "vat_rate": "21",
+        "line_total": "972.10"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "26",
+        "unit_price": "451.24",
+        "vat_rate": "21",
+        "line_total": "11732.24"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "30",
+        "unit_price": "104.72",
+        "vat_rate": "21",
+        "line_total": "3141.60"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "14",
+        "unit_price": "12.97",
+        "vat_rate": "21",
+        "line_total": "181.58"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "23",
+        "unit_price": "2.24",
+        "vat_rate": "21",
+        "line_total": "51.52"
+      }
+    ],
+    "subtotal": "19638.44",
+    "vat": "4124.07",
+    "total": "23762.51",
+    "purchase_order_reference": "PO-2026-75718"
+  },
+  "contract": null
+}

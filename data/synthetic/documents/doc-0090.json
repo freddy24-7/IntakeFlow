@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0090",
+  "filename": "doc-0090.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/01944",
+    "invoice_date": "2026-07-02",
+    "due_date": "2026-08-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "35.5",
+        "unit_price": "119.74",
+        "vat_rate": "21",
+        "line_total": "4250.77"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "35",
+        "unit_price": "116.07",
+        "vat_rate": "21",
+        "line_total": "4062.45"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "15",
+        "unit_price": "3.26",
+        "vat_rate": "21",
+        "line_total": "48.90"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "30",
+        "unit_price": "73.35",
+        "vat_rate": "21",
+        "line_total": "2200.50"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "10",
+        "unit_price": "1122.59",
+        "vat_rate": "0",
+        "line_total": "11225.90"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "13",
+        "unit_price": "10.79",
+        "vat_rate": "9",
+        "line_total": "140.27"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "8",
+        "unit_price": "9.32",
+        "vat_rate": "9",
+        "line_total": "74.56"
+      }
+    ],
+    "subtotal": "22003.35",
+    "vat": "2237.48",
+    "total": "24240.83",
+    "purchase_order_reference": "PO-2026-23392"
+  },
+  "contract": null
+}

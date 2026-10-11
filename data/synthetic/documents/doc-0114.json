@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0114",
+  "filename": "doc-0114.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-004289",
+    "invoice_date": "2026-03-06",
+    "due_date": "2026-04-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "29",
+        "unit_price": "71.57",
+        "vat_rate": "21",
+        "line_total": "2075.53"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "29",
+        "unit_price": "29.79",
+        "vat_rate": "21",
+        "line_total": "863.91"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "21",
+        "unit_price": "347.68",
+        "vat_rate": "21",
+        "line_total": "7301.28"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "5",
+        "unit_price": "1841.78",
+        "vat_rate": "0",
+        "line_total": "9208.90"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "35",
+        "unit_price": "83.78",
+        "vat_rate": "21",
+        "line_total": "2932.30"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "20",
+        "unit_price": "7.61",
+        "vat_rate": "21",
+        "line_total": "152.20"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "12",
+        "unit_price": "84.61",
+        "vat_rate": "21",
+        "line_total": "1015.32"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "33",
+        "unit_price": "253.47",
+        "vat_rate": "21",
+        "line_total": "8364.51"
+      }
+    ],
+    "subtotal": "31913.95",
+    "vat": "4768.06",
+    "total": "36682.01",
+    "purchase_order_reference": "PO-2026-34116"
+  },
+  "contract": null
+}

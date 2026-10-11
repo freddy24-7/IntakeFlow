@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0187",
+  "filename": "doc-0187.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/03000",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-05-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "39",
+        "unit_price": "96.29",
+        "vat_rate": "21",
+        "line_total": "3755.31"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "37",
+        "unit_price": "802.93",
+        "vat_rate": "21",
+        "line_total": "29708.41"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "28",
+        "unit_price": "70.21",
+        "vat_rate": "21",
+        "line_total": "1965.88"
+      }
+    ],
+    "subtotal": "35429.60",
+    "vat": "7440.22",
+    "total": "42869.82",
+    "purchase_order_reference": "PO-2026-48929"
+  },
+  "contract": null
+}

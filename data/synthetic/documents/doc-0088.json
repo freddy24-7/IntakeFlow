@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0088",
+  "filename": "doc-0088.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Roosenboom & van de Greef",
+    "supplier_vat_number": "NL419212169B34",
+    "iban": "NL21NZLB5002078344",
+    "invoice_number": "RN2607565",
+    "invoice_date": "2026-08-18",
+    "due_date": "2026-09-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "9.5",
+        "unit_price": "105.48",
+        "vat_rate": "21",
+        "line_total": "1002.06"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "4",
+        "unit_price": "2080.81",
+        "vat_rate": "0",
+        "line_total": "8323.24"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "31",
+        "unit_price": "85.4",
+        "vat_rate": "21",
+        "line_total": "2647.40"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "36",
+        "unit_price": "518.93",
+        "vat_rate": "21",
+        "line_total": "18681.48"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "34",
+        "unit_price": "55.85",
+        "vat_rate": "21",
+        "line_total": "1898.90"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "19",
+        "unit_price": "409.93",
+        "vat_rate": "21",
+        "line_total": "7788.67"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "11",
+        "unit_price": "33.58",
+        "vat_rate": "21",
+        "line_total": "369.38"
+      }
+    ],
+    "subtotal": "40711.13",
+    "vat": "6801.46",
+    "total": "47512.59",
+    "purchase_order_reference": "PO-2026-36932"
+  },
+  "contract": null
+}

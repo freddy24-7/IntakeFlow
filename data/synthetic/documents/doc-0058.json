@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0058",
+  "filename": "doc-0058.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00004522",
+    "invoice_date": "2026-08-15",
+    "due_date": "2026-09-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "32",
+        "unit_price": "248.15",
+        "vat_rate": "21",
+        "line_total": "7940.80"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "30",
+        "unit_price": "7.09",
+        "vat_rate": "21",
+        "line_total": "212.70"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "9",
+        "unit_price": "139.91",
+        "vat_rate": "21",
+        "line_total": "1259.19"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "1",
+        "unit_price": "16.1",
+        "vat_rate": "21",
+        "line_total": "16.10"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "22",
+        "unit_price": "5.17",
+        "vat_rate": "21",
+        "line_total": "113.74"
+      }
+    ],
+    "subtotal": "9542.53",
+    "vat": "2003.93",
+    "total": "11546.46",
+    "purchase_order_reference": "PO-2026-55194"
+  },
+  "contract": null
+}

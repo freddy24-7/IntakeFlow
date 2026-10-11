@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0100",
+  "filename": "doc-0100.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Willems",
+    "supplier_vat_number": "NL084564737B11",
+    "iban": "NL44DELT0248786714",
+    "invoice_number": "00008000",
+    "invoice_date": "2026-04-27",
+    "due_date": "2026-06-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "26",
+        "unit_price": "68.52",
+        "vat_rate": "21",
+        "line_total": "1781.52"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "30",
+        "unit_price": "203.64",
+        "vat_rate": "21",
+        "line_total": "6109.20"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "40",
+        "unit_price": "88.75",
+        "vat_rate": "21",
+        "line_total": "3550.00"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "2",
+        "unit_price": "816.45",
+        "vat_rate": "21",
+        "line_total": "1632.90"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "38",
+        "unit_price": "519.87",
+        "vat_rate": "21",
+        "line_total": "19755.06"
+      }
+    ],
+    "subtotal": "32828.68",
+    "vat": "6894.02",
+    "total": "39730.41",
+    "purchase_order_reference": "PO-2026-28760"
+  },
+  "contract": null
+}

@@ -1,0 +1,73 @@
+{
+  "doc_id": "doc-0055",
+  "filename": "doc-0055.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Gerritsen Transport B.V.",
+    "supplier_vat_number": "NL298362082B20",
+    "iban": "NL90DELT7293453178",
+    "invoice_number": "F2026-1691",
+    "invoice_date": "2026-02-26",
+    "due_date": "2026-03-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "34.5",
+        "unit_price": "39.53",
+        "vat_rate": "21",
+        "line_total": "1363.79"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "1",
+        "unit_price": "134.99",
+        "vat_rate": "21",
+        "line_total": "134.99"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "11",
+        "unit_price": "876.84",
+        "vat_rate": "21",
+        "line_total": "9645.24"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "23",
+        "unit_price": "9.69",
+        "vat_rate": "9",
+        "line_total": "222.87"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "14.5",
+        "unit_price": "136.45",
+        "vat_rate": "21",
+        "line_total": "1978.53"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "10",
+        "unit_price": "314.9",
+        "vat_rate": "21",
+        "line_total": "3149.00"
+      }
+    ],
+    "subtotal": "16494.42",
+    "vat": "3437.09",
+    "total": "19931.51",
+    "purchase_order_reference": "PO-2026-41071"
+  },
+  "contract": null
+}

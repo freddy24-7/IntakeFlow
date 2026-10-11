@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0108",
+  "filename": "doc-0108.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/01776",
+    "invoice_date": "2026-07-14",
+    "due_date": "2026-08-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "40",
+        "unit_price": "265.07",
+        "vat_rate": "21",
+        "line_total": "10602.80"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "5",
+        "unit_price": "83.03",
+        "vat_rate": "21",
+        "line_total": "415.15"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "20",
+        "unit_price": "15.64",
+        "vat_rate": "9",
+        "line_total": "312.80"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "27",
+        "unit_price": "226.46",
+        "vat_rate": "21",
+        "line_total": "6114.42"
+      }
+    ],
+    "subtotal": "17445.17",
+    "vat": "3625.95",
+    "total": "21071.12",
+    "purchase_order_reference": "PO-2026-88452"
+  },
+  "contract": null
+}

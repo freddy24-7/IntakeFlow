@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0184",
+  "filename": "doc-0184.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Driessen & Kronenberg Advies V.O.F.",
+    "supplier_vat_number": "NL710026086B30",
+    "iban": "NL88DELT3026113008",
+    "invoice_number": "C2026/03268",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-10-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "25",
+        "unit_price": "6",
+        "vat_rate": "21",
+        "line_total": "150.00"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "23",
+        "unit_price": "13.91",
+        "vat_rate": "9",
+        "line_total": "319.93"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "35",
+        "unit_price": "84.7",
+        "vat_rate": "21",
+        "line_total": "2964.50"
+      }
+    ],
+    "subtotal": "3434.43",
+    "vat": "682.84",
+    "total": "4117.27",
+    "purchase_order_reference": "PO-2026-84233"
+  },
+  "contract": null
+}

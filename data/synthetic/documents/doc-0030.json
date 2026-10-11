@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0030",
+  "filename": "doc-0030.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/00026",
+    "invoice_date": "2026-08-12",
+    "due_date": "2026-10-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "24",
+        "unit_price": "2.34",
+        "vat_rate": "21",
+        "line_total": "56.16"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "34",
+        "unit_price": "8.78",
+        "vat_rate": "9",
+        "line_total": "298.52"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "33",
+        "unit_price": "96.58",
+        "vat_rate": "21",
+        "line_total": "3187.14"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "36",
+        "unit_price": "303.3",
+        "vat_rate": "21",
+        "line_total": "10918.80"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "25",
+        "unit_price": "10.81",
+        "vat_rate": "21",
+        "line_total": "270.25"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "3",
+        "unit_price": "15.92",
+        "vat_rate": "21",
+        "line_total": "47.76"
+      }
+    ],
+    "subtotal": "14778.63",
+    "vat": "3067.69",
+    "total": "17846.32",
+    "purchase_order_reference": "PO-2026-80584"
+  },
+  "contract": null
+}

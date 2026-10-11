@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0036",
+  "filename": "doc-0036.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00007480",
+    "invoice_date": "2026-08-18",
+    "due_date": "2026-09-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": "24",
+        "unit_price": "97.04",
+        "vat_rate": "21",
+        "line_total": "2328.96"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "6",
+        "unit_price": "115.46",
+        "vat_rate": "21",
+        "line_total": "692.76"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "11.5",
+        "unit_price": "29.06",
+        "vat_rate": "21",
+        "line_total": "334.19"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "26",
+        "unit_price": "1050.87",
+        "vat_rate": "21",
+        "line_total": "27322.62"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "15",
+        "unit_price": "16.79",
+        "vat_rate": "21",
+        "line_total": "251.85"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "6",
+        "unit_price": "410.58",
+        "vat_rate": "21",
+        "line_total": "2463.48"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "7",
+        "unit_price": "150.71",
+        "vat_rate": "21",
+        "line_total": "1054.97"
+      }
+    ],
+    "subtotal": "34448.83",
+    "vat": "7234.25",
+    "total": "41683.08",
+    "purchase_order_reference": "PO-2026-00088"
+  },
+  "contract": null
+}

@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0137",
+  "filename": "doc-0137.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00006465",
+    "invoice_date": "2026-07-18",
+    "due_date": "2026-08-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "6",
+        "unit_price": "35.09",
+        "vat_rate": "21",
+        "line_total": "210.54"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "29",
+        "unit_price": "394.94",
+        "vat_rate": "21",
+        "line_total": "11453.26"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "17",
+        "unit_price": "2359.1",
+        "vat_rate": "0",
+        "line_total": "40104.70"
+      }
+    ],
+    "subtotal": "51768.50",
+    "vat": "2449.40",
+    "total": "54217.90",
+    "purchase_order_reference": "PO-2026-45237"
+  },
+  "contract": null
+}

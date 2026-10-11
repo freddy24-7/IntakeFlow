@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0197",
+  "filename": "doc-0197.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL98047244B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2608544",
+    "invoice_date": "2026-01-27",
+    "due_date": "2026-03-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "29",
+        "unit_price": "51.02",
+        "vat_rate": "21",
+        "line_total": "1479.58"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "6",
+        "unit_price": "285.54",
+        "vat_rate": "21",
+        "line_total": "1713.24"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "39",
+        "unit_price": "217.21",
+        "vat_rate": "21",
+        "line_total": "8471.19"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "5",
+        "unit_price": "465.4",
+        "vat_rate": "21",
+        "line_total": "2327.00"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "18",
+        "unit_price": "106.14",
+        "vat_rate": "21",
+        "line_total": "1910.52"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "38",
+        "unit_price": "509.37",
+        "vat_rate": "21",
+        "line_total": "19356.06"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "21",
+        "unit_price": "7.95",
+        "vat_rate": "9",
+        "line_total": "166.95"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "39",
+        "unit_price": "4.71",
+        "vat_rate": "21",
+        "line_total": "183.69"
+      }
+    ],
+    "subtotal": "35608.23",
+    "vat": "7457.70",
+    "total": "43065.93",
+    "purchase_order_reference": "PO-2026-39535"
+  },
+  "contract": null
+}

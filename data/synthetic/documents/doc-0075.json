@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0075",
+  "filename": "doc-0075.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Geenen Verpakkingen B.V.",
+    "supplier_vat_number": "NL061380746B07",
+    "iban": "NL72NZLB2328710672",
+    "invoice_number": "C00003523",
+    "invoice_date": "2026-01-25",
+    "due_date": "2026-02-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "16",
+        "unit_price": "9.64",
+        "vat_rate": "21",
+        "line_total": "154.24"
+      }
+    ],
+    "subtotal": "154.24",
+    "vat": "32.39",
+    "total": "186.63",
+    "purchase_order_reference": "PO-2026-42964"
+  },
+  "contract": null
+}

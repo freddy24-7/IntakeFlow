@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0161",
+  "filename": "doc-0161.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Amstel & Bloemendaal Advies V.O.F.",
+    "supplier_vat_number": "NL219321646B86",
+    "iban": "NL18NZLB6540301973",
+    "invoice_number": "INV-007855",
+    "invoice_date": "2026-04-26",
+    "due_date": "2026-05-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "31.5",
+        "unit_price": "32.96",
+        "vat_rate": "21",
+        "line_total": "1038.24"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "39",
+        "unit_price": "61.75",
+        "vat_rate": "21",
+        "line_total": "2408.25"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "26",
+        "unit_price": "93.42",
+        "vat_rate": "21",
+        "line_total": "2428.92"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "36",
+        "unit_price": "12.29",
+        "vat_rate": "9",
+        "line_total": "442.44"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "19",
+        "unit_price": "91.18",
+        "vat_rate": "21",
+        "line_total": "1732.42"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "30",
+        "unit_price": "177.43",
+        "vat_rate": "21",
+        "line_total": "5322.90"
+      }
+    ],
+    "subtotal": "13373.17",
+    "vat": "2755.27",
+    "total": "16128.44",
+    "purchase_order_reference": "PO-2026-27379"
+  },
+  "contract": null
+}

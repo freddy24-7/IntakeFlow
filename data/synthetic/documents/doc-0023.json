@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0023",
+  "filename": "doc-0023.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/03793",
+    "invoice_date": "2026-01-21",
+    "due_date": "2026-03-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "28",
+        "unit_price": "8.17",
+        "vat_rate": "21",
+        "line_total": "228.76"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "35",
+        "unit_price": "8.3",
+        "vat_rate": "21",
+        "line_total": "290.50"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "10",
+        "unit_price": "3.36",
+        "vat_rate": "21",
+        "line_total": "33.60"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "10",
+        "unit_price": "9.46",
+        "vat_rate": "21",
+        "line_total": "94.60"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "4",
+        "unit_price": "69.36",
+        "vat_rate": "21",
+        "line_total": "277.44"
+      }
+    ],
+    "subtotal": "924.90",
+    "vat": "194.23",
+    "total": "1119.13",
+    "purchase_order_reference": "PO-2026-37762"
+  },
+  "contract": null
+}

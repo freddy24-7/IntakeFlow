@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0091",
+  "filename": "doc-0091.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Coret-Coredo",
+    "supplier_vat_number": "NL842478695B61",
+    "iban": "NL77DELT6769777475",
+    "invoice_number": "F2026-8235",
+    "invoice_date": "2026-02-21",
+    "due_date": "2026-03-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "11",
+        "unit_price": "9.37",
+        "vat_rate": "9",
+        "line_total": "103.07"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "40",
+        "unit_price": "2289.09",
+        "vat_rate": "0",
+        "line_total": "91563.60"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "39",
+        "unit_price": "112.65",
+        "vat_rate": "21",
+        "line_total": "4393.35"
+      }
+    ],
+    "subtotal": "96060.02",
+    "vat": "931.88",
+    "total": "96991.90",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

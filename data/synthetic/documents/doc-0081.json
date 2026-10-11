@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0081",
+  "filename": "doc-0081.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00001130",
+    "invoice_date": "2026-07-29",
+    "due_date": "2026-08-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "24.5",
+        "unit_price": "32.1",
+        "vat_rate": "21",
+        "line_total": "786.45"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "19",
+        "unit_price": "519.49",
+        "vat_rate": "21",
+        "line_total": "9870.31"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "20",
+        "unit_price": "13.57",
+        "vat_rate": "21",
+        "line_total": "271.40"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "40",
+        "unit_price": "9.48",
+        "vat_rate": "21",
+        "line_total": "379.20"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "30",
+        "unit_price": "75.16",
+        "vat_rate": "21",
+        "line_total": "2254.80"
+      }
+    ],
+    "subtotal": "13562.16",
+    "vat": "2848.05",
+    "total": "16410.21",
+    "purchase_order_reference": "PO-2026-60960"
+  },
+  "contract": null
+}

@@ -1,0 +1,87 @@
+{
+  "doc_id": "doc-0071",
+  "filename": "doc-0071.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": -3.66,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00002774",
+    "invoice_date": "2026-07-04",
+    "due_date": "2026-08-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "4",
+        "unit_price": "266.73",
+        "vat_rate": "21",
+        "line_total": "1066.92"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "27",
+        "unit_price": "10.4",
+        "vat_rate": "9",
+        "line_total": "280.80"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "15",
+        "unit_price": "202.27",
+        "vat_rate": "21",
+        "line_total": "3034.05"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "10.5",
+        "unit_price": "85.74",
+        "vat_rate": "21",
+        "line_total": "900.27"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "14",
+        "unit_price": "8.58",
+        "vat_rate": "9",
+        "line_total": "120.12"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "30",
+        "unit_price": "85.57",
+        "vat_rate": "21",
+        "line_total": "2567.10"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "4",
+        "unit_price": "11.94",
+        "vat_rate": "21",
+        "line_total": "47.76"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "32",
+        "unit_price": "130.3",
+        "vat_rate": "21",
+        "line_total": "4169.60"
+      }
+    ],
+    "subtotal": "12186.62",
+    "vat": "2511.08",
+    "total": "14697.70",
+    "purchase_order_reference": "PO-2026-18344"
+  },
+  "contract": null
+}

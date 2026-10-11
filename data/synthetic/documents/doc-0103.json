@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0103",
+  "filename": "doc-0103.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2600660",
+    "invoice_date": "2026-02-09",
+    "due_date": "2026-04-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "13",
+        "unit_price": "2.1",
+        "vat_rate": "21",
+        "line_total": "27.30"
+      }
+    ],
+    "subtotal": "27.30",
+    "vat": "5.73",
+    "total": "33.03",
+    "purchase_order_reference": "PO-2026-98858"
+  },
+  "contract": null
+}

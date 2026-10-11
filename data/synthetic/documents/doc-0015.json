@@ -1,0 +1,41 @@
+{
+  "doc_id": "doc-0015",
+  "filename": "doc-0015.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch",
+    "stamp"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Spreuwel Koeltechniek B.V.",
+    "supplier_vat_number": "NL097613238B97",
+    "iban": "NL55DELT9184064900",
+    "invoice_number": "2026/00754",
+    "invoice_date": "2026-01-19",
+    "due_date": "2026-03-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "23.5",
+        "unit_price": "35.67",
+        "vat_rate": "21",
+        "line_total": "838.25"
+      }
+    ],
+    "subtotal": "838.25",
+    "vat": "176.03",
+    "total": "1014.28",
+    "purchase_order_reference": "PO-2026-42516"
+  },
+  "contract": null
+}

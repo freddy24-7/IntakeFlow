@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0008",
+  "filename": "doc-0008.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bruggeman Koeltechniek B.V.",
+    "supplier_vat_number": "NL575770529B16",
+    "iban": "NL42POLD8776552803",
+    "invoice_number": "00009174",
+    "invoice_date": "2026-07-05",
+    "due_date": "2026-08-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "27",
+        "unit_price": "2.12",
+        "vat_rate": "21",
+        "line_total": "57.24"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "12",
+        "unit_price": "1120.8",
+        "vat_rate": "21",
+        "line_total": "13449.60"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "27",
+        "unit_price": "10.1",
+        "vat_rate": "9",
+        "line_total": "272.70"
+      }
+    ],
+    "subtotal": "13779.54",
+    "vat": "2860.98",
+    "total": "16640.52",
+    "purchase_order_reference": "PO-2026-53264"
+  },
+  "contract": null
+}

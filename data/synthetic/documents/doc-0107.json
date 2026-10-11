@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0107",
+  "filename": "doc-0107.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Olst & van der Velden Advies V.O.F.",
+    "supplier_vat_number": "NL502564736B68",
+    "iban": "NL40NZLB5947530309",
+    "invoice_number": "F2026-7240",
+    "invoice_date": "2026-09-28",
+    "due_date": "2026-10-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "29",
+        "unit_price": "10.14",
+        "vat_rate": "9",
+        "line_total": "294.06"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "4",
+        "unit_price": "417.16",
+        "vat_rate": "21",
+        "line_total": "1668.64"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "9",
+        "unit_price": "11.25",
+        "vat_rate": "21",
+        "line_total": "101.25"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "27.5",
+        "unit_price": "122.42",
+        "vat_rate": "21",
+        "line_total": "3366.55"
+      }
+    ],
+    "subtotal": "5430.50",
+    "vat": "1105.12",
+    "total": "6535.62",
+    "purchase_order_reference": "PO-2026-15235"
+  },
+  "contract": null
+}

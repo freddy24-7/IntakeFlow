@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0144",
+  "filename": "doc-0144.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00006699",
+    "invoice_date": "2026-05-31",
+    "due_date": "2026-06-30",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "29",
+        "unit_price": "85.92",
+        "vat_rate": "21",
+        "line_total": "2491.68"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "25",
+        "unit_price": "103.14",
+        "vat_rate": "21",
+        "line_total": "2578.50"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "35",
+        "unit_price": "474.31",
+        "vat_rate": "21",
+        "line_total": "16600.85"
+      }
+    ],
+    "subtotal": "21671.03",
+    "vat": "4550.92",
+    "total": "26221.95",
+    "purchase_order_reference": "PO-2026-23590"
+  },
+  "contract": null
+}

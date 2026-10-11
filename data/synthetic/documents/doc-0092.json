@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0092",
+  "filename": "doc-0092.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00001754",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-05-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "22",
+        "unit_price": "12.16",
+        "vat_rate": "21",
+        "line_total": "267.52"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "17.5",
+        "unit_price": "38.35",
+        "vat_rate": "21",
+        "line_total": "671.13"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "32",
+        "unit_price": "97.28",
+        "vat_rate": "21",
+        "line_total": "3112.96"
+      }
+    ],
+    "subtotal": "4051.61",
+    "vat": "850.84",
+    "total": "4902.45",
+    "purchase_order_reference": "PO-2026-97310"
+  },
+  "contract": null
+}

@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0149",
+  "filename": "doc-0149.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939042955",
+    "invoice_number": "00006940",
+    "invoice_date": "2026-02-21",
+    "due_date": "2026-03-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "22",
+        "unit_price": "55.71",
+        "vat_rate": "21",
+        "line_total": "1225.62"
+      }
+    ],
+    "subtotal": "1225.62",
+    "vat": "257.38",
+    "total": "1483.00",
+    "purchase_order_reference": "PO-2026-36265"
+  },
+  "contract": null
+}

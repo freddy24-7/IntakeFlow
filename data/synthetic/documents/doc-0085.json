@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0085",
+  "filename": "doc-0085.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "C00004586",
+    "invoice_date": "2026-05-25",
+    "due_date": "2026-06-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Container handling 40ft",
+        "quantity": "40",
+        "unit_price": "382.89",
+        "vat_rate": "21",
+        "line_total": "15315.60"
+      }
+    ],
+    "subtotal": "15315.60",
+    "vat": "3216.28",
+    "total": "18531.88",
+    "purchase_order_reference": "PO-2026-58459"
+  },
+  "contract": null
+}

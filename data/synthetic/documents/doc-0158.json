@@ -1,0 +1,48 @@
+{
+  "doc_id": "doc-0158",
+  "filename": "doc-0158.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch",
+    "stamp"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Gerritsen Transport B.V.",
+    "supplier_vat_number": "NL298362082B20",
+    "iban": "NL90DELT7293453178",
+    "invoice_number": "F2026-0229",
+    "invoice_date": "2026-07-26",
+    "due_date": "2026-08-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "17",
+        "unit_price": "12.98",
+        "vat_rate": "21",
+        "line_total": "220.66"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "25",
+        "unit_price": "224.74",
+        "vat_rate": "21",
+        "line_total": "5618.50"
+      }
+    ],
+    "subtotal": "5839.16",
+    "vat": "1226.22",
+    "total": "7068.48",
+    "purchase_order_reference": "PO-2026-34663"
+  },
+  "contract": null
+}

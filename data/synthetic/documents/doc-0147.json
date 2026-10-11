@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0147",
+  "filename": "doc-0147.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "00001887",
+    "invoice_date": "2026-06-27",
+    "due_date": "2026-07-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Forklift rental per day",
+        "quantity": "26",
+        "unit_price": "154.28",
+        "vat_rate": "21",
+        "line_total": "4011.28"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "36",
+        "unit_price": "3.87",
+        "vat_rate": "21",
+        "line_total": "139.32"
+      }
+    ],
+    "subtotal": "4150.60",
+    "vat": "871.63",
+    "total": "5022.23",
+    "purchase_order_reference": "PO-2026-61385"
+  },
+  "contract": null
+}

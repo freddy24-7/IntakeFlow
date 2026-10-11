@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0104",
+  "filename": "doc-0104.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Goderts Verpakkingen B.V.",
+    "supplier_vat_number": "NL150519597B55",
+    "iban": "NL72DELT9406875631",
+    "invoice_number": "RN2605122",
+    "invoice_date": "2026-03-19",
+    "due_date": "2026-04-02",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "16",
+        "unit_price": "166.42",
+        "vat_rate": "21",
+        "line_total": "2662.72"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "8",
+        "unit_price": "650.58",
+        "vat_rate": "21",
+        "line_total": "5204.64"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "29",
+        "unit_price": "105.3",
+        "vat_rate": "21",
+        "line_total": "3053.70"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "10",
+        "unit_price": "653.78",
+        "vat_rate": "0",
+        "line_total": "6537.80"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "4",
+        "unit_price": "83.77",
+        "vat_rate": "21",
+        "line_total": "335.08"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "25",
+        "unit_price": "1346.11",
+        "vat_rate": "21",
+        "line_total": "33652.75"
+      }
+    ],
+    "subtotal": "51446.69",
+    "vat": "9430.87",
+    "total": "60877.56",
+    "purchase_order_reference": "PO-2026-94157"
+  },
+  "contract": null
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0077",
+  "filename": "doc-0077.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2606025",
+    "invoice_date": "2026-03-31",
+    "due_date": "2026-04-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "3",
+        "unit_price": "130.34",
+        "vat_rate": "21",
+        "line_total": "391.02"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "1",
+        "unit_price": "7.25",
+        "vat_rate": "9",
+        "line_total": "7.25"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "3",
+        "unit_price": "1636.7",
+        "vat_rate": "0",
+        "line_total": "4910.10"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "24",
+        "unit_price": "3.96",
+        "vat_rate": "21",
+        "line_total": "95.04"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "10",
+        "unit_price": "59.66",
+        "vat_rate": "21",
+        "line_total": "596.60"
+      }
+    ],
+    "subtotal": "6000.01",
+    "vat": "228.01",
+    "total": "6228.02",
+    "purchase_order_reference": "PO-2026-20618"
+  },
+  "contract": null
+}

@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0175",
+  "filename": "doc-0175.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": -2.69,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Gruson Koeltechniek B.V.",
+    "supplier_vat_number": "NL980472440B73",
+    "iban": "NL46WADB1149938334",
+    "invoice_number": "RN2605278",
+    "invoice_date": "2026-03-20",
+    "due_date": "2026-05-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "6",
+        "unit_price": "384.01",
+        "vat_rate": "21",
+        "line_total": "2304.06"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "33",
+        "unit_price": "146.42",
+        "vat_rate": "21",
+        "line_total": "4831.86"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "18",
+        "unit_price": "15.55",
+        "vat_rate": "21",
+        "line_total": "279.90"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "30",
+        "unit_price": "94.98",
+        "vat_rate": "21",
+        "line_total": "2849.40"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "21",
+        "unit_price": "1062.78",
+        "vat_rate": "21",
+        "line_total": "22318.38"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "1",
+        "unit_price": "5.96",
+        "vat_rate": "21",
+        "line_total": "5.96"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "6",
+        "unit_price": "419.51",
+        "vat_rate": "21",
+        "line_total": "2517.06"
+      }
+    ],
+    "subtotal": "35106.62",
+    "vat": "7372.39",
+    "total": "42479.01",
+    "purchase_order_reference": "PO-2026-32447"
+  },
+  "contract": null
+}

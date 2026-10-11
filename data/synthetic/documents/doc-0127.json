@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0127",
+  "filename": "doc-0127.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Tins Intern Transport B.V.",
+    "supplier_vat_number": "NL224956459B86",
+    "iban": "NL46HAVN4993561321",
+    "invoice_number": "00005287",
+    "invoice_date": "2026-03-28",
+    "due_date": "2026-04-27",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "17",
+        "unit_price": "122.16",
+        "vat_rate": "21",
+        "line_total": "2076.72"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "36",
+        "unit_price": "107.48",
+        "vat_rate": "21",
+        "line_total": "3869.28"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "9",
+        "unit_price": "40.8",
+        "vat_rate": "21",
+        "line_total": "367.20"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "20",
+        "unit_price": "12.29",
+        "vat_rate": "21",
+        "line_total": "245.80"
+      }
+    ],
+    "subtotal": "6559.00",
+    "vat": "1377.39",
+    "total": "7936.39",
+    "purchase_order_reference": "PO-2026-92973"
+  },
+  "contract": null
+}

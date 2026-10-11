@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0080",
+  "filename": "doc-0080.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Wijland & Lagerweij Techniek",
+    "supplier_vat_number": "NL602764446B69",
+    "iban": "NL15HAVN0599707677",
+    "invoice_number": "00007031",
+    "invoice_date": "2026-04-30",
+    "due_date": "2026-06-29",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "475.89",
+        "vat_rate": "0",
+        "line_total": "8566.02"
+      }
+    ],
+    "subtotal": "8566.02",
+    "vat": "0.00",
+    "total": "8566.02",
+    "purchase_order_reference": "PO-2026-73526"
+  },
+  "contract": null
+}

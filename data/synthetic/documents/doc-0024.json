@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0024",
+  "filename": "doc-0024.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2608429",
+    "invoice_date": "2026-05-21",
+    "due_date": "2026-06-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "4",
+        "unit_price": "107.71",
+        "vat_rate": "21",
+        "line_total": "430.84"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "9",
+        "unit_price": "65.87",
+        "vat_rate": "21",
+        "line_total": "592.83"
+      }
+    ],
+    "subtotal": "1023.67",
+    "vat": "214.97",
+    "total": "1238.64",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0152",
+  "filename": "doc-0152.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/04558",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-09-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "7",
+        "unit_price": "225.39",
+        "vat_rate": "21",
+        "line_total": "1577.73"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "22",
+        "unit_price": "10.21",
+        "vat_rate": "21",
+        "line_total": "224.62"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "32",
+        "unit_price": "1155.54",
+        "vat_rate": "0",
+        "line_total": "36977.28"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "26",
+        "unit_price": "223.29",
+        "vat_rate": "21",
+        "line_total": "5805.54"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "36",
+        "unit_price": "58",
+        "vat_rate": "21",
+        "line_total": "2088.00"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "30",
+        "unit_price": "480.84",
+        "vat_rate": "21",
+        "line_total": "14425.20"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "21",
+        "unit_price": "9.58",
+        "vat_rate": "21",
+        "line_total": "201.18"
+      }
+    ],
+    "subtotal": "61299.55",
+    "vat": "5107.68",
+    "total": "66407.23",
+    "purchase_order_reference": "PO-2026-23788"
+  },
+  "contract": null
+}

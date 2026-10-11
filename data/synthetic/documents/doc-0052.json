@@ -1,0 +1,15 @@
+{
+  "doc_id": "doc-0052",
+  "filename": "doc-0052.pdf",
+  "doc_type": "other",
+  "language": "nl",
+  "layout": "plain",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": "price_announcement",
+  "invoice": null,
+  "contract": null
+}

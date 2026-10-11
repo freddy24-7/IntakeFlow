@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0011",
+  "filename": "doc-0011.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dam & de Vroege Techniek",
+    "supplier_vat_number": "NL738908273B72",
+    "iban": "NL50WADB5924716023",
+    "invoice_number": "INV-009369",
+    "invoice_date": "2026-05-07",
+    "due_date": "2026-05-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "25",
+        "unit_price": "86.62",
+        "vat_rate": "21",
+        "line_total": "2165.50"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "10",
+        "unit_price": "342.3",
+        "vat_rate": "21",
+        "line_total": "3423.00"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "3",
+        "unit_price": "232.73",
+        "vat_rate": "21",
+        "line_total": "698.19"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "33",
+        "unit_price": "337.57",
+        "vat_rate": "21",
+        "line_total": "11139.81"
+      }
+    ],
+    "subtotal": "17426.50",
+    "vat": "3659.57",
+    "total": "21086.07",
+    "purchase_order_reference": "PO-2026-50196"
+  },
+  "contract": null
+}

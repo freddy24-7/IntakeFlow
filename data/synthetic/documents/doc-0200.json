@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0200",
+  "filename": "doc-0200.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Goderts Verpakkingen B.V.",
+    "supplier_vat_number": "NL150519597B55",
+    "iban": "NL72DELT9406875631",
+    "invoice_number": "RN2605348",
+    "invoice_date": "2026-07-27",
+    "due_date": "2026-08-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "28",
+        "unit_price": "8.9",
+        "vat_rate": "21",
+        "line_total": "249.20"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "38",
+        "unit_price": "369.08",
+        "vat_rate": "21",
+        "line_total": "14025.04"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "6",
+        "unit_price": "5.95",
+        "vat_rate": "21",
+        "line_total": "35.70"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "40",
+        "unit_price": "138.39",
+        "vat_rate": "21",
+        "line_total": "5535.60"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "16",
+        "unit_price": "1234.68",
+        "vat_rate": "21",
+        "line_total": "19754.88"
+      }
+    ],
+    "subtotal": "39600.42",
+    "vat": "8316.09",
+    "total": "47916.51",
+    "purchase_order_reference": "PO-2026-03883"
+  },
+  "contract": null
+}

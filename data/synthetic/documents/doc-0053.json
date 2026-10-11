@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0053",
+  "filename": "doc-0053.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dries Intern Transport B.V.",
+    "supplier_vat_number": "NL818739736B21",
+    "iban": "NL63HAVN0854316681",
+    "invoice_number": "INV-007213",
+    "invoice_date": "2026-06-22",
+    "due_date": "2026-07-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "12",
+        "unit_price": "1443.96",
+        "vat_rate": "0",
+        "line_total": "17327.52"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "21",
+        "unit_price": "108.87",
+        "vat_rate": "21",
+        "line_total": "2286.27"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "32",
+        "unit_price": "39.79",
+        "vat_rate": "21",
+        "line_total": "1273.28"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "16",
+        "unit_price": "363.57",
+        "vat_rate": "21",
+        "line_total": "5817.12"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "25",
+        "unit_price": "106.84",
+        "vat_rate": "21",
+        "line_total": "2671.00"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "26",
+        "unit_price": "3.86",
+        "vat_rate": "21",
+        "line_total": "100.36"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "8",
+        "unit_price": "1728.1",
+        "vat_rate": "21",
+        "line_total": "13824.80"
+      }
+    ],
+    "subtotal": "43300.35",
+    "vat": "5454.29",
+    "total": "48754.64",
+    "purchase_order_reference": "PO-2026-43874"
+  },
+  "contract": null
+}

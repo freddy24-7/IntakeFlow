@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0172",
+  "filename": "doc-0172.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Willems",
+    "supplier_vat_number": "NL084564737B11",
+    "iban": "NL44DELT0248786714",
+    "invoice_number": "00004001",
+    "invoice_date": "2026-03-20",
+    "due_date": "2026-05-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "25",
+        "unit_price": "9.17",
+        "vat_rate": "9",
+        "line_total": "229.25"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "16",
+        "unit_price": "1554.6",
+        "vat_rate": "21",
+        "line_total": "24873.60"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "38",
+        "unit_price": "775.17",
+        "vat_rate": "0",
+        "line_total": "29456.46"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "15",
+        "unit_price": "13.72",
+        "vat_rate": "9",
+        "line_total": "205.80"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "17",
+        "unit_price": "10.7",
+        "vat_rate": "21",
+        "line_total": "181.90"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "17",
+        "unit_price": "41.65",
+        "vat_rate": "21",
+        "line_total": "708.05"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "1",
+        "unit_price": "93.11",
+        "vat_rate": "21",
+        "line_total": "93.11"
+      }
+    ],
+    "subtotal": "55748.17",
+    "vat": "5469.05",
+    "total": "61217.22",
+    "purchase_order_reference": "PO-2026-69621"
+  },
+  "contract": null
+}

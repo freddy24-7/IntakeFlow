@@ -1,0 +1,87 @@
+{
+  "doc_id": "doc-0195",
+  "filename": "doc-0195.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dam & de Vroege Techniek",
+    "supplier_vat_number": "NL738908273B72",
+    "iban": "NL50WADB5924716023",
+    "invoice_number": "INV-009013",
+    "invoice_date": "2026-04-07",
+    "due_date": "2026-04-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "20",
+        "unit_price": "94.3",
+        "vat_rate": "21",
+        "line_total": "1886.00"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "17",
+        "unit_price": "8.57",
+        "vat_rate": "21",
+        "line_total": "145.69"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "28",
+        "unit_price": "35.72",
+        "vat_rate": "21",
+        "line_total": "1000.16"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "5",
+        "unit_price": "10.59",
+        "vat_rate": "21",
+        "line_total": "52.95"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "39",
+        "unit_price": "94.25",
+        "vat_rate": "21",
+        "line_total": "3675.75"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "38",
+        "unit_price": "412.67",
+        "vat_rate": "21",
+        "line_total": "15681.46"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "35",
+        "unit_price": "4.59",
+        "vat_rate": "21",
+        "line_total": "160.65"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "27.5",
+        "unit_price": "129.53",
+        "vat_rate": "21",
+        "line_total": "3562.08"
+      }
+    ],
+    "subtotal": "26164.74",
+    "vat": "5494.60",
+    "total": "31659.34",
+    "purchase_order_reference": "PO-2026-03527"
+  },
+  "contract": null
+}

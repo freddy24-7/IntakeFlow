@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0143",
+  "filename": "doc-0143.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Arens Software B.V.",
+    "supplier_vat_number": "NL580451872B02",
+    "iban": "NL84POLD0420514789",
+    "invoice_number": "2026/01080",
+    "invoice_date": "2026-06-25",
+    "due_date": "2026-07-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "19",
+        "unit_price": "11.58",
+        "vat_rate": "9",
+        "line_total": "220.02"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "39",
+        "unit_price": "497.09",
+        "vat_rate": "21",
+        "line_total": "19386.51"
+      }
+    ],
+    "subtotal": "19606.53",
+    "vat": "4090.97",
+    "total": "23697.50",
+    "purchase_order_reference": "PO-2026-43213"
+  },
+  "contract": null
+}

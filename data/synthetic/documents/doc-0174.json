@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0174",
+  "filename": "doc-0174.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Post Intern Transport B.V.",
+    "supplier_vat_number": "NL169820594B59",
+    "iban": "NL44HAVN4774080233",
+    "invoice_number": "C00005270",
+    "invoice_date": "2026-09-19",
+    "due_date": "2026-10-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "21",
+        "unit_price": "824.14",
+        "vat_rate": "21",
+        "line_total": "17306.94"
+      },
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "2",
+        "unit_price": "68.01",
+        "vat_rate": "21",
+        "line_total": "136.02"
+      }
+    ],
+    "subtotal": "17442.96",
+    "vat": "3663.02",
+    "total": "21105.98",
+    "purchase_order_reference": "PO-2026-50905"
+  },
+  "contract": null
+}

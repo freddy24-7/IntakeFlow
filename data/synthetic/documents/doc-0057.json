@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0057",
+  "filename": "doc-0057.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice van Brenen",
+    "supplier_vat_number": "NL454340903B28",
+    "iban": "NL06DELT9728344131",
+    "invoice_number": "INV-001038",
+    "invoice_date": "2026-07-07",
+    "due_date": "2026-08-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "19",
+        "unit_price": "125.67",
+        "vat_rate": "21",
+        "line_total": "2387.73"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "36",
+        "unit_price": "102.34",
+        "vat_rate": "21",
+        "line_total": "3684.24"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "9",
+        "unit_price": "1884.1",
+        "vat_rate": "0",
+        "line_total": "16956.90"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "32",
+        "unit_price": "345.27",
+        "vat_rate": "21",
+        "line_total": "11048.64"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "4",
+        "unit_price": "8.94",
+        "vat_rate": "21",
+        "line_total": "35.76"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "7",
+        "unit_price": "1454.76",
+        "vat_rate": "21",
+        "line_total": "10183.32"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "2",
+        "unit_price": "6.63",
+        "vat_rate": "9",
+        "line_total": "13.26"
+      }
+    ],
+    "subtotal": "44309.85",
+    "vat": "5742.52",
+    "total": "50052.37",
+    "purchase_order_reference": "PO-2026-70048"
+  },
+  "contract": null
+}

@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0110",
+  "filename": "doc-0110.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau van den Nuwenhuijzen & Tuithof",
+    "supplier_vat_number": "NL701642483B83",
+    "iban": "NL24WADB3131356954",
+    "invoice_number": "RN2601125",
+    "invoice_date": "2026-04-20",
+    "due_date": "2026-05-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "10",
+        "unit_price": "10.03",
+        "vat_rate": "9",
+        "line_total": "100.30"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "39",
+        "unit_price": "15.92",
+        "vat_rate": "21",
+        "line_total": "620.88"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "18",
+        "unit_price": "2.74",
+        "vat_rate": "21",
+        "line_total": "49.32"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "9",
+        "unit_price": "504.03",
+        "vat_rate": "21",
+        "line_total": "4536.27"
+      }
+    ],
+    "subtotal": "5306.77",
+    "vat": "1102.39",
+    "total": "6409.16",
+    "purchase_order_reference": "PO-2026-72641"
+  },
+  "contract": null
+}

@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0109",
+  "filename": "doc-0109.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Wright & Briere Techniek",
+    "supplier_vat_number": "NL925371323B31",
+    "iban": "NL35NZLB2555656321",
+    "invoice_number": "00002422",
+    "invoice_date": "2026-07-18",
+    "due_date": "2026-08-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Container handling 40ft",
+        "quantity": "2",
+        "unit_price": "324.51",
+        "vat_rate": "21",
+        "line_total": "649.02"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "21",
+        "unit_price": "8.14",
+        "vat_rate": "9",
+        "line_total": "170.94"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "10",
+        "unit_price": "93.82",
+        "vat_rate": "21",
+        "line_total": "938.20"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "14",
+        "unit_price": "149.47",
+        "vat_rate": "21",
+        "line_total": "2092.58"
+      }
+    ],
+    "subtotal": "3850.74",
+    "vat": "788.14",
+    "total": "4638.88",
+    "purchase_order_reference": "PO-2026-89224"
+  },
+  "contract": null
+}

@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0173",
+  "filename": "doc-0173.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Coret-Coredo",
+    "supplier_vat_number": "NL842478695B61",
+    "iban": "NL77DELT6769777475",
+    "invoice_number": "F2026-6289",
+    "invoice_date": "2026-06-23",
+    "due_date": "2026-07-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "4",
+        "unit_price": "7",
+        "vat_rate": "21",
+        "line_total": "28.00"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "28.5",
+        "unit_price": "104.01",
+        "vat_rate": "21",
+        "line_total": "2964.29"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "5",
+        "unit_price": "145.8",
+        "vat_rate": "21",
+        "line_total": "729.00"
+      }
+    ],
+    "subtotal": "3721.29",
+    "vat": "781.47",
+    "total": "4502.76",
+    "purchase_order_reference": "PO-2026-99039"
+  },
+  "contract": null
+}

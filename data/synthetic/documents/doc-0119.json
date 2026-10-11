@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0119",
+  "filename": "doc-0119.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Manne Transport B.V.",
+    "supplier_vat_number": "NL646412689B04",
+    "iban": "NL09NZLB0939242955",
+    "invoice_number": "00008797",
+    "invoice_date": "2026-07-08",
+    "due_date": "2026-08-07",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "23",
+        "unit_price": "73.62",
+        "vat_rate": "21",
+        "line_total": "1693.26"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "40",
+        "unit_price": "2.22",
+        "vat_rate": "21",
+        "line_total": "88.80"
+      }
+    ],
+    "subtotal": "1782.06",
+    "vat": "374.23",
+    "total": "2156.29",
+    "purchase_order_reference": "PO-2026-77833"
+  },
+  "contract": null
+}

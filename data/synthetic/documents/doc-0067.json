@@ -1,0 +1,52 @@
+{
+  "doc_id": "doc-0067",
+  "filename": "doc-0067.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Olst & van der Velden Advies V.O.F.",
+    "supplier_vat_number": "NL502564736B68",
+    "iban": "NL40NZLB5947530309",
+    "invoice_number": "F2026-8099",
+    "invoice_date": "2026-01-19",
+    "due_date": "2026-02-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "17",
+        "unit_price": "343.04",
+        "vat_rate": "21",
+        "line_total": "5831.68"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "18",
+        "unit_price": "210.34",
+        "vat_rate": "21",
+        "line_total": "3786.12"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "18",
+        "unit_price": "181.06",
+        "vat_rate": "21",
+        "line_total": "3259.08"
+      }
+    ],
+    "subtotal": "12876.88",
+    "vat": "2704.14",
+    "total": "15581.02",
+    "purchase_order_reference": "PO-2026-42600"
+  },
+  "contract": null
+}
