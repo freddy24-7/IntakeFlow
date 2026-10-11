@@ -6,12 +6,12 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stage 1 of 7 (foundations and data) is built. **Nothing has been deployed to or run in Azure yet**, and no model has been called: there are no extraction, accuracy, latency or cost results to report.
+Stage 1 (foundations and data) is done. Stage 2 (reading and extraction) is built and tested against fakes. **Nothing has been deployed to or run in Azure yet**, and no real model or Document Intelligence call has been made: there are no extraction, accuracy, latency or cost results to report.
 
 | Stage | State |
 | --- | --- |
-| 1. Foundations and data | Built, tested locally |
-| 2. Reading and extraction | Not started |
+| 1. Foundations and data | Done |
+| 2. Reading and extraction | Code and evaluation script built, tested with fakes only. Not yet measured against Azure |
 | 3. Validation and routing | Not started |
 | 4. Review interface | Not started |
 | 5. Contract Q&A | Not started |
@@ -23,7 +23,11 @@ What exists today:
 - A synthetic set of 200 documents with ground truth, from a fixed seed (see below).
 - PostgreSQL schema with an append-only, hash-chained audit log.
 - A mock ERP with one write function that refuses unapproved documents.
-- Interfaces for chat models, embeddings and document reading, each with a fake, so later stages can be tested without Azure.
+- Interfaces for chat models, embeddings and document reading, each with a fake and (since stage 2) an Azure implementation that has not been run yet.
+- An upload endpoint and four idempotent pipeline steps: read text, classify, read invoice fields, extract.
+- Three extraction variants for the baseline comparison: Document Intelligence only, model only, and combined.
+- An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
+- A Bicep file for the two Azure resources stage 2 needs, checked with a dry run only.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
 
 ## The synthetic set
@@ -67,6 +71,19 @@ uv run python scripts/generate_synthetic.py --documents 200 --seed 42
 uv run uvicorn app.main:app --reload      # http://localhost:8000/health
 uv run pytest tests/unit tests/integration
 uv run ruff check . && uv run mypy .
+uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
 ```
+
+## Azure (stage 2)
+
+```bash
+./deploy/up.sh --what-if                  # preview, changes nothing
+./deploy/up.sh                            # create: budget alert, Document Intelligence, Azure OpenAI
+uv run pytest tests/azure -m azure        # smoke test against the real services
+uv run python scripts/evaluate_extraction.py --services azure --limit 10
+./deploy/down.sh                          # delete everything
+```
+
+Sign-in is keyless through `az login`. Key access is switched off on both resources, so there are no keys to store. Both resources are pay-per-use and cost nothing while idle.
 
 The integration tests need the local PostgreSQL. They use a separate database (`<name>_test`) that is rebuilt on every run.
