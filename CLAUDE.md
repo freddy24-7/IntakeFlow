@@ -79,8 +79,9 @@ It is a demo, not a product. All data is synthetic. There is no real customer da
 ## Commands (create these in stage 1 and keep this list current)
 
 ```bash
+cp .env.example .env                      # once, then choose a local database password
 uv sync                                   # install dependencies
-docker compose up -d                      # local PostgreSQL
+docker compose up -d                      # local PostgreSQL (reads .env)
 uv run alembic upgrade head               # migrations
 uv run python scripts/generate_synthetic.py --documents 200 --seed 42
 uv run uvicorn app.main:app --reload      # http://localhost:8000
