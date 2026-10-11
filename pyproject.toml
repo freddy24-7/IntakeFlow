@@ -1,0 +1,67 @@
+[project]
+name = "intakeflow"
+version = "0.1.0"
+description = "Azure-hosted document intake pipeline with human review and cited contract Q&A (portfolio demo, synthetic data only)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alembic==1.20.0",
+    "asyncpg==0.32.0",
+    "faker==40.43.0",
+    "fastapi==0.143.0",
+    "pillow==12.3.0",
+    "pydantic==2.14.1",
+    "pydantic-settings==2.15.0",
+    "pypdfium2==5.14.0",
+    "reportlab==5.0.1",
+    "sqlalchemy[asyncio]==2.1.4",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx==0.28.1",
+    "mypy==2.4.0",
+    "pytest==9.1.1",
+    "pytest-asyncio==1.4.0",
+    "pytest-cov==7.1.0",
+    "ruff==0.17.0",
+]
+
+[tool.uv]
+python-preference = "only-managed"
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "app"
+module-root = ""
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+mypy_path = "scripts"
+exclude = ["^\\.venv/"]
+
+[[tool.mypy.overrides]]
+module = ["reportlab.*", "pypdfium2.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = [".", "scripts"]
+testpaths = ["tests"]
+markers = ["azure: runs against real Azure services, only on request"]
+addopts = "-m 'not azure'"
+
+[tool.coverage.run]
+source = ["app", "scripts"]
