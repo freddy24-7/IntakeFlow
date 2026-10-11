@@ -20,3 +20,9 @@ data/synthetic/documents/*.pdf
 .DS_Store
 .idea/
 .vscode/
+
+# Uploaded files (local storage)
+data/uploads/
+
+# Evaluation reports are committed on purpose, raw run data is not
+reports/*.json

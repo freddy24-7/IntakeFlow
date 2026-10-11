@@ -23,15 +23,21 @@ class FakeDocumentReader:
 
     texts: dict[str, ReadResult] = field(default_factory=dict)
     invoice_fields: dict[str, list[ReadField]] = field(default_factory=dict)
+    calls: list[str] = field(default_factory=list)
 
     async def read_text(self, content: bytes) -> ReadResult:
+        self.calls.append("read_text")
+        return self._text(content)
+
+    def _text(self, content: bytes) -> ReadResult:
         canned = self.texts.get(content_key(content))
         if canned is not None:
             return canned
         return ReadResult(pages=extract_text_layer(content), raw={"source": "pdf-text-layer"})
 
     async def read_invoice_fields(self, content: bytes) -> ReadResult:
-        text = await self.read_text(content)
+        self.calls.append("read_invoice_fields")
+        text = self._text(content)
         fields = self.invoice_fields.get(content_key(content), [])
         return ReadResult(pages=text.pages, fields=fields, raw={"source": "fake"})
 

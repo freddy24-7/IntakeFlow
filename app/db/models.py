@@ -6,7 +6,17 @@ from decimal import Decimal
 from enum import StrEnum
 from typing import Any
 
-from sqlalchemy import BigInteger, DateTime, ForeignKey, Numeric, String, func
+from sqlalchemy import (
+    BigInteger,
+    DateTime,
+    Float,
+    ForeignKey,
+    Integer,
+    Numeric,
+    String,
+    UniqueConstraint,
+    func,
+)
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -33,6 +43,8 @@ class Document(Base):
     content_sha256: Mapped[str] = mapped_column(String(64))
     status: Mapped[str] = mapped_column(String(32), default=DocumentStatus.RECEIVED.value)
     document_type: Mapped[str | None] = mapped_column(String(32))
+    storage_key: Mapped[str | None] = mapped_column(String(255))
+    size_bytes: Mapped[int | None] = mapped_column(Integer)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
@@ -74,3 +86,61 @@ class ErpEntry(Base):
     total: Mapped[Decimal] = mapped_column(Numeric(12, 2))
     currency: Mapped[str] = mapped_column(String(3))
     booked_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class Reading(Base):
+    """What Document Intelligence returned. Kept whole for debugging and comparison (PRD F3)."""
+
+    __tablename__ = "readings"
+    __table_args__ = (UniqueConstraint("document_id", "kind"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    kind: Mapped[str] = mapped_column(String(32))  # "text" or "invoice_fields"
+    page_count: Mapped[int] = mapped_column(Integer)
+    result: Mapped[dict[str, Any]] = mapped_column(JSONB)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class Classification(Base):
+    __tablename__ = "classifications"
+    __table_args__ = (UniqueConstraint("document_id", "run_key"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    run_key: Mapped[str] = mapped_column(String(64))  # prompt version and model
+    label: Mapped[str] = mapped_column(String(32))
+    confidence: Mapped[float] = mapped_column(Float)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class Extraction(Base):
+    """Model output. Never changed after it is written: a reviewer's corrections
+    are stored next to it (rule 5)."""
+
+    __tablename__ = "extractions"
+    __table_args__ = (UniqueConstraint("document_id", "run_key"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    run_key: Mapped[str] = mapped_column(String(64))  # variant, prompt version and model
+    variant: Mapped[str] = mapped_column(String(16))  # "combined", "llm_only" or "di_only"
+    data: Mapped[dict[str, Any]] = mapped_column(JSONB)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class UsageRecord(Base):
+    """One billable call, for the cost and latency report. No document content (rule 8)."""
+
+    __tablename__ = "usage_records"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    step: Mapped[str] = mapped_column(String(64))
+    service: Mapped[str] = mapped_column(String(32))  # "document_intelligence" or "chat"
+    model: Mapped[str] = mapped_column(String(64))
+    input_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    output_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    pages: Mapped[int] = mapped_column(Integer, default=0)
+    latency_ms: Mapped[float] = mapped_column(Float)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

@@ -5,7 +5,7 @@ this package. Two calls, matching the workflow: text and layout for every
 document, then invoice fields only for invoices and credit notes.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from typing import Any, Protocol
 
 
@@ -43,3 +43,16 @@ class DocumentReader(Protocol):
     async def read_invoice_fields(self, content: bytes) -> ReadResult:
         """Prebuilt invoice fields. Runs only on invoices and credit notes."""
         ...
+
+
+def read_result_to_dict(result: ReadResult) -> dict[str, Any]:
+    """For storing a reading in the database."""
+    return asdict(result)
+
+
+def read_result_from_dict(data: dict[str, Any]) -> ReadResult:
+    return ReadResult(
+        pages=[PageText(**page) for page in data["pages"]],
+        fields=[ReadField(**item) for item in data["fields"]],
+        raw=data["raw"],
+    )

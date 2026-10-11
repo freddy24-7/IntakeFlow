@@ -12,7 +12,7 @@ import pytest
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import URL, make_url, text
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.pool import NullPool
 
 from app.config import get_settings
@@ -42,13 +42,24 @@ def test_database_url() -> URL:
 
 
 @pytest.fixture
-async def session(test_database_url: URL) -> AsyncIterator[AsyncSession]:
+async def session_factory(
+    test_database_url: URL,
+) -> AsyncIterator[async_sessionmaker[AsyncSession]]:
+    """Sessions that share one connection and one outer transaction. Code under
+    test may commit as often as it likes: everything is rolled back afterwards."""
     engine = create_async_engine(test_database_url, poolclass=NullPool)
     async with engine.connect() as connection:
         transaction = await connection.begin()
-        async with AsyncSession(
+        yield async_sessionmaker(
             bind=connection, join_transaction_mode="create_savepoint", expire_on_commit=False
-        ) as db_session:
-            yield db_session
+        )
         await transaction.rollback()
     await engine.dispose()
+
+
+@pytest.fixture
+async def session(
+    session_factory: async_sessionmaker[AsyncSession],
+) -> AsyncIterator[AsyncSession]:
+    async with session_factory() as db_session:
+        yield db_session
