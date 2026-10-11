@@ -52,7 +52,7 @@ What exists today:
 | Malformed VAT number | 4 | `vat_number_format` |
 | Due date before invoice date | 4 | `due_date_before_invoice_date` |
 
-138 of the 192 invoices and credit notes carry no expected failure. These counts come from `data/synthetic/manifest.json`.
+138 of the 186 invoices and credit notes carry no expected failure. These counts come from `data/synthetic/manifest.json`.
 
 Limits of this data: the scans are clean renders that were rasterised, blurred and rotated, not paper that went through a scanner. Real invoices are messier, so any accuracy measured on this set will be an upper bound.
 
