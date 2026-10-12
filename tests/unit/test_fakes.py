@@ -53,12 +53,12 @@ async def test_fake_chat_fails_loudly_when_unscripted_or_wrongly_scripted() -> N
 
 
 async def test_fake_embeddings_are_deterministic() -> None:
-    model = FakeEmbeddingModel(dimensions=4)
+    model = FakeEmbeddingModel(dimensions=16)
 
     first = await model.embed(["opzegtermijn", "aansprakelijkheid", "opzegtermijn"])
 
     assert len(first.vectors) == 3
-    assert all(len(vector) == 4 for vector in first.vectors)
+    assert all(len(vector) == 16 for vector in first.vectors)
     assert first.vectors[0] == first.vectors[2]
     assert first.vectors[0] != first.vectors[1]
 

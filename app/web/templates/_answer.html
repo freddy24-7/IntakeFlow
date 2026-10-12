@@ -1,0 +1,26 @@
+{% if message %}
+  <div class="notice warn">{{ message }}</div>
+{% else %}
+  <h2>{{ question }}</h2>
+  {% if answer.found %}
+    <div class="card" id="answer-text">{{ answer.text }}</div>
+    <h2>Bronnen</h2>
+    <table id="citations">
+      <tr><th>Contract</th><th>Artikel</th><th>Pagina</th></tr>
+      {% for citation in answer.citations %}
+      <tr>
+        <td>{{ citation.passage.title }}</td>
+        <td>Artikel {{ citation.passage.clause_number }}. {{ citation.passage.heading }}</td>
+        <td>{{ citation.passage.page }}</td>
+      </tr>
+      <tr><td colspan="3" class="muted">{{ citation.passage.text }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="card" id="answer-text">{{ answer.text }}</div>
+    <p class="muted">Het systeem heeft {{ answer.offered | length }} passages bekeken en daarin geen antwoord gevonden.</p>
+  {% endif %}
+  {% if answer.dropped %}
+    <p class="muted">{{ answer.dropped | length }} bronverwijzing(en) van het model bestonden niet en zijn weggelaten.</p>
+  {% endif %}
+{% endif %}

@@ -1,5 +1,6 @@
-"""Stage 4: review, corrections stored next to the extraction, and the pages."""
+"""Stages 4 and 5: review, corrections stored next to the extraction, and the pages."""
 
+import dataclasses
 import re
 import uuid
 from collections.abc import AsyncIterator
@@ -15,11 +16,13 @@ from app.agents.schema import FIELD_KINDS, ExtractedInvoice
 from app.auth.demo import COOKIE
 from app.config import Settings, get_settings
 from app.db.models import AuditRecord, Document, DocumentStatus, Extraction, Review
+from app.inference.fakes import FakeChatModel
 from app.main import app
+from app.rag.answer import LlmAnswer
 from app.review import service as review
 from app.review.service import ReviewError
 from app.validation.purchase_orders import upsert_purchase_orders
-from app.web.deps import get_dispatcher, get_session, get_storage
+from app.web.deps import get_dispatcher, get_services, get_session, get_storage
 from tests.integration.pipeline import TODAY, Pipeline, pick
 
 SETTINGS = Settings(_env_file=None, database_url="unused")
@@ -422,3 +425,87 @@ async def test_upload_page_and_dashboard(
     assert "1 van 2 facturen" in dashboard.text
     assert re.search(r"<td>\d{4}-\d{2}-\d{2}</td><td>2</td>", dashboard.text)
     assert "Automatisch goedgekeurd</td><td>1</td>" in dashboard.text
+
+
+# The contract manager's page
+
+
+async def _contract_services(
+    dataset: Dataset, session_factory: async_sessionmaker[AsyncSession]
+) -> tuple[Pipeline, DocumentTruth]:
+    """Index one contract with the fakes and return (pipeline, truth)."""
+    truth = pick(dataset, doc_type="contract")
+    pipeline = Pipeline(dataset, session_factory, [truth])
+    await pipeline.process(truth)
+    return pipeline, truth
+
+
+async def test_contract_question_gets_a_cited_answer_or_not_found(
+    client: AsyncClient,
+    session_factory: async_sessionmaker[AsyncSession],
+    session: AsyncSession,
+    dataset: Dataset,
+) -> None:
+    pipeline, truth = await _contract_services(dataset, session_factory)
+    assert truth.contract is not None
+    notice = next(c for c in truth.contract.clauses if c.topic == "notice_period")
+    months = truth.contract.facts["notice_period_months"]
+
+    def model_answer(user: str) -> LlmAnswer:
+        # Cites the notice clause when it was offered, and one number that was not.
+        for line in user.splitlines():
+            if line.startswith(f"Artikel {notice.number}. "):
+                number = int(user[: user.index(line)].rsplit("[", 1)[1].split("]")[0])
+                return LlmAnswer(found=True, answer=f"{months} maanden.", passages=[number, 99])
+        return LlmAnswer(found=False, answer="", passages=[])
+
+    services = dataclasses.replace(
+        pipeline.services,
+        answerer=FakeChatModel(answers={LlmAnswer: model_answer}),
+        answerer_name="fake",
+    )
+    app.dependency_overrides[get_services] = lambda: services
+    _as(client, "contract_manager")
+
+    page = await client.get("/contracts")
+    assert "1 contract doorzoekbaar" in page.text
+
+    question = f"Wat is de opzegtermijn in het contract met {truth.contract.supplier_name}?"
+    answered = await client.post("/contracts/ask", data={"question": question})
+    assert f"{months} maanden." in answered.text
+    assert f"Artikel {notice.number}. Opzegging" in answered.text
+    assert f"<td>{notice.page}</td>" in answered.text
+    assert "1 bronverwijzing(en) van het model bestonden niet" in answered.text
+
+    services.answerer.answers[LlmAnswer] = LlmAnswer(found=False, answer="", passages=[])  # type: ignore[union-attr]
+    declined = await client.post(
+        "/contracts/ask", data={"question": "Welke boete geldt bij te late levering?"}
+    )
+    assert "Niet gevonden in de documenten." in declined.text
+    assert "Bronnen" not in declined.text
+
+    records = (
+        (
+            await session.execute(
+                select(AuditRecord.payload).where(AuditRecord.step == "question_answered")
+            )
+        )
+        .scalars()
+        .all()
+    )
+    assert records == [
+        {"found": True, "citations": 1, "dropped": 1},
+        {"found": False, "citations": 0, "dropped": 0},
+    ]
+    assert "opzegtermijn" not in str(records)  # rule 8
+
+
+async def test_contract_page_without_search_says_so(client: AsyncClient) -> None:
+    app.dependency_overrides[get_services] = lambda: None
+    _as(client, "contract_manager")
+
+    response = await client.post("/contracts/ask", data={"question": "Wat is de opzegtermijn?"})
+
+    assert "Zoeken in contracten is niet ingesteld" in response.text
+    _as(client, "finance_clerk")
+    assert (await client.get("/contracts")).status_code == 403

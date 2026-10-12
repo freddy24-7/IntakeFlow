@@ -34,3 +34,5 @@ input.flagged { border-color: var(--warn); background: var(--warn-bg); }
 .tile .value { font-size: 26px; font-weight: 600; }
 .roles { display: flex; gap: 12px; flex-wrap: wrap; }
 ul.plain { margin: 0; padding-left: 18px; }
+.htmx-indicator { display: none; }
+.htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline; }

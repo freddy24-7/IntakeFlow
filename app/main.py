@@ -35,6 +35,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.session_factory = session_factory
     app.state.storage = LocalStorage(settings.storage_dir)
     app.state.dispatcher = NotConfiguredDispatcher()
+    app.state.services = None
     if not azure_is_configured(settings):
         yield
         await engine.dispose()
@@ -44,9 +45,9 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         checkpoint_url(settings.database_url)
     ) as checkpointer:
         await checkpointer.setup()  # creates the checkpoint tables on first start
-        graph = build_graph(
-            session_factory, build_azure_services(settings), settings, checkpointer=checkpointer
-        )
+        services = build_azure_services(settings)
+        app.state.services = services
+        graph = build_graph(session_factory, services, settings, checkpointer=checkpointer)
         dispatcher = InProcessDispatcher(graph, session_factory, settings.max_attempts)
         app.state.dispatcher = dispatcher
         yield

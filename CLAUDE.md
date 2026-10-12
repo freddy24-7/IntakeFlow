@@ -17,7 +17,7 @@ It is a demo, not a product. All data is synthetic. There is no real customer da
 
 ## Architecture rules (do not break these)
 
-1. **One door to a model.** All LLM, embedding and Document Intelligence calls go through the interfaces in `app/inference/` (and `app/reading/`). No other module imports an Azure or LangChain model client directly.
+1. **One door to a model.** All LLM, embedding and Document Intelligence calls go through the interfaces in `app/inference/` (and `app/reading/`), and all Azure AI Search calls through the interface in `app/rag/`. No other module imports an Azure or LangChain model client or the search client directly.
 2. **Steps are stateless and idempotent.** A step reads its input from the database and writes its output to the database. A step that already ran (recognised by its audit record) is skipped on retry. Every step must be safe to receive twice.
 3. **The model never approves alone.** Auto-approval requires deterministic validation to pass and the combined score to meet the configured threshold. Thresholds live in configuration, and changes to them are measured.
 4. **One path to the (mock) ERP.** Only documents with status `approved` or `auto_approved` may be written there, through a single function. A test reads the source and fails if a second path appears.
@@ -92,6 +92,8 @@ uv run ruff check . && uv run mypy .
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
 uv run python scripts/evaluate_extraction.py --services azure               # real measurement, costs money
 uv run python scripts/evaluate_routing.py --services azure                  # routing, on stored extractions
+uv run python scripts/evaluate_qa.py --services oracle                      # contract Q&A harness check, no Azure
+uv run python scripts/evaluate_qa.py --services azure                       # contract Q&A, asks every question again (costs money)
 uv run python scripts/load_purchase_orders.py                               # purchase orders into the database
 uv run pytest tests/azure -m azure        # smoke test against real Azure, on request only
 ./deploy/up.sh --what-if                  # preview the Azure environment, changes nothing

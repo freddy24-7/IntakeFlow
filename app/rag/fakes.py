@@ -2,6 +2,7 @@
 
 import math
 import re
+from collections import Counter
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 
@@ -32,14 +33,18 @@ class InMemorySearchIndex:
             self.vectors[passage.id] = vector
 
     async def search(self, query: str, vector: list[float], top: int) -> list[Passage]:
-        """Rank by keyword overlap and by vector similarity, then combine the two
+        """Rank by weighted keyword overlap and by vector similarity, then combine the two
         rankings with reciprocal rank fusion, as Azure AI Search does."""
         query_words = _words(query)
+        texts = {
+            passage.id: _words(f"{passage.title} {passage.heading} {passage.text}")
+            for passage in self.passages.values()
+        }
+        # A word that occurs in few passages says more than one that is everywhere.
+        frequency = Counter(word for words in texts.values() for word in words)
 
         def keyword(passage: Passage) -> float:
-            return float(
-                len(query_words & _words(f"{passage.title} {passage.heading} {passage.text}"))
-            )
+            return sum(1 / frequency[word] for word in query_words & texts[passage.id])
 
         def similarity(passage: Passage) -> float:
             return _cosine(vector, self.vectors[passage.id])

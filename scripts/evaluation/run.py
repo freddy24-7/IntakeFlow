@@ -61,7 +61,7 @@ class RunResults:
     usage: dict[str, StepUsage]  # by step name
 
 
-async def _ensure_ingested(
+async def ensure_ingested(
     session_factory: async_sessionmaker[AsyncSession],
     services: Services,
     documents: Sequence[tuple[DocumentTruth, bytes]],
@@ -106,7 +106,7 @@ async def run_evaluation(
     namespace: str,
     concurrency: int = 4,
 ) -> RunResults:
-    ids = await _ensure_ingested(session_factory, services, documents, namespace)
+    ids = await ensure_ingested(session_factory, services, documents, namespace)
     results = {truth.doc_id: DocumentResult(truth) for truth, _ in documents}
     limiter = asyncio.Semaphore(concurrency)
 

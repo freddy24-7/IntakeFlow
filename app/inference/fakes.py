@@ -1,6 +1,7 @@
 """Fakes behind the model interfaces, so the pipeline runs in seconds without Azure."""
 
 import hashlib
+import re
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 
@@ -48,9 +49,13 @@ class FakeChatModel:
 
 @dataclass
 class FakeEmbeddingModel:
-    """Deterministic vectors derived from a hash: equal texts give equal vectors."""
+    """Deterministic bag-of-words vectors: each word is hashed to one dimension.
 
-    dimensions: int = 8
+    Texts that share words get similar vectors, which is enough for tests of
+    search. It knows nothing about meaning: a paraphrase gets no credit.
+    """
+
+    dimensions: int = 64
     model: str = "fake-embedding"
 
     async def embed(self, texts: Sequence[str]) -> EmbeddingResult:
@@ -64,8 +69,11 @@ class FakeEmbeddingModel:
         return EmbeddingResult(vectors=vectors, usage=usage)
 
     def _vector(self, text: str) -> list[float]:
-        digest = hashlib.sha256(text.encode("utf-8")).digest()
-        return [digest[index % len(digest)] / 255.0 for index in range(self.dimensions)]
+        vector = [0.0] * self.dimensions
+        for word in re.findall(r"\w+", text.casefold()):
+            digest = hashlib.sha256(word.encode("utf-8")).digest()
+            vector[int.from_bytes(digest[:4], "big") % self.dimensions] += 1.0
+        return vector
 
 
 def _rough_tokens(text: str) -> int:

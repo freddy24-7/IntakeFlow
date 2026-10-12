@@ -1,0 +1,1570 @@
+[
+  {
+    "question_id": "doc-0008-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0008-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Dachgeldt & Gemen Techniek beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0008",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0008-notice_period-english",
+    "question": "What is the notice period in the contract with Dachgeldt & Gemen Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0008",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0008-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "12"
+    ]
+  },
+  {
+    "question_id": "doc-0008-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0008-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Dachgeldt & Gemen Techniek de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0008",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0008-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0008-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Dachgeldt & Gemen Techniek te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0008",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0008-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Dachgeldt & Gemen Techniek per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0008-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Dachgeldt & Gemen Techniek verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0008",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0008-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Dachgeldt & Gemen Techniek geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0008-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0008-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Dachgeldt & Gemen Techniek voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0008",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0008-governing_law-english",
+    "question": "Which court handles disputes under the contract with Dachgeldt & Gemen Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0008",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0016-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Lagerweij Logistiek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0016-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Lagerweij Logistiek B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0016",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0016-notice_period-english",
+    "question": "What is the notice period in the contract with Lagerweij Logistiek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0016",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0016-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Lagerweij Logistiek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "36"
+    ]
+  },
+  {
+    "question_id": "doc-0016-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Lagerweij Logistiek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "5",
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0016-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Lagerweij Logistiek B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0016",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "5",
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0016-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Lagerweij Logistiek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0016-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Lagerweij Logistiek B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0016",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0016-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Lagerweij Logistiek B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0016-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Lagerweij Logistiek B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0016",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0016-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Lagerweij Logistiek B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0016-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Lagerweij Logistiek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0016-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Lagerweij Logistiek B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0016",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Oost-Brabant"
+    ]
+  },
+  {
+    "question_id": "doc-0016-governing_law-english",
+    "question": "Which court handles disputes under the contract with Lagerweij Logistiek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0016",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Oost-Brabant"
+    ]
+  },
+  {
+    "question_id": "doc-0029-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0029-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Draaisma Koeltechniek B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0029",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0029-notice_period-english",
+    "question": "What is the notice period in the contract with Draaisma Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0029",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0029-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "24"
+    ]
+  },
+  {
+    "question_id": "doc-0029-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0029-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Draaisma Koeltechniek B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0029",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0029-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0029-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Draaisma Koeltechniek B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0029",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0029-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Draaisma Koeltechniek B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0029-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Draaisma Koeltechniek B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0029",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0029-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Draaisma Koeltechniek B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0029-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0029-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Draaisma Koeltechniek B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0029",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0029-governing_law-english",
+    "question": "Which court handles disputes under the contract with Draaisma Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0029",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0033-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met de Koning Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0033-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met de Koning Koeltechniek B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0033",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0033-notice_period-english",
+    "question": "What is the notice period in the contract with de Koning Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0033",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0033-term-near",
+    "question": "Wat is de initiële looptijd van het contract met de Koning Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "12"
+    ]
+  },
+  {
+    "question_id": "doc-0033-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met de Koning Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0033-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag de Koning Koeltechniek B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0033",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0033-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van de Koning Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0033-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van de Koning Koeltechniek B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0033",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0033-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van de Koning Koeltechniek B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0033-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op de Koning Koeltechniek B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0033",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0033-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met de Koning Koeltechniek B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0033-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met de Koning Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0033-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met de Koning Koeltechniek B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0033",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0033-governing_law-english",
+    "question": "Which court handles disputes under the contract with de Koning Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0033",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0128-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0128-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Schoonmaakbedrijf Weijland beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0128",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0128-notice_period-english",
+    "question": "What is the notice period in the contract with Schoonmaakbedrijf Weijland?",
+    "phrasing": "english",
+    "doc_id": "doc-0128",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0128-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "36"
+    ]
+  },
+  {
+    "question_id": "doc-0128-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2,5",
+      "2.5"
+    ]
+  },
+  {
+    "question_id": "doc-0128-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Schoonmaakbedrijf Weijland de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0128",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2,5",
+      "2.5"
+    ]
+  },
+  {
+    "question_id": "doc-0128-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0128-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Schoonmaakbedrijf Weijland te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0128",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0128-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Schoonmaakbedrijf Weijland per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0128-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Schoonmaakbedrijf Weijland verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0128",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0128-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Schoonmaakbedrijf Weijland geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0128-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0128-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Schoonmaakbedrijf Weijland voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0128",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0128-governing_law-english",
+    "question": "Which court handles disputes under the contract with Schoonmaakbedrijf Weijland?",
+    "phrasing": "english",
+    "doc_id": "doc-0128",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0155-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Takkelenburg Intern Transport B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0155-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Takkelenburg Intern Transport B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0155",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0155-notice_period-english",
+    "question": "What is the notice period in the contract with Takkelenburg Intern Transport B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0155",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0155-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Takkelenburg Intern Transport B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "36"
+    ]
+  },
+  {
+    "question_id": "doc-0155-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Takkelenburg Intern Transport B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0155-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Takkelenburg Intern Transport B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0155",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0155-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Takkelenburg Intern Transport B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0155-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Takkelenburg Intern Transport B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0155",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0155-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Takkelenburg Intern Transport B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0155-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Takkelenburg Intern Transport B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0155",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0155-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Takkelenburg Intern Transport B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0155-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Takkelenburg Intern Transport B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0155-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Takkelenburg Intern Transport B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0155",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0155-governing_law-english",
+    "question": "Which court handles disputes under the contract with Takkelenburg Intern Transport B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0155",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0169-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0169-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Dillen Koeltechniek B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0169",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0169-notice_period-english",
+    "question": "What is the notice period in the contract with van Dillen Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0169",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0169-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "36"
+    ]
+  },
+  {
+    "question_id": "doc-0169-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2,5",
+      "2.5"
+    ]
+  },
+  {
+    "question_id": "doc-0169-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Dillen Koeltechniek B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0169",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2,5",
+      "2.5"
+    ]
+  },
+  {
+    "question_id": "doc-0169-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0169-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Dillen Koeltechniek B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0169",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0169-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Dillen Koeltechniek B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0169-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Dillen Koeltechniek B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0169",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0169-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Dillen Koeltechniek B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0169-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0169-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Dillen Koeltechniek B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0169",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0169-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Dillen Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0169",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Rotterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0174-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Schoonmaakbedrijf van Wessex?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0174-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Schoonmaakbedrijf van Wessex beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0174",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0174-notice_period-english",
+    "question": "What is the notice period in the contract with Schoonmaakbedrijf van Wessex?",
+    "phrasing": "english",
+    "doc_id": "doc-0174",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0174-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Schoonmaakbedrijf van Wessex?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "24"
+    ]
+  },
+  {
+    "question_id": "doc-0174-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Schoonmaakbedrijf van Wessex?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0174-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Schoonmaakbedrijf van Wessex de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0174",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0174-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Schoonmaakbedrijf van Wessex?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "45"
+    ]
+  },
+  {
+    "question_id": "doc-0174-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Schoonmaakbedrijf van Wessex te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0174",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "45"
+    ]
+  },
+  {
+    "question_id": "doc-0174-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Schoonmaakbedrijf van Wessex per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0174-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Schoonmaakbedrijf van Wessex verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0174",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0174-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Schoonmaakbedrijf van Wessex geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0174-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Schoonmaakbedrijf van Wessex?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0174-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Schoonmaakbedrijf van Wessex voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0174",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0174-governing_law-english",
+    "question": "Which court handles disputes under the contract with Schoonmaakbedrijf van Wessex?",
+    "phrasing": "english",
+    "doc_id": "doc-0174",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0008-penalty-near",
+    "question": "Welke boete geldt bij te late levering door Dachgeldt & Gemen Techniek?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0016-insurance_amount-near",
+    "question": "Voor welk bedrag moet Lagerweij Logistiek B.V. verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0029-penalty-near",
+    "question": "Welke boete geldt bij te late levering door Draaisma Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0033-insurance_amount-near",
+    "question": "Voor welk bedrag moet de Koning Koeltechniek B.V. verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0128-penalty-near",
+    "question": "Welke boete geldt bij te late levering door Schoonmaakbedrijf Weijland?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0155-insurance_amount-near",
+    "question": "Voor welk bedrag moet Takkelenburg Intern Transport B.V. verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0169-penalty-near",
+    "question": "Welke boete geldt bij te late levering door van Dillen Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0174-insurance_amount-near",
+    "question": "Voor welk bedrag moet Schoonmaakbedrijf van Wessex verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  }
+]

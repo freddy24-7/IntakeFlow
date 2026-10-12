@@ -9,6 +9,7 @@ PROMPTS_DIR = Path(__file__).resolve().parents[2] / "prompts"
 CLASSIFY = "classify_v1"
 # v2: `vat` is the total, summed from per-rate amounts when no total is printed.
 EXTRACT_INVOICE = "extract_invoice_v2"
+ANSWER_CONTRACT = "answer_contract_v1"
 
 
 @dataclass(frozen=True)

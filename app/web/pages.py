@@ -9,10 +9,12 @@ from typing import Annotated, Any
 from fastapi import APIRouter, Depends, Form, HTTPException, Request, Response, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.agents.prompts import ANSWER_CONTRACT, load_prompt
 from app.agents.schema import FIELD_KINDS
+from app.audit import log as audit
 from app.auth.demo import (
     CONTRACT_MANAGER,
     COOKIE,
@@ -26,14 +28,16 @@ from app.auth.demo import (
 from app.config import Settings, get_settings
 from app.db.models import Document, DocumentStatus, RoutingDecision
 from app.observability.dashboard import load_dashboard
+from app.rag.answer import answer_question
 from app.review import service as review
 from app.review.service import ReviewError
 from app.storage.interfaces import Storage
 from app.web import labels, preview
-from app.web.deps import get_dispatcher, get_session, get_storage
+from app.web.deps import get_dispatcher, get_services, get_session, get_storage
 from app.web.upload import ingest_files
 from app.workflow.dispatch import Dispatcher
 from app.workflow.routing_steps import REASON_NOT_AN_INVOICE
+from app.workflow.steps import Services
 
 router = APIRouter(include_in_schema=False)
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
@@ -316,8 +320,59 @@ async def dashboard(
     return _page(request, "dashboard.html", data=await load_dashboard(session))
 
 
+Manager = Annotated[str, Depends(require_role(CONTRACT_MANAGER))]
+
+
+async def _indexed_contracts(session: AsyncSession) -> int:
+    count: int = (
+        await session.execute(
+            select(func.count())
+            .select_from(Document)
+            .where(Document.origin == "upload", Document.status == DocumentStatus.INDEXED.value)
+        )
+    ).scalar_one()
+    return count
+
+
 @router.get("/contracts")
-async def contracts(
-    request: Request, role: Annotated[str, Depends(require_role(CONTRACT_MANAGER))]
+async def contracts(request: Request, role: Manager, session: Session) -> HTMLResponse:
+    return _page(request, "contracts.html", indexed=await _indexed_contracts(session))
+
+
+@router.post("/contracts/ask")
+async def contracts_ask(
+    request: Request,
+    role: Manager,
+    session: Session,
+    question: Annotated[str, Form()],
+    services: Annotated[Services | None, Depends(get_services)],
+    settings: Annotated[Settings, Depends(get_settings)],
 ) -> HTMLResponse:
-    return _page(request, "contracts.html")
+    """Answer a question about the contract archive, as a fragment for the page."""
+    asked = question.strip()
+    if not asked:
+        return _page(request, "_answer.html", message="Stel een vraag.")
+    if services is None or services.search is None:
+        return _page(request, "_answer.html", message="Zoeken in contracten is niet ingesteld.")
+    assert services.embedder is not None
+    assert services.answerer is not None
+    answer = await answer_question(
+        asked,
+        index=services.search,
+        embedder=services.embedder,
+        model=services.answerer,
+        prompt=load_prompt(ANSWER_CONTRACT),
+        top=settings.search_top_k,
+    )
+    # Rule 8: what happened, not what was asked or answered.
+    await audit.append(
+        session,
+        step="question_answered",
+        payload={
+            "found": answer.found,
+            "citations": len(answer.citations),
+            "dropped": len(answer.dropped),
+        },
+    )
+    await session.commit()
+    return _page(request, "_answer.html", answer=answer, question=asked, message=None)

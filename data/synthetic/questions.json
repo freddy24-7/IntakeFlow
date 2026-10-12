@@ -1,0 +1,1558 @@
+[
+  {
+    "question_id": "doc-0002-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0002-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Arens Software B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0002",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0002-notice_period-english",
+    "question": "What is the notice period in the contract with Arens Software B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0002",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0002-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0002-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0002-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Arens Software B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0002",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0002-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0002-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Arens Software B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0002",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0002-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Arens Software B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "250.000,00",
+      "250.000",
+      "250000",
+      "250,000"
+    ]
+  },
+  {
+    "question_id": "doc-0002-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Arens Software B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0002",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "250.000,00",
+      "250.000",
+      "250000",
+      "250,000"
+    ]
+  },
+  {
+    "question_id": "doc-0002-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Arens Software B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0002-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0002-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Arens Software B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0002",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0002-governing_law-english",
+    "question": "Which court handles disputes under the contract with Arens Software B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0002",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0019-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0019-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met Driessen & Kronenberg Advies V.O.F. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0019",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0019-notice_period-english",
+    "question": "What is the notice period in the contract with Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0019",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0019-term-near",
+    "question": "Wat is de initiële looptijd van het contract met Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "24"
+    ]
+  },
+  {
+    "question_id": "doc-0019-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0019-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag Driessen & Kronenberg Advies V.O.F. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0019",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0019-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0019-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van Driessen & Kronenberg Advies V.O.F. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0019",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0019-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van Driessen & Kronenberg Advies V.O.F. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0019-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op Driessen & Kronenberg Advies V.O.F. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0019",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0019-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met Driessen & Kronenberg Advies V.O.F. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0019-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0019-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met Driessen & Kronenberg Advies V.O.F. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0019",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0019-governing_law-english",
+    "question": "Which court handles disputes under the contract with Driessen & Kronenberg Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0019",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0040-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0040-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Amstel & Bloemendaal Advies V.O.F. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0040",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0040-notice_period-english",
+    "question": "What is the notice period in the contract with van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0040",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "6"
+    ]
+  },
+  {
+    "question_id": "doc-0040-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0040-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0040-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Amstel & Bloemendaal Advies V.O.F. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0040",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "2",
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0040-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0040-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Amstel & Bloemendaal Advies V.O.F. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0040",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0040-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Amstel & Bloemendaal Advies V.O.F. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0040-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Amstel & Bloemendaal Advies V.O.F. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0040",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0040-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Amstel & Bloemendaal Advies V.O.F. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0040-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0040-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Amstel & Bloemendaal Advies V.O.F. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0040",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0040-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0040",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0064-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Wijland & Lagerweij Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0064-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Wijland & Lagerweij Techniek beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0064",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0064-notice_period-english",
+    "question": "What is the notice period in the contract with van Wijland & Lagerweij Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0064",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0064-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Wijland & Lagerweij Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "24"
+    ]
+  },
+  {
+    "question_id": "doc-0064-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Wijland & Lagerweij Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0064-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Wijland & Lagerweij Techniek de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0064",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "3",
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0064-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Wijland & Lagerweij Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0064-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Wijland & Lagerweij Techniek te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0064",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0064-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Wijland & Lagerweij Techniek per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0064-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Wijland & Lagerweij Techniek verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0064",
+    "topic": "liability",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0064-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Wijland & Lagerweij Techniek geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0064-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Wijland & Lagerweij Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0064-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Wijland & Lagerweij Techniek voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0064",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0064-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Wijland & Lagerweij Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0064",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0069-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0069-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Spreuwel Koeltechniek B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0069",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0069-notice_period-english",
+    "question": "What is the notice period in the contract with van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0069",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0069-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "12"
+    ]
+  },
+  {
+    "question_id": "doc-0069-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0069-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Spreuwel Koeltechniek B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0069",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0069-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "45"
+    ]
+  },
+  {
+    "question_id": "doc-0069-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Spreuwel Koeltechniek B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0069",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "45"
+    ]
+  },
+  {
+    "question_id": "doc-0069-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Spreuwel Koeltechniek B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "50.000,00",
+      "50.000",
+      "50000",
+      "50,000"
+    ]
+  },
+  {
+    "question_id": "doc-0069-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Spreuwel Koeltechniek B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0069",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "50.000,00",
+      "50.000",
+      "50000",
+      "50,000"
+    ]
+  },
+  {
+    "question_id": "doc-0069-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Spreuwel Koeltechniek B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0069-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0069-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Spreuwel Koeltechniek B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0069",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0069-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0069",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "Den Haag"
+    ]
+  },
+  {
+    "question_id": "doc-0145-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Dam & de Vroege Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0145-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Dam & de Vroege Techniek beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0145",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0145-notice_period-english",
+    "question": "What is the notice period in the contract with van Dam & de Vroege Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0145",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0145-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Dam & de Vroege Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0145-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Dam & de Vroege Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "5",
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0145-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Dam & de Vroege Techniek de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0145",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "5",
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0145-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Dam & de Vroege Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0145-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Dam & de Vroege Techniek te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0145",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0145-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Dam & de Vroege Techniek per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0145-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Dam & de Vroege Techniek verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0145",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "500.000,00",
+      "500.000",
+      "500000",
+      "500,000"
+    ]
+  },
+  {
+    "question_id": "doc-0145-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Dam & de Vroege Techniek geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "3"
+    ]
+  },
+  {
+    "question_id": "doc-0145-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Dam & de Vroege Techniek?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0145-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Dam & de Vroege Techniek voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0145",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0145-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Dam & de Vroege Techniek?",
+    "phrasing": "english",
+    "doc_id": "doc-0145",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0157-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0157-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Olst & van der Velden Advies V.O.F. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0157",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0157-notice_period-english",
+    "question": "What is the notice period in the contract with van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0157",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "2"
+    ]
+  },
+  {
+    "question_id": "doc-0157-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "24"
+    ]
+  },
+  {
+    "question_id": "doc-0157-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0157-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Olst & van der Velden Advies V.O.F. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0157",
+    "topic": "price_indexation",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0157-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0157-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Olst & van der Velden Advies V.O.F. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0157",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "60"
+    ]
+  },
+  {
+    "question_id": "doc-0157-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Olst & van der Velden Advies V.O.F. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "250.000,00",
+      "250.000",
+      "250000",
+      "250,000"
+    ]
+  },
+  {
+    "question_id": "doc-0157-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Olst & van der Velden Advies V.O.F. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0157",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "250.000,00",
+      "250.000",
+      "250000",
+      "250,000"
+    ]
+  },
+  {
+    "question_id": "doc-0157-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Olst & van der Velden Advies V.O.F. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "confidentiality",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0157-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "30"
+    ]
+  },
+  {
+    "question_id": "doc-0157-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Olst & van der Velden Advies V.O.F. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0157",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0157-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "english",
+    "doc_id": "doc-0157",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_id": "doc-0163-notice_period-near",
+    "question": "Wat is de opzegtermijn in het contract met van Geenen Verpakkingen B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0163-notice_period-paraphrase",
+    "question": "Hoe lang van tevoren moeten we het contract met van Geenen Verpakkingen B.V. beëindigen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0163",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0163-notice_period-english",
+    "question": "What is the notice period in the contract with van Geenen Verpakkingen B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0163",
+    "topic": "notice_period",
+    "answerable": true,
+    "clause_number": 3,
+    "page": 1,
+    "accepted": [
+      "1"
+    ]
+  },
+  {
+    "question_id": "doc-0163-term-near",
+    "question": "Wat is de initiële looptijd van het contract met van Geenen Verpakkingen B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "term",
+    "answerable": true,
+    "clause_number": 2,
+    "page": 1,
+    "accepted": [
+      "36"
+    ]
+  },
+  {
+    "question_id": "doc-0163-price_indexation-near",
+    "question": "Wat is het maximum van de jaarlijkse prijsindexatie in het contract met van Geenen Verpakkingen B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0163-price_indexation-paraphrase",
+    "question": "Met hoeveel procent mag van Geenen Verpakkingen B.V. de tarieven per jaar hoogstens verhogen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0163",
+    "topic": "price_indexation",
+    "answerable": true,
+    "clause_number": 4,
+    "page": 1,
+    "accepted": [
+      "4",
+      "4"
+    ]
+  },
+  {
+    "question_id": "doc-0163-payment-near",
+    "question": "Binnen hoeveel dagen betaalt Opdrachtgever de facturen van van Geenen Verpakkingen B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0163-payment-paraphrase",
+    "question": "Hoeveel tijd hebben we om een rekening van van Geenen Verpakkingen B.V. te voldoen?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0163",
+    "topic": "payment",
+    "answerable": true,
+    "clause_number": 5,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0163-liability-near",
+    "question": "Tot welk bedrag is de aansprakelijkheid van van Geenen Verpakkingen B.V. per gebeurtenis beperkt?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0163-liability-paraphrase",
+    "question": "Wat kunnen we maximaal op van Geenen Verpakkingen B.V. verhalen als er iets misgaat?",
+    "phrasing": "paraphrase",
+    "doc_id": "doc-0163",
+    "topic": "liability",
+    "answerable": true,
+    "clause_number": 6,
+    "page": 2,
+    "accepted": [
+      "1.000.000,00",
+      "1.000.000",
+      "1000000",
+      "1,000,000"
+    ]
+  },
+  {
+    "question_id": "doc-0163-confidentiality-near",
+    "question": "Hoeveel jaar na het einde van het contract met van Geenen Verpakkingen B.V. geldt de geheimhouding nog?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "confidentiality",
+    "answerable": true,
+    "clause_number": 7,
+    "page": 2,
+    "accepted": [
+      "5"
+    ]
+  },
+  {
+    "question_id": "doc-0163-termination-near",
+    "question": "Welke hersteltermijn geldt bij een ingebrekestelling in het contract met van Geenen Verpakkingen B.V.?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "termination",
+    "answerable": true,
+    "clause_number": 8,
+    "page": 2,
+    "accepted": [
+      "14"
+    ]
+  },
+  {
+    "question_id": "doc-0163-governing_law-near",
+    "question": "Aan welke rechtbank worden geschillen met van Geenen Verpakkingen B.V. voorgelegd?",
+    "phrasing": "near",
+    "doc_id": "doc-0163",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0163-governing_law-english",
+    "question": "Which court handles disputes under the contract with van Geenen Verpakkingen B.V.?",
+    "phrasing": "english",
+    "doc_id": "doc-0163",
+    "topic": "governing_law",
+    "answerable": true,
+    "clause_number": 9,
+    "page": 2,
+    "accepted": [
+      "Midden-Nederland"
+    ]
+  },
+  {
+    "question_id": "doc-0002-penalty-near",
+    "question": "Welke boete geldt bij te late levering door Arens Software B.V.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0019-insurance_amount-near",
+    "question": "Voor welk bedrag moet Driessen & Kronenberg Advies V.O.F. verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0040-penalty-near",
+    "question": "Welke boete geldt bij te late levering door van Amstel & Bloemendaal Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0064-insurance_amount-near",
+    "question": "Voor welk bedrag moet van Wijland & Lagerweij Techniek verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0069-penalty-near",
+    "question": "Welke boete geldt bij te late levering door van Spreuwel Koeltechniek B.V.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0145-insurance_amount-near",
+    "question": "Voor welk bedrag moet van Dam & de Vroege Techniek verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0157-penalty-near",
+    "question": "Welke boete geldt bij te late levering door van Olst & van der Velden Advies V.O.F.?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "penalty",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  },
+  {
+    "question_id": "doc-0163-insurance_amount-near",
+    "question": "Voor welk bedrag moet van Geenen Verpakkingen B.V. verzekerd zijn?",
+    "phrasing": "near",
+    "doc_id": null,
+    "topic": "insurance_amount",
+    "answerable": false,
+    "clause_number": null,
+    "page": null,
+    "accepted": []
+  }
+]

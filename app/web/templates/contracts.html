@@ -1,5 +1,18 @@
 {% extends "base.html" %}
+{% block title %}Contracten - IntakeFlow{% endblock %}
 {% block content %}
-<h1>Contracten</h1>
-<p class="card">Vragen stellen over het contractarchief is nog niet gebouwd. Dat volgt in fase 5.</p>
+<h1>Vraag het contractarchief</h1>
+<p class="muted">{{ indexed }} contract{{ "en" if indexed != 1 }} doorzoekbaar. Antwoorden komen alleen uit de contracten zelf, met bron. Staat het er niet in, dan krijgt u dat te lezen.</p>
+<div class="card">
+  <form hx-post="/contracts/ask" hx-target="#answer" hx-swap="innerHTML" hx-indicator="#busy">
+    <div class="field">
+      <label for="question">Vraag</label>
+      <input type="text" id="question" name="question" required
+             placeholder="Wat is de opzegtermijn in het contract met ...?">
+    </div>
+    <button type="submit" id="ask">Vraag stellen</button>
+    <span id="busy" class="muted htmx-indicator">Bezig met zoeken...</span>
+  </form>
+</div>
+<div id="answer"></div>
 {% endblock %}

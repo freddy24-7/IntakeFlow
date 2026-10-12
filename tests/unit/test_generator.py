@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 from synthetic.build import CONTENT_SHARES, VISUAL_SHARES, Dataset, generate, plan_counts, totals
 from synthetic.iban import is_valid_iban, with_check_digits
+from synthetic.questions import accepted_values, make_questions
 from synthetic.render import format_money, layout_contract
 from synthetic.truth import CONTENT_CASES, DocumentTruth
 from synthetic.write import render_document, write_dataset
@@ -260,3 +261,37 @@ def test_committed_ground_truth_is_what_the_generator_produces(folder: str, seed
     assert len(stored) == len(expected.documents)
     for path, doc in zip(stored, expected.documents, strict=True):
         assert DocumentTruth.model_validate_json(path.read_text(encoding="utf-8")) == doc
+
+
+def test_questions_are_labelled_from_the_contract_facts(dataset: Dataset) -> None:
+    questions = make_questions(dataset.documents)
+    by_id = {doc.doc_id: doc for doc in dataset.documents}
+
+    assert len({question.question_id for question in questions}) == len(questions)
+    assert {question.phrasing for question in questions} == {"near", "paraphrase", "english"}
+    assert any(not q.answerable and q.doc_id for q in questions)  # a clause the contract lacks
+    assert any(q.doc_id is None for q in questions)  # a subject no contract covers
+    for question in questions:
+        if not question.answerable:
+            assert question.accepted == []
+            assert question.clause_number is None
+            continue
+        assert question.doc_id is not None
+        contract = by_id[question.doc_id].contract
+        assert contract is not None
+        clause = next(c for c in contract.clauses if c.number == question.clause_number)
+        assert (clause.topic, clause.page) == (question.topic, question.page)
+        assert contract.supplier_name in question.question
+        # The labelled value is really in the clause the question points to.
+        assert question.accepted[0] in clause.text
+
+
+def test_accepted_forms_of_a_value() -> None:
+    assert accepted_values("liability_cap_eur", "250.000,00") == [
+        "250.000,00",
+        "250.000",
+        "250000",
+        "250,000",
+    ]
+    assert accepted_values("indexation_cap_percent", "2,5") == ["2,5", "2.5"]
+    assert accepted_values("court", "Rotterdam") == ["Rotterdam"]

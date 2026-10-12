@@ -5,13 +5,16 @@ made with them says nothing about extraction quality, and is marked as such.
 """
 
 import re
+from collections.abc import Sequence
 
 from pydantic import BaseModel
+from synthetic.questions import QuestionTruth
 from synthetic.truth import DocumentTruth
 
 from app.agents.extract import DI_FIELD_NAMES
 from app.agents.schema import ClassificationAnswer, LlmField, LlmInvoice, LlmLineItem
 from app.inference.fakes import FakeChatModel, FakeEmbeddingModel
+from app.rag.answer import LlmAnswer
 from app.rag.fakes import InMemorySearchIndex
 from app.reading.fakes import FakeDocumentReader, content_key, extract_text_layer
 from app.reading.interfaces import PageText, ReadField, ReadResult
@@ -71,7 +74,8 @@ def oracle_services(documents: list[tuple[DocumentTruth, bytes]], storage: Stora
             continue
         # The marker tells the fake model which document it is looking at.
         pages = [PageText(p.number, p.text) for p in extract_text_layer(content)]
-        pages[0] = PageText(1, f"ORACLE {truth.doc_id}\n{pages[0].text}")
+        # At the end of the first page, so a contract's title stays its first line.
+        pages[0] = PageText(1, f"{pages[0].text}\nORACLE {truth.doc_id}")
         texts[key] = ReadResult(pages=pages)
         if truth.invoice is not None:
             invoice_fields[key] = _di_fields(truth)
@@ -99,3 +103,30 @@ def oracle_services(documents: list[tuple[DocumentTruth, bytes]], storage: Stora
         search=InMemorySearchIndex(),
         search_name="memory",
     )
+
+
+def oracle_answerer(
+    questions: Sequence[QuestionTruth], documents: Sequence[tuple[DocumentTruth, bytes]]
+) -> FakeChatModel:
+    """A fake answering model that knows the labels: it cites the labelled clause
+    when that clause is among the passages, and declines otherwise."""
+    by_text = {question.question: question for question in questions}
+    suppliers = {
+        truth.doc_id: truth.contract.supplier_name
+        for truth, _ in documents
+        if truth.contract is not None
+    }
+    block = re.compile(r"\[(\d+)\] (.*)\nArtikel (\d+)\.")
+
+    def answer(user: str) -> BaseModel:
+        asked = user.split("<question>\n")[1].split("\n</question>")[0]
+        question = by_text[asked]
+        if question.answerable and question.doc_id is not None:
+            for number, title, clause in block.findall(user):
+                if int(clause) == question.clause_number and suppliers[question.doc_id] in title:
+                    return LlmAnswer(
+                        found=True, answer=question.accepted[0], passages=[int(number)]
+                    )
+        return LlmAnswer(found=False, answer="", passages=[])
+
+    return FakeChatModel(answers={LlmAnswer: answer}, model=ORACLE_MODEL)

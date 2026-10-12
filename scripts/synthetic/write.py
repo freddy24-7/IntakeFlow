@@ -5,6 +5,7 @@ from collections import Counter
 from pathlib import Path
 
 from synthetic.build import Dataset, RenderPlan
+from synthetic.questions import make_questions
 from synthetic.render import render_contract, render_invoice, render_letter
 from synthetic.scan import rasterise
 from synthetic.truth import DocumentTruth
@@ -54,6 +55,10 @@ def write_dataset(dataset: Dataset, out_dir: Path) -> None:
     purchase_orders = [po.model_dump(mode="json") for po in dataset.purchase_orders]
     (out_dir / "purchase_orders.json").write_text(
         json.dumps(purchase_orders, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    questions = [question.model_dump(mode="json") for question in make_questions(dataset.documents)]
+    (out_dir / "questions.json").write_text(
+        json.dumps(questions, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest(dataset), indent=2) + "\n", encoding="utf-8"
