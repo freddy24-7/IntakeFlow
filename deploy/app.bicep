@@ -25,7 +25,9 @@ param documentIntelligenceEndpoint string
 param openAiEndpoint string
 param searchEndpoint string
 
-var suffix = uniqueString(resourceGroup().id)
+// The region is part of the names, so a move to another region does not collide
+// with names that the old region still holds for a while after deletion.
+var suffix = uniqueString(resourceGroup().id, location)
 var tags = { part: 'app', project: 'intakeflow' }
 var databaseName = 'intakeflow'
 var databaseUser = 'intakeflow'

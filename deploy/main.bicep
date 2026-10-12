@@ -23,6 +23,9 @@ param budgetContactEmail string
 @description('Monthly budget in the billing currency of the subscription.')
 param monthlyBudget int = 35
 
+@description('Region for the application. On 2026-10-12 Sweden Central had no capacity for the database, so the application runs next to the search service.')
+param appLocation string = 'northeurope'
+
 @description('Also create the application: Container Apps, Postgres, storage, registry, monitoring. These cost money while idle.')
 param deployApp bool = false
 
@@ -75,7 +78,7 @@ module app 'app.bicep' = if (deployApp) {
   name: 'app'
   scope: group
   params: {
-    location: location
+    location: appLocation
     developerObjectId: developerObjectId
     imageTag: imageTag
     postgresPassword: postgresPassword
