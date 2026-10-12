@@ -57,7 +57,7 @@ def extract_run_key(services: Services, variant: str) -> str:
     """A new prompt version or model gives a new key, so the step runs again
     and both results stay available for comparison."""
     if variant == extraction.VARIANT_DI_ONLY:
-        return variant
+        return _run_key(variant, extraction.DI_MAPPING_VERSION)
     return _run_key(variant, EXTRACT_INVOICE, services.extractor_name)
 
 

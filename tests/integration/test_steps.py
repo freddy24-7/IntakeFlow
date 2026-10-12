@@ -117,9 +117,9 @@ async def test_invoice_goes_through_all_steps(
         "read_text",
         "classified:classify_v1|fake-mini",
         "read_invoice_fields",
-        "extracted:combined|extract_invoice_v1|fake-big",
-        "extracted:llm_only|extract_invoice_v1|fake-big",
-        "extracted:di_only",
+        "extracted:combined|extract_invoice_v2|fake-big",
+        "extracted:llm_only|extract_invoice_v2|fake-big",
+        "extracted:di_only|map_v2",
     ]
     assert (await audit.verify_chain(session)).ok
 
@@ -221,8 +221,8 @@ async def test_no_document_content_reaches_the_audit_log(
 async def test_a_new_model_or_prompt_gives_a_new_run(session: AsyncSession) -> None:
     services = _services()
 
-    assert steps.extract_run_key(services, "combined") == "combined|extract_invoice_v1|fake-big"
-    assert steps.extract_run_key(services, "di_only") == "di_only"
+    assert steps.extract_run_key(services, "combined") == "combined|extract_invoice_v2|fake-big"
+    assert steps.extract_run_key(services, "di_only") == "di_only|map_v2"
     assert steps.classify_run_key(services) == "classify_v1|fake-mini"
     with pytest.raises(ValueError, match="unknown extraction variant"):
         await steps.extract_invoice(session, services, uuid.uuid4(), "best")

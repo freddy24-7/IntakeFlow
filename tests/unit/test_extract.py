@@ -182,3 +182,43 @@ async def test_classify_clamps_confidence_and_limits_the_text() -> None:
 def test_prompts_are_versioned_files() -> None:
     assert load_prompt(CLASSIFY).version == "classify_v1"
     assert "1.234,56" in load_prompt(EXTRACT_INVOICE).text
+
+
+def test_di_vat_is_the_sum_of_per_rate_amounts_when_given() -> None:
+    """As measured: TotalTax held only the 21% amount on a two-rate invoice."""
+    fields = [
+        ReadField("TotalTax", "1978.56", 0.36, 1),
+        ReadField("TaxDetails[0].Amount", "1978.56", 0.94, 1),
+        ReadField("TaxDetails[0].Rate", "21%", 0.94, 1),
+        ReadField("TaxDetails[1].Amount", "37.4", 0.93, 1),
+        ReadField("TaxDetails[1].Rate", "9%", 0.94, 1),
+    ]
+
+    vat = extract.di_fields_to_invoice(fields).fields["vat"]
+
+    assert (vat.value, vat.di_value, vat.di_confidence) == ("2015.96", "2015.96", 0.93)
+    assert vat.source_text == "1978.56 + 37.4"
+
+
+def test_di_vat_falls_back_to_total_tax_without_usable_details() -> None:
+    only_total = [ReadField("TotalTax", "214.26", 0.9, 1)]
+    unreadable = [*only_total, ReadField("TaxDetails[0].Amount", "n/a", 0.5, 1)]
+
+    assert extract.di_fields_to_invoice(only_total).fields["vat"].value == "214.26"
+    assert extract.di_fields_to_invoice(unreadable).fields["vat"].value == "214.26"
+
+
+def test_combined_flags_when_the_model_copies_an_incomplete_total() -> None:
+    """The case from the first run: the model repeated TotalTax. With the summed
+    Document Intelligence value the two now disagree, so the field is flagged."""
+    fields = [
+        ReadField("TotalTax", "9030.27", 0.43, 1),
+        ReadField("TaxDetails[0].Amount", "9030.27", 0.93, 1),
+        ReadField("TaxDetails[1].Amount", "68.08", 0.93, 1),
+    ]
+    copied = _field("9030.27", "€ 9.030,27")
+
+    vat = extract.merge(_llm_invoice(vat=copied), fields).fields["vat"]
+
+    assert vat.di_value == "9098.35"
+    assert vat.flags == [FLAG_DI_DISAGREES]

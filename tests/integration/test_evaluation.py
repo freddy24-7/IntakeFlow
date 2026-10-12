@@ -58,7 +58,7 @@ async def test_perfect_answers_give_a_perfect_report(
     assert "**Not a measurement.**" in report
     assert "Accuracy: 100.0% (30/30)" in report
     assert f"| Combined | 100.0% ({len(money)}/{len(money)}) |" in report
-    assert "combined\\|extract_invoice_v1\\|oracle" in report  # pipes escaped in tables
+    assert "combined\\|extract_invoice_v2\\|oracle" in report  # pipes escaped in tables
     assert "scanned" in report
 
 

@@ -7,6 +7,7 @@
 """
 
 import re
+from decimal import Decimal
 
 from app.agents import normalise
 from app.agents.prompts import Prompt
@@ -42,6 +43,10 @@ DI_FIELD_NAMES = {
     "purchase_order_reference": "PurchaseOrder",
 }
 _ITEM_FIELD = re.compile(r"^Items\[(\d+)\]\.(\w+)$")
+_TAX_DETAIL_AMOUNT = re.compile(r"^TaxDetails\[\d+\]\.Amount$")
+# Part of the `di_only` run key: a change to the mapping below is a new run.
+# v2: VAT is the sum of the per-rate tax details when Document Intelligence returns them.
+DI_MAPPING_VERSION = "map_v2"
 _CHECKED_AGAINST_SOURCE = (normalise.AMOUNT, normalise.DATE)
 
 
@@ -64,6 +69,10 @@ def di_fields_to_invoice(fields: list[ReadField]) -> ExtractedInvoice:
             flags=[] if value is not None else [FLAG_UNPARSEABLE],
         )
 
+    vat_from_details = _vat_from_tax_details(fields)
+    if vat_from_details is not None:
+        extracted["vat"] = vat_from_details
+
     items: dict[int, dict[str, str]] = {}
     for field in fields:
         match = _ITEM_FIELD.match(field.name)
@@ -80,6 +89,29 @@ def di_fields_to_invoice(fields: list[ReadField]) -> ExtractedInvoice:
         for _, item in sorted(items.items())
     ]
     return ExtractedInvoice(fields=extracted, line_items=lines)
+
+
+def _vat_from_tax_details(fields: list[ReadField]) -> FieldValue | None:
+    """Total VAT as the sum of the per-rate amounts.
+
+    Measured on the first evaluation run: on invoices with two VAT rates,
+    Document Intelligence reads each per-rate amount correctly but returns only
+    one of them (or nothing) as `TotalTax`. The sum is ours, not the service's,
+    so its confidence is that of the least certain amount.
+    """
+    details = [field for field in fields if _TAX_DETAIL_AMOUNT.match(field.name)]
+    amounts = [normalise.parse_number(field.value) for field in details]
+    known = [amount for amount in amounts if amount is not None]
+    if not details or len(known) != len(amounts):
+        return None
+    value = normalise.canonical(normalise.AMOUNT, str(sum(known, Decimal(0))))
+    return FieldValue(
+        value=value,
+        page=details[0].page,
+        source_text=" + ".join(field.value for field in details),
+        di_value=value,
+        di_confidence=min(field.confidence for field in details),
+    )
 
 
 def build_user_prompt(reading: ReadResult, di_fields: list[ReadField] | None) -> str:
