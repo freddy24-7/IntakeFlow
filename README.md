@@ -25,18 +25,37 @@ It is a portfolio project, not a product. The company is fictional and every doc
 
 A fictional Dutch company, Noordzee Logistiek B.V., receives about 200 documents a week: supplier invoices, credit notes and a few contracts. IntakeFlow reads each one and decides what happens next.
 
-```
-Upload -> Read text        (Document Intelligence, every document)
-       -> Classify         (invoice / credit note / contract / other)
-            |-- invoice or credit note
-            |     -> Read invoice fields (Document Intelligence, prebuilt invoice model)
-            |     -> Extract             (LLM, structured output, checked by code)
-            |     -> Validate            (plain code: totals, dates, IBAN, VAT number, purchase order, duplicates)
-            |     -> Decide
-            |           |-- nothing failed, nothing flagged --> auto-approve -> mock ERP
-            |           |-- otherwise ----------------------> review queue -> a person approves, corrects or rejects
-            |-- contract -> split per clause -> embed -> index in Azure AI Search
-            |-- other    -> review queue
+```mermaid
+flowchart TD
+    upload(["Upload PDF"]) --> read["<b>Read text</b><br/>Document Intelligence, every document"]
+    read --> classify{"<b>Classify</b><br/>invoice, credit note,<br/>contract or other"}
+
+    classify -- "invoice or credit note" --> fields["<b>Read invoice fields</b><br/>Document Intelligence,<br/>prebuilt invoice model"]
+    fields --> extract["<b>Extract</b><br/>LLM, structured output,<br/>checked by code"]
+    extract --> validate["<b>Validate</b><br/>plain code: totals, dates, IBAN,<br/>VAT number, purchase order, duplicates"]
+    validate --> decide{"Anything failed<br/>or flagged?"}
+    decide -- "no" --> auto(["Auto-approve"])
+    decide -- "yes" --> queue["Review queue"]
+    auto --> erp[("Mock ERP")]
+    queue --> person{{"A person approves,<br/>corrects or rejects"}}
+    person -- "approved" --> erp
+
+    classify -- "contract" --> index["<b>Split per clause, embed</b>"]
+    index --> search[("Azure AI Search")]
+    search --> answers(["Cited answers<br/>to questions"])
+
+    classify -- "other" --> queue
+
+    classDef step fill:#14141b,stroke:#ff3d9a,stroke-width:1.5px,color:#f5f5f8
+    classDef choice fill:#1c1c26,stroke:#8b5cf6,stroke-width:1.5px,color:#f5f5f8
+    classDef store fill:#14141b,stroke:#c44dff,stroke-width:1.5px,color:#f5f5f8
+    classDef human fill:#2a1020,stroke:#ff8cc6,stroke-width:1.5px,color:#f5f5f8
+    classDef edge fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
+    class read,fields,extract,validate,index,queue step
+    class classify,decide choice
+    class erp,search store
+    class person human
+    class upload,auto,answers edge
 ```
 
 Three roles use it through server-rendered pages (Jinja2 and HTMX, interface text in Dutch):
@@ -205,11 +224,22 @@ The extraction step asks the model for an invoice as data, not as text.
 
 ### The workflow as a graph
 
+```mermaid
+flowchart LR
+    start(["START"]) --> read_text --> classify{"classify"}
+    classify -- "invoice or<br/>credit note" --> read_fields --> extract --> validate --> decide --> apply --> done(["END"])
+    classify -- "contract" --> index --> done
+    classify -- "other" --> non_invoice --> done
+
+    classDef azure fill:#14141b,stroke:#ff3d9a,stroke-width:1.5px,color:#f5f5f8
+    classDef code fill:#14141b,stroke:#8b5cf6,stroke-width:1.5px,color:#f5f5f8
+    classDef edge fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
+    class read_text,classify,read_fields,extract,index azure
+    class validate,decide,apply,non_invoice code
+    class start,done edge
 ```
-START -> read_text -> classify -+-> read_fields -> extract -> validate -> decide -> apply -> END
-                                +-> index        (contracts)                               -> END
-                                +-> non_invoice  (other mail)                              -> END
-```
+
+Nodes with a pink border call Azure and have a retry policy. Nodes with a violet border are plain code.
 
 - **State** is a small typed dictionary: the document's id, its label and the decision. The documents themselves live in the database, not in the graph's state.
 - **Each node** opens its own database session, calls one step function and commits, so a step's output and its audit record are stored before the graph moves on.
