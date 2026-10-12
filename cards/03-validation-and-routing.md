@@ -14,7 +14,7 @@ Stage 3 of the PRD. Measured on 12 October 2026 on the stored extractions of sta
 
 **Three defences against paying twice.** The duplicate check in validation, a check in the ERP gateway, and a unique constraint on supplier and invoice number in the database.
 
-**LangGraph for the workflow.** The graph declares the branching, gives the four Azure nodes a retry policy and saves state to Postgres after every node. Compared with the hand-built Redis Streams worker in Muni Mailbox: much less code for retries and resuming, and the flow can be read from the edges. The costs: a second Postgres driver (`psycopg`, next to `asyncpg`), checkpoint tables that the library creates outside our migrations, and type hints loose enough that the graph builder had to be left untyped under `mypy --strict`.
+**LangGraph for the workflow.** The graph declares the branching, gives the four Azure nodes a retry policy and saves state to Postgres after every node. Retries and resuming need little code this way, and the flow can be read from the edges. The costs: a second Postgres driver (`psycopg`, next to `asyncpg`), checkpoint tables that the library creates outside our migrations, and type hints loose enough that the graph builder had to be left untyped under `mypy --strict`.
 
 **The checkpoint adds less than expected.** Our steps were already idempotent, so starting a failed document over would also continue where it stopped. What the checkpoint adds is a record of which node a run stopped at. A test shows a run resuming from Postgres with a new graph object, without reading the text a second time.
 

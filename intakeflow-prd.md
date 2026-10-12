@@ -2,14 +2,14 @@
 
 A portfolio project: an Azure-hosted pipeline that turns incoming invoices and supplier contracts (PDF) into validated structured data, routes uncertain cases to a person, and answers questions about the contract archive with citations. Built with LangChain and LangGraph on Azure services.
 
-**Status:** draft for building with Claude Code. Verify current Azure service names, limits, prices and language support before each stage, as they change.
+**Status:** all seven stages done as of 2026-10-12. Decisions taken along the way are in section 14. Written as a plan for building with Claude Code. Verify current Azure service names, limits, prices and language support before each stage, as they change.
 
 ---
 
 ## 1. Why this project
 
 - It targets what Forward Deployed / AI Engineer vacancies in the Netherlands ask for: document intelligence, pipelines over many documents, LLMs connected to data and APIs, deployment in Azure, and attention to reliability, quality, latency and cost.
-- It complements Muni Mailbox. Muni Mailbox was built by hand on open-source parts (FastAPI, Redis Streams, Presidio, ChromaDB, Ollama/Mistral). IntakeFlow uses a framework (LangChain, LangGraph) and Azure-native services. The comparison between the two is part of the deliverable.
+- It uses a framework (LangChain, LangGraph) and Azure-native services, where the earlier Muni Mailbox project was built by hand on open-source parts. A comparison between the two was planned as part of the deliverable and was dropped on 2026-10-12: the write-up covers this project only.
 - All data is synthetic, so there are no privacy or licensing problems.
 
 **The question the project works through:** how do you get reliable structured data out of messy documents with an LLM, know how reliable it is, and keep a person in charge of the uncertain cases, at a cost you can state per document?
@@ -158,7 +158,7 @@ Report these in the README, with how each was measured, including the unflatteri
 | Cost | Tokens and service charges per document, and per 1,000 documents |
 | Baseline comparison | Document Intelligence only vs LLM only vs combined |
 
-Planned comparison for the portfolio story: **IntakeFlow vs Muni Mailbox**, covering lines of code for retrieval and orchestration, how much control each gave, how each was tested, and what each cost to run.
+The comparison with Muni Mailbox that was planned here was dropped on 2026-10-12. The README covers this project only, with LangChain, LangGraph and Azure described in depth.
 
 ## 10. Non-functional requirements
 
@@ -177,7 +177,7 @@ Each stage ends with working software, tests and a short note of what was learne
 4. **Review interface.** Queue, side-by-side review, edits stored separately, single path to the mock ERP, dashboard.
 5. **Contract Q&A.** Chunking, embeddings, AI Search hybrid index, cited answers, unanswerable-question tests.
 6. **Azure deployment.** Infrastructure as code, Container Apps, managed identity and Key Vault, Azure Queue Storage, CI/CD, monitoring, cost report. Optional: Entra ID login.
-7. **Write-up.** README with measured results, honest findings, limits, and the IntakeFlow vs Muni Mailbox comparison.
+7. **Write-up.** README with measured results, honest findings and limits, and a thorough account of how LangChain, LangGraph and Azure are used.
 
 Stages 1 to 3 already give a presentable first version. Stages 4 to 7 can follow.
 
@@ -215,6 +215,8 @@ Decided on 2026-10-11:
 - Contract search (2026-10-12): Azure AI Search on the free tier in North Europe, `text-embedding-3-large` at 1024 dimensions, hybrid search with the semantic ranker off after measuring both. Our own search interface, wrapped as a LangChain retriever.
 
 - Deployment (2026-10-12): the application runs in North Europe because Sweden Central had no capacity for Postgres. Azure Queue Storage with a separate worker. Azure Container Registry. Microsoft sign-in in front of the web application, limited to one account. Deploys are started by hand.
+
+- Write-up (2026-10-12): no comparison with Muni Mailbox. The README covers this project only.
 
 Still open:
 - Which extraction variant the pipeline uses. Two sets of 200 documents gave opposite rankings (Document Intelligence only best on seed 42, worst on seed 43), because errors cluster per supplier layout. Over both sets the variants are too close to rank. See cards/03-validation-and-routing.md.

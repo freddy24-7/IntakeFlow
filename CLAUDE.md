@@ -105,4 +105,4 @@ uv run pytest tests/azure -m azure        # smoke test against real Azure, on re
 
 ## Working with the author
 
-The author is a developer moving into AI engineering and uses this project to learn: LangChain, LangGraph and Azure. Explain choices briefly as you go, name the trade-offs (especially framework vs hand-built compared with the earlier Muni Mailbox project), and prefer clear code over clever code.
+The author is a developer moving into AI engineering and uses this project to learn: LangChain, LangGraph and Azure. Explain choices briefly as you go, name the trade-offs (especially framework vs hand-built), and prefer clear code over clever code. Do not compare with other projects in the README or the cards.

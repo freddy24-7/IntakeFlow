@@ -6,7 +6,7 @@ Stage 2 of the PRD. First stage with LangChain and with real Azure calls. Measur
 
 **Read first, then classify.** A scanned PDF has no text until it is read, so the cheap read model (`prebuilt-read`) runs on every document, the classifier works on that text, and the expensive invoice model (`prebuilt-invoice`) runs only on invoices and credit notes.
 
-**Two schemas.** The model fills in a flat, text-only schema where every property is required, because that is what strict structured output accepts. The application stores a second shape with canonical values, the page, the printed text and flags. LangChain's `with_structured_output` does the first part. In Muni Mailbox this was a prompt asking for JSON plus hand-written parsing and retries. Here it is one call, at the price of having to know which JSON-schema features strict mode accepts.
+**Two schemas.** The model fills in a flat, text-only schema where every property is required, because that is what strict structured output accepts. The application stores a second shape with canonical values, the page, the printed text and flags. LangChain's `with_structured_output` does the first part. It is one call, at the price of having to know which JSON-schema features strict mode accepts.
 
 **The model normalises, the code checks.** The model returns each value normalised and as printed. Our own parsers for Dutch (1.234,56) and English (1,234.56) numbers and dates re-read the printed form, and a difference is flagged.
 

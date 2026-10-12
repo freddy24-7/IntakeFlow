@@ -14,7 +14,7 @@ Stage 4 of the PRD. Server-rendered pages with Jinja2 and HTMX: role picker, upl
 
 **Pages of the document are shown as images.** The first version embedded the PDF. The browser test showed an empty frame in headless Chromium, so each page is now rendered to PNG on the server. It works without a PDF viewer and can be checked in a test.
 
-**HTMX for three small things:** the queue refreshes itself while documents are being processed, the upload form shows its result without a page reload, and "Controleren" validates the form without saving. Everything else is plain forms and redirects. Compared with Muni Mailbox, where the same stack was used, nothing new was needed here.
+**HTMX for three small things:** the queue refreshes itself while documents are being processed, the upload form shows its result without a page reload, and "Controleren" validates the form without saving. Everything else is plain forms and redirects.
 
 **The dashboard counts uploads only.** Documents registered by the evaluation scripts are marked as such and left out, so the dashboard shows use of the application, not test runs. Field accuracy is the exception and is labelled as coming from the evaluation.
 

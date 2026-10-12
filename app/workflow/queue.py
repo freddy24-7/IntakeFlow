@@ -3,8 +3,7 @@
 An upload puts the document's id on the queue. A worker takes it off, runs the
 workflow and deletes the message when the document has a result. A message that
 is not deleted becomes visible again after a while, so a worker that dies in
-the middle of a document does not lose it. This replaces the Redis Streams
-consumer group that Muni Mailbox built by hand.
+the middle of a document does not lose it.
 """
 
 import uuid

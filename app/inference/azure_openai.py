@@ -2,8 +2,8 @@
 
 LangChain does three things here: it turns a Pydantic schema into a strict
 JSON-schema request, parses the answer back into that schema, and retries
-failed calls with backoff. Hand-built in Muni Mailbox, this was a prompt that
-asked for JSON plus our own parsing and retry code.
+failed calls with backoff. Written by hand, this would be a prompt that asks
+for JSON plus our own parsing and retry code.
 """
 
 import time

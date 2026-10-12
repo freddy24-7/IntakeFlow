@@ -4,7 +4,7 @@ Stage 1 of the PRD. No Azure, no LangChain yet: this stage builds what the later
 
 ## What was decided and why
 
-**Our own interfaces before any framework.** `app/inference/interfaces.py` and `app/reading/interfaces.py` define `ChatModel`, `EmbeddingModel` and `DocumentReader` as plain Python protocols. LangChain and the Azure SDKs arrive in stage 2 as implementations of these. The trade-off: one extra layer to maintain, in exchange for tests that run without Azure and a framework that can be swapped. In Muni Mailbox the model calls were hand-built, so the layer was there by default. With a framework it has to be chosen on purpose.
+**Our own interfaces before any framework.** `app/inference/interfaces.py` and `app/reading/interfaces.py` define `ChatModel`, `EmbeddingModel` and `DocumentReader` as plain Python protocols. LangChain and the Azure SDKs arrive in stage 2 as implementations of these. The trade-off: one extra layer to maintain, in exchange for tests that run without Azure and a framework that can be swapped.
 
 **Guarantees are enforced twice.** The ERP rule (only approved documents) is checked in `post_to_erp` and again by a database trigger. The audit log has no update or delete function and a trigger refuses both. The application check gives a clear error, and the trigger catches code that goes around the application.
 
