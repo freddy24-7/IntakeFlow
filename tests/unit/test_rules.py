@@ -142,3 +142,13 @@ def test_iban_and_vat_number_helpers() -> None:
     assert not is_valid_vat_number("NL942755630B7")
     assert is_valid_vat_number("BE0123456789")
     assert not is_valid_vat_number("12345")
+
+
+def test_a_flagged_field_fails_validation_whatever_its_value() -> None:
+    """Found by a test: with the score as a mean, one flagged invoice number
+    among ten confident fields still scored 0.945 and was auto-approved."""
+    invoice = _invoice()
+    invoice.fields["invoice_number"].flags = ["di_disagrees"]
+    invoice.fields["total"].flags = ["normalisation_mismatch"]
+
+    assert validate(invoice, _context()) == ["flagged_invoice_number", "flagged_total"]

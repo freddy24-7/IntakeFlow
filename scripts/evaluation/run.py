@@ -42,6 +42,7 @@ def load_dataset(directory: Path, limit: int | None) -> list[tuple[DocumentTruth
 class DocumentResult:
     truth: DocumentTruth
     label: str | None = None
+    classification_confidence: float | None = None
     extractions: dict[str, ExtractedInvoice] = field(default_factory=dict)
     error: str | None = None  # the kind of error, never its message (rule 8)
 
@@ -130,13 +131,16 @@ async def run_evaluation(
 
     async with session_factory() as session:
         labels = await session.execute(
-            select(Classification.document_id, Classification.label).where(
+            select(
+                Classification.document_id, Classification.label, Classification.confidence
+            ).where(
                 Classification.run_key == classify_key,
                 Classification.document_id.in_(by_uuid),
             )
         )
-        for document_id, label in labels:
+        for document_id, label, confidence in labels:
             results[by_uuid[document_id]].label = label
+            results[by_uuid[document_id]].classification_confidence = confidence
 
         extractions = await session.execute(
             select(Extraction).where(

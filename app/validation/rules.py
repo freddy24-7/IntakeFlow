@@ -110,6 +110,11 @@ def validate(invoice: ExtractedInvoice, context: ValidationContext) -> list[str]
 
     if context.is_duplicate:
         failures.append("duplicate_invoice")
+
+    # A flagged field (the two sources disagree, or the code could not read the
+    # value back) always needs a person. Left to the score alone, one flagged
+    # field is averaged away by ten confident ones.
+    failures += [f"flagged_{name}" for name, field in invoice.fields.items() if field.flags]
     return failures
 
 

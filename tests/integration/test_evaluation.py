@@ -4,8 +4,10 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+from evaluation.metrics import Rate
 from evaluation.oracle import oracle_services
 from evaluation.report import build_report
+from evaluation.routing import build_routing_report, outcome, route_documents
 from evaluation.run import load_dataset, run_evaluation
 from pydantic import BaseModel
 from sqlalchemy import func, select
@@ -16,6 +18,7 @@ from synthetic.write import write_dataset
 
 from app.agents.extract import VARIANTS
 from app.agents.schema import ClassificationAnswer, LlmInvoice
+from app.config import Settings
 from app.db.models import Document, UsageRecord
 from app.inference.fakes import FakeChatModel
 from app.storage.local import MemoryStorage
@@ -149,3 +152,75 @@ def test_missing_pdfs_give_a_clear_error(tmp_path: Path) -> None:
     )
     with pytest.raises(FileNotFoundError, match="generate_synthetic"):
         load_dataset(tmp_path, limit=None)
+
+
+async def test_routing_report_on_perfect_extractions(
+    session_factory: async_sessionmaker[AsyncSession], dataset: Dataset
+) -> None:
+    """With perfect, confident extractions every labelled problem must still go
+    to review, and nothing wrong may be auto-approved."""
+    services = oracle_services(dataset, MemoryStorage())
+    results = await run_evaluation(
+        session_factory, services, dataset, VARIANTS, namespace="test", concurrency=1
+    )
+    orders = [order.model_dump(mode="json") for order in generate(30, seed=7).purchase_orders]
+    settings = Settings(database_url="unused")
+    today = date(2026, 10, 12)
+
+    routed, missing = route_documents(results.documents, "combined", orders, settings, today)
+    result = outcome(routed, settings, settings.auto_approve_threshold, "mean")
+
+    assert missing == []
+    labelled = [doc for doc in routed if doc.expected_failures]
+    assert labelled
+    for doc in labelled:
+        assert set(doc.expected_failures) <= set(doc.failures), doc.doc_id
+    assert result.wrong == []
+    assert {doc.doc_id for doc in result.auto_approved} == {
+        doc.doc_id for doc in routed if not doc.expected_failures
+    }
+    # No check fires on a document that has nothing wrong.
+    assert all(doc.failures == [] for doc in routed if not doc.expected_failures)
+
+    report = build_routing_report(
+        results.documents, VARIANTS, orders, settings, today=today, services_kind="oracle"
+    )
+    assert "**Not a measurement.**" in report
+    assert f"| Combined | {Rate(len(result.auto_approved), len(routed))} | 0.0% (0/" in report
+    assert "| duplicate_invoice | 100.0% (" in report
+    assert "### Threshold sweep" in report
+
+
+async def test_routing_counts_an_extraction_error_that_slips_through_as_wrong(
+    session_factory: async_sessionmaker[AsyncSession], dataset: Dataset
+) -> None:
+    """Built wrongly on purpose: the model garbles every invoice number. No check
+    can see that, so the documents are auto-approved and must be counted as wrong."""
+    services = oracle_services(dataset, MemoryStorage())
+    assert isinstance(services.extractor, FakeChatModel)
+    good_extract = services.extractor.answers[LlmInvoice]
+    assert callable(good_extract)
+
+    def bad_extract(user: str) -> BaseModel:
+        invoice = good_extract(user)
+        assert isinstance(invoice, LlmInvoice)
+        invoice.invoice_number.value = f"X{invoice.invoice_number.value}"
+        return invoice
+
+    services.extractor.answers[LlmInvoice] = bad_extract
+    results = await run_evaluation(
+        session_factory, services, dataset, VARIANTS, namespace="test", concurrency=1
+    )
+    orders = [order.model_dump(mode="json") for order in generate(30, seed=7).purchase_orders]
+    settings = Settings(database_url="unused")
+
+    # llm_only has no Document Intelligence value to disagree with.
+    routed, _ = route_documents(results.documents, "llm_only", orders, settings, date(2026, 10, 12))
+    unflagged = outcome(routed, settings, 0.0, "mean")
+    assert unflagged.auto_approved
+    assert len(unflagged.wrong) == len(unflagged.auto_approved)
+
+    # combined sees that Document Intelligence disagrees, and that alone sends it to review.
+    routed, _ = route_documents(results.documents, "combined", orders, settings, date(2026, 10, 12))
+    assert all("flagged_invoice_number" in doc.failures for doc in routed)
+    assert outcome(routed, settings, 0.0, "mean").auto_approved == []

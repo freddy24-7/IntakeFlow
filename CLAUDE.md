@@ -90,6 +90,8 @@ uv run pytest tests/e2e                   # browser tests
 uv run ruff check . && uv run mypy .
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
 uv run python scripts/evaluate_extraction.py --services azure               # real measurement, costs money
+uv run python scripts/evaluate_routing.py --services azure                  # routing, on stored extractions
+uv run python scripts/load_purchase_orders.py                               # purchase orders into the database
 uv run pytest tests/azure -m azure        # smoke test against real Azure, on request only
 ./deploy/up.sh --what-if                  # preview the Azure environment, changes nothing
 ./deploy/up.sh                            # create it (needs explicit confirmation first)

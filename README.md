@@ -6,13 +6,13 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stages 1 and 2 are done. Stage 2 was measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
+Stages 1 to 3 are done. Stages 2 and 3 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
 
 | Stage | State |
 | --- | --- |
 | 1. Foundations and data | Done |
 | 2. Reading and extraction | Done, measured on 12 October 2026 |
-| 3. Validation and routing | Not started |
+| 3. Validation and routing | Done, measured on 12 October 2026 |
 | 4. Review interface | Not started |
 | 5. Contract Q&A | Not started |
 | 6. Azure deployment | Not started |
@@ -34,6 +34,21 @@ One run on the 200 synthetic documents (186 invoices and credit notes), not repe
 - Cost is computed from token and page counts at list prices of 11 October 2026, and has not been compared with the Azure invoice.
 - The documents are synthetic and clean, so these numbers are an upper bound for real invoices.
 
+### Routing (stage 3)
+
+Measured on the same 186 extractions, without new Azure calls. Full report: [reports/routing-2026-10-12.md](reports/routing-2026-10-12.md). What was learned: [cards/03-validation-and-routing.md](cards/03-validation-and-routing.md).
+
+| Variant | Auto-approved at threshold 0.90 | Wrong among them | Auto-approved by validation alone | Wrong among them |
+| --- | --- | --- | --- | --- |
+| Combined | 12.4% (23/186) | 0 | 72.6% (135/186) | 3 |
+| Model only | 0% (0/186) | n/a | 72.0% (134/186) | 4 |
+| Document Intelligence only | 12.4% (23/186) | 0 | 73.1% (136/186) | 1 |
+
+- Validation caught all 48 labelled problems (wrong IBAN, duplicate, wrong total, purchase order problems and so on) in every variant. None was auto-approved at any threshold.
+- A wrong auto-approval is an auto-approved document where any extracted field differs from the label, or where a labelled problem was missed. All wrong ones here are extraction errors that arithmetic cannot see, such as line items in the wrong order.
+- The threshold of 0.90 was set before measuring and turns out close to useless: it sends 83% of the documents with nothing wrong to review. The score, built mostly on Document Intelligence's confidence, does not separate right from wrong on this data.
+- No better threshold has been chosen yet. Choosing one on these same documents and quoting the result would be fitting to the test set.
+
 What exists today:
 
 - A synthetic set of 200 documents with ground truth, from a fixed seed (see below).
@@ -42,11 +57,13 @@ What exists today:
 - Interfaces for chat models, embeddings and document reading, each with a fake and an Azure implementation.
 - An upload endpoint and four idempotent pipeline steps: read text, classify, read invoice fields, extract.
 - Three extraction variants: Document Intelligence only, model only, and combined.
+- Validation rules, scoring and routing, with auto-approved documents booked in the mock ERP.
+- A LangGraph workflow with retries, state saved in Postgres, resume, and dead-letter handling.
 - An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
 - A Bicep file for the Azure resources, with one command to create and one to delete them.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
 
-Not built yet: validation rules, scoring and routing, the review interface, contract Q&A, and deployment of the application to Azure.
+Not built yet: the review interface, contract Q&A, and deployment of the application to Azure. The workflow has been tested with fakes; its steps were measured against Azure one by one, but no document has gone through the whole graph against Azure yet.
 
 ## The synthetic set
 
@@ -89,7 +106,9 @@ uv run python scripts/generate_synthetic.py --documents 200 --seed 42
 uv run uvicorn app.main:app --reload      # http://localhost:8000/health
 uv run pytest tests/unit tests/integration
 uv run ruff check . && uv run mypy .
+uv run python scripts/load_purchase_orders.py
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
+uv run python scripts/evaluate_routing.py --services oracle --limit 20      # same, for routing
 ```
 
 ## Azure (stage 2)
