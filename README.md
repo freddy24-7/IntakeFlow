@@ -66,7 +66,7 @@ What ran where:
 - **Run against real Azure services:** Document Intelligence, Azure OpenAI and Azure AI Search, on two sets of 200 synthetic documents each (October 2026). All accuracy, latency and cost figures below come from those runs.
 - **Deployed to Azure:** the application itself, on Container Apps in North Europe, on 12 October 2026. It was used through the browser with ten synthetic documents. It is a demo environment that is taken down when not in use, so there is no public link.
 - **Tested with fakes only:** everything in CI. The models, Document Intelligence and AI Search are replaced by fakes behind the same interfaces, so the tests need no Azure.
-- **Never run:** the GitHub Actions deploy workflow is written but has not been started.
+- **Deployed from GitHub Actions:** the deploy workflow, started by hand, built the image and updated both apps on 12 October 2026 (one successful run, after one that failed on sign-in).
 
 ## Measured results
 
@@ -299,7 +299,7 @@ START -> read_text -> classify -+-> read_fields -> extract -> validate -> decide
 - **Bicep**, in [deploy/](deploy/), in two layers. [deploy/ai.bicep](deploy/ai.bicep) holds the AI resources, which cost nothing while idle. [deploy/app.bicep](deploy/app.bicep) holds the application, which costs about € 0.70 a day while it exists. Each layer has one command to create and one to remove.
 - **Dry runs** (`--what-if`) before every deployment. They catch template errors. They do not catch quota or capacity.
 - **The budget alert is created before anything that can cost money.**
-- **The deploy workflow** in [.github/workflows/deploy.yml](.github/workflows/deploy.yml) is started by hand and signs in with OpenID Connect, so no Azure secret is stored in GitHub. Its rights are limited to the one resource group.
+- **The deploy workflow** in [.github/workflows/deploy.yml](.github/workflows/deploy.yml) is started by hand and signs in with OpenID Connect, so no Azure secret is stored in GitHub. Its rights are limited to the one resource group. Azure matches the identity GitHub presents character for character, and that identity contains the numeric ids of the owner and the repository, which the setup script looks up.
 
 ### Observability
 
@@ -423,7 +423,7 @@ After `./deploy/up.sh`, put the three endpoints it prints in `.env`. The full ex
 - **Keeping an answer within the right contract rests on the prompt**, not on a filter in the search.
 - **Security is demo-grade.** No real sign-in inside the application, no CSRF protection, and the deployed database accepts connections from any Azure service, protected by its password and TLS.
 - **One worker, one document at a time.** Time to result in Azure is dominated by waiting.
-- **Not done:** the deploy workflow has never run, there is no alerting beyond the budget, nobody has built a view on the telemetry, and the interface has been used by one person.
+- **Not done:** there is no alerting beyond the budget, nobody has built a view on the telemetry, and the interface has been used by one person.
 
 ## Repository map
 

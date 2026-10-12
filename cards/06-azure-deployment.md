@@ -32,11 +32,12 @@ Stage 6 of the PRD. The application itself now runs in Azure: a web application 
 - **The libraries logged every request with all headers.** No document content, but it buried the application's own lines and is billed per gigabyte. Turned down to warnings.
 - **Worker bug found by a test.** A queue message for a document that does not exist crashed the failure handling.
 - **The upload page hid earlier results.** Each upload replaced the result of the one before, which looked as if a document had been removed. Found by the first real user in the first five minutes. Results now add up.
+- **The GitHub deploy workflow ran on its second attempt.** The first was refused at sign-in: the setup script had registered `repo:owner/name:ref:...`, while GitHub presents `repo:owner@id/name@id:ref:...` with numeric ids, and Azure compares the two exactly. After that, one run built the image in the registry, updated both apps and passed the health check in under three minutes.
+- **A workflow can only be tested by running it.** Moving to newer action versions broke CI once, because one action publishes no short version tag.
 - **Scale to zero works both ways.** The worker went to zero replicas with an empty queue and started when documents arrived.
 
 ## What is still open
 
-- **The GitHub deploy workflow has never run.** It needs three repository variables and the current code on GitHub.
 - **Cost against the real invoice**, see above.
 - **Processing time in Azure, separate from queue time**, was not measured.
 - **The database accepts connections from any Azure service.** It is protected by the password and TLS. A private network would be the stricter choice.
