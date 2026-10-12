@@ -98,7 +98,9 @@ uv run python scripts/load_purchase_orders.py                               # pu
 uv run pytest tests/azure -m azure        # smoke test against real Azure, on request only
 ./deploy/up.sh --what-if                  # preview the Azure environment, changes nothing
 ./deploy/up.sh                            # create it (needs explicit confirmation first)
-./deploy/down.sh                          # delete it
+./deploy/up-app.sh                        # also deploy the application (costs money while it exists, confirm first)
+./deploy/down-app.sh                      # remove the application, keep the AI resources
+./deploy/down.sh                          # delete everything
 ```
 
 ## Working with the author

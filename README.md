@@ -6,7 +6,7 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stages 1 to 5 are done. Stages 2, 3 and 5 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central, Azure AI Search in North Europe) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those services.
+Stages 1 to 6 are done. Stages 2, 3 and 5 were measured against real Azure services. In stage 6 the application itself was deployed to Azure (Container Apps in North Europe) on 12 October 2026 and used through the browser with ten synthetic documents. It is a demo environment that is taken down when not in use, so there is no public link.
 
 | Stage | State |
 | --- | --- |
@@ -15,7 +15,7 @@ Stages 1 to 5 are done. Stages 2, 3 and 5 were measured against real Azure servi
 | 3. Validation and routing | Done, measured on 12 October 2026 |
 | 4. Review interface | Done. Tested with fakes, and tried once against Azure with two documents |
 | 5. Contract Q&A | Done, measured on 12 October 2026 |
-| 6. Azure deployment | Not started |
+| 6. Azure deployment | Done. Deployed and tried with ten documents. The GitHub deploy workflow has not run yet |
 | 7. Write-up | Not started |
 
 ## Measured results so far
@@ -81,6 +81,19 @@ After the first set, two settings were written down and committed before a secon
 - The semantic ranker was measured too and did slightly worse (97 of 98 and 98 of 101 right), so it is off.
 - The code that drops invented source numbers never had to act in 480 real answers. It is tested with fakes.
 
+### In Azure (stage 6)
+
+Ten synthetic documents uploaded through the browser of the deployed application. What was learned: [cards/06-azure-deployment.md](cards/06-azure-deployment.md).
+
+| Measure | Value | How measured |
+| --- | --- | --- |
+| Documents | 10: six invoices auto-approved, one contract indexed, three to review | The application's dashboard |
+| Time from upload to result, median | 88 seconds | Audit records. Includes waiting in the queue and the worker starting from zero. Seven documents were uploaded at once and one worker handles one at a time |
+| Cost per document | € 0.0193 | Page and token counts at list prices of 11 October 2026 |
+
+- Cost figures in this README are computed from usage counts. On 12 October Azure Cost Management showed € 2.00 for the month against about € 15 by these counts. Billing data lags by a day or more, so this has not been confirmed either way.
+- Ten documents show that the deployment works. They are not a performance measurement.
+
 What exists today:
 
 - A synthetic set of 200 documents with ground truth, from a fixed seed (see below).
@@ -95,9 +108,10 @@ What exists today:
 - Pages in Dutch for uploading, the review queue, reviewing a document next to its extracted fields, and a dashboard. A reviewer's corrections are stored next to the model's extraction, never over it.
 - An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
 - A Bicep file for the Azure resources, with one command to create and one to delete them.
+- Deployment to Azure from Bicep: web application and worker on Container Apps with scale to zero, Postgres, Blob and Queue Storage, Key Vault, a registry and monitoring, with one managed identity and no keys.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
 
-Not built yet: deployment of the application itself to Azure. It runs on a laptop and calls the Azure services. Sign-in is a demo role picker without passwords. The workflow and the pages are tested with fakes, and each path (invoice, review, contract question) has been tried by hand against Azure with a few documents.
+Limits of what exists: sign-in inside the application is a demo role picker (the deployed version has Microsoft sign-in in front of it, limited to one account). The workflow and the pages are tested with fakes, and each path has been tried by hand against Azure with a few documents. The final write-up with the comparison to Muni Mailbox (stage 7) is still to come.
 
 ## The synthetic set
 
@@ -150,14 +164,31 @@ uv run python scripts/evaluate_qa.py --services oracle                      # sa
 
 ## Azure
 
+Two layers. The AI resources cost nothing while idle. The application costs about € 0.70 a day while it exists.
+
 ```bash
-./deploy/up.sh --what-if                  # preview, changes nothing
-./deploy/up.sh                            # create: budget alert, Document Intelligence, Azure OpenAI, AI Search
+./deploy/up.sh --what-if                  # preview the AI resources, changes nothing
+./deploy/up.sh                            # budget alert, Document Intelligence, Azure OpenAI, AI Search
 uv run pytest tests/azure -m azure        # smoke test against the real services
 uv run python scripts/evaluate_extraction.py --services azure --limit 10
+
+./deploy/up-app.sh --what-if              # preview the application
+./deploy/up-app.sh                        # Container Apps, Postgres, storage, Key Vault, registry, monitoring
+./deploy/down-app.sh                      # remove the application, keep the AI resources
 ./deploy/down.sh                          # delete everything
 ```
 
-Sign-in is keyless through `az login`. Key access is switched off on all three resources, so there are no keys to store. Document Intelligence and Azure OpenAI are pay-per-use, and Azure AI Search is on the free tier, so nothing costs money while idle.
+Sign-in to Azure services is keyless: `az login` on a laptop, a managed identity in Azure. Key access is switched off on the AI resources and on storage. The only secret is the database URL, which lives in Key Vault.
 
-The integration tests need the local PostgreSQL. They use a separate database (`<name>_test`) that is rebuilt on every run.
+### Runbook
+
+| Situation | What to do |
+| --- | --- |
+| Is it up? | `curl https://<web address>/health` returns `{"status":"ok"}`. The first request after a quiet period takes longer: the application starts from zero |
+| A document stays "in verwerking" | The worker starts when a message is on the queue. Look at its log: `az containerapp logs show -g rg-intakeflow-dev -n ca-intakeflow-worker --tail 50` |
+| A document is "Mislukt" | It failed three times. Its audit records hold the kind of error. There is no retry button yet |
+| Deploy a new version | Start the "Deploy" workflow in GitHub Actions, or run `./deploy/up-app.sh` |
+| Region has no capacity | Change `appLocation` or `searchLocation` in `deploy/main.bicep`. A dry run does not check capacity |
+| Stop the daily cost | `./deploy/down-app.sh`. Deleting the Container Apps environment takes about twenty minutes |
+| Cost so far | Azure portal, Cost Management, resource group `rg-intakeflow-dev`. A budget alert mails at 50%, 80% and 100% of € 35 a month |
+| Who can open the application | One Microsoft account, set by `developerObjectId` at deploy time |
