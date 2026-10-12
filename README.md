@@ -6,29 +6,47 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stage 1 (foundations and data) is done. Stage 2 (reading and extraction) is built and tested against fakes. **Nothing has been deployed to or run in Azure yet**, and no real model or Document Intelligence call has been made: there are no extraction, accuracy, latency or cost results to report.
+Stages 1 and 2 are done. Stage 2 was measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
 
 | Stage | State |
 | --- | --- |
 | 1. Foundations and data | Done |
-| 2. Reading and extraction | Code and evaluation script built, tested with fakes only. Not yet measured against Azure |
+| 2. Reading and extraction | Done, measured on 12 October 2026 |
 | 3. Validation and routing | Not started |
 | 4. Review interface | Not started |
 | 5. Contract Q&A | Not started |
 | 6. Azure deployment | Not started |
 | 7. Write-up | Not started |
 
+## Measured results so far
+
+One run on the 200 synthetic documents (186 invoices and credit notes), not repeated. Models: `gpt-4.1-mini` for classification, `gpt-4.1` for extraction. Full report with every field, latency and method: [reports/extraction-2026-10-12.md](reports/extraction-2026-10-12.md). What was learned: [cards/02-reading-and-extraction.md](cards/02-reading-and-extraction.md).
+
+| Measure | Combined | Model only | Document Intelligence only |
+| --- | --- | --- | --- |
+| Documents with every field right | 97.3% (181/186) | 94.6% (176/186) | 98.4% (183/186) |
+| Cost per invoice | € 0.0206 | € 0.0100 | € 0.0105 |
+
+- Classification: 200 of 200 right.
+- A field counts as right only when it equals the label exactly after normalising. An invoice needs all eleven fields and all line items right to count.
+- Document Intelligence on its own scored highest. Its figure includes one fix of ours: it returned an incomplete VAT total on all 71 invoices with two VAT rates, and we sum its per-rate amounts instead. Without that fix its VAT field is wrong on 71 of 186.
+- The model's errors are mostly line items on skewed scans.
+- Cost is computed from token and page counts at list prices of 11 October 2026, and has not been compared with the Azure invoice.
+- The documents are synthetic and clean, so these numbers are an upper bound for real invoices.
+
 What exists today:
 
 - A synthetic set of 200 documents with ground truth, from a fixed seed (see below).
 - PostgreSQL schema with an append-only, hash-chained audit log.
 - A mock ERP with one write function that refuses unapproved documents.
-- Interfaces for chat models, embeddings and document reading, each with a fake and (since stage 2) an Azure implementation that has not been run yet.
+- Interfaces for chat models, embeddings and document reading, each with a fake and an Azure implementation.
 - An upload endpoint and four idempotent pipeline steps: read text, classify, read invoice fields, extract.
-- Three extraction variants for the baseline comparison: Document Intelligence only, model only, and combined.
+- Three extraction variants: Document Intelligence only, model only, and combined.
 - An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
-- A Bicep file for the two Azure resources stage 2 needs, checked with a dry run only.
+- A Bicep file for the Azure resources, with one command to create and one to delete them.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
+
+Not built yet: validation rules, scoring and routing, the review interface, contract Q&A, and deployment of the application to Azure.
 
 ## The synthetic set
 

@@ -207,8 +207,8 @@ Decided on 2026-10-11:
 - Infrastructure as code: Bicep (Azure-only project, no state file to manage).
 - Traces: OpenTelemetry and Application Insights only. LangSmith can be switched on later.
 - Workflow order: layout/read before classification (see section 5).
+- Region and models (2026-10-12): Sweden Central, `gpt-4.1-mini` for classification and `gpt-4.1` for extraction, as regional Standard deployments because the subscription has no EU data-zone quota for them.
 - Queue: in-process worker locally, Azure Queue Storage in stage 6.
 
 Still open:
-- Whether Document Intelligence's prebuilt invoice model covers the Dutch fields well enough, or whether the LLM must do more of the work (decide after the baseline comparison in stage 2).
-- Which model deployment to use for classification vs extraction (a cheaper model for the former).
+- Which extraction variant the pipeline uses. The stage 2 baseline (reports/extraction-2026-10-12.md) had Document Intelligence only at 98.4% of documents fully right, combined at 97.3% and model only at 94.6%, with Document Intelligence needing our own VAT sum. Decide in stage 3 on auto-approval precision per variant.
