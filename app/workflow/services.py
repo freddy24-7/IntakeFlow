@@ -2,12 +2,33 @@
 
 from typing import Any
 
+from sqlalchemy import make_url
+
 from app.config import Settings
 from app.inference.azure_openai import AzureOpenAIChatModel, AzureOpenAIEmbeddingModel
 from app.rag.azure_search import AzureSearchIndex
 from app.reading.azure_di import AzureDocumentReader
+from app.storage.blob import BlobStorage
+from app.storage.interfaces import Storage
 from app.storage.local import LocalStorage
 from app.workflow.steps import Services
+
+
+def build_storage(settings: Settings) -> Storage:
+    if settings.storage_backend == "blob":
+        return BlobStorage.connect(
+            account_url=settings.azure_storage_blob_url, container=settings.blob_container
+        )
+    return LocalStorage(settings.storage_dir)
+
+
+def checkpoint_url(database_url: str) -> str:
+    """LangGraph's Postgres checkpointer uses psycopg, the rest of the app asyncpg.
+    The two drivers also spell the TLS option differently."""
+    url = make_url(database_url).set(drivername="postgresql")
+    if "ssl" in url.query:
+        url = url.difference_update_query(["ssl"]).update_query_dict({"sslmode": "require"})
+    return url.render_as_string(hide_password=False)
 
 
 class AzureNotConfiguredError(Exception):
@@ -32,7 +53,7 @@ def build_azure_services(settings: Settings, index_name: str | None = None) -> S
         )
 
     return Services(
-        storage=LocalStorage(settings.storage_dir),
+        storage=build_storage(settings),
         reader=AzureDocumentReader.connect(endpoint=settings.azure_document_intelligence_endpoint),
         classifier=chat(settings.azure_openai_classify_deployment),
         classifier_name=settings.azure_openai_classify_deployment,

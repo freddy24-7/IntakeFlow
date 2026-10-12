@@ -177,7 +177,9 @@ async def _record_failure(
 ) -> None:
     """Rule 8: only the kind of error is stored, because a message can quote the document."""
     async with session_factory() as session:
-        document = await session.get_one(Document, document_id)
+        document = await session.get(Document, document_id)
+        if document is None:  # a queue message for a document that does not exist
+            return
         document.attempts += 1
         document.last_error = error_kind[:64]
         parked = document.attempts >= max_attempts

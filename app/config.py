@@ -30,6 +30,18 @@ class Settings(BaseSettings):
     # Uploaded files, until Blob Storage replaces the local folder in stage 6.
     storage_dir: Path = Path("data/uploads")
 
+    # Where uploads are kept: "local" (the folder above) or "blob".
+    storage_backend: str = "local"
+    azure_storage_blob_url: str = ""
+    blob_container: str = "documents"
+    # How an upload reaches the workflow: "in_process" (a task in the web
+    # application) or "queue" (a message for the worker, see app/worker.py).
+    dispatch_backend: str = "in_process"
+    azure_storage_queue_url: str = ""
+    queue_name: str = "documents"
+    # Telemetry to Application Insights. Empty means off.
+    applicationinsights_connection_string: str = ""
+
     # Azure. Empty endpoints mean "not configured": the app then refuses to
     # process documents instead of silently using a fake.
     # Sign-in is keyless (az login locally, managed identity later), so there

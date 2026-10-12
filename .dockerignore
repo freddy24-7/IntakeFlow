@@ -1,0 +1,19 @@
+# Keep the image small and keep local secrets and data out of it.
+.git
+.github
+.venv
+.env
+.env.*
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
+__pycache__
+data
+tests
+scripts
+cards
+docs
+deploy
+reports/*.md
+*.md
