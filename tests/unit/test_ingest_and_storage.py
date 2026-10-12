@@ -49,5 +49,5 @@ def test_call_cost() -> None:
     chat = call_cost(model="gpt-4.1", pages=0, input_tokens=2000, output_tokens=500)
 
     assert read == Decimal("0.00264")
-    assert chat == Decimal("0.00765")
+    assert chat == Decimal("0.00845")
     assert call_cost(model="fake-chat", pages=0, input_tokens=10, output_tokens=10) is None

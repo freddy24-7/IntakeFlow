@@ -1,8 +1,8 @@
 """Unit prices for the cost report.
 
 Source: Azure retail prices API (prices.azure.com), region swedencentral, EUR,
-pay-as-you-go, looked up on 2026-10-11. Model prices are the EU data zone
-rates. Prices change: look them up again before quoting a cost.
+pay-as-you-go, looked up on 2026-10-11. Model prices are the regional
+(Standard) rates, which is the deployment type in deploy/ai.bicep. Prices change: look them up again before quoting a cost.
 """
 
 from decimal import Decimal
@@ -16,8 +16,8 @@ PAGE_PRICES = {
 }
 # EUR per 1,000 tokens: (input, output)
 TOKEN_PRICES = {
-    "gpt-4.1": (Decimal("0.0019"), Decimal("0.0077")),
-    "gpt-4.1-mini": (Decimal("0.0004"), Decimal("0.0015")),
+    "gpt-4.1": (Decimal("0.0021"), Decimal("0.0085")),
+    "gpt-4.1-mini": (Decimal("0.0004"), Decimal("0.0017")),
 }
 
 

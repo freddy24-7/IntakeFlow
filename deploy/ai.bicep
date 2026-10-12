@@ -42,12 +42,13 @@ resource openAi 'Microsoft.CognitiveServices/accounts@2024-10-01' = {
   }
 }
 
-// DataZoneStandard keeps processing inside the EU data zone.
+// Regional Standard: processing stays in Sweden Central. The subscription has no
+// quota for the EU data zone type (DataZoneStandard) for these models.
 resource classifyModel 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = {
   parent: openAi
   name: 'gpt-4.1-mini'
   sku: {
-    name: 'DataZoneStandard'
+    name: 'Standard'
     capacity: deploymentCapacity
   }
   properties: {
@@ -65,7 +66,7 @@ resource extractModel 'Microsoft.CognitiveServices/accounts/deployments@2024-10-
   // Deployments on one account are created one at a time.
   dependsOn: [classifyModel]
   sku: {
-    name: 'DataZoneStandard'
+    name: 'Standard'
     capacity: deploymentCapacity
   }
   properties: {
