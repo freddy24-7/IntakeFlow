@@ -212,6 +212,8 @@ Decided on 2026-10-11:
 
 - Review (2026-10-12): corrected values are validated again and failures are shown and recorded, but the reviewer may approve anyway. Interface text is Dutch.
 
+- Contract search (2026-10-12): Azure AI Search on the free tier in North Europe, `text-embedding-3-large` at 1024 dimensions, hybrid search with the semantic ranker off after measuring both. Our own search interface, wrapped as a LangChain retriever.
+
 Still open:
 - Which extraction variant the pipeline uses. Two sets of 200 documents gave opposite rankings (Document Intelligence only best on seed 42, worst on seed 43), because errors cluster per supplier layout. Over both sets the variants are too close to rank. See cards/03-validation-and-routing.md.
 - The auto-approve threshold. Routing by validation alone (threshold 0) was fixed in advance and held up on the hold-out set: every labelled problem caught, 0 to 4 wrong auto-approvals per variant out of 123 to 130. Decided 2026-10-12: threshold 0, combined variant.

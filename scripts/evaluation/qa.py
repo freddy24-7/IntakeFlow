@@ -120,7 +120,9 @@ async def ask_all(
     services: Services,
     doc_ids: dict[str, str],
     top: int,
-    concurrency: int = 3,
+    concurrency: int = 2,
+    attempts: int = 4,
+    pause_seconds: float = 15.0,
 ) -> list[Asked]:
     assert services.embedder is not None
     assert services.answerer is not None
@@ -134,18 +136,24 @@ async def ask_all(
     async def ask(question: QuestionTruth) -> Asked:
         asked = Asked(question)
         async with limiter:
-            try:
-                answer = await answer_question(
-                    question.question,
-                    index=index,
-                    embedder=embedder,
-                    model=model,
-                    prompt=prompt,
-                    top=top,
-                )
-            except Exception as error:
-                asked.error = type(error).__name__
-                return asked
+            # Answers are not stored, so a question that hits a rate limit is
+            # asked again here, after a pause, instead of being lost.
+            for attempt in range(1, attempts + 1):
+                try:
+                    answer = await answer_question(
+                        question.question,
+                        index=index,
+                        embedder=embedder,
+                        model=model,
+                        prompt=prompt,
+                        top=top,
+                    )
+                    break
+                except Exception as error:
+                    if attempt == attempts:
+                        asked.error = type(error).__name__
+                        return asked
+                    await asyncio.sleep(pause_seconds * attempt)
         asked.answer = answer
         asked.offered = [locate(p.document_id, p.clause_number, p.page) for p in answer.offered]
         asked.cited = [
@@ -276,9 +284,13 @@ def build_qa_report(
         wrongly = [i for i in unanswerable if i.answered]
         if wrongly:
             out += _table(
-                ["Answered although it should decline", "Cited"],
+                ["Answered although it should decline", "Cited", "Answer given"],
                 [
-                    [i.question.question_id, ", ".join(f"{d} art. {c}" for d, c, _ in i.cited)]
+                    [
+                        i.question.question_id,
+                        ", ".join(f"{d} art. {c}" for d, c, _ in i.cited),
+                        i.answer.text if i.answer else "",
+                    ]
                     for i in wrongly
                 ],
             )

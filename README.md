@@ -6,7 +6,7 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stages 1 to 4 are done. Stages 2 and 3 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
+Stages 1 to 5 are done. Stages 2, 3 and 5 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central, Azure AI Search in North Europe) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those services.
 
 | Stage | State |
 | --- | --- |
@@ -14,7 +14,7 @@ Stages 1 to 4 are done. Stages 2 and 3 were measured against real Azure services
 | 2. Reading and extraction | Done, measured on 12 October 2026 |
 | 3. Validation and routing | Done, measured on 12 October 2026 |
 | 4. Review interface | Done. Tested with fakes, and tried once against Azure with two documents |
-| 5. Contract Q&A | Not started |
+| 5. Contract Q&A | Done, measured on 12 October 2026 |
 | 6. Azure deployment | Not started |
 | 7. Write-up | Not started |
 
@@ -64,6 +64,23 @@ After the first set, two settings were written down and committed before a secon
 - Settings since then: auto-approval by validation alone (threshold 0), with the combined variant. Combined was kept because it is the only variant with a second source to disagree with, not because the data shows it to be better.
 - Over both sets (372 documents, about 50 suppliers) the three variants auto-approve 259 to 264 documents with 3 to 5 wrong. That is too close to rank them.
 
+### Contract Q&A (stage 5)
+
+120 labelled questions per set about 8 synthetic contracts, hybrid search without the semantic ranker. Reports: [first set](reports/qa-2026-10-12.md), [hold-out set](reports/qa-holdout-2026-10-12.md). What was learned: [cards/05-contract-qa.md](cards/05-contract-qa.md).
+
+| Measure | First set (seed 42) | Hold-out set (seed 43) |
+| --- | --- | --- |
+| Right clause among the 5 passages | 100% (98/98) | 100% (101/101) |
+| Right answer | 100% (98/98) | 100% (101/101) |
+| Citation points to the labelled clause and page | 100% (98/98) | 100% (101/101) |
+| Declined: this contract lacks the clause, others have it | 100% (14/14) | 100% (11/11) |
+| Declined: no contract covers the subject | 75% (6/8) | 87.5% (7/8) |
+
+- These numbers say little about real contracts. All 16 contracts come from the same nine clause templates, and each fact sits in one sentence.
+- All three failures are one question, about an insured amount. The liability clause mentions insurance without an amount, and in two cases the model gave the liability cap as the insured amount.
+- The semantic ranker was measured too and did slightly worse (97 of 98 and 98 of 101 right), so it is off.
+- The code that drops invented source numbers never had to act in 480 real answers. It is tested with fakes.
+
 What exists today:
 
 - A synthetic set of 200 documents with ground truth, from a fixed seed (see below).
@@ -74,12 +91,13 @@ What exists today:
 - Three extraction variants: Document Intelligence only, model only, and combined.
 - Validation rules, scoring and routing, with auto-approved documents booked in the mock ERP.
 - A LangGraph workflow with retries, state saved in Postgres, resume, and dead-letter handling.
+- Contract search: clauses indexed in Azure AI Search (hybrid), answers with contract, clause and page looked up by code, and "Niet gevonden in de documenten" when the passages do not hold the answer.
 - Pages in Dutch for uploading, the review queue, reviewing a document next to its extracted fields, and a dashboard. A reviewer's corrections are stored next to the model's extraction, never over it.
 - An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
 - A Bicep file for the Azure resources, with one command to create and one to delete them.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
 
-Not built yet: contract Q&A, and deployment of the application to Azure. Sign-in is a demo role picker without passwords. On 12 October 2026 two documents went through the whole workflow against Azure from the running application; everything else about the workflow and the pages is tested with fakes.
+Not built yet: deployment of the application itself to Azure. It runs on a laptop and calls the Azure services. Sign-in is a demo role picker without passwords. The workflow and the pages are tested with fakes, and each path (invoice, review, contract question) has been tried by hand against Azure with a few documents.
 
 ## The synthetic set
 
@@ -127,18 +145,19 @@ uv run ruff check . && uv run mypy .
 uv run python scripts/load_purchase_orders.py
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
 uv run python scripts/evaluate_routing.py --services oracle --limit 20      # same, for routing
+uv run python scripts/evaluate_qa.py --services oracle                      # same, for contract Q&A
 ```
 
-## Azure (stage 2)
+## Azure
 
 ```bash
 ./deploy/up.sh --what-if                  # preview, changes nothing
-./deploy/up.sh                            # create: budget alert, Document Intelligence, Azure OpenAI
+./deploy/up.sh                            # create: budget alert, Document Intelligence, Azure OpenAI, AI Search
 uv run pytest tests/azure -m azure        # smoke test against the real services
 uv run python scripts/evaluate_extraction.py --services azure --limit 10
 ./deploy/down.sh                          # delete everything
 ```
 
-Sign-in is keyless through `az login`. Key access is switched off on both resources, so there are no keys to store. Both resources are pay-per-use and cost nothing while idle.
+Sign-in is keyless through `az login`. Key access is switched off on all three resources, so there are no keys to store. Document Intelligence and Azure OpenAI are pay-per-use, and Azure AI Search is on the free tier, so nothing costs money while idle.
 
 The integration tests need the local PostgreSQL. They use a separate database (`<name>_test`) that is rebuilt on every run.
