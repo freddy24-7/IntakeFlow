@@ -27,7 +27,7 @@ jobs:
       DATABASE_URL: postgresql+asyncpg://intakeflow:ci-only@localhost:5432/intakeflow
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.0  # this action publishes no v10 tag, only full versions
       - run: uv sync --locked
       - run: uv run ruff check .
       - run: uv run ruff format --check .
