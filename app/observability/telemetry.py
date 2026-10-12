@@ -18,6 +18,10 @@ logger = logging.getLogger(__name__)
 def configure_telemetry(settings: Settings, *, service_name: str) -> bool:
     """Returns True when telemetry was switched on."""
     logging.basicConfig(level=logging.INFO)
+    # The Azure and HTTP libraries log every request with its headers at INFO.
+    # That buries the application's own lines and is paid for per gigabyte.
+    for noisy in ("azure", "httpx", "httpcore", "openai", "urllib3"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
     if not settings.applicationinsights_connection_string:
         return False
     # Imported here: the package is heavy and only needed when telemetry is on.
