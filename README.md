@@ -50,12 +50,12 @@ flowchart TD
     classDef choice fill:#1c1c26,stroke:#8b5cf6,stroke-width:1.5px,color:#f5f5f8
     classDef store fill:#14141b,stroke:#c44dff,stroke-width:1.5px,color:#f5f5f8
     classDef human fill:#2a1020,stroke:#ff8cc6,stroke-width:1.5px,color:#f5f5f8
-    classDef edge fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
+    classDef terminal fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
     class read,fields,extract,validate,index,queue step
     class classify,decide choice
     class erp,search store
     class person human
-    class upload,auto,answers edge
+    class upload,auto,answers terminal
 ```
 
 Three roles use it through server-rendered pages (Jinja2 and HTMX, interface text in Dutch):
@@ -233,10 +233,10 @@ flowchart LR
 
     classDef azure fill:#14141b,stroke:#ff3d9a,stroke-width:1.5px,color:#f5f5f8
     classDef code fill:#14141b,stroke:#8b5cf6,stroke-width:1.5px,color:#f5f5f8
-    classDef edge fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
+    classDef terminal fill:#ff3d9a,stroke:#ff3d9a,color:#12060d
     class read_text,classify,read_fields,extract,index azure
     class validate,decide,apply,non_invoice code
-    class start,done edge
+    class start,done terminal
 ```
 
 Nodes with a pink border call Azure and have a retry policy. Nodes with a violet border are plain code.
