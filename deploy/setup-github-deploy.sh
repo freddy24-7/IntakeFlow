@@ -17,13 +17,24 @@ if [[ -z "$CLIENT_ID" ]]; then
 fi
 
 # Only workflows on the main branch of this repository may sign in.
+# GitHub puts the numeric ids of the owner and the repository in the subject it
+# presents (repo:owner@id/name@id:ref:...), and Entra compares it exactly.
+IDS="$(curl -fsS "https://api.github.com/repos/$REPOSITORY" \
+  | python3 -c "import sys, json; d = json.load(sys.stdin); print(d['owner']['id'], d['id'])")"
+OWNER_ID="${IDS% *}"
+REPOSITORY_ID="${IDS#* }"
+SUBJECT="repo:${REPOSITORY%/*}@${OWNER_ID}/${REPOSITORY#*/}@${REPOSITORY_ID}:ref:refs/heads/main"
+CREDENTIAL="{
+  \"name\": \"main-branch\",
+  \"issuer\": \"https://token.actions.githubusercontent.com\",
+  \"subject\": \"$SUBJECT\",
+  \"audiences\": [\"api://AzureADTokenExchange\"]
+}"
 if [[ -z "$(az ad app federated-credential list --id "$CLIENT_ID" --query "[?name=='main-branch'].name" -o tsv)" ]]; then
-  az ad app federated-credential create --id "$CLIENT_ID" --output none --parameters "{
-    \"name\": \"main-branch\",
-    \"issuer\": \"https://token.actions.githubusercontent.com\",
-    \"subject\": \"repo:$REPOSITORY:ref:refs/heads/main\",
-    \"audiences\": [\"api://AzureADTokenExchange\"]
-  }"
+  az ad app federated-credential create --id "$CLIENT_ID" --output none --parameters "$CREDENTIAL"
+else
+  az ad app federated-credential update --id "$CLIENT_ID" --federated-credential-id main-branch \
+    --output none --parameters "$CREDENTIAL"
 fi
 
 # Limited to the one resource group: build images and update the container apps.
