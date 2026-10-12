@@ -21,16 +21,18 @@ _TYPED_VALUES = {
 
 
 class AzureDocumentReader:
-    def __init__(self, client: Any) -> None:
+    def __init__(self, client: Any, credential: Any = None) -> None:
         self._client = client
+        self._credential = credential
 
     @classmethod
     def connect(cls, *, endpoint: str, retries: int = 5) -> "AzureDocumentReader":
         """Keyless sign-in. The SDK retries throttled and failed calls with backoff."""
+        credential = DefaultAzureCredential()
         client = DocumentIntelligenceClient(
-            endpoint=endpoint, credential=DefaultAzureCredential(), retry_total=retries
+            endpoint=endpoint, credential=credential, retry_total=retries
         )
-        return cls(client)
+        return cls(client, credential)
 
     async def _analyze(self, model: str, content: bytes) -> dict[str, Any]:
         poller = await self._client.begin_analyze_document(
@@ -47,6 +49,8 @@ class AzureDocumentReader:
 
     async def close(self) -> None:
         await self._client.close()
+        if self._credential is not None:
+            await self._credential.close()
 
 
 def to_read_result(result: dict[str, Any]) -> ReadResult:

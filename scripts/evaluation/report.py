@@ -62,7 +62,9 @@ def _variant_steps(services: Services, variant: str) -> list[str]:
     names = [steps.STEP_READ_TEXT, f"classified:{steps.classify_run_key(services)}"]
     if variant != VARIANT_LLM_ONLY:
         names.append(steps.STEP_READ_FIELDS)
-    names.append(f"extracted:{steps.extract_run_key(services, variant)}")
+    # Document Intelligence only needs no model call: mapping its fields is free.
+    if variant != VARIANT_DI_ONLY:
+        names.append(f"extracted:{steps.extract_run_key(services, variant)}")
     return names
 
 
