@@ -24,6 +24,10 @@ class DocumentNotFoundError(Exception):
     pass
 
 
+class DuplicateInvoiceError(Exception):
+    """This supplier invoice is already in the ERP under another document."""
+
+
 class NotApprovedError(Exception):
     def __init__(self, document_id: uuid.UUID, status: str) -> None:
         super().__init__(f"document {document_id} has status {status!r} and may not reach the ERP")
@@ -54,6 +58,17 @@ async def post_to_erp(
     ).scalar_one_or_none()
     if existing is not None:
         return existing
+
+    # Last line of defence against paying twice. The duplicate check in validation
+    # comes first, and a database constraint backs this up.
+    same_invoice = await session.execute(
+        select(ErpEntry.id).where(
+            ErpEntry.supplier_name == invoice.supplier_name,
+            ErpEntry.invoice_number == invoice.invoice_number,
+        )
+    )
+    if same_invoice.first() is not None:
+        raise DuplicateInvoiceError(str(document_id))
 
     entry = ErpEntry(
         document_id=document_id,

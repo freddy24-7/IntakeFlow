@@ -45,6 +45,9 @@ class Document(Base):
     document_type: Mapped[str | None] = mapped_column(String(32))
     storage_key: Mapped[str | None] = mapped_column(String(255))
     size_bytes: Mapped[int | None] = mapped_column(Integer)
+    # Dead-letter bookkeeping: how often processing failed, and the kind of the last error.
+    attempts: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    last_error: Mapped[str | None] = mapped_column(String(64))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
@@ -78,6 +81,8 @@ class ErpEntry(Base):
     """The mock ERP. Written only through app.erp.gateway (rule 4)."""
 
     __tablename__ = "erp_entries"
+    # A second booking of the same supplier invoice is refused by the database.
+    __table_args__ = (UniqueConstraint("supplier_name", "invoice_number"),)
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), unique=True)
@@ -143,4 +148,34 @@ class UsageRecord(Base):
     output_tokens: Mapped[int] = mapped_column(Integer, default=0)
     pages: Mapped[int] = mapped_column(Integer, default=0)
     latency_ms: Mapped[float] = mapped_column(Float)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class Validation(Base):
+    """Outcome of the deterministic checks for one extraction."""
+
+    __tablename__ = "validations"
+    __table_args__ = (UniqueConstraint("document_id", "run_key"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    run_key: Mapped[str] = mapped_column(String(64))
+    failures: Mapped[list[str]] = mapped_column(JSONB)  # names of the checks that failed
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class RoutingDecision(Base):
+    """Auto-approve or review, with the score, the threshold used and every reason."""
+
+    __tablename__ = "routing_decisions"
+    __table_args__ = (UniqueConstraint("document_id", "run_key"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    run_key: Mapped[str] = mapped_column(String(64))
+    decision: Mapped[str] = mapped_column(String(16))  # "auto_approve" or "review"
+    score: Mapped[float] = mapped_column(Float)
+    threshold: Mapped[float] = mapped_column(Float)
+    field_scores: Mapped[dict[str, float]] = mapped_column(JSONB)
+    reasons: Mapped[list[str]] = mapped_column(JSONB)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

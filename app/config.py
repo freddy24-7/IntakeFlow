@@ -12,6 +12,16 @@ class Settings(BaseSettings):
     database_url: str
     # Rule 3: thresholds live in configuration, and changes to them are measured.
     auto_approve_threshold: float = 0.90
+    # How the field scores become one document score: "mean" or "min".
+    score_aggregate: str = "mean"
+    # Score of a field that only the model produced (it gives no usable confidence).
+    score_default_confidence: float = 0.80
+    # Below this the classifier's answer is not trusted and a person looks.
+    classification_threshold: float = 0.80
+    # Share of the purchase order amount an invoice total may differ by.
+    po_amount_tolerance: float = 0.01
+    # After this many failed runs a document is parked as failed (dead letter).
+    max_attempts: int = 3
     max_upload_bytes: int = 20 * 1024 * 1024
     # Uploaded files, until Blob Storage replaces the local folder in stage 6.
     storage_dir: Path = Path("data/uploads")

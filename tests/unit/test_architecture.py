@@ -3,6 +3,8 @@
 from pathlib import Path
 
 from tests.architecture import (
+    AUTO_APPROVE_FILE,
+    find_auto_approved_references,
     find_erp_references_outside_gateway,
     find_erp_write_sites,
     find_model_client_imports,
@@ -99,3 +101,36 @@ def test_second_write_inside_the_gateway_is_caught(tmp_path: Path) -> None:
     )
 
     assert len(find_erp_write_sites(root)) == 2
+
+
+# Rule 3: the model never approves alone
+
+
+def test_only_the_routing_step_can_make_a_document_auto_approved() -> None:
+    references = find_auto_approved_references(REPO_ROOT)
+
+    assert references, "the routing step should set the status"
+    assert all(reference.startswith(f"{AUTO_APPROVE_FILE}:") for reference in references)
+
+
+def test_the_routing_step_approves_only_on_a_stored_decision() -> None:
+    """The status is set inside one `if` that tests the decision made by scoring.decide."""
+    source = (REPO_ROOT / AUTO_APPROVE_FILE).read_text(encoding="utf-8")
+
+    assert source.count("DocumentStatus.AUTO_APPROVED") == 2  # set before booking, kept after
+    guard = source.index("if decision.decision == scoring.AUTO_APPROVE:")
+    assert guard < source.index("DocumentStatus.AUTO_APPROVED")
+
+
+def test_a_shortcut_to_auto_approval_is_caught(tmp_path: Path) -> None:
+    root = _wrong_tree(tmp_path)
+    _write(
+        root,
+        "app/agents/extract.py",
+        "def confident(document, model_score):\n"
+        "    if model_score > 0.99:\n"
+        "        document.status = DocumentStatus.AUTO_APPROVED.value\n",
+    )
+    _write(root, "app/web/quick.py", "STATUS = 'auto_approved'\n")
+
+    assert find_auto_approved_references(root) == ["app/agents/extract.py:3", "app/web/quick.py:1"]

@@ -7,12 +7,11 @@ replaces it with Azure Queue Storage without the upload code changing.
 import asyncio
 import logging
 import uuid
-from typing import Protocol
+from typing import Any, Protocol
 
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from app.workflow.runner import process_document
-from app.workflow.steps import Services
+from app.workflow.graph import run_document
 
 logger = logging.getLogger(__name__)
 
@@ -31,13 +30,13 @@ class NotConfiguredDispatcher:
 class InProcessDispatcher:
     def __init__(
         self,
+        graph: Any,
         session_factory: async_sessionmaker[AsyncSession],
-        services: Services,
-        variant: str,
+        max_attempts: int,
     ) -> None:
+        self._graph = graph
         self._session_factory = session_factory
-        self._services = services
-        self._variant = variant
+        self._max_attempts = max_attempts
         self._tasks: set[asyncio.Task[None]] = set()
 
     async def dispatch(self, document_id: uuid.UUID) -> None:
@@ -46,14 +45,12 @@ class InProcessDispatcher:
         task.add_done_callback(self._tasks.discard)
 
     async def _run(self, document_id: uuid.UUID) -> None:
-        try:
-            await process_document(
-                self._session_factory, self._services, document_id, [self._variant]
-            )
-        except Exception as error:
-            # Rule 8: log the id and the kind of error, not the message, which
-            # can quote the document. Dead-letter handling arrives in stage 3.
-            logger.error("document %s failed: %s", document_id, type(error).__name__)
+        # run_document records failures on the document, so nothing is lost here.
+        result = await run_document(
+            self._graph, self._session_factory, document_id, max_attempts=self._max_attempts
+        )
+        if result is None:
+            logger.error("document %s failed, see its audit records", document_id)
 
     async def wait(self) -> None:
         """Wait for running documents. Used by tests and on shutdown."""

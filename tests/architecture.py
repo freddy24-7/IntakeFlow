@@ -97,3 +97,25 @@ def find_erp_write_sites(root: Path) -> list[str]:
             ):
                 sites.append(f"{function.name}:{node.lineno}")
     return sites
+
+
+# Rule 3: the one place where a document may become auto-approved.
+AUTO_APPROVED_NAME = "AUTO_APPROVED"
+AUTO_APPROVE_FILE = "app/workflow/routing_steps.py"
+# These define or check the status. They do not set it.
+AUTO_APPROVED_READERS = ("app/db/models.py", "app/erp/gateway.py")
+
+
+def find_auto_approved_references(root: Path) -> list[str]:
+    """Every mention of the auto-approved status outside the files that define
+    or check it, as 'file:line'. All of them must be in the routing step."""
+    references = []
+    for relative, tree in _python_files(root):
+        if relative in AUTO_APPROVED_READERS:
+            continue
+        for node in ast.walk(tree):
+            if (isinstance(node, ast.Attribute) and node.attr == AUTO_APPROVED_NAME) or (
+                isinstance(node, ast.Constant) and node.value == "auto_approved"
+            ):
+                references.append(f"{relative}:{node.lineno}")
+    return references
