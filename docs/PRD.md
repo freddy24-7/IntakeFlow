@@ -211,5 +211,6 @@ Decided on 2026-10-11:
 - Queue: in-process worker locally, Azure Queue Storage in stage 6.
 
 Still open:
-- Which extraction variant the pipeline uses, and the auto-approve threshold. Stage 3 (reports/routing-2026-10-12.md): validation caught 48 of 48 labelled problems in every variant. The threshold of 0.90 auto-approves 12% with none wrong, and the score does not separate right from wrong. Document Intelligence only again did best. Decide after a run on a set with another seed, so the choice is not fitted to the test set.
+- Which extraction variant the pipeline uses. Two sets of 200 documents gave opposite rankings (Document Intelligence only best on seed 42, worst on seed 43), because errors cluster per supplier layout. Over both sets the variants are too close to rank. See cards/03-validation-and-routing.md.
+- The auto-approve threshold. Routing by validation alone (threshold 0) was fixed in advance and held up on the hold-out set: every labelled problem caught, 0 to 4 wrong auto-approvals per variant out of 123 to 130. The configured default is still 0.90.
 - How to score: leave the score out, weigh payment fields only, or calibrate Document Intelligence's confidence.

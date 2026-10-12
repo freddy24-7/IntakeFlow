@@ -47,7 +47,21 @@ Measured on the same 186 extractions, without new Azure calls. Full report: [rep
 - Validation caught all 48 labelled problems (wrong IBAN, duplicate, wrong total, purchase order problems and so on) in every variant. None was auto-approved at any threshold.
 - A wrong auto-approval is an auto-approved document where any extracted field differs from the label, or where a labelled problem was missed. All wrong ones here are extraction errors that arithmetic cannot see, such as line items in the wrong order.
 - The threshold of 0.90 was set before measuring and turns out close to useless: it sends 83% of the documents with nothing wrong to review. The score, built mostly on Document Intelligence's confidence, does not separate right from wrong on this data.
-- No better threshold has been chosen yet. Choosing one on these same documents and quoting the result would be fitting to the test set.
+
+### Hold-out check (second set, seed 43)
+
+After the first set, two settings were written down and committed before a second set of 200 documents with other suppliers was generated and run: route by validation alone (no score threshold), and use the Document Intelligence only variant. Reports: [extraction](reports/extraction-holdout-2026-10-12.md), [routing](reports/routing-holdout-2026-10-12.md).
+
+| Variant | Documents with every field right | Auto-approved by validation alone | Wrong among them |
+| --- | --- | --- | --- |
+| Combined | 96.2% (179/186) | 68.3% (127/186) | 0 |
+| Model only | 93.5% (174/186) | 69.9% (130/186) | 1 |
+| Document Intelligence only | 84.9% (158/186) | 66.1% (123/186) | 4 |
+
+- The result for the settings fixed in advance: 123 of 186 auto-approved, 4 of them wrong (3.3%).
+- Routing by validation alone held up: every labelled problem was caught again, in all three variants.
+- The choice of variant did not: Document Intelligence only was the best variant on the first set and the worst on the second. Its errors cluster per supplier layout (14 wrong IBANs from two suppliers), so 186 documents from 25 suppliers are far fewer independent samples than they look.
+- Over both sets (372 documents, about 50 suppliers) the three variants auto-approve 259 to 264 documents with 3 to 5 wrong. That is too close to rank them.
 
 What exists today:
 

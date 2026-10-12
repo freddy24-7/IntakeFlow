@@ -56,3 +56,25 @@ Written and committed on 12 October 2026, before the hold-out set (seed 43) was 
 - **Variant: Document Intelligence only.** Reason: most auto-approvals and fewest wrong ones on seed 42 (136 auto-approved, 1 wrong), at half the cost of combined.
 - **What will be reported:** auto-approval rate and wrong auto-approvals on the hold-out set for all three variants, with the two choices above as the result to quote, whatever it turns out to be.
 - Rules, prompts, the Document Intelligence mapping and the definition of a wrong auto-approval stay exactly as they are at this commit.
+
+## Hold-out result (seed 43)
+
+Run on 12 October 2026, after the settings above were committed. 200 new documents, 186 of them invoices and credit notes, from 25 other suppliers. Reports: `reports/extraction-holdout-2026-10-12.md` and `reports/routing-holdout-2026-10-12.md`.
+
+| Variant | Documents with every field right | Auto-approved by validation alone | Wrong among them |
+| --- | --- | --- | --- |
+| Combined | 96.2% (179/186) | 68.3% (127/186) | 0 |
+| Model only | 93.5% (174/186) | 69.9% (130/186) | 1 |
+| Document Intelligence only | 84.9% (158/186) | 66.1% (123/186) | 4 |
+
+**The result for the settings fixed in advance** (validation alone, Document Intelligence only): 123 of 186 auto-approved, 4 of them wrong (3.3%).
+
+- **Routing by validation alone held up.** Validation again caught every labelled problem in all three variants, and no labelled problem was auto-approved.
+- **The choice of variant did not hold up.** Document Intelligence only went from best on seed 42 (98.4% of documents fully right) to worst on seed 43 (84.9%). Its four wrong auto-approvals all have a wrong supplier name. They passed because the purchase order also matches on VAT number.
+- **Errors come per supplier, not per document.** On seed 43 Document Intelligence got the IBAN wrong on 14 documents, and those 14 belong to just two suppliers. Its supplier-name errors belong to three. Every supplier has one layout, so the 186 documents behave like about 25 independent samples. Seed 42 happened to contain 25 suppliers whose layouts suited Document Intelligence. This is why the first set alone gave a misleading ranking.
+- **Stamps were harder on this set.** Where the stamp covered the subtotal or the VAT amount, all three variants misread them. The totals check failed on those and sent them to review.
+- **The threshold of 0.90 was worse than useless for Document Intelligence only on this set:** 19 auto-approved, 3 of them wrong. A high confidence score did not mean a right supplier name.
+- **Both sets together (372 invoices and credit notes), validation alone:** combined 262 auto-approved with 3 wrong, model only 264 with 5 wrong, Document Intelligence only 259 with 5 wrong. With about 50 suppliers behind these numbers the variants cannot be ranked with any confidence.
+- **Cost of the hold-out run:** about € 5.45 by token and page counts at list prices.
+
+What this leaves open: the variant. The pooled numbers slightly favour combined, and it is the only variant with a second source to disagree with, but choosing it because it did best on the hold-out set would repeat the mistake this run exposed.
