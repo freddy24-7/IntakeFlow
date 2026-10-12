@@ -1,8 +1,10 @@
 // IntakeFlow environment for stages 2 to 5: reading, extraction and contract search.
 // Everything is pay-per-use. Nothing here costs money while idle.
 //
-//   ./deploy/up.sh      create or update
-//   ./deploy/down.sh    delete everything
+//   ./deploy/up.sh          the AI resources (no idle cost)
+//   ./deploy/up-app.sh      also the application (costs money while it exists)
+//   ./deploy/down-app.sh    remove the application, keep the AI resources
+//   ./deploy/down.sh        delete everything
 
 targetScope = 'subscription'
 
@@ -19,7 +21,19 @@ param developerObjectId string
 param budgetContactEmail string
 
 @description('Monthly budget in the billing currency of the subscription.')
-param monthlyBudget int = 20
+param monthlyBudget int = 35
+
+@description('Also create the application: Container Apps, Postgres, storage, registry, monitoring. These cost money while idle.')
+param deployApp bool = false
+
+@description('Image tag for the two container apps. Empty creates the application resources without the apps.')
+param imageTag string = ''
+
+@secure()
+param postgresPassword string = ''
+
+@description('Client id of the Entra app registration for sign-in to the web application.')
+param authClientId string = ''
 
 @description('First day of the current month, for example 2026-10-01.')
 param budgetStartDate string
@@ -57,7 +71,27 @@ module ai 'ai.bicep' = {
   }
 }
 
+module app 'app.bicep' = if (deployApp) {
+  name: 'app'
+  scope: group
+  params: {
+    location: location
+    developerObjectId: developerObjectId
+    imageTag: imageTag
+    postgresPassword: postgresPassword
+    authClientId: authClientId
+    documentIntelligenceName: ai.outputs.documentIntelligenceName
+    openAiName: ai.outputs.openAiName
+    searchName: ai.outputs.searchName
+    documentIntelligenceEndpoint: ai.outputs.documentIntelligenceEndpoint
+    openAiEndpoint: ai.outputs.openAiEndpoint
+    searchEndpoint: ai.outputs.searchEndpoint
+  }
+}
+
 output resourceGroup string = group.name
 output documentIntelligenceEndpoint string = ai.outputs.documentIntelligenceEndpoint
 output openAiEndpoint string = ai.outputs.openAiEndpoint
 output searchEndpoint string = ai.outputs.searchEndpoint
+output registryName string = app.?outputs.registryName ?? ''
+output webUrl string = app.?outputs.webUrl ?? ''

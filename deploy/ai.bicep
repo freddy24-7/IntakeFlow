@@ -163,3 +163,6 @@ resource modelRole 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
 output documentIntelligenceEndpoint string = documentIntelligence.properties.endpoint
 output openAiEndpoint string = openAi.properties.endpoint
 output searchEndpoint string = 'https://${search.name}.search.windows.net'
+output documentIntelligenceName string = documentIntelligence.name
+output openAiName string = openAi.name
+output searchName string = search.name
