@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Tech Stack - IntakeFlow{% endblock %}
+{% block content %}
+<div class="doc">
+  <h1>Tech <span class="accent">Stack</span></h1>
+  <p class="muted">What IntakeFlow is built with, and what each part does in it.</p>
+
+  <h2>Application</h2>
+  <div class="stack">
+    <div class="card"><h3>Python 3.12 and FastAPI</h3><p>The web application and the worker, async throughout.</p></div>
+    <div class="card"><h3>PostgreSQL, SQLAlchemy 2 and Alembic</h3><p>Documents, extractions, review decisions, the audit log and the workflow's saved state.</p></div>
+    <div class="card"><h3>Pydantic 2</h3><p>The schemas the model must answer in, and the application's settings.</p></div>
+    <div class="card"><h3>Jinja2 and HTMX</h3><p>Server-rendered pages. No single-page framework.</p></div>
+  </div>
+
+  <h2>LangChain and LangGraph</h2>
+  <div class="stack">
+    <div class="card"><h3>Structured output</h3><p>LangChain turns a Pydantic schema into a strict request to the model and parses the answer back. Code then checks the model's work against the text as printed.</p></div>
+    <div class="card"><h3>Model and embedding wrappers</h3><p>Azure OpenAI chat and embedding models through LangChain, with sign-in by identity instead of keys.</p></div>
+    <div class="card"><h3>Retriever</h3><p>The contract search exposed through LangChain's retriever interface.</p></div>
+    <div class="card"><h3>LangGraph workflow</h3><p>The document pipeline as a graph: a branch per document type, retries on the calls to Azure, and state saved in PostgreSQL after every step so a run can resume.</p></div>
+  </div>
+
+  <h2>Azure</h2>
+  <div class="stack">
+    <div class="card"><h3>Document Intelligence</h3><p>Reads every page, including scans, and returns invoice fields with a confidence.</p></div>
+    <div class="card"><h3>Azure OpenAI</h3><p><code>gpt-4.1-mini</code> classifies. <code>gpt-4.1</code> extracts and answers. <code>text-embedding-3-large</code> embeds contract clauses.</p></div>
+    <div class="card"><h3>AI Search</h3><p>Hybrid search over contract clauses: keywords and vectors combined.</p></div>
+    <div class="card"><h3>Container Apps</h3><p>The web application and the worker, both scaling to zero. Microsoft sign-in in front.</p></div>
+    <div class="card"><h3>Queue and Blob Storage</h3><p>A queue between upload and processing, so a document survives a crash. Uploaded files in blobs.</p></div>
+    <div class="card"><h3>Database for PostgreSQL</h3><p>The managed database behind the application.</p></div>
+    <div class="card"><h3>Managed identity and Key Vault</h3><p>The application signs in to every service without keys. The one secret, the database URL, is in Key Vault.</p></div>
+    <div class="card"><h3>Application Insights</h3><p>Traces and logs through OpenTelemetry, without document content.</p></div>
+    <div class="card"><h3>Bicep and Container Registry</h3><p>The whole environment as code, with one command to create it and one to remove it.</p></div>
+  </div>
+
+  <h2>Quality</h2>
+  <div class="stack">
+    <div class="card"><h3>pytest and Playwright</h3><p>Unit, integration and browser tests. Azure is replaced by fakes behind the same interfaces, so the tests need no cloud.</p></div>
+    <div class="card"><h3>ruff and mypy --strict</h3><p>Lint, formatting and strict type checking on every push.</p></div>
+    <div class="card"><h3>GitHub Actions</h3><p>CI on every push. Deployment is started by hand and signs in to Azure without a stored secret.</p></div>
+    <div class="card"><h3>Evaluation scripts</h3><p>Accuracy, routing and question answering are measured against labelled synthetic documents, and the reports are in the repository.</p></div>
+  </div>
+
+  <p class="muted" style="margin-top:28px">Measured results, design rules and what was learned are in the README of the repository: <a href="https://github.com/freddy24-7/IntakeFlow">github.com/freddy24-7/IntakeFlow</a>.</p>
+</div>
+{% endblock %}

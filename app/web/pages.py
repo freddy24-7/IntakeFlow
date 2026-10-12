@@ -64,6 +64,17 @@ async def pick_role(request: Request) -> HTMLResponse:
     return _page(request, "pick_role.html")
 
 
+@router.get("/how-to-use")
+async def how_to_use(request: Request) -> HTMLResponse:
+    """What the application is and how to try it. Open to everyone, with or without a role."""
+    return _page(request, "how_to_use.html")
+
+
+@router.get("/tech-stack")
+async def tech_stack(request: Request) -> HTMLResponse:
+    return _page(request, "tech_stack.html")
+
+
 @router.post("/login")
 async def login(role: Annotated[str, Form()]) -> RedirectResponse:
     if role not in ROLES:

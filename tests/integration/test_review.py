@@ -544,3 +544,21 @@ async def test_purchase_orders_can_be_seeded_from_a_file_twice(
     assert [(order.po_number, str(order.amount)) for order in stored] == [
         ("PO-2026-00001", "400.00")
     ]
+
+
+async def test_explanation_pages_are_open_to_everyone_and_linked_in_the_header(
+    client: AsyncClient,
+) -> None:
+    start = await client.get("/")
+    assert 'href="/how-to-use"' in start.text
+    assert 'href="/tech-stack"' in start.text
+
+    how = await client.get("/how-to-use")  # no role chosen
+    assert how.status_code == 200
+    assert how.text.index("What kind of app this is") < how.text.index("Try it")
+    assert "not a product" in how.text
+
+    stack = await client.get("/tech-stack")
+    assert stack.status_code == 200
+    for part in ("LangGraph", "Document Intelligence", "Container Apps", "Playwright"):
+        assert part in stack.text
