@@ -34,3 +34,6 @@ jobs:
       - run: uv run mypy .
       # No Azure here: models, Document Intelligence and Search are fakes.
       - run: uv run pytest tests/unit tests/integration --cov --cov-fail-under=70
+      # A few browser tests of the main path, also with fakes.
+      - run: uv run playwright install --with-deps chromium
+      - run: uv run pytest tests/e2e

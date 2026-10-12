@@ -4,7 +4,7 @@ from pathlib import Path
 
 from tests.architecture import (
     AUTO_APPROVE_FILE,
-    find_auto_approved_references,
+    find_auto_approved_writes,
     find_erp_references_outside_gateway,
     find_erp_write_sites,
     find_model_client_imports,
@@ -107,22 +107,21 @@ def test_second_write_inside_the_gateway_is_caught(tmp_path: Path) -> None:
 
 
 def test_only_the_routing_step_can_make_a_document_auto_approved() -> None:
-    references = find_auto_approved_references(REPO_ROOT)
+    writes = find_auto_approved_writes(REPO_ROOT)
 
-    assert references, "the routing step should set the status"
-    assert all(reference.startswith(f"{AUTO_APPROVE_FILE}:") for reference in references)
+    assert len(writes) == 1
+    assert writes[0].startswith(f"{AUTO_APPROVE_FILE}:")
 
 
 def test_the_routing_step_approves_only_on_a_stored_decision() -> None:
     """The status is set inside one `if` that tests the decision made by scoring.decide."""
     source = (REPO_ROOT / AUTO_APPROVE_FILE).read_text(encoding="utf-8")
 
-    assert source.count("DocumentStatus.AUTO_APPROVED") == 2  # set before booking, kept after
     guard = source.index("if decision.decision == scoring.AUTO_APPROVE:")
     assert guard < source.index("DocumentStatus.AUTO_APPROVED")
 
 
-def test_a_shortcut_to_auto_approval_is_caught(tmp_path: Path) -> None:
+def test_shortcuts_to_auto_approval_are_caught(tmp_path: Path) -> None:
     root = _wrong_tree(tmp_path)
     _write(
         root,
@@ -131,6 +130,30 @@ def test_a_shortcut_to_auto_approval_is_caught(tmp_path: Path) -> None:
         "    if model_score > 0.99:\n"
         "        document.status = DocumentStatus.AUTO_APPROVED.value\n",
     )
-    _write(root, "app/web/quick.py", "STATUS = 'auto_approved'\n")
+    _write(root, "app/web/quick.py", "document = Document(status='auto_approved')\n")
+    _write(
+        root,
+        "app/review/bulk.py",
+        "statement = update(Document).values(status=DocumentStatus.AUTO_APPROVED.value)\n",
+    )
+    _write(root, "scripts/fix.py", "SQL = \"UPDATE documents SET status = 'auto_approved'\"\n")
 
-    assert find_auto_approved_references(root) == ["app/agents/extract.py:3", "app/web/quick.py:1"]
+    assert find_auto_approved_writes(root) == [
+        "app/agents/extract.py:3",
+        "app/review/bulk.py:1",
+        "app/web/quick.py:1",
+        "scripts/fix.py:1",
+    ]
+
+
+def test_reading_the_status_is_allowed(tmp_path: Path) -> None:
+    root = _wrong_tree(tmp_path)
+    _write(
+        root,
+        "app/web/labels.py",
+        "LABELS = {'auto_approved': 'Automatisch goedgekeurd'}\n"
+        "def is_auto(document):\n"
+        "    return document.status == DocumentStatus.AUTO_APPROVED.value\n",
+    )
+
+    assert find_auto_approved_writes(root) == []

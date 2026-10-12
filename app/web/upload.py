@@ -22,13 +22,12 @@ class UploadResult(BaseModel):
     message: str | None = None
 
 
-@router.post("/documents")
-async def upload_documents(
+async def ingest_files(
     files: list[UploadFile],
-    session: Annotated[AsyncSession, Depends(get_session)],
-    storage: Annotated[Storage, Depends(get_storage)],
-    dispatcher: Annotated[Dispatcher, Depends(get_dispatcher)],
-    settings: Annotated[Settings, Depends(get_settings)],
+    session: AsyncSession,
+    storage: Storage,
+    dispatcher: Dispatcher,
+    settings: Settings,
 ) -> list[UploadResult]:
     """A refused file does not stop the others."""
     results = []
@@ -52,3 +51,15 @@ async def upload_documents(
         await dispatcher.dispatch(document.id)
         results.append(UploadResult(filename=filename, accepted=True, document_id=str(document.id)))
     return results
+
+
+@router.post("/documents")
+async def upload_documents(
+    files: list[UploadFile],
+    session: Annotated[AsyncSession, Depends(get_session)],
+    storage: Annotated[Storage, Depends(get_storage)],
+    dispatcher: Annotated[Dispatcher, Depends(get_dispatcher)],
+    settings: Annotated[Settings, Depends(get_settings)],
+) -> list[UploadResult]:
+    """JSON upload endpoint (PRD F1): one or more PDFs in, one result per file out."""
+    return await ingest_files(files, session, storage, dispatcher, settings)

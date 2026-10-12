@@ -66,6 +66,9 @@ async def _is_duplicate(
         .where(
             Extraction.run_key == run_key,
             Extraction.document_id != document.id,
+            # Evaluation runs register the same files again. They are not duplicates
+            # of what a user uploads, and the other way round.
+            Document.origin == document.origin,
             fields["supplier_name"]["value"].astext == supplier,
             fields["invoice_number"]["value"].astext == number,
             tuple_(Document.created_at, Document.filename)
@@ -74,6 +77,33 @@ async def _is_duplicate(
         .limit(1)
     )
     return earlier.first() is not None
+
+
+async def validation_context(
+    session: AsyncSession,
+    document: Document,
+    invoice: ExtractedInvoice,
+    run_key: str,
+    *,
+    settings: Settings,
+    today: date,
+) -> rules.ValidationContext:
+    """What the checks need from the database: the purchase order and the duplicate lookup.
+    Also used when a reviewer's corrected values are checked again."""
+    order_info = None
+    reference = invoice.fields["purchase_order_reference"].value
+    if reference is not None:
+        order = await session.get(PurchaseOrder, reference)
+        if order is not None:
+            order_info = rules.PurchaseOrderInfo(
+                order.supplier_name, order.supplier_vat_number, order.amount
+            )
+    return rules.ValidationContext(
+        today=today,
+        purchase_order=order_info,
+        is_duplicate=await _is_duplicate(session, document, invoice, run_key),
+        po_tolerance=Decimal(str(settings.po_amount_tolerance)),
+    )
 
 
 async def validate_invoice(
@@ -92,19 +122,8 @@ async def validate_invoice(
     document = await session.get_one(Document, document_id)
     invoice = await _extraction(session, document_id, run_key)
 
-    order_info = None
-    reference = invoice.fields["purchase_order_reference"].value
-    if reference is not None:
-        order = await session.get(PurchaseOrder, reference)
-        if order is not None:
-            order_info = rules.PurchaseOrderInfo(
-                order.supplier_name, order.supplier_vat_number, order.amount
-            )
-    context = rules.ValidationContext(
-        today=today,
-        purchase_order=order_info,
-        is_duplicate=await _is_duplicate(session, document, invoice, run_key),
-        po_tolerance=Decimal(str(settings.po_amount_tolerance)),
+    context = await validation_context(
+        session, document, invoice, run_key, settings=settings, today=today
     )
     failures = rules.validate(invoice, context)
     session.add(Validation(document_id=document_id, run_key=run_key, failures=failures))

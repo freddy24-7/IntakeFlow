@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Uploaden - IntakeFlow{% endblock %}
+{% block content %}
+<h1>Documenten uploaden</h1>
+<div class="card">
+  <form hx-post="/upload" hx-encoding="multipart/form-data" hx-target="#results" hx-swap="innerHTML">
+    <p><input type="file" name="files" accept="application/pdf,.pdf" multiple required></p>
+    <button type="submit">Uploaden</button>
+    <span class="muted">Alleen pdf-bestanden.</span>
+  </form>
+</div>
+<div id="results"></div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-12",
+  "documents": 186,
+  "fields": [
+    "supplier_name",
+    "supplier_vat_number",
+    "iban",
+    "invoice_number",
+    "invoice_date",
+    "due_date",
+    "currency",
+    "subtotal",
+    "vat",
+    "total",
+    "purchase_order_reference",
+    "line_items"
+  ],
+  "variants": [
+    {
+      "name": "combined",
+      "title": "Combined",
+      "accuracy": {
+        "supplier_name": "98.9% (184/186)",
+        "supplier_vat_number": "100.0% (186/186)",
+        "iban": "100.0% (186/186)",
+        "invoice_number": "100.0% (186/186)",
+        "invoice_date": "100.0% (186/186)",
+        "due_date": "100.0% (186/186)",
+        "currency": "100.0% (186/186)",
+        "subtotal": "100.0% (186/186)",
+        "vat": "100.0% (186/186)",
+        "total": "100.0% (186/186)",
+        "purchase_order_reference": "100.0% (186/186)",
+        "line_items": "98.4% (183/186)"
+      },
+      "exact": "97.3% (181/186)"
+    },
+    {
+      "name": "llm_only",
+      "title": "Model only",
+      "accuracy": {
+        "supplier_name": "99.5% (185/186)",
+        "supplier_vat_number": "100.0% (186/186)",
+        "iban": "100.0% (186/186)",
+        "invoice_number": "100.0% (186/186)",
+        "invoice_date": "100.0% (186/186)",
+        "due_date": "100.0% (186/186)",
+        "currency": "100.0% (186/186)",
+        "subtotal": "100.0% (186/186)",
+        "vat": "98.4% (183/186)",
+        "total": "100.0% (186/186)",
+        "purchase_order_reference": "100.0% (186/186)",
+        "line_items": "95.7% (178/186)"
+      },
+      "exact": "94.6% (176/186)"
+    },
+    {
+      "name": "di_only",
+      "title": "Document Intelligence only",
+      "accuracy": {
+        "supplier_name": "99.5% (185/186)",
+        "supplier_vat_number": "100.0% (186/186)",
+        "iban": "98.9% (184/186)",
+        "invoice_number": "100.0% (186/186)",
+        "invoice_date": "100.0% (186/186)",
+        "due_date": "100.0% (186/186)",
+        "currency": "100.0% (186/186)",
+        "subtotal": "100.0% (186/186)",
+        "vat": "100.0% (186/186)",
+        "total": "100.0% (186/186)",
+        "purchase_order_reference": "100.0% (186/186)",
+        "line_items": "100.0% (186/186)"
+      },
+      "exact": "98.4% (183/186)"
+    }
+  ]
+}

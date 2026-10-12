@@ -207,3 +207,29 @@ def build_report(
         "",
     ]
     return "\n".join(out)
+
+
+def accuracy_summary(
+    results: RunResults, variants: Sequence[str], *, today: date
+) -> dict[str, object]:
+    """Field accuracy per variant, as data. The dashboard shows this."""
+    names = [*metrics.field_accuracy([]).keys()]
+    return {
+        "date": today.isoformat(),
+        "documents": sum(result.truth.invoice is not None for result in results.documents),
+        "fields": names,
+        "variants": [
+            {
+                "name": variant,
+                "title": VARIANT_TITLES[variant],
+                "accuracy": {
+                    name: str(rate)
+                    for name, rate in metrics.field_accuracy(
+                        _scores(results.documents, variant)
+                    ).items()
+                },
+                "exact": str(metrics.exact_match(_scores(results.documents, variant))),
+            }
+            for variant in variants
+        ],
+    }

@@ -14,6 +14,7 @@ from alembic.config import Config
 from sqlalchemy import URL, make_url, text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.pool import NullPool
+from synthetic.build import Dataset, generate
 
 from app.config import get_settings
 
@@ -63,3 +64,9 @@ async def session(
 ) -> AsyncIterator[AsyncSession]:
     async with session_factory() as db_session:
         yield db_session
+
+
+@pytest.fixture(scope="session")
+def dataset() -> Dataset:
+    """A synthetic set for tests that run documents through the workflow."""
+    return generate(60, seed=11)

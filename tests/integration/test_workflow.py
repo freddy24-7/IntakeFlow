@@ -2,104 +2,21 @@
 
 import uuid
 from collections.abc import AsyncIterator
-from datetime import date
 from typing import Any
 
 import pytest
-from evaluation.oracle import oracle_services
-from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
 from sqlalchemy import URL, select, text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
-from synthetic.build import Dataset, generate
-from synthetic.truth import DocumentTruth
-from synthetic.write import render_document
+from synthetic.build import Dataset
 
 from app.audit import log as audit
 from app.config import Settings
 from app.db.models import AuditRecord, Document, DocumentStatus, RoutingDecision, Validation
 from app.reading.fakes import FakeDocumentReader
 from app.reading.interfaces import ReadResult
-from app.storage.local import MemoryStorage
-from app.validation.purchase_orders import upsert_purchase_orders
-from app.workflow.graph import build_graph, run_document
-from app.workflow.ingest import ingest
 from app.workflow.steps import Services
-
-TODAY = date(2026, 10, 12)
-Documents = list[tuple[DocumentTruth, bytes]]
-
-
-@pytest.fixture(scope="module")
-def dataset() -> Dataset:
-    return generate(60, seed=11)
-
-
-def _pick(dataset: Dataset, *, case: str | None = None, doc_type: str = "invoice") -> DocumentTruth:
-    """A digital document of the type, with exactly this hard case (or none)."""
-    wanted = [case] if case else []
-    return next(
-        doc
-        for doc in dataset.documents
-        if doc.doc_type == doc_type and doc.hard_cases == wanted and not doc.scanned
-    )
-
-
-class Pipeline:
-    """Everything a test needs to push documents through the graph."""
-
-    def __init__(
-        self,
-        dataset: Dataset,
-        session_factory: async_sessionmaker[AsyncSession],
-        truths: list[DocumentTruth],
-        *,
-        settings: Settings | None = None,
-        checkpointer: Any = None,
-    ) -> None:
-        self.session_factory = session_factory
-        self.settings = settings or Settings(_env_file=None, database_url="unused")
-        self.documents: Documents = [
-            (truth, render_document(truth, dataset.plans[truth.doc_id])) for truth in truths
-        ]
-        self.services: Services = oracle_services(self.documents, MemoryStorage())
-        self.orders = [order.model_dump(mode="json") for order in dataset.purchase_orders]
-        self.checkpointer = checkpointer or InMemorySaver()
-        self.graph = self.build()
-
-    def build(self) -> Any:
-        return build_graph(
-            self.session_factory,
-            self.services,
-            self.settings,
-            checkpointer=self.checkpointer,
-            today=lambda: TODAY,
-            retry_initial_interval=0.01,
-        )
-
-    async def ingest(self, truth: DocumentTruth) -> uuid.UUID:
-        content = next(content for candidate, content in self.documents if candidate is truth)
-        async with self.session_factory() as session:
-            await upsert_purchase_orders(session, self.orders)
-            document = await ingest(
-                session,
-                self.services.storage,
-                filename=truth.filename,
-                content=content,
-                max_bytes=10_000_000,
-            )
-            await session.commit()
-            return document.id
-
-    async def run(self, document_id: uuid.UUID) -> Any:
-        return await run_document(
-            self.graph, self.session_factory, document_id, max_attempts=self.settings.max_attempts
-        )
-
-    async def process(self, truth: DocumentTruth) -> uuid.UUID:
-        document_id = await self.ingest(truth)
-        await self.run(document_id)
-        return document_id
+from tests.integration.pipeline import Pipeline, pick
 
 
 async def _status(session: AsyncSession, document_id: uuid.UUID) -> str:
@@ -124,7 +41,7 @@ async def _decision(session: AsyncSession, document_id: uuid.UUID) -> RoutingDec
 async def test_clean_invoice_is_auto_approved_and_booked(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     pipeline = Pipeline(dataset, session_factory, [truth])
 
     document_id = await pipeline.ingest(truth)
@@ -198,7 +115,7 @@ async def test_a_labelled_problem_goes_to_review_despite_a_near_perfect_score(
 async def test_low_score_goes_to_review_although_every_check_passes(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     strict = Settings(_env_file=None, database_url="unused", auto_approve_threshold=0.995)
     pipeline = Pipeline(dataset, session_factory, [truth], settings=strict)
 
@@ -235,8 +152,8 @@ async def test_duplicate_invoice_is_caught_on_the_second_copy(
 async def test_other_mail_goes_to_review_and_contracts_wait(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    other = _pick(dataset, doc_type="other")
-    contract = _pick(dataset, doc_type="contract")
+    other = pick(dataset, doc_type="other")
+    contract = pick(dataset, doc_type="contract")
     pipeline = Pipeline(dataset, session_factory, [other, contract])
 
     other_id = await pipeline.process(other)
@@ -252,7 +169,7 @@ async def test_other_mail_goes_to_review_and_contracts_wait(
 async def test_running_a_finished_document_again_changes_nothing(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     pipeline = Pipeline(dataset, session_factory, [truth])
     document_id = await pipeline.process(truth)
     records_before = (await audit.verify_chain(session)).records_checked
@@ -299,7 +216,7 @@ def _with_reader(pipeline: Pipeline, reader: Any) -> None:
 async def test_a_throttled_call_is_retried_within_the_run(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     pipeline = Pipeline(dataset, session_factory, [truth])
     flaky = FlakyReader(pipeline.services.reader, failures=2)
     _with_reader(pipeline, flaky)
@@ -316,7 +233,7 @@ async def test_a_throttled_call_is_retried_within_the_run(
 async def test_a_document_that_keeps_failing_is_parked_as_failed(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     pipeline = Pipeline(dataset, session_factory, [truth])
     _with_reader(pipeline, FlakyReader(pipeline.services.reader, failures=1000))
     document_id = await pipeline.ingest(truth)
@@ -358,7 +275,7 @@ async def test_a_failed_run_resumes_from_the_saved_state_in_postgres(
     dataset: Dataset,
     postgres_checkpointer: AsyncPostgresSaver,
 ) -> None:
-    truth = _pick(dataset)
+    truth = pick(dataset)
     pipeline = Pipeline(dataset, session_factory, [truth], checkpointer=postgres_checkpointer)
     good_reader = pipeline.services.reader
     assert isinstance(good_reader, FakeDocumentReader)

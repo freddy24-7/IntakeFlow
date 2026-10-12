@@ -86,7 +86,8 @@ uv run alembic upgrade head               # migrations
 uv run python scripts/generate_synthetic.py --documents 200 --seed 42
 uv run uvicorn app.main:app --reload      # http://localhost:8000
 uv run pytest tests/unit tests/integration
-uv run pytest tests/e2e                   # browser tests
+uv run playwright install chromium        # once, downloads the test browser
+uv run pytest tests/e2e                   # browser tests (start their own server and database)
 uv run ruff check . && uv run mypy .
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure
 uv run python scripts/evaluate_extraction.py --services azure               # real measurement, costs money

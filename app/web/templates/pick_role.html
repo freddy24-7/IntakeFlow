@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Kies een rol</h1>
+<p class="muted">Dit is een demo met verzonnen documenten. Er is geen wachtwoord: u kiest de rol waarmee u de applicatie bekijkt.</p>
+<form method="post" action="/login" class="roles">
+  {% for key, name in roles.items() %}
+    <button type="submit" name="role" value="{{ key }}">{{ name }}</button>
+  {% endfor %}
+</form>
+{% endblock %}

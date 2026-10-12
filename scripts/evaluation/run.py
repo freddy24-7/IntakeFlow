@@ -89,6 +89,7 @@ async def _ensure_ingested(
                     filename=filename,
                     content=content,
                     max_bytes=MAX_UPLOAD_BYTES,
+                    origin="evaluation",
                 )
                 document_id = document.id
             ids[truth.doc_id] = document_id

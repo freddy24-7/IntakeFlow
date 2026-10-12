@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - IntakeFlow{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p class="muted">Cijfers over geüploade documenten in deze omgeving. Alle documenten zijn verzonnen.</p>
+<div class="tiles">
+  <div class="card tile"><div class="value" id="auto-share">{{ data.auto_approved.percent }}</div>Automatisch goedgekeurd
+    <div class="muted">{{ data.auto_approved.part }} van {{ data.auto_approved.whole }} facturen en creditnota's met een uitkomst</div></div>
+  <div class="card tile"><div class="value" id="corrected-share">{{ data.corrected.percent }}</div>Aangepast door een medewerker
+    <div class="muted">{{ data.corrected.part }} van {{ data.corrected.whole }} handmatige goedkeuringen</div></div>
+  <div class="card tile"><div class="value">{% if data.median_seconds_to_result is none %}n.v.t.{% else %}{{ "%.1f" | format(data.median_seconds_to_result) }} s{% endif %}</div>Mediane tijd tot uitkomst
+    <div class="muted">van upload tot automatisch besluit</div></div>
+  <div class="card tile"><div class="value">{% if data.cost_per_document is none %}n.v.t.{% else %}€ {{ "%.4f" | format(data.cost_per_document) }}{% endif %}</div>Kosten per document
+    <div class="muted">gemiddeld over {{ data.documents_with_cost }} documenten, tegen lijstprijzen</div></div>
+</div>
+
+<h2>Documenten per dag</h2>
+{% if data.per_day %}
+<table id="per-day">
+  <tr><th>Dag</th><th>Documenten</th></tr>
+  {% for day, count in data.per_day %}<tr><td>{{ day }}</td><td>{{ count }}</td></tr>{% endfor %}
+</table>
+{% else %}<p class="card">Nog geen documenten geüpload.</p>{% endif %}
+
+<h2>Status</h2>
+<table id="by-status">
+  <tr><th>Status</th><th>Documenten</th></tr>
+  {% for status, count in data.by_status.items() %}<tr><td>{{ status_labels.get(status, status) }}</td><td>{{ count }}</td></tr>{% endfor %}
+</table>
+
+<h2>Nauwkeurigheid per veld</h2>
+{% if data.accuracy %}
+<p class="muted">Uit de evaluatie van {{ data.accuracy.date }} op {{ data.accuracy.documents }} gelabelde, verzonnen documenten. Dit is een meting op de testset, niet op de documenten hierboven.</p>
+<table id="accuracy">
+  <tr><th>Veld</th>{% for variant in data.accuracy.variants %}<th>{{ variant.title }}</th>{% endfor %}</tr>
+  {% for name in data.accuracy.fields %}
+  <tr><td>{{ field_labels.get(name, "Factuurregels") }}</td>{% for variant in data.accuracy.variants %}<td>{{ variant.accuracy[name] }}</td>{% endfor %}</tr>
+  {% endfor %}
+  <tr><td><strong>Alle velden goed</strong></td>{% for variant in data.accuracy.variants %}<td><strong>{{ variant.exact }}</strong></td>{% endfor %}</tr>
+</table>
+{% else %}<p class="card">Er is nog geen evaluatie beschikbaar.</p>{% endif %}
+{% endblock %}

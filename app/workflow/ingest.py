@@ -26,7 +26,13 @@ def check_upload(filename: str, content: bytes, max_bytes: int) -> None:
 
 
 async def ingest(
-    session: AsyncSession, storage: Storage, *, filename: str, content: bytes, max_bytes: int
+    session: AsyncSession,
+    storage: Storage,
+    *,
+    filename: str,
+    content: bytes,
+    max_bytes: int,
+    origin: str = "upload",
 ) -> Document:
     """Store the file and create the document. The caller commits."""
     check_upload(filename, content, max_bytes)
@@ -39,6 +45,7 @@ async def ingest(
         content_sha256=hashlib.sha256(content).hexdigest(),
         storage_key=storage_key,
         size_bytes=len(content),
+        origin=origin,
     )
     session.add(document)
     await session.flush()

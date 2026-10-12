@@ -14,7 +14,7 @@ from datetime import date
 from pathlib import Path
 
 from evaluation.oracle import oracle_services
-from evaluation.report import build_report
+from evaluation.report import accuracy_summary, build_report
 from evaluation.run import load_dataset, run_evaluation
 
 from app.agents.extract import VARIANTS
@@ -74,6 +74,12 @@ async def main() -> None:
         suffix = f"-first-{arguments.limit}" if arguments.limit else ""
         label = "" if arguments.name == "eval" else f"-{arguments.name}"
         out = Path("reports") / f"extraction{label}-{date.today().isoformat()}{suffix}.md"
+    if arguments.services == "azure" and arguments.name == "eval" and not arguments.limit:
+        summary = accuracy_summary(results, VARIANTS, today=date.today())
+        Path("reports").mkdir(exist_ok=True)
+        Path("reports/extraction-latest.json").write_text(
+            json.dumps(summary, indent=2) + "\n", encoding="utf-8"
+        )
     if out is not None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(report + "\n", encoding="utf-8")

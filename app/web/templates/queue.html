@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Beoordelen - IntakeFlow{% endblock %}
+{% block content %}
+<h1>Te beoordelen</h1>
+{% if notice == "approved" %}<div class="notice">Het document is goedgekeurd en geboekt.</div>{% endif %}
+{% if notice == "rejected" %}<div class="notice">Het document is afgewezen.</div>{% endif %}
+<div id="queue" hx-get="/queue/rows" hx-trigger="every 3s" hx-swap="innerHTML">
+  {% include "_queue_rows.html" %}
+</div>
+{% endblock %}

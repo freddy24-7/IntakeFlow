@@ -1,16 +1,21 @@
 """FastAPI application entry point."""
 
-from collections.abc import AsyncIterator
-from contextlib import asynccontextmanager
+from collections.abc import AsyncIterator, Callable
+from contextlib import AbstractAsyncContextManager, asynccontextmanager
+from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
 from sqlalchemy import make_url
 
+from app.auth.demo import NotSignedIn
 from app.config import get_settings
 from app.db.base import create_engine, create_session_factory
 from app.storage.local import LocalStorage
 from app.web.health import router as health_router
+from app.web.pages import router as pages_router
 from app.web.upload import router as upload_router
 from app.workflow.dispatch import InProcessDispatcher, NotConfiguredDispatcher
 from app.workflow.graph import build_graph
@@ -49,6 +54,21 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     await engine.dispose()
 
 
-app = FastAPI(title="IntakeFlow", lifespan=lifespan)
-app.include_router(health_router)
-app.include_router(upload_router)
+def create_app(app_lifespan: Callable[[FastAPI], AbstractAsyncContextManager[None]]) -> FastAPI:
+    """Build the application. Tests pass their own lifespan to run it with fakes."""
+    application = FastAPI(title="IntakeFlow", lifespan=app_lifespan)
+    application.include_router(health_router)
+    application.include_router(upload_router)
+    application.include_router(pages_router)
+    application.mount(
+        "/static", StaticFiles(directory=Path(__file__).parent / "web" / "static"), name="static"
+    )
+
+    @application.exception_handler(NotSignedIn)
+    async def to_role_picker(request: Request, error: NotSignedIn) -> RedirectResponse:
+        return RedirectResponse("/", status_code=303)
+
+    return application
+
+
+app = create_app(lifespan)

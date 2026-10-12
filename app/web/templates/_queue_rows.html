@@ -1,0 +1,29 @@
+{% if in_progress %}
+  <p class="muted" id="in-progress">{{ in_progress }} document{{ "en" if in_progress != 1 }} in verwerking.</p>
+{% endif %}
+{% if rows %}
+<table>
+  <tr><th>Document</th><th>Soort</th><th>Ontvangen</th><th>Waarom een persoon</th><th></th></tr>
+  {% for row in rows %}
+  <tr>
+    <td>{{ row.document.filename }}</td>
+    <td>{{ type_labels.get(row.document.document_type, "Onbekend") }}</td>
+    <td>{{ row.document.created_at.strftime("%d-%m-%Y %H:%M") }}</td>
+    <td>
+      {% if row.document.status == "failed" %}
+        <span class="badge warn">Verwerking mislukt ({{ row.document.attempts }} pogingen)</span>
+      {% else %}
+        {% for reason in row.reasons %}<span class="badge warn">{{ reason_label(reason) }}</span>{% endfor %}
+      {% endif %}
+    </td>
+    <td>
+      {% if row.document.status == "in_review" %}
+        <a class="button" href="/review/{{ row.document.id }}">Beoordelen</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+  <p class="card" id="queue-empty">Er wacht niets op beoordeling.</p>
+{% endif %}

@@ -101,21 +101,48 @@ def find_erp_write_sites(root: Path) -> list[str]:
 
 # Rule 3: the one place where a document may become auto-approved.
 AUTO_APPROVED_NAME = "AUTO_APPROVED"
+AUTO_APPROVED_VALUE = "auto_approved"
 AUTO_APPROVE_FILE = "app/workflow/routing_steps.py"
-# These define or check the status. They do not set it.
-AUTO_APPROVED_READERS = ("app/db/models.py", "app/erp/gateway.py")
 
 
-def find_auto_approved_references(root: Path) -> list[str]:
-    """Every mention of the auto-approved status outside the files that define
-    or check it, as 'file:line'. All of them must be in the routing step."""
-    references = []
+def _mentions_auto_approved(node: ast.AST) -> bool:
+    return any(
+        (isinstance(child, ast.Attribute) and child.attr == AUTO_APPROVED_NAME)
+        or (isinstance(child, ast.Constant) and child.value == AUTO_APPROVED_VALUE)
+        for child in ast.walk(node)
+    )
+
+
+def _sets_status(node: ast.AST) -> ast.AST | None:
+    """The value being written when this node sets a status, else None.
+
+    Three ways to set it: `document.status = ...`, a `status=...` argument (a
+    constructor or an UPDATE's `.values(...)`), and raw SQL that writes it.
+    """
+    if isinstance(node, ast.Assign) and any(
+        isinstance(target, ast.Attribute) and target.attr == "status" for target in node.targets
+    ):
+        return node.value
+    if isinstance(node, ast.keyword) and node.arg == "status":
+        return node.value
+    if (
+        isinstance(node, ast.Constant)
+        and isinstance(node.value, str)
+        and AUTO_APPROVED_VALUE in node.value
+        and any(word in node.value.upper() for word in ("UPDATE ", "INSERT "))
+    ):
+        return node
+    return None
+
+
+def find_auto_approved_writes(root: Path) -> list[str]:
+    """Every place that sets a status to auto-approved, as 'file:line'. Reading
+    the status (the dashboard, labels, the ERP gateway's check) is not listed."""
+    writes = []
     for relative, tree in _python_files(root):
-        if relative in AUTO_APPROVED_READERS:
-            continue
         for node in ast.walk(tree):
-            if (isinstance(node, ast.Attribute) and node.attr == AUTO_APPROVED_NAME) or (
-                isinstance(node, ast.Constant) and node.value == "auto_approved"
-            ):
-                references.append(f"{relative}:{node.lineno}")
-    return references
+            value = _sets_status(node)
+            if value is not None and (value is node or _mentions_auto_approved(value)):
+                line = getattr(node, "lineno", getattr(value, "lineno", 0))
+                writes.append(f"{relative}:{line}")
+    return writes

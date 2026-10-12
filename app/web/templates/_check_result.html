@@ -1,0 +1,13 @@
+{% if message %}
+  <div class="notice warn">{{ message }}</div>
+{% elif errors %}
+  <div class="notice warn">Niet leesbaar ingevuld: {% for name in errors %}{{ field_labels[name] }}{{ ", " if not loop.last }}{% endfor %}.</div>
+{% elif failures %}
+  <div class="notice warn">
+    Met deze waarden slagen nog niet alle controles:
+    <ul class="plain">{% for failure in failures %}<li>{{ reason_label(failure) }}</li>{% endfor %}</ul>
+    U kunt toch goedkeuren. De controles worden dan vastgelegd.
+  </div>
+{% else %}
+  <div class="notice">Met deze waarden slagen alle controles.</div>
+{% endif %}

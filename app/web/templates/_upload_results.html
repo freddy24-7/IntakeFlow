@@ -1,0 +1,17 @@
+<h2>Resultaat</h2>
+<table>
+  <tr><th>Bestand</th><th>Resultaat</th></tr>
+  {% for result in results %}
+  <tr>
+    <td>{{ result.filename }}</td>
+    <td>
+      {% if result.accepted %}
+        <span class="badge">Ontvangen</span> Het document wordt verwerkt.
+      {% else %}
+        <span class="badge warn">Geweigerd</span> {{ result.message }}
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<p><a href="/queue">Naar de beoordelingslijst</a></p>

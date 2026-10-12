@@ -6,14 +6,14 @@ It is a demo, not a product. The company is fictional and all documents are gene
 
 ## Status
 
-Stages 1 to 3 are done. Stages 2 and 3 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
+Stages 1 to 4 are done. Stages 2 and 3 were measured against real Azure services (Document Intelligence and Azure OpenAI in Sweden Central) from a laptop. The application itself is **not deployed in Azure**: it runs locally and calls those two services.
 
 | Stage | State |
 | --- | --- |
 | 1. Foundations and data | Done |
 | 2. Reading and extraction | Done, measured on 12 October 2026 |
 | 3. Validation and routing | Done, measured on 12 October 2026 |
-| 4. Review interface | Not started |
+| 4. Review interface | Done. Tested with fakes, and tried once against Azure with two documents |
 | 5. Contract Q&A | Not started |
 | 6. Azure deployment | Not started |
 | 7. Write-up | Not started |
@@ -74,11 +74,12 @@ What exists today:
 - Three extraction variants: Document Intelligence only, model only, and combined.
 - Validation rules, scoring and routing, with auto-approved documents booked in the mock ERP.
 - A LangGraph workflow with retries, state saved in Postgres, resume, and dead-letter handling.
+- Pages in Dutch for uploading, the review queue, reviewing a document next to its extracted fields, and a dashboard. A reviewer's corrections are stored next to the model's extraction, never over it.
 - An evaluation script that reports field accuracy, exact-match rate, latency and cost per invoice.
 - A Bicep file for the Azure resources, with one command to create and one to delete them.
 - Tests that read the source tree and fail if a second path to the ERP or a stray model client appears.
 
-Not built yet: the review interface, contract Q&A, and deployment of the application to Azure. The workflow has been tested with fakes; its steps were measured against Azure one by one, but no document has gone through the whole graph against Azure yet.
+Not built yet: contract Q&A, and deployment of the application to Azure. Sign-in is a demo role picker without passwords. On 12 October 2026 two documents went through the whole workflow against Azure from the running application; everything else about the workflow and the pages is tested with fakes.
 
 ## The synthetic set
 
@@ -118,8 +119,10 @@ uv sync
 docker compose up -d                      # local PostgreSQL
 uv run alembic upgrade head
 uv run python scripts/generate_synthetic.py --documents 200 --seed 42
-uv run uvicorn app.main:app --reload      # http://localhost:8000/health
+uv run uvicorn app.main:app --reload      # http://localhost:8000, pick a role
 uv run pytest tests/unit tests/integration
+uv run playwright install chromium        # once
+uv run pytest tests/e2e                   # browser tests
 uv run ruff check . && uv run mypy .
 uv run python scripts/load_purchase_orders.py
 uv run python scripts/evaluate_extraction.py --services oracle --limit 20   # harness check, no Azure

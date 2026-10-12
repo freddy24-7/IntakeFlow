@@ -210,6 +210,8 @@ Decided on 2026-10-11:
 - Region and models (2026-10-12): Sweden Central, `gpt-4.1-mini` for classification and `gpt-4.1` for extraction, as regional Standard deployments because the subscription has no EU data-zone quota for them.
 - Queue: in-process worker locally, Azure Queue Storage in stage 6.
 
+- Review (2026-10-12): corrected values are validated again and failures are shown and recorded, but the reviewer may approve anyway. Interface text is Dutch.
+
 Still open:
 - Which extraction variant the pipeline uses. Two sets of 200 documents gave opposite rankings (Document Intelligence only best on seed 42, worst on seed 43), because errors cluster per supplier layout. Over both sets the variants are too close to rank. See cards/03-validation-and-routing.md.
 - The auto-approve threshold. Routing by validation alone (threshold 0) was fixed in advance and held up on the hold-out set: every labelled problem caught, 0 to 4 wrong auto-approvals per variant out of 123 to 130. Decided 2026-10-12: threshold 0, combined variant.

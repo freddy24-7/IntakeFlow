@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}{{ case.document.filename }} - IntakeFlow{% endblock %}
+{% block content %}
+<h1>{{ case.document.filename }}
+  <span class="badge">{{ type_labels.get(case.document.document_type, "Onbekend") }}</span>
+  <span class="badge">{{ status_labels[case.document.status] }}</span>
+</h1>
+{% if message %}<div class="notice warn" id="message">{{ message }}</div>{% endif %}
+<div class="review">
+  <div class="pages" id="pages">
+    {% for number in range(1, pages + 1) %}
+      <img src="/documents/{{ case.document.id }}/pages/{{ number }}.png" alt="Pagina {{ number }}" loading="lazy">
+    {% endfor %}
+    <p><a href="/documents/{{ case.document.id }}/file" target="_blank" rel="noopener">Open het pdf-bestand</a></p>
+  </div>
+  <div>
+    <div class="card">
+      <strong>Waarom een persoon</strong>
+      <ul class="plain" id="reasons">
+        {% for reason in case.reasons %}<li>{{ reason_label(reason) }}</li>
+        {% else %}<li>Geen factuur of creditnota</li>{% endfor %}
+      </ul>
+    </div>
+
+    {% if case.invoice %}
+    <form method="post" action="/review/{{ case.document.id }}/approve" class="card" style="margin-top:12px">
+      {% for name, label in field_labels.items() %}
+      {% set extracted = case.invoice.fields[name] %}
+      <div class="field">
+        <label for="{{ name }}">{{ label }}</label>
+        <input type="text" id="{{ name }}" name="{{ name }}" value="{{ values.get(name, '') }}"
+               class="{{ 'flagged' if extracted.flags or name in errors }}" {{ "disabled" if not open }}>
+        {% if name in errors %}<div class="error">{{ errors[name] }}</div>{% endif %}
+        {% for flag in extracted.flags %}<span class="badge warn">{{ flag_labels.get(flag, flag) }}</span>{% endfor %}
+        <div class="hint">
+          {% if extracted.page %}Pagina {{ extracted.page }}.{% endif %}
+          {% if extracted.source_text %}Afgedrukt: "{{ extracted.source_text }}".{% endif %}
+          {% if extracted.di_value is not none and extracted.di_value != extracted.value %}
+            Andere bron leest: {{ extracted.di_value }}.
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+
+      <h2>Factuurregels ({{ case.invoice.line_items | length }})</h2>
+      <table>
+        <tr><th>Omschrijving</th><th>Aantal</th><th>Prijs</th><th>Btw %</th><th>Bedrag</th></tr>
+        {% for line in case.invoice.line_items %}
+        <tr><td>{{ line.description }}</td><td>{{ line.quantity or "" }}</td><td>{{ line.unit_price or "" }}</td><td>{{ line.vat_rate or "" }}</td><td>{{ line.line_total or "" }}</td></tr>
+        {% endfor %}
+      </table>
+      <p class="hint muted">Factuurregels kunnen in deze versie niet worden aangepast.</p>
+
+      {% if open %}
+      <div id="check-result"></div>
+      <div class="actions">
+        <button type="submit" id="approve">Goedkeuren en boeken</button>
+        <button type="button" class="secondary" id="check"
+                hx-post="/review/{{ case.document.id }}/check" hx-target="#check-result" hx-swap="innerHTML">Controleren</button>
+      </div>
+      {% endif %}
+    </form>
+    {% endif %}
+
+    {% if open %}
+    <form method="post" action="/review/{{ case.document.id }}/reject" class="card" style="margin-top:12px">
+      <div class="field">
+        <label for="reason">Reden van afwijzing</label>
+        <input type="text" id="reason" name="reason" maxlength="500">
+      </div>
+      <button type="submit" class="danger" id="reject">Afwijzen</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

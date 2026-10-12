@@ -27,3 +27,4 @@ data/uploads/
 
 # Evaluation reports are committed on purpose, raw run data is not
 reports/*.json
+!reports/extraction-latest.json

@@ -8,6 +8,7 @@ from typing import Any
 
 from sqlalchemy import (
     BigInteger,
+    Boolean,
     DateTime,
     Float,
     ForeignKey,
@@ -45,6 +46,9 @@ class Document(Base):
     document_type: Mapped[str | None] = mapped_column(String(32))
     storage_key: Mapped[str | None] = mapped_column(String(255))
     size_bytes: Mapped[int | None] = mapped_column(Integer)
+    # "upload" for documents that came in through the application, "evaluation" for
+    # documents registered by the evaluation scripts. The dashboard shows uploads only.
+    origin: Mapped[str] = mapped_column(String(16), default="upload", server_default="upload")
     # Dead-letter bookkeeping: how often processing failed, and the kind of the last error.
     attempts: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     last_error: Mapped[str | None] = mapped_column(String(64))
@@ -178,4 +182,24 @@ class RoutingDecision(Base):
     threshold: Mapped[float] = mapped_column(Float)
     field_scores: Mapped[dict[str, float]] = mapped_column(JSONB)
     reasons: Mapped[list[str]] = mapped_column(JSONB)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class Review(Base):
+    """A reviewer's verdict. Corrections are stored here, next to the model's
+    extraction and never over it (rule 5), so "approved unchanged" is a lookup."""
+
+    __tablename__ = "reviews"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), unique=True)
+    extraction_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("extractions.id"))
+    reviewer_role: Mapped[str] = mapped_column(String(32))
+    action: Mapped[str] = mapped_column(String(16))  # "approved" or "rejected"
+    # Only the fields the reviewer changed: name -> corrected canonical value.
+    corrections: Mapped[dict[str, Any]] = mapped_column(JSONB)
+    unchanged: Mapped[bool] = mapped_column(Boolean)
+    # Checks that still failed on the corrected values when the reviewer approved.
+    failures_at_approval: Mapped[list[str]] = mapped_column(JSONB)
+    reason: Mapped[str | None] = mapped_column(String(500))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
