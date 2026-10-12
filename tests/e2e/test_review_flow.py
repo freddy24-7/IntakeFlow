@@ -39,6 +39,12 @@ def test_upload_review_correct_approve_and_dashboard(
     expect(page.locator("#results")).to_contain_text("Het document wordt verwerkt")
 
     # The queue refreshes by itself. Only the invoice with the wrong IBAN appears.
+    # A second upload adds to the list. It does not replace the first result.
+    page.set_input_files("input[name=files]", [not_a_pdf])
+    page.get_by_role("button", name="Uploaden").click()
+    expect(page.locator("#results .upload-result")).to_have_count(2)
+    expect(page.locator("#results")).to_contain_text(clean.filename)
+
     page.get_by_role("link", name="Naar de beoordelingslijst").click()
     row = page.locator("tr", has_text=wrong_iban.filename)
     expect(row).to_contain_text("IBAN is ongeldig (controlegetal)", timeout=15_000)

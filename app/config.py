@@ -39,6 +39,9 @@ class Settings(BaseSettings):
     dispatch_backend: str = "in_process"
     azure_storage_queue_url: str = ""
     queue_name: str = "documents"
+    # A JSON file with purchase orders to load when the web application starts.
+    # For the demo environment, which has no accounting system to get them from.
+    seed_purchase_orders_file: Path | None = None
     # Telemetry to Application Insights. Empty means off.
     applicationinsights_connection_string: str = ""
 

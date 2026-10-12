@@ -316,6 +316,8 @@ var settings = [
   { name: 'AZURE_STORAGE_QUEUE_URL', value: storage.properties.primaryEndpoints.queue }
   { name: 'QUEUE_NAME', value: queueName }
   { name: 'APPLICATIONINSIGHTS_CONNECTION_STRING', value: insights.properties.ConnectionString }
+  // The demo has no accounting system, so the synthetic purchase orders come with the image.
+  { name: 'SEED_PURCHASE_ORDERS_FILE', value: 'data/synthetic/purchase_orders.json' }
 ]
 var configuration = {
   registries: [

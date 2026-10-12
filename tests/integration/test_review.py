@@ -1,9 +1,11 @@
 """Stages 4 and 5: review, corrections stored next to the extraction, and the pages."""
 
 import dataclasses
+import json
 import re
 import uuid
 from collections.abc import AsyncIterator
+from pathlib import Path
 
 import pytest
 from httpx import ASGITransport, AsyncClient
@@ -15,13 +17,20 @@ from synthetic.truth import DocumentTruth
 from app.agents.schema import FIELD_KINDS, ExtractedInvoice
 from app.auth.demo import COOKIE
 from app.config import Settings, get_settings
-from app.db.models import AuditRecord, Document, DocumentStatus, Extraction, Review
+from app.db.models import (
+    AuditRecord,
+    Document,
+    DocumentStatus,
+    Extraction,
+    PurchaseOrder,
+    Review,
+)
 from app.inference.fakes import FakeChatModel
 from app.main import app
 from app.rag.answer import LlmAnswer
 from app.review import service as review
 from app.review.service import ReviewError
-from app.validation.purchase_orders import upsert_purchase_orders
+from app.validation.purchase_orders import seed_from_file, upsert_purchase_orders
 from app.web.deps import get_dispatcher, get_services, get_session, get_storage
 from tests.integration.pipeline import TODAY, Pipeline, pick
 
@@ -509,3 +518,29 @@ async def test_contract_page_without_search_says_so(client: AsyncClient) -> None
     assert "Zoeken in contracten is niet ingesteld" in response.text
     _as(client, "finance_clerk")
     assert (await client.get("/contracts")).status_code == 403
+
+
+async def test_purchase_orders_can_be_seeded_from_a_file_twice(
+    session: AsyncSession, tmp_path: Path
+) -> None:
+    orders = [
+        {
+            "po_number": "PO-2026-00001",
+            "supplier_name": "Arens Software B.V.",
+            "supplier_vat_number": "NL942755630B73",
+            "amount": "302.50",
+            "currency": "EUR",
+        }
+    ]
+    path = tmp_path / "orders.json"
+    path.write_text(json.dumps(orders))
+
+    assert await seed_from_file(session, path) == 1
+    orders[0]["amount"] = "400.00"
+    path.write_text(json.dumps(orders))
+    assert await seed_from_file(session, path) == 1
+
+    stored = (await session.execute(select(PurchaseOrder))).scalars().all()
+    assert [(order.po_number, str(order.amount)) for order in stored] == [
+        ("PO-2026-00001", "400.00")
+    ]

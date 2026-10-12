@@ -1,6 +1,4 @@
-<h2>Resultaat</h2>
-<table>
-  <tr><th>Bestand</th><th>Resultaat</th></tr>
+<table class="upload-result">
   {% for result in results %}
   <tr>
     <td>{{ result.filename }}</td>
@@ -14,4 +12,3 @@
   </tr>
   {% endfor %}
 </table>
-<p><a href="/queue">Naar de beoordelingslijst</a></p>

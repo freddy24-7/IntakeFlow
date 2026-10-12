@@ -17,6 +17,8 @@ COPY alembic.ini ./
 COPY migrations migrations
 COPY prompts prompts
 COPY reports/extraction-latest.json reports/extraction-latest.json
+# Purchase orders of the synthetic set, loaded at start in the demo environment.
+COPY data/synthetic/purchase_orders.json data/synthetic/purchase_orders.json
 COPY app app
 RUN uv sync --locked --no-dev --python-preference only-system
 

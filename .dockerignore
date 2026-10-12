@@ -10,6 +10,7 @@
 .coverage
 __pycache__
 data
+!data/synthetic/purchase_orders.json
 tests
 scripts
 cards

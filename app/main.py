@@ -1,5 +1,6 @@
 """FastAPI application entry point."""
 
+import logging
 from collections.abc import AsyncIterator, Callable
 from contextlib import AbstractAsyncContextManager, asynccontextmanager
 from pathlib import Path
@@ -13,6 +14,7 @@ from app.auth.demo import NotSignedIn
 from app.config import get_settings
 from app.db.base import create_engine, create_session_factory
 from app.observability.telemetry import configure_telemetry
+from app.validation.purchase_orders import seed_from_file
 from app.web.health import router as health_router
 from app.web.pages import router as pages_router
 from app.web.upload import router as upload_router
@@ -26,6 +28,8 @@ from app.workflow.services import (
     checkpoint_url,
 )
 
+logger = logging.getLogger(__name__)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
@@ -33,6 +37,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     configure_telemetry(settings, service_name="intakeflow-web")
     engine = create_engine(settings.database_url)
     session_factory = create_session_factory(engine)
+    if settings.seed_purchase_orders_file is not None:
+        async with session_factory() as session:
+            count = await seed_from_file(session, settings.seed_purchase_orders_file)
+        logger.info("loaded %d purchase orders", count)
     app.state.session_factory = session_factory
     app.state.storage = build_storage(settings)
     app.state.dispatcher = NotConfiguredDispatcher()

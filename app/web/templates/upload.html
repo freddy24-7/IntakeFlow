@@ -3,11 +3,14 @@
 {% block content %}
 <h1>Documenten uploaden</h1>
 <div class="card">
-  <form hx-post="/upload" hx-encoding="multipart/form-data" hx-target="#results" hx-swap="innerHTML">
+  <form hx-post="/upload" hx-encoding="multipart/form-data" hx-target="#results" hx-swap="afterbegin">
     <p><input type="file" name="files" accept="application/pdf,.pdf" multiple required></p>
     <button type="submit">Uploaden</button>
-    <span class="muted">Alleen pdf-bestanden.</span>
+    <span class="muted">Alleen pdf-bestanden. Meerdere tegelijk kan: houd Cmd of Ctrl ingedrukt bij het kiezen.</span>
   </form>
 </div>
+<h2>Geüpload in deze sessie</h2>
+<p class="muted">Het nieuwste staat bovenaan. Alle documenten vindt u onder Beoordelen.</p>
 <div id="results"></div>
+<p><a href="/queue">Naar de beoordelingslijst</a></p>
 {% endblock %}

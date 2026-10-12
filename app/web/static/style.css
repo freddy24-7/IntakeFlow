@@ -36,3 +36,5 @@ input.flagged { border-color: var(--warn); background: var(--warn-bg); }
 ul.plain { margin: 0; padding-left: 18px; }
 .htmx-indicator { display: none; }
 .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline; }
+.upload-result { margin-bottom: 8px; }
+.upload-result td:first-child { width: 40%; }
