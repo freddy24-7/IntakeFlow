@@ -1,5 +1,6 @@
 """Stage 6 adapters without Azure: Blob Storage, the Azure queue and telemetry."""
 
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -7,6 +8,7 @@ from app.config import Settings
 from app.observability.telemetry import configure_telemetry
 from app.storage.blob import BlobStorage
 from app.storage.local import LocalStorage
+from app.web.pages import local_time
 from app.workflow.queue import AzureQueue
 from app.workflow.services import build_storage, checkpoint_url
 
@@ -101,3 +103,11 @@ def test_storage_and_checkpoint_settings(tmp_path: Path) -> None:
         checkpoint_url("postgresql+asyncpg://user:secret@db.example:5432/intakeflow?ssl=require")
         == "postgresql://user:secret@db.example:5432/intakeflow?sslmode=require"
     )
+
+
+def test_times_are_shown_in_dutch_local_time() -> None:
+    summer = datetime(2026, 10, 12, 20, 0, tzinfo=UTC)
+    winter = datetime(2026, 12, 1, 20, 0, tzinfo=UTC)
+
+    assert local_time(summer) == "12-10-2026 22:00"
+    assert local_time(winter) == "01-12-2026 21:00"

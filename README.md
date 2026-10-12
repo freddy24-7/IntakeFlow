@@ -6,9 +6,22 @@ It is a portfolio project, not a product. The company is fictional and every doc
 
 **The question the project works through:** how do you get reliable structured data out of messy documents with an LLM, know how reliable it is, and keep a person in charge of the uncertain cases, at a cost you can state per document?
 
+## At a glance
+
+| | |
+| --- | --- |
+| **What it is** | A document intake pipeline for accounts payable, built with LangChain and LangGraph on Azure, deployed to Azure Container Apps |
+| **Extraction** | 97.3% and 96.2% of invoices fully correct (all eleven fields and every line item) on two sets of 186 |
+| **Auto-approval** | About 70% of invoices approved without a person. Of those 135 and 127 documents, 3 and 0 were wrong. Every one of the 48 planted problems per set was caught |
+| **Contract Q&A** | Right answer with the right clause and page for 199 of 199 answerable questions. Declined 38 of 41 questions that have no answer |
+| **Cost** | About € 0.02 per invoice, computed from usage at list prices and not yet confirmed by an invoice |
+
+All figures are for the configured variant, measured on generated documents that are easier than real ones. They are upper bounds. Details and caveats are under [Measured results](#measured-results).
+
 ## Contents
 
 - [What it does](#what-it-does)
+- [Screenshots](#screenshots)
 - [What was built, deployed and measured](#what-was-built-deployed-and-measured)
 - [Measured results](#measured-results)
 - [Design rules](#design-rules)
@@ -19,6 +32,7 @@ It is a portfolio project, not a product. The company is fictional and every doc
 - [Running it locally](#running-it-locally)
 - [Deploying to Azure](#deploying-to-azure)
 - [Limits](#limits)
+- [What I would do next](#what-i-would-do-next)
 - [Repository map](#repository-map)
 
 ## What it does
@@ -65,6 +79,26 @@ Three roles use it through server-rendered pages (Jinja2 and HTMX, interface tex
 | Finance clerk | Uploads documents, works through the review queue with the page next to the extracted fields, corrects, approves or rejects |
 | Contract manager | Asks questions about the contract archive and gets the answer with contract, clause and page |
 | Team lead | Sees a dashboard: share handled automatically, share corrected by a person, time to result, cost per document |
+
+## Screenshots
+
+The deployed application sits behind a sign-in limited to one account, so these show what it looks like. They were taken on 12 October 2026 from the application running against the Azure services, with generated documents.
+
+**Review queue.** Documents that need a person, each with the reason the checks gave.
+
+![Review queue with four documents and the reason for each](docs/screenshots/review-queue.png)
+
+**Reviewing a document.** The page next to the extracted fields. This invoice has a deliberately wrong IBAN: the check names it, and the reviewer can correct the field or approve anyway.
+
+![An invoice next to its extracted fields, with a failed IBAN check](docs/screenshots/review.png)
+
+**A cited answer.** The answer comes with the contract, clause and page, looked up by code from the passage numbers the model gave.
+
+![A question about a notice period, answered with contract, clause and page](docs/screenshots/contract-answer.png)
+
+**Dashboard.** Share approved automatically, time to result and cost per document, from the application's own records. The figures are for the ten documents in that environment, not a benchmark.
+
+![Dashboard with four figures and tables](docs/screenshots/dashboard.png)
 
 ## What was built, deployed and measured
 
@@ -378,7 +412,7 @@ Invoices come in four layouts, in Dutch and English, with Dutch and English numb
 
 ## Testing
 
-- **254 unit and integration tests and one browser test**, about 84% line coverage, all in CI on every push together with `ruff` and `mypy --strict`.
+- **256 unit and integration tests and one browser test**, about 84% line coverage, all in CI on every push together with `ruff` and `mypy --strict`.
 - **No Azure in CI.** Fakes implement the same interfaces as the real services. The integration tests use a real PostgreSQL.
 - **Tests build the system wrongly on purpose**, to show that a guarantee can fail: a model client imported in the wrong module, a second path to the ERP, a perfect score on an invoice with a wrong IBAN, a model that cites passage 7 of 3, a model that misreads every total.
 - **Evaluation is a script, not a test.** `scripts/evaluate_extraction.py`, `evaluate_routing.py` and `evaluate_qa.py` write the reports in [reports/](reports/). Each can also run with fakes that answer from the ground truth, which checks the evaluation code itself.
@@ -454,6 +488,16 @@ After `./deploy/up.sh`, put the three endpoints it prints in `.env`. The full ex
 - **Security is demo-grade.** No real sign-in inside the application, no CSRF protection, and the deployed database accepts connections from any Azure service, protected by its password and TLS.
 - **One worker, one document at a time.** Time to result in Azure is dominated by waiting.
 - **Not done:** there is no alerting beyond the budget, nobody has built a view on the telemetry, and the interface has been used by one person.
+
+## What I would do next
+
+In this order:
+
+1. **Flag line items where the two sources disagree.** Every wrong auto-approval measured here is an extraction error that arithmetic cannot see, mostly in line items, and line items are the one place where the model's answer is not compared with Document Intelligence's.
+2. **Close the two security gaps** before anything beyond a demo: CSRF protection on the forms, and a private network for the database instead of "any Azure service".
+3. **Give contract answers a third outcome**, "the contract mentions this but gives no figure", and filter the search to the contract the question names. The Q&A failures come from the lack of these.
+4. **Test on harder documents.** More layouts per set, scans with noise and folds, and contracts that are not written from the same templates.
+5. **Run more than one worker**, measure processing time and waiting time separately, and compare the computed cost with an Azure invoice.
 
 ## Repository map
 

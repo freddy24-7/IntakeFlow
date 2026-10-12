@@ -2,9 +2,10 @@
 
 import asyncio
 import uuid
-from datetime import date
+from datetime import UTC, date, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import APIRouter, Depends, Form, HTTPException, Request, Response, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
@@ -40,7 +41,19 @@ from app.workflow.routing_steps import REASON_NOT_AN_INVOICE
 from app.workflow.steps import Services
 
 router = APIRouter(include_in_schema=False)
+try:
+    DISPLAY_ZONE: tzinfo = ZoneInfo("Europe/Amsterdam")
+except ZoneInfoNotFoundError:  # a system without time zone data
+    DISPLAY_ZONE = UTC
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
+
+
+def local_time(value: datetime) -> str:
+    """Timestamps are stored in UTC. The interface shows Dutch local time."""
+    return value.astimezone(DISPLAY_ZONE).strftime("%d-%m-%Y %H:%M")
+
+
+templates.env.filters["local_time"] = local_time
 templates.env.globals.update(
     roles=ROLES,
     field_labels=labels.FIELD_LABELS,

@@ -8,7 +8,7 @@
   <tr>
     <td>{{ row.document.filename }}</td>
     <td>{{ type_labels.get(row.document.document_type, "Onbekend") }}</td>
-    <td>{{ row.document.created_at.strftime("%d-%m-%Y %H:%M") }}</td>
+    <td>{{ row.document.created_at | local_time }}</td>
     <td>
       {% if row.document.status == "failed" %}
         <span class="badge warn">Verwerking mislukt ({{ row.document.attempts }} pogingen)</span>
