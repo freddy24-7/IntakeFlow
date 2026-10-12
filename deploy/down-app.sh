@@ -4,7 +4,8 @@
 set -euo pipefail
 
 GROUP="rg-intakeflow-dev"
-ids() { az resource list -g "$GROUP" --tag part=app --query "[?type=='$1'].id" -o tsv; }
+# `az resource list` cannot combine a resource group with --tag, so the tag is in the query.
+ids() { az resource list -g "$GROUP" --query "[?tags.part=='app' && type=='$1'].id" -o tsv; }
 remove() {
   local found
   found="$(ids "$1")"
@@ -25,12 +26,12 @@ remove Microsoft.Insights/components
 remove Microsoft.OperationalInsights/workspaces
 remove Microsoft.ManagedIdentity/userAssignedIdentities
 
-VAULTS="$(az resource list -g "$GROUP" --tag part=app --query "[?type=='Microsoft.KeyVault/vaults'].name" -o tsv)"
+VAULTS="$(az resource list -g "$GROUP" --query "[?tags.part=='app' && type=='Microsoft.KeyVault/vaults'].name" -o tsv)"
 for VAULT in $VAULTS; do
   echo "Deleting and purging key vault"
   az keyvault delete --name "$VAULT" --output none
   az keyvault purge --name "$VAULT" --output none
 done
 
-LEFT="$(az resource list -g "$GROUP" --tag part=app --query "length(@)" -o tsv)"
+LEFT="$(az resource list -g "$GROUP" --query "length([?tags.part=='app'])" -o tsv)"
 echo "Application removed. Resources still tagged part=app: $LEFT"
