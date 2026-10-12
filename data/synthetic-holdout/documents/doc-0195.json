@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0195",
+  "filename": "doc-0195.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "2026/09939",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-03-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "25",
+        "unit_price": "80.33",
+        "vat_rate": "21",
+        "line_total": "2008.25"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "27",
+        "unit_price": "109.12",
+        "vat_rate": "21",
+        "line_total": "2946.24"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "3",
+        "unit_price": "454.39",
+        "vat_rate": "21",
+        "line_total": "1363.17"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "32",
+        "unit_price": "7.2",
+        "vat_rate": "21",
+        "line_total": "230.40"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "38",
+        "unit_price": "16.57",
+        "vat_rate": "21",
+        "line_total": "629.66"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "37",
+        "unit_price": "17.34",
+        "vat_rate": "9",
+        "line_total": "641.58"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "38",
+        "unit_price": "99.2",
+        "vat_rate": "21",
+        "line_total": "3769.60"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "7",
+        "unit_price": "251.88",
+        "vat_rate": "21",
+        "line_total": "1763.16"
+      }
+    ],
+    "subtotal": "13352.06",
+    "vat": "2726.94",
+    "total": "16079.00",
+    "purchase_order_reference": "PO-2026-04004"
+  },
+  "contract": null
+}

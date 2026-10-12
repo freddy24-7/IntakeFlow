@@ -1,0 +1,66 @@
+{
+  "doc_id": "doc-0118",
+  "filename": "doc-0118.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": true,
+  "skew_degrees": 3.45,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2606756",
+    "invoice_date": "2026-01-12",
+    "due_date": "2026-02-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "9",
+        "unit_price": "14.31",
+        "vat_rate": "21",
+        "line_total": "128.79"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "29",
+        "unit_price": "10.58",
+        "vat_rate": "21",
+        "line_total": "306.82"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "28",
+        "unit_price": "9.37",
+        "vat_rate": "21",
+        "line_total": "262.36"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "24.5",
+        "unit_price": "28.73",
+        "vat_rate": "21",
+        "line_total": "703.89"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "1",
+        "unit_price": "194.78",
+        "vat_rate": "21",
+        "line_total": "194.78"
+      }
+    ],
+    "subtotal": "1596.64",
+    "vat": "335.29",
+    "total": "1931.93",
+    "purchase_order_reference": "PO-2026-26997"
+  },
+  "contract": null
+}

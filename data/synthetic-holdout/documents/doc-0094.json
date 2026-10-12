@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0094",
+  "filename": "doc-0094.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": -3.76,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dillen Koeltechniek B.V.",
+    "supplier_vat_number": "NL989672222B06",
+    "iban": "NL16NZLB4648456883",
+    "invoice_number": "INV-000789",
+    "invoice_date": "2026-07-23",
+    "due_date": "2026-08-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "32",
+        "unit_price": "786.52",
+        "vat_rate": "21",
+        "line_total": "25168.64"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "4.5",
+        "unit_price": "101.95",
+        "vat_rate": "21",
+        "line_total": "458.78"
+      }
+    ],
+    "subtotal": "25627.42",
+    "vat": "5381.76",
+    "total": "31009.18",
+    "purchase_order_reference": "PO-2026-32088"
+  },
+  "contract": null
+}

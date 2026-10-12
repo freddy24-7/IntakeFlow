@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0049",
+  "filename": "doc-0049.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "CRN2603784",
+    "invoice_date": "2026-09-09",
+    "due_date": "2026-11-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "20",
+        "unit_price": "1880.76",
+        "vat_rate": "0",
+        "line_total": "37615.20"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "3",
+        "unit_price": "8.84",
+        "vat_rate": "21",
+        "line_total": "26.52"
+      }
+    ],
+    "subtotal": "37641.72",
+    "vat": "5.57",
+    "total": "37647.29",
+    "purchase_order_reference": "PO-2026-75210"
+  },
+  "contract": null
+}

@@ -1,0 +1,38 @@
+{
+  "doc_id": "doc-0140",
+  "filename": "doc-0140.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "C00002156",
+    "invoice_date": "2026-07-25",
+    "due_date": "2026-08-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "29",
+        "unit_price": "96.15",
+        "vat_rate": "21",
+        "line_total": "2788.35"
+      }
+    ],
+    "subtotal": "2788.35",
+    "vat": "585.55",
+    "total": "3373.90",
+    "purchase_order_reference": "PO-2026-05810"
+  },
+  "contract": null
+}

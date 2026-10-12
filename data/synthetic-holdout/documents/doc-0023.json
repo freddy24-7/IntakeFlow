@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0023",
+  "filename": "doc-0023.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2608599",
+    "invoice_date": "2026-03-29",
+    "due_date": "2026-04-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "1",
+        "unit_price": "213.35",
+        "vat_rate": "21",
+        "line_total": "213.35"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "10",
+        "unit_price": "75.04",
+        "vat_rate": "21",
+        "line_total": "750.40"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "37",
+        "unit_price": "352.47",
+        "vat_rate": "21",
+        "line_total": "13041.39"
+      }
+    ],
+    "subtotal": "14005.14",
+    "vat": "2941.08",
+    "total": "16946.22",
+    "purchase_order_reference": "PO-2026-89804"
+  },
+  "contract": null
+}

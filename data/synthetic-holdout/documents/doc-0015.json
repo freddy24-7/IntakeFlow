@@ -1,0 +1,48 @@
+{
+  "doc_id": "doc-0015",
+  "filename": "doc-0015.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch",
+    "scanned"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00002883",
+    "invoice_date": "2026-05-02",
+    "due_date": "2026-06-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "29",
+        "unit_price": "3.99",
+        "vat_rate": "21",
+        "line_total": "115.71"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "23",
+        "unit_price": "445.25",
+        "vat_rate": "21",
+        "line_total": "10240.75"
+      }
+    ],
+    "subtotal": "10356.46",
+    "vat": "2174.86",
+    "total": "12531.32",
+    "purchase_order_reference": "PO-2026-24010"
+  },
+  "contract": null
+}

@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0039",
+  "filename": "doc-0039.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dillen Koeltechniek B.V.",
+    "supplier_vat_number": "NL989672222B06",
+    "iban": "NL16NZLB4648456883",
+    "invoice_number": "INV-008168",
+    "invoice_date": "2026-03-21",
+    "due_date": "2026-04-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "22",
+        "unit_price": "631.05",
+        "vat_rate": "21",
+        "line_total": "13883.10"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "18",
+        "unit_price": "10.17",
+        "vat_rate": "21",
+        "line_total": "183.06"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "3",
+        "unit_price": "10.39",
+        "vat_rate": "21",
+        "line_total": "31.17"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "16",
+        "unit_price": "12.83",
+        "vat_rate": "21",
+        "line_total": "205.28"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "36",
+        "unit_price": "141.27",
+        "vat_rate": "21",
+        "line_total": "5085.72"
+      }
+    ],
+    "subtotal": "19388.33",
+    "vat": "4071.55",
+    "total": "23459.88",
+    "purchase_order_reference": "PO-2026-58205"
+  },
+  "contract": null
+}

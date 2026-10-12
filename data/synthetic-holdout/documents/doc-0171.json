@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0171",
+  "filename": "doc-0171.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Wessex",
+    "supplier_vat_number": "NL364697921B19",
+    "iban": "NL69WADB4610886668",
+    "invoice_number": "F2026-4088",
+    "invoice_date": "2026-02-20",
+    "due_date": "2026-03-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "36",
+        "unit_price": "11.82",
+        "vat_rate": "21",
+        "line_total": "425.52"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "10",
+        "unit_price": "11.9",
+        "vat_rate": "21",
+        "line_total": "119.00"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "39",
+        "unit_price": "37.26",
+        "vat_rate": "21",
+        "line_total": "1453.14"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "23",
+        "unit_price": "52.69",
+        "vat_rate": "21",
+        "line_total": "1211.87"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "38",
+        "unit_price": "117.32",
+        "vat_rate": "21",
+        "line_total": "4458.16"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "36",
+        "unit_price": "1664.24",
+        "vat_rate": "0",
+        "line_total": "59912.64"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "8",
+        "unit_price": "132.69",
+        "vat_rate": "21",
+        "line_total": "1061.52"
+      }
+    ],
+    "subtotal": "68641.85",
+    "vat": "1833.13",
+    "total": "70474.98",
+    "purchase_order_reference": "PO-2026-20754"
+  },
+  "contract": null
+}

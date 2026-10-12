@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0110",
+  "filename": "doc-0110.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2603623",
+    "invoice_date": "2026-03-10",
+    "due_date": "2026-05-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "3",
+        "unit_price": "106.55",
+        "vat_rate": "21",
+        "line_total": "319.65"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "10",
+        "unit_price": "383.65",
+        "vat_rate": "21",
+        "line_total": "3836.50"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "3.5",
+        "unit_price": "126.27",
+        "vat_rate": "21",
+        "line_total": "441.95"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "22",
+        "unit_price": "78.28",
+        "vat_rate": "21",
+        "line_total": "1722.16"
+      }
+    ],
+    "subtotal": "6320.26",
+    "vat": "1327.25",
+    "total": "7647.51",
+    "purchase_order_reference": "PO-2026-63520"
+  },
+  "contract": null
+}

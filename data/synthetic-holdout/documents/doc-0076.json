@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0076",
+  "filename": "doc-0076.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-1974",
+    "invoice_date": "2026-07-12",
+    "due_date": "2026-08-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Safety shoes S3",
+        "quantity": "34",
+        "unit_price": "72.67",
+        "vat_rate": "21",
+        "line_total": "2470.78"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "29.5",
+        "unit_price": "38.98",
+        "vat_rate": "21",
+        "line_total": "1149.91"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "16",
+        "unit_price": "137.37",
+        "vat_rate": "21",
+        "line_total": "2197.92"
+      },
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "26",
+        "unit_price": "93.36",
+        "vat_rate": "21",
+        "line_total": "2427.36"
+      }
+    ],
+    "subtotal": "8245.97",
+    "vat": "1731.65",
+    "total": "9977.62",
+    "purchase_order_reference": "PO-2026-72480"
+  },
+  "contract": null
+}

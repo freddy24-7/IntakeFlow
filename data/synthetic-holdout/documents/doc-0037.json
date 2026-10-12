@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0037",
+  "filename": "doc-0037.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Wessex",
+    "supplier_vat_number": "NL364697921B19",
+    "iban": "NL69WADB4610886668",
+    "invoice_number": "F2026-0559",
+    "invoice_date": "2026-07-12",
+    "due_date": "2026-08-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "35",
+        "unit_price": "27.84",
+        "vat_rate": "21",
+        "line_total": "974.40"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "21",
+        "unit_price": "83.31",
+        "vat_rate": "21",
+        "line_total": "1749.51"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "19",
+        "unit_price": "1779.26",
+        "vat_rate": "21",
+        "line_total": "33805.94"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "2.5",
+        "unit_price": "101.22",
+        "vat_rate": "21",
+        "line_total": "253.05"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "38",
+        "unit_price": "30.65",
+        "vat_rate": "21",
+        "line_total": "1164.70"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "2",
+        "unit_price": "400.13",
+        "vat_rate": "21",
+        "line_total": "800.26"
+      }
+    ],
+    "subtotal": "38747.86",
+    "vat": "8137.05",
+    "total": "46884.91",
+    "purchase_order_reference": "PO-2026-43384"
+  },
+  "contract": null
+}

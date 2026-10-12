@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0158",
+  "filename": "doc-0158.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2602901",
+    "invoice_date": "2026-03-21",
+    "due_date": "2026-05-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "35",
+        "unit_price": "137.49",
+        "vat_rate": "21",
+        "line_total": "4812.15"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "14",
+        "unit_price": "361.37",
+        "vat_rate": "21",
+        "line_total": "5059.18"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "13",
+        "unit_price": "9.32",
+        "vat_rate": "21",
+        "line_total": "121.16"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "4",
+        "unit_price": "295.54",
+        "vat_rate": "21",
+        "line_total": "1182.16"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "33",
+        "unit_price": "76.88",
+        "vat_rate": "21",
+        "line_total": "2537.04"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "39",
+        "unit_price": "5.82",
+        "vat_rate": "21",
+        "line_total": "226.98"
+      }
+    ],
+    "subtotal": "13938.67",
+    "vat": "2927.12",
+    "total": "16865.79",
+    "purchase_order_reference": "PO-2026-22827"
+  },
+  "contract": null
+}

@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0179",
+  "filename": "doc-0179.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00005319",
+    "invoice_date": "2026-09-26",
+    "due_date": "2026-10-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "30",
+        "unit_price": "2121.12",
+        "vat_rate": "0",
+        "line_total": "63633.60"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "112.66",
+        "vat_rate": "21",
+        "line_total": "2703.84"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "20",
+        "unit_price": "593.16",
+        "vat_rate": "21",
+        "line_total": "11863.20"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "9",
+        "unit_price": "7.03",
+        "vat_rate": "21",
+        "line_total": "63.27"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "1",
+        "unit_price": "6.43",
+        "vat_rate": "9",
+        "line_total": "6.43"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "27.5",
+        "unit_price": "110.39",
+        "vat_rate": "21",
+        "line_total": "3035.73"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "7",
+        "unit_price": "69.05",
+        "vat_rate": "21",
+        "line_total": "483.35"
+      }
+    ],
+    "subtotal": "81789.42",
+    "vat": "3811.95",
+    "total": "85601.37",
+    "purchase_order_reference": "PO-2026-34826"
+  },
+  "contract": null
+}

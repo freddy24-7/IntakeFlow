@@ -15,6 +15,7 @@ htmlcov/
 
 # Generated synthetic PDFs: rebuilt from the fixed seed. Ground truth JSON is committed.
 data/synthetic/documents/*.pdf
+data/synthetic-holdout/documents/*.pdf
 
 # Editors and OS
 .DS_Store

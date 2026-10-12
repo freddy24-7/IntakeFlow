@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0073",
+  "filename": "doc-0073.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-4226",
+    "invoice_date": "2026-07-05",
+    "due_date": "2026-07-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "4",
+        "unit_price": "74.79",
+        "vat_rate": "21",
+        "line_total": "299.16"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "29",
+        "unit_price": "4.96",
+        "vat_rate": "21",
+        "line_total": "143.84"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "20",
+        "unit_price": "16.51",
+        "vat_rate": "9",
+        "line_total": "330.20"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "16",
+        "unit_price": "210.31",
+        "vat_rate": "21",
+        "line_total": "3364.96"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "27",
+        "unit_price": "83.02",
+        "vat_rate": "21",
+        "line_total": "2241.54"
+      }
+    ],
+    "subtotal": "6379.70",
+    "vat": "1300.12",
+    "total": "7679.82",
+    "purchase_order_reference": "PO-2026-89860"
+  },
+  "contract": null
+}

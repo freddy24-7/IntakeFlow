@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0181",
+  "filename": "doc-0181.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-2770",
+    "invoice_date": "2026-05-06",
+    "due_date": "2026-06-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Used euro pallets",
+        "quantity": "40",
+        "unit_price": "10.64",
+        "vat_rate": "21",
+        "line_total": "425.60"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "35",
+        "unit_price": "14.26",
+        "vat_rate": "9",
+        "line_total": "499.10"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "38",
+        "unit_price": "940.91",
+        "vat_rate": "21",
+        "line_total": "35754.58"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "37",
+        "unit_price": "589.98",
+        "vat_rate": "21",
+        "line_total": "21829.26"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "16",
+        "unit_price": "165.7",
+        "vat_rate": "21",
+        "line_total": "2651.20"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "22",
+        "unit_price": "7.91",
+        "vat_rate": "9",
+        "line_total": "174.02"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "31",
+        "unit_price": "289.49",
+        "vat_rate": "21",
+        "line_total": "8974.19"
+      }
+    ],
+    "subtotal": "70307.95",
+    "vat": "14683.89",
+    "total": "84991.84",
+    "purchase_order_reference": "PO-2026-51228"
+  },
+  "contract": null
+}

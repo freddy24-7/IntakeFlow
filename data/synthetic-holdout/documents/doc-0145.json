@@ -1,0 +1,83 @@
+{
+  "doc_id": "doc-0145",
+  "filename": "doc-0145.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch",
+    "stamp"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Weijland",
+    "supplier_vat_number": "NL427254099B45",
+    "iban": "NL73POLD6813208904",
+    "invoice_number": "00006606",
+    "invoice_date": "2026-07-03",
+    "due_date": "2026-08-02",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "35",
+        "unit_price": "9.79",
+        "vat_rate": "9",
+        "line_total": "342.65"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "40",
+        "unit_price": "880.13",
+        "vat_rate": "21",
+        "line_total": "35205.20"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "1",
+        "unit_price": "246.09",
+        "vat_rate": "21",
+        "line_total": "246.09"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "11",
+        "unit_price": "17.06",
+        "vat_rate": "21",
+        "line_total": "187.66"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "35",
+        "unit_price": "10.58",
+        "vat_rate": "21",
+        "line_total": "370.30"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "3",
+        "unit_price": "93.14",
+        "vat_rate": "21",
+        "line_total": "279.42"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "29",
+        "unit_price": "128.75",
+        "vat_rate": "21",
+        "line_total": "3733.75"
+      }
+    ],
+    "subtotal": "40365.07",
+    "vat": "8435.55",
+    "total": "48800.62",
+    "purchase_order_reference": "PO-2026-70075"
+  },
+  "contract": null
+}

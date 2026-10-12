@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0131",
+  "filename": "doc-0131.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2608886",
+    "invoice_date": "2026-04-25",
+    "due_date": "2026-06-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "33",
+        "unit_price": "272.42",
+        "vat_rate": "21",
+        "line_total": "8989.86"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "7",
+        "unit_price": "162.84",
+        "vat_rate": "21",
+        "line_total": "1139.88"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "28",
+        "unit_price": "11.43",
+        "vat_rate": "21",
+        "line_total": "320.04"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "31.5",
+        "unit_price": "31.55",
+        "vat_rate": "21",
+        "line_total": "993.83"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "15",
+        "unit_price": "114.97",
+        "vat_rate": "21",
+        "line_total": "1724.55"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "39",
+        "unit_price": "5.69",
+        "vat_rate": "21",
+        "line_total": "221.91"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "18",
+        "unit_price": "927.58",
+        "vat_rate": "21",
+        "line_total": "16696.44"
+      }
+    ],
+    "subtotal": "30086.51",
+    "vat": "6318.17",
+    "total": "36404.68",
+    "purchase_order_reference": "PO-2026-16235"
+  },
+  "contract": null
+}

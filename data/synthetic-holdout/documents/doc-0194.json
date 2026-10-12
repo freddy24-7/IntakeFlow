@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0194",
+  "filename": "doc-0194.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00000878",
+    "invoice_date": "2026-03-28",
+    "due_date": "2026-05-27",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "21.5",
+        "unit_price": "32.38",
+        "vat_rate": "21",
+        "line_total": "696.17"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "6",
+        "unit_price": "119.04",
+        "vat_rate": "21",
+        "line_total": "714.24"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "16",
+        "unit_price": "17.65",
+        "vat_rate": "9",
+        "line_total": "282.40"
+      }
+    ],
+    "subtotal": "1692.81",
+    "vat": "321.61",
+    "total": "2014.42",
+    "purchase_order_reference": "PO-2026-37756"
+  },
+  "contract": null
+}

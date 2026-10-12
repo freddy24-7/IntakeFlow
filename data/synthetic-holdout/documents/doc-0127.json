@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0127",
+  "filename": "doc-0127.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "CF2026-6048",
+    "invoice_date": "2026-03-12",
+    "due_date": "2026-04-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "24",
+        "unit_price": "323.68",
+        "vat_rate": "21",
+        "line_total": "7768.32"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "38",
+        "unit_price": "142.26",
+        "vat_rate": "21",
+        "line_total": "5405.88"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "18",
+        "unit_price": "103.94",
+        "vat_rate": "21",
+        "line_total": "1870.92"
+      }
+    ],
+    "subtotal": "15045.12",
+    "vat": "3159.48",
+    "total": "18204.60",
+    "purchase_order_reference": "PO-2026-98929"
+  },
+  "contract": null
+}

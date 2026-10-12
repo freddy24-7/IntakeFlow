@@ -250,10 +250,11 @@ def test_written_files_round_trip(dataset: Dataset, tmp_path: Path) -> None:
     assert len(orders) == len(dataset.purchase_orders)
 
 
-def test_committed_ground_truth_is_what_the_generator_produces() -> None:
+@pytest.mark.parametrize(("folder", "seed"), [("synthetic", 42), ("synthetic-holdout", 43)])
+def test_committed_ground_truth_is_what_the_generator_produces(folder: str, seed: int) -> None:
     """Labels in the repository come from the generator and are never edited by hand."""
-    documents_dir = Path(__file__).resolve().parents[2] / "data" / "synthetic" / "documents"
-    expected = generate(200, SEED)
+    documents_dir = Path(__file__).resolve().parents[2] / "data" / folder / "documents"
+    expected = generate(200, seed)
 
     stored = sorted(documents_dir.glob("doc-*.json"))
     assert len(stored) == len(expected.documents)

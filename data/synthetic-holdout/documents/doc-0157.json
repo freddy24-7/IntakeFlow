@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0157",
+  "filename": "doc-0157.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-0375",
+    "invoice_date": "2026-09-11",
+    "due_date": "2026-09-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "15",
+        "unit_price": "2.2",
+        "vat_rate": "21",
+        "line_total": "33.00"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "36",
+        "unit_price": "2095.45",
+        "vat_rate": "0",
+        "line_total": "75436.20"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "27",
+        "unit_price": "202.15",
+        "vat_rate": "21",
+        "line_total": "5458.05"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "10",
+        "unit_price": "10.56",
+        "vat_rate": "21",
+        "line_total": "105.60"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "20",
+        "unit_price": "109.89",
+        "vat_rate": "21",
+        "line_total": "2197.80"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "16",
+        "unit_price": "94.18",
+        "vat_rate": "21",
+        "line_total": "1506.88"
+      }
+    ],
+    "subtotal": "84737.53",
+    "vat": "1953.28",
+    "total": "86690.81",
+    "purchase_order_reference": "PO-2026-58947"
+  },
+  "contract": null
+}

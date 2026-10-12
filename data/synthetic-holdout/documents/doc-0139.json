@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0139",
+  "filename": "doc-0139.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2601843",
+    "invoice_date": "2026-09-09",
+    "due_date": "2026-10-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "7",
+        "unit_price": "450.4",
+        "vat_rate": "21",
+        "line_total": "3152.80"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "3",
+        "unit_price": "831.98",
+        "vat_rate": "0",
+        "line_total": "2495.94"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "19",
+        "unit_price": "248.1",
+        "vat_rate": "21",
+        "line_total": "4713.90"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "21",
+        "unit_price": "345.58",
+        "vat_rate": "21",
+        "line_total": "7257.18"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "25",
+        "unit_price": "150.66",
+        "vat_rate": "21",
+        "line_total": "3766.50"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "36",
+        "unit_price": "398.02",
+        "vat_rate": "21",
+        "line_total": "14328.72"
+      }
+    ],
+    "subtotal": "35715.04",
+    "vat": "6976.01",
+    "total": "42691.05",
+    "purchase_order_reference": "PO-2026-06439"
+  },
+  "contract": null
+}

@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0069",
+  "filename": "doc-0069.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Pauw Intern Transport B.V.",
+    "supplier_vat_number": "NL869771677B67",
+    "iban": "NL22DELT9437944273",
+    "invoice_number": "2026/07579",
+    "invoice_date": "2026-07-26",
+    "due_date": "2026-09-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Container handling 40ft",
+        "quantity": "12",
+        "unit_price": "301.63",
+        "vat_rate": "21",
+        "line_total": "3619.56"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "6",
+        "unit_price": "9.74",
+        "vat_rate": "21",
+        "line_total": "58.44"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "23",
+        "unit_price": "1225.59",
+        "vat_rate": "21",
+        "line_total": "28188.57"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "30",
+        "unit_price": "136.99",
+        "vat_rate": "21",
+        "line_total": "4109.70"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "6",
+        "unit_price": "35.39",
+        "vat_rate": "21",
+        "line_total": "212.34"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "36",
+        "unit_price": "74.62",
+        "vat_rate": "21",
+        "line_total": "2686.32"
+      }
+    ],
+    "subtotal": "38874.93",
+    "vat": "8163.74",
+    "total": "47038.67",
+    "purchase_order_reference": "PO-2026-62162"
+  },
+  "contract": null
+}

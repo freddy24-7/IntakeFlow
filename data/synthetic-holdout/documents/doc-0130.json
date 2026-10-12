@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0130",
+  "filename": "doc-0130.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00009202",
+    "invoice_date": "2026-06-27",
+    "due_date": "2026-08-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "29",
+        "unit_price": "10.24",
+        "vat_rate": "21",
+        "line_total": "296.96"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "34",
+        "unit_price": "373.18",
+        "vat_rate": "21",
+        "line_total": "12688.12"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "12",
+        "unit_price": "57.25",
+        "vat_rate": "21",
+        "line_total": "687.00"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "10",
+        "unit_price": "69.5",
+        "vat_rate": "21",
+        "line_total": "695.00"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "13",
+        "unit_price": "10.85",
+        "vat_rate": "21",
+        "line_total": "141.05"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "2384.85",
+        "vat_rate": "0",
+        "line_total": "42927.30"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "37",
+        "unit_price": "113.02",
+        "vat_rate": "21",
+        "line_total": "4181.74"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "30",
+        "unit_price": "9.91",
+        "vat_rate": "21",
+        "line_total": "297.30"
+      }
+    ],
+    "subtotal": "61914.47",
+    "vat": "3987.31",
+    "total": "65901.78",
+    "purchase_order_reference": "PO-2026-43528"
+  },
+  "contract": null
+}

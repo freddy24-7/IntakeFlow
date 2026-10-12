@@ -1,0 +1,52 @@
+{
+  "doc_id": "doc-0136",
+  "filename": "doc-0136.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "CF2026-5334",
+    "invoice_date": "2026-03-07",
+    "due_date": "2026-03-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "21",
+        "unit_price": "11.76",
+        "vat_rate": "21",
+        "line_total": "246.96"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "22",
+        "unit_price": "700.74",
+        "vat_rate": "21",
+        "line_total": "15416.28"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "10",
+        "unit_price": "1681.22",
+        "vat_rate": "0",
+        "line_total": "16812.20"
+      }
+    ],
+    "subtotal": "32475.44",
+    "vat": "3289.28",
+    "total": "35764.72",
+    "purchase_order_reference": "PO-2026-01943"
+  },
+  "contract": null
+}

@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0061",
+  "filename": "doc-0061.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00004577",
+    "invoice_date": "2026-02-19",
+    "due_date": "2026-03-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "38",
+        "unit_price": "128.78",
+        "vat_rate": "21",
+        "line_total": "4893.64"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "28",
+        "unit_price": "1742.54",
+        "vat_rate": "21",
+        "line_total": "48791.12"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "13",
+        "unit_price": "139.02",
+        "vat_rate": "21",
+        "line_total": "1807.26"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "19",
+        "unit_price": "49.3",
+        "vat_rate": "21",
+        "line_total": "936.70"
+      }
+    ],
+    "subtotal": "56428.72",
+    "vat": "11850.03",
+    "total": "68278.75",
+    "purchase_order_reference": "PO-2026-78874"
+  },
+  "contract": null
+}

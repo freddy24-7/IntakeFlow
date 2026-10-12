@@ -1,0 +1,52 @@
+{
+  "doc_id": "doc-0097",
+  "filename": "doc-0097.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": -2.1,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00007281",
+    "invoice_date": "2026-07-20",
+    "due_date": "2026-08-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "38",
+        "unit_price": "216.87",
+        "vat_rate": "21",
+        "line_total": "8241.06"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "24",
+        "unit_price": "93.25",
+        "vat_rate": "21",
+        "line_total": "2238.00"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "13",
+        "unit_price": "100.35",
+        "vat_rate": "21",
+        "line_total": "1304.55"
+      }
+    ],
+    "subtotal": "11783.61",
+    "vat": "2474.56",
+    "total": "14258.17",
+    "purchase_order_reference": "PO-2026-33077"
+  },
+  "contract": null
+}

@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0159",
+  "filename": "doc-0159.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "2026/01331",
+    "invoice_date": "2026-09-25",
+    "due_date": "2026-11-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "31",
+        "unit_price": "8.8",
+        "vat_rate": "9",
+        "line_total": "272.80"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "4",
+        "unit_price": "387.24",
+        "vat_rate": "21",
+        "line_total": "1548.96"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "17",
+        "unit_price": "407.21",
+        "vat_rate": "21",
+        "line_total": "6922.57"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "37",
+        "unit_price": "134.16",
+        "vat_rate": "21",
+        "line_total": "4963.92"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "20",
+        "unit_price": "27.78",
+        "vat_rate": "21",
+        "line_total": "555.60"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "21",
+        "unit_price": "4.32",
+        "vat_rate": "21",
+        "line_total": "90.72"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "39",
+        "unit_price": "84.37",
+        "vat_rate": "21",
+        "line_total": "3290.43"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "24",
+        "unit_price": "92.27",
+        "vat_rate": "21",
+        "line_total": "2214.48"
+      }
+    ],
+    "subtotal": "19859.48",
+    "vat": "4137.75",
+    "total": "23997.23",
+    "purchase_order_reference": "PO-2026-20302"
+  },
+  "contract": null
+}

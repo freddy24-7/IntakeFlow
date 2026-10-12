@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0058",
+  "filename": "doc-0058.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Verbruggen & de Vos Techniek",
+    "supplier_vat_number": "NL788760781B03",
+    "iban": "NL76NZLB3556624676",
+    "invoice_number": "00007201",
+    "invoice_date": "2026-04-25",
+    "due_date": "2026-06-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "17",
+        "unit_price": "13.95",
+        "vat_rate": "9",
+        "line_total": "237.15"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "21.5",
+        "unit_price": "91.3",
+        "vat_rate": "21",
+        "line_total": "1962.95"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "17",
+        "unit_price": "8.57",
+        "vat_rate": "9",
+        "line_total": "145.69"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "35",
+        "unit_price": "1657.06",
+        "vat_rate": "0",
+        "line_total": "57997.10"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "2",
+        "unit_price": "121.71",
+        "vat_rate": "21",
+        "line_total": "243.42"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "2",
+        "unit_price": "115.8",
+        "vat_rate": "21",
+        "line_total": "231.60"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "22",
+        "unit_price": "30.3",
+        "vat_rate": "21",
+        "line_total": "666.60"
+      }
+    ],
+    "subtotal": "61484.51",
+    "vat": "686.42",
+    "total": "62170.93",
+    "purchase_order_reference": "PO-2026-78524"
+  },
+  "contract": null
+}

@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0022",
+  "filename": "doc-0022.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7115953616",
+    "invoice_number": "00002893",
+    "invoice_date": "2026-08-06",
+    "due_date": "2026-10-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "30",
+        "unit_price": "124.64",
+        "vat_rate": "21",
+        "line_total": "3739.20"
+      }
+    ],
+    "subtotal": "3739.20",
+    "vat": "785.23",
+    "total": "4524.43",
+    "purchase_order_reference": "PO-2026-61364"
+  },
+  "contract": null
+}

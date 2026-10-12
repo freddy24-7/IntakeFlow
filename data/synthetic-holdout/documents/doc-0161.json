@@ -1,0 +1,73 @@
+{
+  "doc_id": "doc-0161",
+  "filename": "doc-0161.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00004918",
+    "invoice_date": "2026-01-09",
+    "due_date": "2026-02-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "30",
+        "unit_price": "87.68",
+        "vat_rate": "21",
+        "line_total": "2630.40"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "40",
+        "unit_price": "4.93",
+        "vat_rate": "21",
+        "line_total": "197.20"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "29",
+        "unit_price": "10.34",
+        "vat_rate": "9",
+        "line_total": "299.86"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "21.5",
+        "unit_price": "37.8",
+        "vat_rate": "21",
+        "line_total": "812.70"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "25",
+        "unit_price": "70.71",
+        "vat_rate": "21",
+        "line_total": "1767.75"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "874.66",
+        "vat_rate": "0",
+        "line_total": "15743.88"
+      }
+    ],
+    "subtotal": "21451.79",
+    "vat": "1162.68",
+    "total": "22614.47",
+    "purchase_order_reference": "PO-2026-46891"
+  },
+  "contract": null
+}

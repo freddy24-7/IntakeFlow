@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0166",
+  "filename": "doc-0166.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Pauw Intern Transport B.V.",
+    "supplier_vat_number": "NL869771677B67",
+    "iban": "NL22DELT9437944273",
+    "invoice_number": "2026/02677",
+    "invoice_date": "2026-03-20",
+    "due_date": "2026-05-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "32",
+        "unit_price": "100.27",
+        "vat_rate": "21",
+        "line_total": "3208.64"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "17",
+        "unit_price": "231.9",
+        "vat_rate": "21",
+        "line_total": "3942.30"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "29",
+        "unit_price": "93.9",
+        "vat_rate": "21",
+        "line_total": "2723.10"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "2",
+        "unit_price": "75.78",
+        "vat_rate": "21",
+        "line_total": "151.56"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "24",
+        "unit_price": "396.38",
+        "vat_rate": "21",
+        "line_total": "9513.12"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "2",
+        "unit_price": "362.72",
+        "vat_rate": "21",
+        "line_total": "725.44"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "29",
+        "unit_price": "11.27",
+        "vat_rate": "21",
+        "line_total": "326.83"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "9",
+        "unit_price": "113.38",
+        "vat_rate": "21",
+        "line_total": "1020.42"
+      }
+    ],
+    "subtotal": "21611.41",
+    "vat": "4538.40",
+    "total": "26175.01",
+    "purchase_order_reference": "PO-2026-49426"
+  },
+  "contract": null
+}

@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0115",
+  "filename": "doc-0115.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-4450",
+    "invoice_date": "2026-05-23",
+    "due_date": "2026-06-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "7",
+        "unit_price": "1053.92",
+        "vat_rate": "21",
+        "line_total": "7377.44"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "29",
+        "unit_price": "86.08",
+        "vat_rate": "21",
+        "line_total": "2496.32"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "30",
+        "unit_price": "143.72",
+        "vat_rate": "21",
+        "line_total": "4311.60"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "37",
+        "unit_price": "105.45",
+        "vat_rate": "21",
+        "line_total": "3901.65"
+      }
+    ],
+    "subtotal": "18087.01",
+    "vat": "3798.27",
+    "total": "21885.28",
+    "purchase_order_reference": "PO-2026-39287"
+  },
+  "contract": null
+}

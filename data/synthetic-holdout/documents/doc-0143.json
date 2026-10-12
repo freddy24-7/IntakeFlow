@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0143",
+  "filename": "doc-0143.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/08895",
+    "invoice_date": "2026-06-17",
+    "due_date": "2026-07-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "14",
+        "unit_price": "167.26",
+        "vat_rate": "21",
+        "line_total": "2341.64"
+      }
+    ],
+    "subtotal": "2341.64",
+    "vat": "491.74",
+    "total": "2833.38",
+    "purchase_order_reference": "PO-2026-50737"
+  },
+  "contract": null
+}

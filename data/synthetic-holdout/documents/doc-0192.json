@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0192",
+  "filename": "doc-0192.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "due_before_invoice"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2601308",
+    "invoice_date": "2026-08-01",
+    "due_date": "2026-07-16",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "8",
+        "unit_price": "10.25",
+        "vat_rate": "21",
+        "line_total": "82.00"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "17",
+        "unit_price": "546.46",
+        "vat_rate": "21",
+        "line_total": "9289.82"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "31",
+        "unit_price": "29.94",
+        "vat_rate": "21",
+        "line_total": "928.14"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "33",
+        "unit_price": "9.55",
+        "vat_rate": "21",
+        "line_total": "315.15"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "35",
+        "unit_price": "99.48",
+        "vat_rate": "21",
+        "line_total": "3481.80"
+      }
+    ],
+    "subtotal": "14096.91",
+    "vat": "2960.35",
+    "total": "17057.26",
+    "purchase_order_reference": "PO-2026-25329"
+  },
+  "contract": null
+}

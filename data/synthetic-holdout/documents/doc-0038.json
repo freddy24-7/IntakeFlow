@@ -1,0 +1,66 @@
+{
+  "doc_id": "doc-0038",
+  "filename": "doc-0038.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": 2.97,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/06772",
+    "invoice_date": "2026-01-28",
+    "due_date": "2026-02-27",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "15",
+        "unit_price": "11.61",
+        "vat_rate": "9",
+        "line_total": "174.15"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "25",
+        "unit_price": "12.63",
+        "vat_rate": "21",
+        "line_total": "315.75"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "40",
+        "unit_price": "15.38",
+        "vat_rate": "21",
+        "line_total": "615.20"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "34",
+        "unit_price": "154.45",
+        "vat_rate": "21",
+        "line_total": "5251.30"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "39",
+        "unit_price": "402.06",
+        "vat_rate": "21",
+        "line_total": "15680.34"
+      }
+    ],
+    "subtotal": "22036.74",
+    "vat": "4606.81",
+    "total": "26643.55",
+    "purchase_order_reference": "PO-2026-00950"
+  },
+  "contract": null
+}

@@ -1,0 +1,80 @@
+{
+  "doc_id": "doc-0112",
+  "filename": "doc-0112.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2604582",
+    "invoice_date": "2026-08-21",
+    "due_date": "2026-10-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "12",
+        "unit_price": "10.21",
+        "vat_rate": "9",
+        "line_total": "122.52"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "35",
+        "unit_price": "95.74",
+        "vat_rate": "21",
+        "line_total": "3350.90"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "24",
+        "unit_price": "98.74",
+        "vat_rate": "21",
+        "line_total": "2369.76"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "39",
+        "unit_price": "14.59",
+        "vat_rate": "9",
+        "line_total": "569.01"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "16",
+        "unit_price": "5.33",
+        "vat_rate": "21",
+        "line_total": "85.28"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "23",
+        "unit_price": "11.79",
+        "vat_rate": "21",
+        "line_total": "271.17"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "1",
+        "unit_price": "1063.29",
+        "vat_rate": "0",
+        "line_total": "1063.29"
+      }
+    ],
+    "subtotal": "7831.93",
+    "vat": "1338.43",
+    "total": "9170.36",
+    "purchase_order_reference": "PO-2026-26109"
+  },
+  "contract": null
+}

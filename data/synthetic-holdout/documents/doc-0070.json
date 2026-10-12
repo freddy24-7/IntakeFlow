@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0070",
+  "filename": "doc-0070.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "C00007328",
+    "invoice_date": "2026-02-28",
+    "due_date": "2026-03-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "29",
+        "unit_price": "13",
+        "vat_rate": "21",
+        "line_total": "377.00"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "17",
+        "unit_price": "864.09",
+        "vat_rate": "21",
+        "line_total": "14689.53"
+      }
+    ],
+    "subtotal": "15066.53",
+    "vat": "3163.97",
+    "total": "18230.50",
+    "purchase_order_reference": "PO-2026-00460"
+  },
+  "contract": null
+}

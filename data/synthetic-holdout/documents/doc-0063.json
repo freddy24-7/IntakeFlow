@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0063",
+  "filename": "doc-0063.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/09559",
+    "invoice_date": "2026-07-16",
+    "due_date": "2026-08-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "37",
+        "unit_price": "9.85",
+        "vat_rate": "9",
+        "line_total": "364.45"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "30",
+        "unit_price": "10.91",
+        "vat_rate": "9",
+        "line_total": "327.30"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "37",
+        "unit_price": "70.58",
+        "vat_rate": "21",
+        "line_total": "2611.46"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "9.5",
+        "unit_price": "141.5",
+        "vat_rate": "21",
+        "line_total": "1344.25"
+      }
+    ],
+    "subtotal": "4647.46",
+    "vat": "892.96",
+    "total": "5540.42",
+    "purchase_order_reference": "PO-2026-25463"
+  },
+  "contract": null
+}

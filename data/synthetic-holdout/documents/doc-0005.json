@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0005",
+  "filename": "doc-0005.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-1433",
+    "invoice_date": "2026-09-24",
+    "due_date": "2026-10-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "2",
+        "unit_price": "90.42",
+        "vat_rate": "21",
+        "line_total": "180.84"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "21",
+        "unit_price": "11.14",
+        "vat_rate": "21",
+        "line_total": "233.94"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "21",
+        "unit_price": "2.87",
+        "vat_rate": "21",
+        "line_total": "60.27"
+      }
+    ],
+    "subtotal": "475.05",
+    "vat": "99.76",
+    "total": "574.81",
+    "purchase_order_reference": "PO-2026-45963"
+  },
+  "contract": null
+}

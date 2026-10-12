@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0072",
+  "filename": "doc-0072.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2601290",
+    "invoice_date": "2026-07-26",
+    "due_date": "2026-08-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "20",
+        "unit_price": "2368.13",
+        "vat_rate": "0",
+        "line_total": "47362.60"
+      }
+    ],
+    "subtotal": "47362.60",
+    "vat": "0.00",
+    "total": "47362.60",
+    "purchase_order_reference": "PO-2026-22277"
+  },
+  "contract": null
+}

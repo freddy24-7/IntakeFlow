@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0075",
+  "filename": "doc-0075.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL18918053B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2606849",
+    "invoice_date": "2026-06-02",
+    "due_date": "2026-08-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "27",
+        "unit_price": "136.14",
+        "vat_rate": "21",
+        "line_total": "3675.78"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "1.5",
+        "unit_price": "29.74",
+        "vat_rate": "21",
+        "line_total": "44.61"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "26",
+        "unit_price": "1224.71",
+        "vat_rate": "21",
+        "line_total": "31842.46"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "14",
+        "unit_price": "358.42",
+        "vat_rate": "21",
+        "line_total": "5017.88"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "20",
+        "unit_price": "412.46",
+        "vat_rate": "21",
+        "line_total": "8249.20"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "2",
+        "unit_price": "14.83",
+        "vat_rate": "9",
+        "line_total": "29.66"
+      }
+    ],
+    "subtotal": "48859.59",
+    "vat": "10256.96",
+    "total": "59116.55",
+    "purchase_order_reference": "PO-2026-68512"
+  },
+  "contract": null
+}

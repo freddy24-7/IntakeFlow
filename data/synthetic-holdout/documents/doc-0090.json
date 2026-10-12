@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0090",
+  "filename": "doc-0090.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-4095",
+    "invoice_date": "2026-02-04",
+    "due_date": "2026-03-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "15",
+        "unit_price": "10.22",
+        "vat_rate": "21",
+        "line_total": "153.30"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "33",
+        "unit_price": "100.67",
+        "vat_rate": "21",
+        "line_total": "3322.11"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "23",
+        "unit_price": "10.99",
+        "vat_rate": "21",
+        "line_total": "252.77"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "35",
+        "unit_price": "541.79",
+        "vat_rate": "21",
+        "line_total": "18962.65"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "10",
+        "unit_price": "48.85",
+        "vat_rate": "21",
+        "line_total": "488.50"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "40",
+        "unit_price": "177.35",
+        "vat_rate": "21",
+        "line_total": "7094.00"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "13",
+        "unit_price": "102.11",
+        "vat_rate": "21",
+        "line_total": "1327.43"
+      }
+    ],
+    "subtotal": "31600.76",
+    "vat": "6636.16",
+    "total": "38236.92",
+    "purchase_order_reference": "PO-2026-07394"
+  },
+  "contract": null
+}

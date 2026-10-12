@@ -1,0 +1,41 @@
+{
+  "doc_id": "doc-0137",
+  "filename": "doc-0137.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch",
+    "scanned"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Draaisma Koeltechniek B.V.",
+    "supplier_vat_number": "NL910919305B11",
+    "iban": "NL50POLD1884585483",
+    "invoice_number": "00001691",
+    "invoice_date": "2026-07-20",
+    "due_date": "2026-08-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "10",
+        "unit_price": "126.38",
+        "vat_rate": "21",
+        "line_total": "1263.80"
+      }
+    ],
+    "subtotal": "1263.80",
+    "vat": "265.40",
+    "total": "1533.64",
+    "purchase_order_reference": "PO-2026-50440"
+  },
+  "contract": null
+}

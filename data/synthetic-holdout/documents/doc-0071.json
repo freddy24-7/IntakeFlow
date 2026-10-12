@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0071",
+  "filename": "doc-0071.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "00007897",
+    "invoice_date": "2026-04-20",
+    "due_date": "2026-05-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "25",
+        "unit_price": "1640.68",
+        "vat_rate": "0",
+        "line_total": "41017.00"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "3",
+        "unit_price": "461.8",
+        "vat_rate": "21",
+        "line_total": "1385.40"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "13",
+        "unit_price": "90.12",
+        "vat_rate": "21",
+        "line_total": "1171.56"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "29",
+        "unit_price": "81.82",
+        "vat_rate": "21",
+        "line_total": "2372.78"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "4",
+        "unit_price": "4.34",
+        "vat_rate": "21",
+        "line_total": "17.36"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "10",
+        "unit_price": "18.35",
+        "vat_rate": "21",
+        "line_total": "183.50"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "12",
+        "unit_price": "1746.05",
+        "vat_rate": "21",
+        "line_total": "20952.60"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "1",
+        "unit_price": "16.3",
+        "vat_rate": "9",
+        "line_total": "16.30"
+      }
+    ],
+    "subtotal": "67116.50",
+    "vat": "5478.94",
+    "total": "72595.44",
+    "purchase_order_reference": "PO-2026-60594"
+  },
+  "contract": null
+}

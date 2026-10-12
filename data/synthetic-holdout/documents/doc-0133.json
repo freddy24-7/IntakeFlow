@@ -1,0 +1,73 @@
+{
+  "doc_id": "doc-0133",
+  "filename": "doc-0133.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-5854",
+    "invoice_date": "2026-01-16",
+    "due_date": "2026-01-30",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "6",
+        "unit_price": "94.7",
+        "vat_rate": "21",
+        "line_total": "568.20"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "40",
+        "unit_price": "28.21",
+        "vat_rate": "21",
+        "line_total": "1128.40"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "4",
+        "unit_price": "56.63",
+        "vat_rate": "21",
+        "line_total": "226.52"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "28",
+        "unit_price": "67.19",
+        "vat_rate": "21",
+        "line_total": "1881.32"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "17",
+        "unit_price": "12.51",
+        "vat_rate": "21",
+        "line_total": "212.67"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "20",
+        "unit_price": "467.23",
+        "vat_rate": "0",
+        "line_total": "9344.60"
+      }
+    ],
+    "subtotal": "13361.71",
+    "vat": "843.59",
+    "total": "14205.30",
+    "purchase_order_reference": "PO-2026-91811"
+  },
+  "contract": null
+}

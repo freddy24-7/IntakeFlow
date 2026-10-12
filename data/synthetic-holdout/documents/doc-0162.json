@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0162",
+  "filename": "doc-0162.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-8150",
+    "invoice_date": "2026-06-08",
+    "due_date": "2026-06-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": "21",
+        "unit_price": "41.61",
+        "vat_rate": "21",
+        "line_total": "873.81"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "39",
+        "unit_price": "6.74",
+        "vat_rate": "21",
+        "line_total": "262.86"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "2.5",
+        "unit_price": "97.81",
+        "vat_rate": "21",
+        "line_total": "244.53"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "32",
+        "unit_price": "146.86",
+        "vat_rate": "21",
+        "line_total": "4699.52"
+      }
+    ],
+    "subtotal": "6080.72",
+    "vat": "1276.95",
+    "total": "7357.67",
+    "purchase_order_reference": "PO-2026-45271"
+  },
+  "contract": null
+}

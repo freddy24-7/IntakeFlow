@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0114",
+  "filename": "doc-0114.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "00000761",
+    "invoice_date": "2026-08-16",
+    "due_date": "2026-08-30",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "12",
+        "unit_price": "138.98",
+        "vat_rate": "21",
+        "line_total": "1667.76"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "40",
+        "unit_price": "8.34",
+        "vat_rate": "9",
+        "line_total": "333.60"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "19",
+        "unit_price": "16.71",
+        "vat_rate": "9",
+        "line_total": "317.49"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "4",
+        "unit_price": "8.09",
+        "vat_rate": "21",
+        "line_total": "32.36"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "25",
+        "unit_price": "1235.6",
+        "vat_rate": "0",
+        "line_total": "30890.00"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "19",
+        "unit_price": "144.08",
+        "vat_rate": "21",
+        "line_total": "2737.52"
+      }
+    ],
+    "subtotal": "35978.73",
+    "vat": "990.50",
+    "total": "36969.23",
+    "purchase_order_reference": "PO-2026-25450"
+  },
+  "contract": null
+}

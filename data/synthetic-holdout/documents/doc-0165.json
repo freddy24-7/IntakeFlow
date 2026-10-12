@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0165",
+  "filename": "doc-0165.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "CRN2608100",
+    "invoice_date": "2026-06-13",
+    "due_date": "2026-08-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "23",
+        "unit_price": "174.97",
+        "vat_rate": "21",
+        "line_total": "4024.31"
+      }
+    ],
+    "subtotal": "4024.31",
+    "vat": "845.11",
+    "total": "4869.42",
+    "purchase_order_reference": "PO-2026-67257"
+  },
+  "contract": null
+}

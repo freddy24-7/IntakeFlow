@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0102",
+  "filename": "doc-0102.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-2258",
+    "invoice_date": "2026-03-07",
+    "due_date": "2026-03-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "19",
+        "unit_price": "340.13",
+        "vat_rate": "21",
+        "line_total": "6462.47"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "37",
+        "unit_price": "304.04",
+        "vat_rate": "21",
+        "line_total": "11249.48"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "1",
+        "unit_price": "740.04",
+        "vat_rate": "21",
+        "line_total": "740.04"
+      }
+    ],
+    "subtotal": "18451.99",
+    "vat": "3874.92",
+    "total": "22326.91",
+    "purchase_order_reference": "PO-2026-39371"
+  },
+  "contract": null
+}

@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0003",
+  "filename": "doc-0003.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00009085",
+    "invoice_date": "2026-07-02",
+    "due_date": "2026-08-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "6",
+        "unit_price": "132.07",
+        "vat_rate": "21",
+        "line_total": "792.42"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "26.5",
+        "unit_price": "30.16",
+        "vat_rate": "21",
+        "line_total": "799.24"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "18",
+        "unit_price": "150.54",
+        "vat_rate": "21",
+        "line_total": "2709.72"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "5",
+        "unit_price": "77.25",
+        "vat_rate": "21",
+        "line_total": "386.25"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "19",
+        "unit_price": "10.82",
+        "vat_rate": "21",
+        "line_total": "205.58"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "4",
+        "unit_price": "139.65",
+        "vat_rate": "21",
+        "line_total": "558.60"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "17",
+        "unit_price": "91.36",
+        "vat_rate": "21",
+        "line_total": "1553.12"
+      }
+    ],
+    "subtotal": "7004.93",
+    "vat": "1471.04",
+    "total": "8475.97",
+    "purchase_order_reference": "PO-2026-39508"
+  },
+  "contract": null
+}

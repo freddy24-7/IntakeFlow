@@ -1,0 +1,87 @@
+{
+  "doc_id": "doc-0141",
+  "filename": "doc-0141.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": 2.68,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-3659",
+    "invoice_date": "2026-02-03",
+    "due_date": "2026-03-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "5",
+        "unit_price": "118.43",
+        "vat_rate": "21",
+        "line_total": "592.15"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "27",
+        "unit_price": "993",
+        "vat_rate": "0",
+        "line_total": "26811.00"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "36",
+        "unit_price": "78.92",
+        "vat_rate": "21",
+        "line_total": "2841.12"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "13",
+        "unit_price": "11.41",
+        "vat_rate": "21",
+        "line_total": "148.33"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "23",
+        "unit_price": "286.4",
+        "vat_rate": "21",
+        "line_total": "6587.20"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "1",
+        "unit_price": "59.53",
+        "vat_rate": "21",
+        "line_total": "59.53"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "4",
+        "unit_price": "4.49",
+        "vat_rate": "21",
+        "line_total": "17.96"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "28",
+        "unit_price": "31.61",
+        "vat_rate": "21",
+        "line_total": "885.08"
+      }
+    ],
+    "subtotal": "37942.37",
+    "vat": "2337.59",
+    "total": "40279.96",
+    "purchase_order_reference": "PO-2026-04759"
+  },
+  "contract": null
+}

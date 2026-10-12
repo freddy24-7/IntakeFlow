@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0040",
+  "filename": "doc-0040.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00005346",
+    "invoice_date": "2026-06-29",
+    "due_date": "2026-08-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "21",
+        "unit_price": "35.63",
+        "vat_rate": "21",
+        "line_total": "748.23"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "18",
+        "unit_price": "9.05",
+        "vat_rate": "21",
+        "line_total": "162.90"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "4",
+        "unit_price": "16.03",
+        "vat_rate": "9",
+        "line_total": "64.12"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "20",
+        "unit_price": "91.28",
+        "vat_rate": "21",
+        "line_total": "1825.60"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "19",
+        "unit_price": "594.9",
+        "vat_rate": "21",
+        "line_total": "11303.10"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "29",
+        "unit_price": "8.91",
+        "vat_rate": "9",
+        "line_total": "258.39"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "25",
+        "unit_price": "174.65",
+        "vat_rate": "21",
+        "line_total": "4366.25"
+      }
+    ],
+    "subtotal": "18728.59",
+    "vat": "3894.31",
+    "total": "22622.90",
+    "purchase_order_reference": "PO-2026-41736"
+  },
+  "contract": null
+}

@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0120",
+  "filename": "doc-0120.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00002274",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-09-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "4",
+        "unit_price": "89.01",
+        "vat_rate": "21",
+        "line_total": "356.04"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "36",
+        "unit_price": "15.83",
+        "vat_rate": "21",
+        "line_total": "569.88"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "11",
+        "unit_price": "73.58",
+        "vat_rate": "21",
+        "line_total": "809.38"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "15",
+        "unit_price": "137.8",
+        "vat_rate": "21",
+        "line_total": "2067.00"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "3",
+        "unit_price": "10.73",
+        "vat_rate": "9",
+        "line_total": "32.19"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "33",
+        "unit_price": "186.08",
+        "vat_rate": "21",
+        "line_total": "6140.64"
+      }
+    ],
+    "subtotal": "9975.13",
+    "vat": "2090.92",
+    "total": "12066.05",
+    "purchase_order_reference": "PO-2026-55949"
+  },
+  "contract": null
+}

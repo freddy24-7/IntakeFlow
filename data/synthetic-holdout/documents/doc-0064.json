@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0064",
+  "filename": "doc-0064.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2604706",
+    "invoice_date": "2026-08-21",
+    "due_date": "2026-10-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "25",
+        "unit_price": "7.34",
+        "vat_rate": "21",
+        "line_total": "183.50"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "19.5",
+        "unit_price": "92.69",
+        "vat_rate": "21",
+        "line_total": "1807.46"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "32",
+        "unit_price": "2.68",
+        "vat_rate": "21",
+        "line_total": "85.76"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "9",
+        "unit_price": "534.72",
+        "vat_rate": "21",
+        "line_total": "4812.48"
+      }
+    ],
+    "subtotal": "6889.20",
+    "vat": "1446.73",
+    "total": "8335.93",
+    "purchase_order_reference": "PO-2026-99028"
+  },
+  "contract": null
+}

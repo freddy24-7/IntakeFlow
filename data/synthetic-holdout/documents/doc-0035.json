@@ -1,0 +1,76 @@
+{
+  "doc_id": "doc-0035",
+  "filename": "doc-0035.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch",
+    "scanned"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-9023",
+    "invoice_date": "2026-01-11",
+    "due_date": "2026-02-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "8",
+        "unit_price": "12.04",
+        "vat_rate": "21",
+        "line_total": "96.32"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "16",
+        "unit_price": "120.06",
+        "vat_rate": "21",
+        "line_total": "1920.96"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "38.5",
+        "unit_price": "132.94",
+        "vat_rate": "21",
+        "line_total": "5118.19"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "40",
+        "unit_price": "609.87",
+        "vat_rate": "21",
+        "line_total": "24394.80"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "7",
+        "unit_price": "72.6",
+        "vat_rate": "21",
+        "line_total": "508.20"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "1193.25",
+        "vat_rate": "0",
+        "line_total": "21478.50"
+      }
+    ],
+    "subtotal": "53516.97",
+    "vat": "6728.08",
+    "total": "60245.05",
+    "purchase_order_reference": "PO-2026-01181"
+  },
+  "contract": null
+}

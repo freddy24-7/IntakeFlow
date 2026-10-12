@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0024",
+  "filename": "doc-0024.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2608406",
+    "invoice_date": "2026-05-24",
+    "due_date": "2026-07-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "8",
+        "unit_price": "1070.91",
+        "vat_rate": "21",
+        "line_total": "8567.28"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "6",
+        "unit_price": "128.27",
+        "vat_rate": "21",
+        "line_total": "769.62"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "4",
+        "unit_price": "82.56",
+        "vat_rate": "21",
+        "line_total": "330.24"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "6",
+        "unit_price": "15.35",
+        "vat_rate": "9",
+        "line_total": "92.10"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "16",
+        "unit_price": "125.44",
+        "vat_rate": "21",
+        "line_total": "2007.04"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "8",
+        "unit_price": "2.13",
+        "vat_rate": "21",
+        "line_total": "17.04"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "3",
+        "unit_price": "11.6",
+        "vat_rate": "21",
+        "line_total": "34.80"
+      }
+    ],
+    "subtotal": "11818.12",
+    "vat": "2470.75",
+    "total": "14288.87",
+    "purchase_order_reference": "PO-2026-09102"
+  },
+  "contract": null
+}

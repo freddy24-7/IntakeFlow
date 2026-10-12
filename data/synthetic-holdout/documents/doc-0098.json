@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0098",
+  "filename": "doc-0098.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-6033",
+    "invoice_date": "2026-09-04",
+    "due_date": "2026-09-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "18",
+        "unit_price": "538.94",
+        "vat_rate": "21",
+        "line_total": "9700.92"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "23",
+        "unit_price": "12.17",
+        "vat_rate": "9",
+        "line_total": "279.91"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "40",
+        "unit_price": "8.97",
+        "vat_rate": "21",
+        "line_total": "358.80"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "25",
+        "unit_price": "858.97",
+        "vat_rate": "21",
+        "line_total": "21474.25"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "33",
+        "unit_price": "1611.48",
+        "vat_rate": "21",
+        "line_total": "53178.84"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "20",
+        "unit_price": "130.66",
+        "vat_rate": "21",
+        "line_total": "2613.20"
+      }
+    ],
+    "subtotal": "87605.92",
+    "vat": "18363.65",
+    "total": "105969.57",
+    "purchase_order_reference": "PO-2026-91575"
+  },
+  "contract": null
+}

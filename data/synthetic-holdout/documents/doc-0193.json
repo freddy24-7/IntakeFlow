@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0193",
+  "filename": "doc-0193.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "RN2602392",
+    "invoice_date": "2026-05-20",
+    "due_date": "2026-06-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "15",
+        "unit_price": "33.47",
+        "vat_rate": "21",
+        "line_total": "502.05"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "22",
+        "unit_price": "2181.56",
+        "vat_rate": "0",
+        "line_total": "47994.32"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "25",
+        "unit_price": "194.79",
+        "vat_rate": "21",
+        "line_total": "4869.75"
+      }
+    ],
+    "subtotal": "53366.12",
+    "vat": "1128.08",
+    "total": "54494.20",
+    "purchase_order_reference": "PO-2026-35467"
+  },
+  "contract": null
+}

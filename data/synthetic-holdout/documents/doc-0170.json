@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0170",
+  "filename": "doc-0170.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bresse Transport B.V.",
+    "supplier_vat_number": "NL749942761B13",
+    "iban": "NL08HAVN6281528199",
+    "invoice_number": "RN2608438",
+    "invoice_date": "2026-08-22",
+    "due_date": "2026-09-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "17",
+        "unit_price": "318.15",
+        "vat_rate": "21",
+        "line_total": "5408.55"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "34",
+        "unit_price": "80.2",
+        "vat_rate": "21",
+        "line_total": "2726.80"
+      }
+    ],
+    "subtotal": "8135.35",
+    "vat": "1708.42",
+    "total": "9843.77",
+    "purchase_order_reference": "PO-2026-60947"
+  },
+  "contract": null
+}

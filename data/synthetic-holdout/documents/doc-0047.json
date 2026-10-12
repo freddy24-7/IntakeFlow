@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0047",
+  "filename": "doc-0047.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00004839",
+    "invoice_date": "2026-03-21",
+    "due_date": "2026-04-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "9",
+        "unit_price": "105.23",
+        "vat_rate": "21",
+        "line_total": "947.07"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "28",
+        "unit_price": "26.07",
+        "vat_rate": "21",
+        "line_total": "729.96"
+      }
+    ],
+    "subtotal": "1677.03",
+    "vat": "352.18",
+    "total": "2029.21",
+    "purchase_order_reference": "PO-2026-15501"
+  },
+  "contract": null
+}

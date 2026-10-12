@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0104",
+  "filename": "doc-0104.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Verbruggen & de Vos Techniek",
+    "supplier_vat_number": "NL788760781B03",
+    "iban": "NL76NZLB3556624676",
+    "invoice_number": "00004360",
+    "invoice_date": "2026-08-22",
+    "due_date": "2026-10-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "25",
+        "unit_price": "433.67",
+        "vat_rate": "21",
+        "line_total": "10841.75"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "10",
+        "unit_price": "8.14",
+        "vat_rate": "21",
+        "line_total": "81.40"
+      }
+    ],
+    "subtotal": "10923.15",
+    "vat": "2293.86",
+    "total": "13217.01",
+    "purchase_order_reference": "PO-2026-57069"
+  },
+  "contract": null
+}

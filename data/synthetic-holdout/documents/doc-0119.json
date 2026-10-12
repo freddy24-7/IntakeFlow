@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0119",
+  "filename": "doc-0119.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-8438",
+    "invoice_date": "2026-09-04",
+    "due_date": "2026-10-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "1",
+        "unit_price": "14.8",
+        "vat_rate": "9",
+        "line_total": "14.80"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "6",
+        "unit_price": "12.13",
+        "vat_rate": "21",
+        "line_total": "72.78"
+      },
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "31",
+        "unit_price": "502.35",
+        "vat_rate": "21",
+        "line_total": "15572.85"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "40",
+        "unit_price": "12.31",
+        "vat_rate": "21",
+        "line_total": "492.40"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "5",
+        "unit_price": "2267.42",
+        "vat_rate": "0",
+        "line_total": "11337.10"
+      },
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "27",
+        "unit_price": "94.69",
+        "vat_rate": "21",
+        "line_total": "2556.63"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "15",
+        "unit_price": "446.51",
+        "vat_rate": "21",
+        "line_total": "6697.65"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "11.5",
+        "unit_price": "93.17",
+        "vat_rate": "21",
+        "line_total": "1071.46"
+      }
+    ],
+    "subtotal": "37815.67",
+    "vat": "5558.72",
+    "total": "43374.39",
+    "purchase_order_reference": "PO-2026-77028"
+  },
+  "contract": null
+}

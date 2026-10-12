@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0083",
+  "filename": "doc-0083.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Draaisma Koeltechniek B.V.",
+    "supplier_vat_number": "NL910919305B11",
+    "iban": "NL50POLD1884585483",
+    "invoice_number": "00002228",
+    "invoice_date": "2026-05-12",
+    "due_date": "2026-06-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "16",
+        "unit_price": "8.14",
+        "vat_rate": "9",
+        "line_total": "130.24"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "16",
+        "unit_price": "403.23",
+        "vat_rate": "21",
+        "line_total": "6451.68"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "34",
+        "unit_price": "1448.25",
+        "vat_rate": "21",
+        "line_total": "49240.50"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "32",
+        "unit_price": "60.98",
+        "vat_rate": "21",
+        "line_total": "1951.36"
+      }
+    ],
+    "subtotal": "57773.78",
+    "vat": "12116.86",
+    "total": "69890.64",
+    "purchase_order_reference": "PO-2026-21780"
+  },
+  "contract": null
+}

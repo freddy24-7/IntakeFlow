@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0167",
+  "filename": "doc-0167.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Verbruggen & de Vos Techniek",
+    "supplier_vat_number": "NL788760781B03",
+    "iban": "NL76NZLB3556624676",
+    "invoice_number": "00008265",
+    "invoice_date": "2026-09-24",
+    "due_date": "2026-11-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "22",
+        "unit_price": "15.58",
+        "vat_rate": "21",
+        "line_total": "342.76"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "36",
+        "unit_price": "7.77",
+        "vat_rate": "9",
+        "line_total": "279.72"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "29",
+        "unit_price": "90.78",
+        "vat_rate": "21",
+        "line_total": "2632.62"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "40",
+        "unit_price": "2.09",
+        "vat_rate": "21",
+        "line_total": "83.60"
+      }
+    ],
+    "subtotal": "3338.70",
+    "vat": "667.56",
+    "total": "4006.26",
+    "purchase_order_reference": "PO-2026-85420"
+  },
+  "contract": null
+}

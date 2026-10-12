@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0172",
+  "filename": "doc-0172.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Pauw Intern Transport B.V.",
+    "supplier_vat_number": "NL869771677B67",
+    "iban": "NL22DELT9437944273",
+    "invoice_number": "2026/08773",
+    "invoice_date": "2026-05-21",
+    "due_date": "2026-07-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "25",
+        "unit_price": "9.97",
+        "vat_rate": "9",
+        "line_total": "249.25"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "23",
+        "unit_price": "3.41",
+        "vat_rate": "21",
+        "line_total": "78.43"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "30",
+        "unit_price": "1077.16",
+        "vat_rate": "21",
+        "line_total": "32314.80"
+      }
+    ],
+    "subtotal": "32642.48",
+    "vat": "6825.01",
+    "total": "39467.49",
+    "purchase_order_reference": "PO-2026-83313"
+  },
+  "contract": null
+}

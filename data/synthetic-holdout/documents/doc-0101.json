@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0101",
+  "filename": "doc-0101.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Verbruggen & de Vos Techniek",
+    "supplier_vat_number": "NL788760781B03",
+    "iban": "NL76NZLB3556624676",
+    "invoice_number": "00004523",
+    "invoice_date": "2026-07-28",
+    "due_date": "2026-09-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "31",
+        "unit_price": "762.87",
+        "vat_rate": "21",
+        "line_total": "23648.97"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "3",
+        "unit_price": "10.24",
+        "vat_rate": "21",
+        "line_total": "30.72"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "30",
+        "unit_price": "34.15",
+        "vat_rate": "21",
+        "line_total": "1024.50"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "23",
+        "unit_price": "131.52",
+        "vat_rate": "21",
+        "line_total": "3024.96"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "3",
+        "unit_price": "122.22",
+        "vat_rate": "21",
+        "line_total": "366.66"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "38",
+        "unit_price": "6.32",
+        "vat_rate": "21",
+        "line_total": "240.16"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "36",
+        "unit_price": "99.4",
+        "vat_rate": "21",
+        "line_total": "3578.40"
+      }
+    ],
+    "subtotal": "31914.37",
+    "vat": "6702.02",
+    "total": "38616.39",
+    "purchase_order_reference": "PO-2026-82681"
+  },
+  "contract": null
+}

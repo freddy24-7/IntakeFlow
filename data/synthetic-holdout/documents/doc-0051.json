@@ -1,0 +1,66 @@
+{
+  "doc_id": "doc-0051",
+  "filename": "doc-0051.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2602475",
+    "invoice_date": "2026-04-26",
+    "due_date": "2026-06-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "13",
+        "unit_price": "65.41",
+        "vat_rate": "21",
+        "line_total": "850.33"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "5",
+        "unit_price": "71.46",
+        "vat_rate": "21",
+        "line_total": "357.30"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "13",
+        "unit_price": "4.51",
+        "vat_rate": "21",
+        "line_total": "58.63"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "3",
+        "unit_price": "1276.69",
+        "vat_rate": "0",
+        "line_total": "3830.07"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "7.5",
+        "unit_price": "31.17",
+        "vat_rate": "21",
+        "line_total": "233.78"
+      }
+    ],
+    "subtotal": "5330.11",
+    "vat": "315.01",
+    "total": "5645.12",
+    "purchase_order_reference": "PO-2026-64589"
+  },
+  "contract": null
+}

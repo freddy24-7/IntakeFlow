@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0088",
+  "filename": "doc-0088.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00004695",
+    "invoice_date": "2026-02-27",
+    "due_date": "2026-04-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "18",
+        "unit_price": "8.39",
+        "vat_rate": "9",
+        "line_total": "151.02"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "20",
+        "unit_price": "10.21",
+        "vat_rate": "9",
+        "line_total": "204.20"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "17",
+        "unit_price": "1440.62",
+        "vat_rate": "0",
+        "line_total": "24490.54"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "31",
+        "unit_price": "10.49",
+        "vat_rate": "21",
+        "line_total": "325.19"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "39",
+        "unit_price": "11.96",
+        "vat_rate": "21",
+        "line_total": "466.44"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "20",
+        "unit_price": "694.37",
+        "vat_rate": "21",
+        "line_total": "13887.40"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "5",
+        "unit_price": "134.78",
+        "vat_rate": "21",
+        "line_total": "673.90"
+      }
+    ],
+    "subtotal": "40198.69",
+    "vat": "3256.09",
+    "total": "43454.78",
+    "purchase_order_reference": "PO-2026-76757"
+  },
+  "contract": null
+}

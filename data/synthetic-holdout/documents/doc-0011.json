@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0011",
+  "filename": "doc-0011.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "RN2604956",
+    "invoice_date": "2026-09-06",
+    "due_date": "2026-09-20",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "15",
+        "unit_price": "35.2",
+        "vat_rate": "21",
+        "line_total": "528.00"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "124.35",
+        "vat_rate": "21",
+        "line_total": "2984.40"
+      }
+    ],
+    "subtotal": "3512.40",
+    "vat": "737.60",
+    "total": "4250.00",
+    "purchase_order_reference": "PO-2026-79671"
+  },
+  "contract": null
+}

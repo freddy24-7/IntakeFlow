@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0163",
+  "filename": "doc-0163.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-9039",
+    "invoice_date": "2026-01-19",
+    "due_date": "2026-02-02",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "37",
+        "unit_price": "69.8",
+        "vat_rate": "21",
+        "line_total": "2582.60"
+      }
+    ],
+    "subtotal": "2582.60",
+    "vat": "542.35",
+    "total": "3124.95",
+    "purchase_order_reference": "PO-2026-57176"
+  },
+  "contract": null
+}

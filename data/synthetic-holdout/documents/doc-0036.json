@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0036",
+  "filename": "doc-0036.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Scharroo",
+    "supplier_vat_number": "NL586061644B79",
+    "iban": "NL96NZLB0412264556",
+    "invoice_number": "INV-005030",
+    "invoice_date": "2026-08-23",
+    "due_date": "2026-10-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "WMS software licence per month",
+        "quantity": "18",
+        "unit_price": "709.73",
+        "vat_rate": "21",
+        "line_total": "12775.14"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "6",
+        "unit_price": "35.23",
+        "vat_rate": "21",
+        "line_total": "211.38"
+      }
+    ],
+    "subtotal": "12986.52",
+    "vat": "2727.17",
+    "total": "15713.69",
+    "purchase_order_reference": "PO-2026-04246"
+  },
+  "contract": null
+}

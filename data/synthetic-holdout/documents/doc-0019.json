@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0019",
+  "filename": "doc-0019.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "due_before_invoice"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-5498",
+    "invoice_date": "2026-02-21",
+    "due_date": "2026-02-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "21",
+        "unit_price": "225.48",
+        "vat_rate": "21",
+        "line_total": "4735.08"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "37",
+        "unit_price": "661.99",
+        "vat_rate": "21",
+        "line_total": "24493.63"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "6",
+        "unit_price": "13",
+        "vat_rate": "9",
+        "line_total": "78.00"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "8",
+        "unit_price": "466.53",
+        "vat_rate": "21",
+        "line_total": "3732.24"
+      }
+    ],
+    "subtotal": "33038.95",
+    "vat": "6928.82",
+    "total": "39967.77",
+    "purchase_order_reference": "PO-2026-47275"
+  },
+  "contract": null
+}

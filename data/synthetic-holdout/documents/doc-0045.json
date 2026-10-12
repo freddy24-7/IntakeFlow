@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0045",
+  "filename": "doc-0045.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "due_before_invoice"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "2026/03372",
+    "invoice_date": "2026-01-18",
+    "due_date": "2025-12-31",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "20",
+        "unit_price": "7.15",
+        "vat_rate": "9",
+        "line_total": "143.00"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "10",
+        "unit_price": "629.45",
+        "vat_rate": "21",
+        "line_total": "6294.50"
+      }
+    ],
+    "subtotal": "6437.50",
+    "vat": "1334.72",
+    "total": "7772.22",
+    "purchase_order_reference": "PO-2026-83888"
+  },
+  "contract": null
+}

@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0052",
+  "filename": "doc-0052.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bresse Transport B.V.",
+    "supplier_vat_number": "NL749942761B13",
+    "iban": "NL08HAVN6281528199",
+    "invoice_number": "RN2603103",
+    "invoice_date": "2026-06-23",
+    "due_date": "2026-07-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "33",
+        "unit_price": "7.19",
+        "vat_rate": "21",
+        "line_total": "237.27"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "33",
+        "unit_price": "334.73",
+        "vat_rate": "21",
+        "line_total": "11046.09"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "33",
+        "unit_price": "10.11",
+        "vat_rate": "9",
+        "line_total": "333.63"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "33",
+        "unit_price": "1246.29",
+        "vat_rate": "21",
+        "line_total": "41127.57"
+      }
+    ],
+    "subtotal": "52744.56",
+    "vat": "11036.33",
+    "total": "63780.89",
+    "purchase_order_reference": "PO-2026-76543"
+  },
+  "contract": null
+}

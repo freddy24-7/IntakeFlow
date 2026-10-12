@@ -29,6 +29,9 @@ async def main() -> None:
     parser.add_argument("--services", choices=("azure", "oracle"), required=True)
     parser.add_argument("--data", type=Path, default=Path("data/synthetic"))
     parser.add_argument("--limit", type=int, default=None, help="only the first N documents")
+    parser.add_argument(
+        "--name", default="eval", help="name of the run: keeps sets apart and labels the report"
+    )
     parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument("--out", type=Path, default=None, help="report file (default: reports/)")
     arguments = parser.parse_args()
@@ -49,7 +52,7 @@ async def main() -> None:
             services,
             documents,
             VARIANTS,
-            namespace=f"eval-{arguments.services}",
+            namespace=f"{arguments.name}-{arguments.services}",
             concurrency=arguments.concurrency,
         )
     finally:
@@ -69,7 +72,8 @@ async def main() -> None:
     out = arguments.out
     if out is None and arguments.services == "azure":
         suffix = f"-first-{arguments.limit}" if arguments.limit else ""
-        out = Path("reports") / f"extraction-{date.today().isoformat()}{suffix}.md"
+        label = "" if arguments.name == "eval" else f"-{arguments.name}"
+        out = Path("reports") / f"extraction{label}-{date.today().isoformat()}{suffix}.md"
     if out is not None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(report + "\n", encoding="utf-8")

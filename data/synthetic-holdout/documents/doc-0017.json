@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0017",
+  "filename": "doc-0017.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-1165",
+    "invoice_date": "2026-07-15",
+    "due_date": "2026-08-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "9",
+        "unit_price": "208.47",
+        "vat_rate": "21",
+        "line_total": "1876.23"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "13",
+        "unit_price": "9.37",
+        "vat_rate": "21",
+        "line_total": "121.81"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "14",
+        "unit_price": "69.52",
+        "vat_rate": "21",
+        "line_total": "973.28"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "30",
+        "unit_price": "100.27",
+        "vat_rate": "21",
+        "line_total": "3008.10"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "39",
+        "unit_price": "3.18",
+        "vat_rate": "21",
+        "line_total": "124.02"
+      },
+      {
+        "description": "Truck tyre change",
+        "quantity": "4",
+        "unit_price": "190.26",
+        "vat_rate": "21",
+        "line_total": "761.04"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "28",
+        "unit_price": "818.91",
+        "vat_rate": "21",
+        "line_total": "22929.48"
+      }
+    ],
+    "subtotal": "29793.96",
+    "vat": "6256.73",
+    "total": "36050.69",
+    "purchase_order_reference": "PO-2026-23081"
+  },
+  "contract": null
+}

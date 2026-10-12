@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0080",
+  "filename": "doc-0080.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "2026/06175",
+    "invoice_date": "2026-01-21",
+    "due_date": "2026-03-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "15",
+        "unit_price": "11.06",
+        "vat_rate": "21",
+        "line_total": "165.90"
+      }
+    ],
+    "subtotal": "165.90",
+    "vat": "34.84",
+    "total": "200.74",
+    "purchase_order_reference": "PO-2026-61090"
+  },
+  "contract": null
+}

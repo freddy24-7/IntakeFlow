@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0012",
+  "filename": "doc-0012.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-5832",
+    "invoice_date": "2026-08-04",
+    "due_date": "2026-09-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "11",
+        "unit_price": "137.81",
+        "vat_rate": "21",
+        "line_total": "1515.91"
+      }
+    ],
+    "subtotal": "1515.91",
+    "vat": "318.34",
+    "total": "1834.25",
+    "purchase_order_reference": "PO-2026-86652"
+  },
+  "contract": null
+}

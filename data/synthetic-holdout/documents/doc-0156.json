@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0156",
+  "filename": "doc-0156.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00004676",
+    "invoice_date": "2026-06-26",
+    "due_date": "2026-07-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "29",
+        "unit_price": "172.99",
+        "vat_rate": "21",
+        "line_total": "5016.71"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "39",
+        "unit_price": "17.54",
+        "vat_rate": "9",
+        "line_total": "684.06"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "1",
+        "unit_price": "12.79",
+        "vat_rate": "21",
+        "line_total": "12.79"
+      }
+    ],
+    "subtotal": "5713.56",
+    "vat": "1117.77",
+    "total": "6831.33",
+    "purchase_order_reference": "PO-2026-47081"
+  },
+  "contract": null
+}

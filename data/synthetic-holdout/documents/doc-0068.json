@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0068",
+  "filename": "doc-0068.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/01252",
+    "invoice_date": "2026-04-28",
+    "due_date": "2026-05-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "13",
+        "unit_price": "78.23",
+        "vat_rate": "21",
+        "line_total": "1016.99"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "39",
+        "unit_price": "194.45",
+        "vat_rate": "21",
+        "line_total": "7583.55"
+      }
+    ],
+    "subtotal": "8600.54",
+    "vat": "1806.11",
+    "total": "10406.65",
+    "purchase_order_reference": "PO-2026-32040"
+  },
+  "contract": null
+}

@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0026",
+  "filename": "doc-0026.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "RN2605779",
+    "invoice_date": "2026-05-22",
+    "due_date": "2026-06-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "10",
+        "unit_price": "369.78",
+        "vat_rate": "21",
+        "line_total": "3697.80"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "11",
+        "unit_price": "419.7",
+        "vat_rate": "21",
+        "line_total": "4616.70"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "13",
+        "unit_price": "14.76",
+        "vat_rate": "21",
+        "line_total": "191.88"
+      }
+    ],
+    "subtotal": "8506.38",
+    "vat": "1786.34",
+    "total": "10292.72",
+    "purchase_order_reference": "PO-2026-81172"
+  },
+  "contract": null
+}

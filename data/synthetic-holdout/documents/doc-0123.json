@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0123",
+  "filename": "doc-0123.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-8356",
+    "invoice_date": "2026-06-15",
+    "due_date": "2026-07-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "37",
+        "unit_price": "8.66",
+        "vat_rate": "21",
+        "line_total": "320.42"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "14",
+        "unit_price": "127.96",
+        "vat_rate": "21",
+        "line_total": "1791.44"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "24",
+        "unit_price": "177.13",
+        "vat_rate": "21",
+        "line_total": "4251.12"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "19",
+        "unit_price": "696.9",
+        "vat_rate": "0",
+        "line_total": "13241.10"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "25",
+        "unit_price": "133.32",
+        "vat_rate": "21",
+        "line_total": "3333.00"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "22",
+        "unit_price": "540.17",
+        "vat_rate": "21",
+        "line_total": "11883.74"
+      }
+    ],
+    "subtotal": "34820.82",
+    "vat": "4531.74",
+    "total": "39352.56",
+    "purchase_order_reference": "PO-2026-75758"
+  },
+  "contract": null
+}

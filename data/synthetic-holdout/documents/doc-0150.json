@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0150",
+  "filename": "doc-0150.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00006200",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-03-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "1",
+        "unit_price": "8.34",
+        "vat_rate": "9",
+        "line_total": "8.34"
+      }
+    ],
+    "subtotal": "8.34",
+    "vat": "0.75",
+    "total": "9.09",
+    "purchase_order_reference": "PO-2026-99971"
+  },
+  "contract": null
+}

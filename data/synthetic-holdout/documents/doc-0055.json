@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0055",
+  "filename": "doc-0055.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00008622",
+    "invoice_date": "2026-03-29",
+    "due_date": "2026-04-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "38",
+        "unit_price": "240.11",
+        "vat_rate": "21",
+        "line_total": "9124.18"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "18",
+        "unit_price": "552.78",
+        "vat_rate": "21",
+        "line_total": "9950.04"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "35",
+        "unit_price": "395.15",
+        "vat_rate": "21",
+        "line_total": "13830.25"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "4",
+        "unit_price": "184.27",
+        "vat_rate": "21",
+        "line_total": "737.08"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "23",
+        "unit_price": "2212.19",
+        "vat_rate": "0",
+        "line_total": "50880.37"
+      }
+    ],
+    "subtotal": "84521.92",
+    "vat": "7064.73",
+    "total": "91625.01",
+    "purchase_order_reference": "PO-2026-69338"
+  },
+  "contract": null
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0082",
+  "filename": "doc-0082.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "RN2609287",
+    "invoice_date": "2026-03-15",
+    "due_date": "2026-03-29",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "34",
+        "unit_price": "99.75",
+        "vat_rate": "21",
+        "line_total": "3391.50"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "25",
+        "unit_price": "76.37",
+        "vat_rate": "21",
+        "line_total": "1909.25"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "33",
+        "unit_price": "69.57",
+        "vat_rate": "21",
+        "line_total": "2295.81"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "26",
+        "unit_price": "159.05",
+        "vat_rate": "21",
+        "line_total": "4135.30"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "1",
+        "unit_price": "4.9",
+        "vat_rate": "21",
+        "line_total": "4.90"
+      }
+    ],
+    "subtotal": "11736.76",
+    "vat": "2464.72",
+    "total": "14229.99",
+    "purchase_order_reference": "PO-2026-51194"
+  },
+  "contract": null
+}

@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0032",
+  "filename": "doc-0032.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Wessex",
+    "supplier_vat_number": "NL364697921B19",
+    "iban": "NL69WADB4610886668",
+    "invoice_number": "F2026-9253",
+    "invoice_date": "2026-01-19",
+    "due_date": "2026-02-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "36",
+        "unit_price": "1483.36",
+        "vat_rate": "21",
+        "line_total": "53400.96"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "34",
+        "unit_price": "391.51",
+        "vat_rate": "21",
+        "line_total": "13311.34"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "26",
+        "unit_price": "9.64",
+        "vat_rate": "9",
+        "line_total": "250.64"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "21",
+        "unit_price": "70.61",
+        "vat_rate": "21",
+        "line_total": "1482.81"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "6",
+        "unit_price": "73.3",
+        "vat_rate": "21",
+        "line_total": "439.80"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "37",
+        "unit_price": "7.69",
+        "vat_rate": "21",
+        "line_total": "284.53"
+      }
+    ],
+    "subtotal": "69170.08",
+    "vat": "14495.64",
+    "total": "83665.72",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0043",
+  "filename": "doc-0043.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/09944",
+    "invoice_date": "2026-04-09",
+    "due_date": "2026-05-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "37",
+        "unit_price": "232.81",
+        "vat_rate": "21",
+        "line_total": "8613.97"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "6",
+        "unit_price": "132.25",
+        "vat_rate": "21",
+        "line_total": "793.50"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "29",
+        "unit_price": "185.94",
+        "vat_rate": "21",
+        "line_total": "5392.26"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "35",
+        "unit_price": "9.41",
+        "vat_rate": "9",
+        "line_total": "329.35"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "14",
+        "unit_price": "5.25",
+        "vat_rate": "21",
+        "line_total": "73.50"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "10",
+        "unit_price": "119.5",
+        "vat_rate": "21",
+        "line_total": "1195.00"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "22",
+        "unit_price": "146.52",
+        "vat_rate": "21",
+        "line_total": "3223.44"
+      }
+    ],
+    "subtotal": "19621.02",
+    "vat": "4080.89",
+    "total": "23701.91",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

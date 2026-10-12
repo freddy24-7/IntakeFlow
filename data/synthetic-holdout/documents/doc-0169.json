@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0169",
+  "filename": "doc-0169.pdf",
+  "doc_type": "contract",
+  "language": "nl",
+  "layout": "plain",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": null,
+  "contract": {
+    "contract_number": "OVK-2026-006",
+    "title": "Dienstverleningsovereenkomst Noordzee Logistiek B.V. - van Dillen Koeltechniek B.V.",
+    "supplier_name": "van Dillen Koeltechniek B.V.",
+    "facts": {
+      "service": "het ter beschikking stellen van uitzendkrachten voor magazijnwerkzaamheden",
+      "start_date": "1 juli 2026",
+      "initial_term_months": "36",
+      "renewal_months": "6",
+      "notice_period_months": "3",
+      "indexation_cap_percent": "2,5",
+      "payment_term_days": "60",
+      "liability_cap_eur": "1.000.000,00",
+      "cure_period_days": "30",
+      "court": "Rotterdam"
+    },
+    "clauses": [
+      {
+        "number": 1,
+        "heading": "Onderwerp van de overeenkomst",
+        "topic": "subject",
+        "page": 1,
+        "text": "Leverancier verricht voor Opdrachtgever de volgende diensten: het ter beschikking stellen van uitzendkrachten voor magazijnwerkzaamheden. De diensten worden uitgevoerd op de locatie van Opdrachtgever te Rotterdam, tenzij partijen schriftelijk anders overeenkomen.\nLeverancier voert de diensten uit met de zorg die van een goed opdrachtnemer mag worden verwacht en houdt zich daarbij aan de redelijke aanwijzingen van Opdrachtgever. Wijzigingen in de omvang van de dienstverlening worden vooraf schriftelijk vastgelegd."
+      },
+      {
+        "number": 2,
+        "heading": "Looptijd",
+        "topic": "term",
+        "page": 1,
+        "text": "Deze overeenkomst gaat in op 1 juli 2026 en wordt aangegaan voor een initiële looptijd van 36 maanden. Na afloop van de initiële looptijd wordt de overeenkomst telkens stilzwijgend verlengd met een periode van 6 maanden.\nVerlenging vindt plaats onder dezelfde voorwaarden, tenzij partijen uiterlijk bij de verlenging schriftelijk andere voorwaarden zijn overeengekomen."
+      },
+      {
+        "number": 3,
+        "heading": "Opzegging",
+        "topic": "notice_period",
+        "page": 1,
+        "text": "Elk der partijen kan de overeenkomst tegen het einde van de lopende periode opzeggen met inachtneming van een opzegtermijn van 3 maanden. Opzegging geschiedt schriftelijk per aangetekende brief.\nEen opzegging die niet tijdig is ontvangen geldt als opzegging tegen het einde van de eerstvolgende periode. Opzegging laat reeds ontstane betalingsverplichtingen onverlet."
+      },
+      {
+        "number": 4,
+        "heading": "Prijzen en prijsindexatie",
+        "topic": "price_indexation",
+        "page": 1,
+        "text": "De tarieven zijn opgenomen in bijlage 1 en luiden in euro, exclusief btw. Leverancier is gerechtigd de tarieven jaarlijks per 1 januari aan te passen op basis van de consumentenprijsindex (CPI) van het CBS, met een maximum van 2,5 procent per jaar.\nLeverancier deelt een tariefwijziging uiterlijk twee maanden voor de ingangsdatum schriftelijk mee. Andere prijsverhogingen zijn alleen mogelijk met schriftelijke instemming van Opdrachtgever."
+      },
+      {
+        "number": 5,
+        "heading": "Facturering en betaling",
+        "topic": "payment",
+        "page": 2,
+        "text": "Leverancier factureert maandelijks achteraf. Opdrachtgever betaalt facturen binnen 60 dagen na factuurdatum. Op iedere factuur wordt het inkoopordernummer van Opdrachtgever vermeld.\nBij niet-tijdige betaling is Opdrachtgever na schriftelijke aanmaning de wettelijke handelsrente verschuldigd. Opdrachtgever mag betwiste factuurbedragen opschorten tot het geschil is opgelost."
+      },
+      {
+        "number": 6,
+        "heading": "Aansprakelijkheid",
+        "topic": "liability",
+        "page": 2,
+        "text": "De aansprakelijkheid van Leverancier is per gebeurtenis beperkt tot een bedrag van € 1.000.000,00. Deze beperking geldt niet in geval van opzet of bewuste roekeloosheid van Leverancier.\nLeverancier is niet aansprakelijk voor indirecte schade, waaronder gevolgschade, gederfde winst en gemiste besparingen. Leverancier houdt gedurende de looptijd een passende aansprakelijkheidsverzekering in stand."
+      },
+      {
+        "number": 7,
+        "heading": "Tussentijdse beëindiging",
+        "topic": "termination",
+        "page": 2,
+        "text": "Elk der partijen kan de overeenkomst met onmiddellijke ingang ontbinden indien de andere partij in staat van faillissement wordt verklaard of surseance van betaling aanvraagt. Hetzelfde geldt indien een partij na schriftelijke ingebrekestelling met een hersteltermijn van 30 dagen blijft tekortschieten.\nBij beëindiging draagt Leverancier zorg voor een ordelijke overdracht van de werkzaamheden aan Opdrachtgever of aan een door Opdrachtgever aangewezen derde."
+      },
+      {
+        "number": 8,
+        "heading": "Toepasselijk recht en geschillen",
+        "topic": "governing_law",
+        "page": 2,
+        "text": "Op deze overeenkomst is Nederlands recht van toepassing. Geschillen die niet in onderling overleg kunnen worden opgelost, worden voorgelegd aan de bevoegde rechter van de rechtbank Rotterdam."
+      }
+    ]
+  }
+}

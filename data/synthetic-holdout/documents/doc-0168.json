@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0168",
+  "filename": "doc-0168.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "2026/03205",
+    "invoice_date": "2026-08-26",
+    "due_date": "2026-10-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "2",
+        "unit_price": "313",
+        "vat_rate": "21",
+        "line_total": "626.00"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "22",
+        "unit_price": "380.12",
+        "vat_rate": "21",
+        "line_total": "8362.64"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "14",
+        "unit_price": "13.64",
+        "vat_rate": "21",
+        "line_total": "190.96"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "26",
+        "unit_price": "9.84",
+        "vat_rate": "21",
+        "line_total": "255.84"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "39",
+        "unit_price": "392.26",
+        "vat_rate": "21",
+        "line_total": "15298.14"
+      }
+    ],
+    "subtotal": "24733.58",
+    "vat": "5194.05",
+    "total": "29927.63",
+    "purchase_order_reference": "PO-2026-68341"
+  },
+  "contract": null
+}

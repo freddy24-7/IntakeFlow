@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0197",
+  "filename": "doc-0197.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "duplicate"
+  ],
+  "expected_failures": [
+    "duplicate_invoice"
+  ],
+  "duplicate_of": "doc-0109",
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00007096",
+    "invoice_date": "2026-05-05",
+    "due_date": "2026-07-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "28",
+        "unit_price": "633.8",
+        "vat_rate": "21",
+        "line_total": "17746.40"
+      }
+    ],
+    "subtotal": "17746.40",
+    "vat": "3726.74",
+    "total": "21473.14",
+    "purchase_order_reference": "PO-2026-15841"
+  },
+  "contract": null
+}

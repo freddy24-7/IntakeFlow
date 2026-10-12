@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0034",
+  "filename": "doc-0034.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/07220",
+    "invoice_date": "2026-09-21",
+    "due_date": "2026-10-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "39",
+        "unit_price": "68.92",
+        "vat_rate": "21",
+        "line_total": "2687.88"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "21",
+        "unit_price": "9.97",
+        "vat_rate": "9",
+        "line_total": "209.37"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "9",
+        "unit_price": "901.12",
+        "vat_rate": "0",
+        "line_total": "8110.08"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "18",
+        "unit_price": "118.83",
+        "vat_rate": "21",
+        "line_total": "2138.94"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "33",
+        "unit_price": "124.8",
+        "vat_rate": "21",
+        "line_total": "4118.40"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "16",
+        "unit_price": "904.45",
+        "vat_rate": "21",
+        "line_total": "14471.20"
+      }
+    ],
+    "subtotal": "31735.87",
+    "vat": "4936.29",
+    "total": "36672.16",
+    "purchase_order_reference": "PO-2026-14915"
+  },
+  "contract": null
+}

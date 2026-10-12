@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0132",
+  "filename": "doc-0132.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-1633",
+    "invoice_date": "2026-06-09",
+    "due_date": "2026-07-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "17.5",
+        "unit_price": "133.24",
+        "vat_rate": "21",
+        "line_total": "2331.70"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "39",
+        "unit_price": "10.48",
+        "vat_rate": "21",
+        "line_total": "408.72"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "124.57",
+        "vat_rate": "21",
+        "line_total": "2989.68"
+      }
+    ],
+    "subtotal": "5730.10",
+    "vat": "1203.32",
+    "total": "6933.42",
+    "purchase_order_reference": "PO-2026-89604"
+  },
+  "contract": null
+}

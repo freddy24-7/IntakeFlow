@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0053",
+  "filename": "doc-0053.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-6174",
+    "invoice_date": "2026-03-30",
+    "due_date": "2026-04-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "27",
+        "unit_price": "12.63",
+        "vat_rate": "21",
+        "line_total": "341.01"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "25",
+        "unit_price": "596.03",
+        "vat_rate": "21",
+        "line_total": "14900.75"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "32",
+        "unit_price": "11.18",
+        "vat_rate": "21",
+        "line_total": "357.76"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "21",
+        "unit_price": "64.25",
+        "vat_rate": "21",
+        "line_total": "1349.25"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "33",
+        "unit_price": "143.33",
+        "vat_rate": "21",
+        "line_total": "4729.89"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "31",
+        "unit_price": "7.61",
+        "vat_rate": "9",
+        "line_total": "235.91"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "5",
+        "unit_price": "10.16",
+        "vat_rate": "21",
+        "line_total": "50.80"
+      }
+    ],
+    "subtotal": "21965.37",
+    "vat": "4584.42",
+    "total": "26549.79",
+    "purchase_order_reference": "PO-2026-43740"
+  },
+  "contract": null
+}

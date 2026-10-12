@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0078",
+  "filename": "doc-0078.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2607325",
+    "invoice_date": "2026-06-16",
+    "due_date": "2026-08-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "23.5",
+        "unit_price": "129.6",
+        "vat_rate": "21",
+        "line_total": "3045.60"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "40",
+        "unit_price": "87.02",
+        "vat_rate": "21",
+        "line_total": "3480.80"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "2",
+        "unit_price": "67.85",
+        "vat_rate": "21",
+        "line_total": "135.70"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "32",
+        "unit_price": "16.76",
+        "vat_rate": "9",
+        "line_total": "536.32"
+      }
+    ],
+    "subtotal": "7198.42",
+    "vat": "1447.31",
+    "total": "8645.73",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

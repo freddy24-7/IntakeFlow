@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0074",
+  "filename": "doc-0074.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Pauw Intern Transport B.V.",
+    "supplier_vat_number": "NL869771677B67",
+    "iban": "NL22DELT9437944273",
+    "invoice_number": "2026/06080",
+    "invoice_date": "2026-02-02",
+    "due_date": "2026-04-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Forklift rental per day",
+        "quantity": "15",
+        "unit_price": "152.73",
+        "vat_rate": "21",
+        "line_total": "2290.95"
+      }
+    ],
+    "subtotal": "2290.95",
+    "vat": "481.10",
+    "total": "2772.05",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0041",
+  "filename": "doc-0041.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_amount_mismatch"
+  ],
+  "expected_failures": [
+    "po_amount_out_of_tolerance"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2607583",
+    "invoice_date": "2026-05-05",
+    "due_date": "2026-07-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "31",
+        "unit_price": "10.36",
+        "vat_rate": "21",
+        "line_total": "321.16"
+      }
+    ],
+    "subtotal": "321.16",
+    "vat": "67.44",
+    "total": "388.60",
+    "purchase_order_reference": "PO-2026-06126"
+  },
+  "contract": null
+}

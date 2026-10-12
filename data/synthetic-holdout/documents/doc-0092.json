@@ -1,0 +1,73 @@
+{
+  "doc_id": "doc-0092",
+  "filename": "doc-0092.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Breugelensis Verpakkingen B.V.",
+    "supplier_vat_number": "NL052221865B24",
+    "iban": "NL41POLD9851126775",
+    "invoice_number": "2026/03785",
+    "invoice_date": "2026-01-23",
+    "due_date": "2026-02-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "21",
+        "unit_price": "11.99",
+        "vat_rate": "21",
+        "line_total": "251.79"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "33",
+        "unit_price": "8.64",
+        "vat_rate": "21",
+        "line_total": "285.12"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "35",
+        "unit_price": "204.02",
+        "vat_rate": "21",
+        "line_total": "7140.70"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "32",
+        "unit_price": "104.76",
+        "vat_rate": "21",
+        "line_total": "3352.32"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "6",
+        "unit_price": "650.91",
+        "vat_rate": "21",
+        "line_total": "3905.46"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "7",
+        "unit_price": "8.63",
+        "vat_rate": "21",
+        "line_total": "60.41"
+      }
+    ],
+    "subtotal": "14995.80",
+    "vat": "3149.12",
+    "total": "18144.92",
+    "purchase_order_reference": "PO-2026-88599"
+  },
+  "contract": null
+}

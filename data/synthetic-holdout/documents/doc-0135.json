@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0135",
+  "filename": "doc-0135.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Verbruggen & de Vos Techniek",
+    "supplier_vat_number": "NL788760781B03",
+    "iban": "NL76NZLB3556624676",
+    "invoice_number": "00008847",
+    "invoice_date": "2026-02-23",
+    "due_date": "2026-04-24",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "17",
+        "unit_price": "10.53",
+        "vat_rate": "21",
+        "line_total": "179.01"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "16",
+        "unit_price": "259.52",
+        "vat_rate": "21",
+        "line_total": "4152.32"
+      }
+    ],
+    "subtotal": "4331.33",
+    "vat": "909.58",
+    "total": "5240.91",
+    "purchase_order_reference": "PO-2026-57964"
+  },
+  "contract": null
+}

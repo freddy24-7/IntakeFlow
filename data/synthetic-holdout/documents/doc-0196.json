@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0196",
+  "filename": "doc-0196.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964326506",
+    "invoice_number": "CRN2609586",
+    "invoice_date": "2026-09-29",
+    "due_date": "2026-11-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "9",
+        "unit_price": "11.6",
+        "vat_rate": "21",
+        "line_total": "104.40"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "36",
+        "unit_price": "129.53",
+        "vat_rate": "21",
+        "line_total": "4663.08"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "32",
+        "unit_price": "154.54",
+        "vat_rate": "21",
+        "line_total": "4945.28"
+      }
+    ],
+    "subtotal": "9712.76",
+    "vat": "2039.68",
+    "total": "11752.44",
+    "purchase_order_reference": "PO-2026-84273"
+  },
+  "contract": null
+}

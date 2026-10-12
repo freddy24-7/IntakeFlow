@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0014",
+  "filename": "doc-0014.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Grondelle",
+    "supplier_vat_number": "NL74518738B35",
+    "iban": "NL83NZLB5763049600",
+    "invoice_number": "F2026-8685",
+    "invoice_date": "2026-09-01",
+    "due_date": "2026-10-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "4",
+        "unit_price": "112.05",
+        "vat_rate": "21",
+        "line_total": "448.20"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "28",
+        "unit_price": "15.14",
+        "vat_rate": "21",
+        "line_total": "423.92"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "27",
+        "unit_price": "99.62",
+        "vat_rate": "21",
+        "line_total": "2689.74"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "14",
+        "unit_price": "385.82",
+        "vat_rate": "21",
+        "line_total": "5401.48"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "14",
+        "unit_price": "1586.89",
+        "vat_rate": "21",
+        "line_total": "22216.46"
+      }
+    ],
+    "subtotal": "31179.80",
+    "vat": "6547.76",
+    "total": "37727.56",
+    "purchase_order_reference": "PO-2026-21503"
+  },
+  "contract": null
+}

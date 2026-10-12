@@ -1,0 +1,75 @@
+{
+  "doc_id": "doc-0144",
+  "filename": "doc-0144.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "duplicate"
+  ],
+  "expected_failures": [
+    "duplicate_invoice"
+  ],
+  "duplicate_of": "doc-0093",
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "00008446",
+    "invoice_date": "2026-02-05",
+    "due_date": "2026-02-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "19",
+        "unit_price": "10.87",
+        "vat_rate": "21",
+        "line_total": "206.53"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "36",
+        "unit_price": "1049.07",
+        "vat_rate": "21",
+        "line_total": "37766.52"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "33",
+        "unit_price": "72.19",
+        "vat_rate": "21",
+        "line_total": "2382.27"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "34",
+        "unit_price": "242.59",
+        "vat_rate": "21",
+        "line_total": "8248.06"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "12.5",
+        "unit_price": "37.06",
+        "vat_rate": "21",
+        "line_total": "463.25"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "22",
+        "unit_price": "133.22",
+        "vat_rate": "21",
+        "line_total": "2930.84"
+      }
+    ],
+    "subtotal": "51997.47",
+    "vat": "10919.47",
+    "total": "62916.94",
+    "purchase_order_reference": "PO-2026-98032"
+  },
+  "contract": null
+}

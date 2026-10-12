@@ -1,0 +1,45 @@
+{
+  "doc_id": "doc-0173",
+  "filename": "doc-0173.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": null,
+  "hard_cases": [
+    "scanned"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "C00001964",
+    "invoice_date": "2026-08-18",
+    "due_date": "2026-09-01",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "13",
+        "unit_price": "5.83",
+        "vat_rate": "21",
+        "line_total": "75.79"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "25",
+        "unit_price": "41.02",
+        "vat_rate": "21",
+        "line_total": "1025.50"
+      }
+    ],
+    "subtotal": "1101.29",
+    "vat": "231.27",
+    "total": "1332.56",
+    "purchase_order_reference": "PO-2026-65140"
+  },
+  "contract": null
+}

@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0188",
+  "filename": "doc-0188.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-2315",
+    "invoice_date": "2026-07-13",
+    "due_date": "2026-08-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "3.5",
+        "unit_price": "34.24",
+        "vat_rate": "21",
+        "line_total": "119.84"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "25",
+        "unit_price": "123.53",
+        "vat_rate": "21",
+        "line_total": "3088.25"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "24",
+        "unit_price": "597.42",
+        "vat_rate": "21",
+        "line_total": "14338.08"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "9",
+        "unit_price": "387.3",
+        "vat_rate": "21",
+        "line_total": "3485.70"
+      }
+    ],
+    "subtotal": "21031.87",
+    "vat": "4416.69",
+    "total": "25448.56",
+    "purchase_order_reference": "PO-2026-96511"
+  },
+  "contract": null
+}

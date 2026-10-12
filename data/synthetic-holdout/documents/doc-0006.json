@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0006",
+  "filename": "doc-0006.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2600252",
+    "invoice_date": "2026-09-14",
+    "due_date": "2026-11-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "8",
+        "unit_price": "213.97",
+        "vat_rate": "21",
+        "line_total": "1711.76"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "2",
+        "unit_price": "50.02",
+        "vat_rate": "21",
+        "line_total": "100.04"
+      }
+    ],
+    "subtotal": "1811.80",
+    "vat": "380.48",
+    "total": "2192.28",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

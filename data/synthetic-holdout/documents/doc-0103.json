@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0103",
+  "filename": "doc-0103.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-1515",
+    "invoice_date": "2026-07-15",
+    "due_date": "2026-08-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "40",
+        "unit_price": "2.24",
+        "vat_rate": "21",
+        "line_total": "89.60"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "14",
+        "unit_price": "105.4",
+        "vat_rate": "21",
+        "line_total": "1475.60"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "25",
+        "unit_price": "79.06",
+        "vat_rate": "21",
+        "line_total": "1976.50"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "13",
+        "unit_price": "401.66",
+        "vat_rate": "21",
+        "line_total": "5221.58"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "30",
+        "unit_price": "7.67",
+        "vat_rate": "21",
+        "line_total": "230.10"
+      }
+    ],
+    "subtotal": "8993.38",
+    "vat": "1888.61",
+    "total": "10881.99",
+    "purchase_order_reference": "PO-2026-57060"
+  },
+  "contract": null
+}

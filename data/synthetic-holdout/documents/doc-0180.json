@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0180",
+  "filename": "doc-0180.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2604130",
+    "invoice_date": "2026-06-26",
+    "due_date": "2026-08-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "23",
+        "unit_price": "977.71",
+        "vat_rate": "0",
+        "line_total": "22487.33"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "14",
+        "unit_price": "148.26",
+        "vat_rate": "21",
+        "line_total": "2075.64"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "27",
+        "unit_price": "350.96",
+        "vat_rate": "21",
+        "line_total": "9475.92"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "38",
+        "unit_price": "15.35",
+        "vat_rate": "9",
+        "line_total": "583.30"
+      }
+    ],
+    "subtotal": "34622.19",
+    "vat": "2478.33",
+    "total": "37100.52",
+    "purchase_order_reference": "PO-2026-21563"
+  },
+  "contract": null
+}

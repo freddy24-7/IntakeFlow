@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0079",
+  "filename": "doc-0079.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "CRN2602442",
+    "invoice_date": "2026-06-12",
+    "due_date": "2026-06-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "26",
+        "unit_price": "6.97",
+        "vat_rate": "9",
+        "line_total": "181.22"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "150.81",
+        "vat_rate": "21",
+        "line_total": "3619.44"
+      }
+    ],
+    "subtotal": "3800.66",
+    "vat": "776.39",
+    "total": "4577.05",
+    "purchase_order_reference": "PO-2026-06055"
+  },
+  "contract": null
+}

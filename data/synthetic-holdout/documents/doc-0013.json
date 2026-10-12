@@ -1,0 +1,73 @@
+{
+  "doc_id": "doc-0013",
+  "filename": "doc-0013.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "2026/02757",
+    "invoice_date": "2026-04-10",
+    "due_date": "2026-06-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "24",
+        "unit_price": "253.67",
+        "vat_rate": "21",
+        "line_total": "6088.08"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "29",
+        "unit_price": "8.23",
+        "vat_rate": "9",
+        "line_total": "238.67"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "32",
+        "unit_price": "56.37",
+        "vat_rate": "21",
+        "line_total": "1803.84"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "34",
+        "unit_price": "17.34",
+        "vat_rate": "9",
+        "line_total": "589.56"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "10",
+        "unit_price": "438.6",
+        "vat_rate": "21",
+        "line_total": "4386.00"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "3",
+        "unit_price": "4.96",
+        "vat_rate": "21",
+        "line_total": "14.88"
+      }
+    ],
+    "subtotal": "13121.03",
+    "vat": "2656.03",
+    "total": "15777.06",
+    "purchase_order_reference": "PO-2026-81942"
+  },
+  "contract": null
+}

@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0057",
+  "filename": "doc-0057.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dillen Koeltechniek B.V.",
+    "supplier_vat_number": "NL989672222B06",
+    "iban": "NL16NZLB4648456883",
+    "invoice_number": "INV-009714",
+    "invoice_date": "2026-06-06",
+    "due_date": "2026-07-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "7",
+        "unit_price": "92.16",
+        "vat_rate": "21",
+        "line_total": "645.12"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "32",
+        "unit_price": "36.78",
+        "vat_rate": "21",
+        "line_total": "1176.96"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "17",
+        "unit_price": "7.68",
+        "vat_rate": "9",
+        "line_total": "130.56"
+      }
+    ],
+    "subtotal": "1952.64",
+    "vat": "394.39",
+    "total": "2375.58",
+    "purchase_order_reference": "PO-2026-84831"
+  },
+  "contract": null
+}

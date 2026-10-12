@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0149",
+  "filename": "doc-0149.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bresse Transport B.V.",
+    "supplier_vat_number": "NL749942761B13",
+    "iban": "NL08HAVN6281528199",
+    "invoice_number": "RN2600213",
+    "invoice_date": "2026-01-29",
+    "due_date": "2026-02-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "8",
+        "unit_price": "211.97",
+        "vat_rate": "21",
+        "line_total": "1695.76"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "38",
+        "unit_price": "6.3",
+        "vat_rate": "9",
+        "line_total": "239.40"
+      }
+    ],
+    "subtotal": "1935.16",
+    "vat": "377.66",
+    "total": "2312.82",
+    "purchase_order_reference": "PO-2026-93459"
+  },
+  "contract": null
+}

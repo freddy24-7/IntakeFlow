@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0148",
+  "filename": "doc-0148.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "invalid_vat_number"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL11063911B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00004717",
+    "invoice_date": "2026-06-26",
+    "due_date": "2026-07-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "14",
+        "unit_price": "6.57",
+        "vat_rate": "9",
+        "line_total": "91.98"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "2",
+        "unit_price": "7.25",
+        "vat_rate": "21",
+        "line_total": "14.50"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "23",
+        "unit_price": "17.31",
+        "vat_rate": "9",
+        "line_total": "398.13"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "37",
+        "unit_price": "9.84",
+        "vat_rate": "21",
+        "line_total": "364.08"
+      }
+    ],
+    "subtotal": "868.69",
+    "vat": "123.61",
+    "total": "992.30",
+    "purchase_order_reference": "PO-2026-46313"
+  },
+  "contract": null
+}

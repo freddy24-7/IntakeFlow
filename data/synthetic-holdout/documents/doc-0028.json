@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-0028",
+  "filename": "doc-0028.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "po_supplier_mismatch"
+  ],
+  "expected_failures": [
+    "po_supplier_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00005532",
+    "invoice_date": "2026-01-17",
+    "due_date": "2026-01-31",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "36",
+        "unit_price": "663.37",
+        "vat_rate": "21",
+        "line_total": "23881.32"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "25",
+        "unit_price": "1128.02",
+        "vat_rate": "21",
+        "line_total": "28200.50"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "35",
+        "unit_price": "213.67",
+        "vat_rate": "21",
+        "line_total": "7478.45"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "37",
+        "unit_price": "122.92",
+        "vat_rate": "21",
+        "line_total": "4548.04"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "6",
+        "unit_price": "462.22",
+        "vat_rate": "21",
+        "line_total": "2773.32"
+      }
+    ],
+    "subtotal": "66881.63",
+    "vat": "14045.14",
+    "total": "80926.77",
+    "purchase_order_reference": "PO-2026-43158"
+  },
+  "contract": null
+}

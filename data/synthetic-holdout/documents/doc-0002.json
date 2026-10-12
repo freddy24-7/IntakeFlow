@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0002",
+  "filename": "doc-0002.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Lagerweij Logistiek B.V.",
+    "supplier_vat_number": "NL403777867B74",
+    "iban": "NL03DELT6519515897",
+    "invoice_number": "RN2606249",
+    "invoice_date": "2026-01-11",
+    "due_date": "2026-01-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "36",
+        "unit_price": "133.09",
+        "vat_rate": "21",
+        "line_total": "4791.24"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "34",
+        "unit_price": "1236.37",
+        "vat_rate": "21",
+        "line_total": "42036.58"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "22",
+        "unit_price": "3.17",
+        "vat_rate": "21",
+        "line_total": "69.74"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "16",
+        "unit_price": "119.59",
+        "vat_rate": "21",
+        "line_total": "1913.44"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "15",
+        "unit_price": "94.95",
+        "vat_rate": "21",
+        "line_total": "1424.25"
+      }
+    ],
+    "subtotal": "50235.25",
+    "vat": "10549.40",
+    "total": "60784.65",
+    "purchase_order_reference": "PO-2026-43789"
+  },
+  "contract": null
+}

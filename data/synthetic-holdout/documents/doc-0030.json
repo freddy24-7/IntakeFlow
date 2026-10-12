@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0030",
+  "filename": "doc-0030.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2601491",
+    "invoice_date": "2026-05-05",
+    "due_date": "2026-07-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "4",
+        "unit_price": "12.26",
+        "vat_rate": "21",
+        "line_total": "49.04"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "11",
+        "unit_price": "125.44",
+        "vat_rate": "21",
+        "line_total": "1379.84"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "34",
+        "unit_price": "8.25",
+        "vat_rate": "21",
+        "line_total": "280.50"
+      }
+    ],
+    "subtotal": "1709.38",
+    "vat": "358.97",
+    "total": "2068.35",
+    "purchase_order_reference": "PO-2026-23920"
+  },
+  "contract": null
+}

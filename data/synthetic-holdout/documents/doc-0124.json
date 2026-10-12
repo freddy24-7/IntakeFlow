@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0124",
+  "filename": "doc-0124.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Wessex",
+    "supplier_vat_number": "NL364697921B19",
+    "iban": "NL69WADB4610886668",
+    "invoice_number": "F2026-3942",
+    "invoice_date": "2026-01-24",
+    "due_date": "2026-02-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "18",
+        "unit_price": "353.57",
+        "vat_rate": "21",
+        "line_total": "6364.26"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "12",
+        "unit_price": "54.52",
+        "vat_rate": "21",
+        "line_total": "654.24"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "6",
+        "unit_price": "663.27",
+        "vat_rate": "21",
+        "line_total": "3979.62"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "7",
+        "unit_price": "4.74",
+        "vat_rate": "21",
+        "line_total": "33.18"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "2",
+        "unit_price": "12.93",
+        "vat_rate": "21",
+        "line_total": "25.86"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "26",
+        "unit_price": "2340.68",
+        "vat_rate": "0",
+        "line_total": "60857.68"
+      }
+    ],
+    "subtotal": "71914.84",
+    "vat": "2322.00",
+    "total": "74236.84",
+    "purchase_order_reference": "PO-2026-29143"
+  },
+  "contract": null
+}

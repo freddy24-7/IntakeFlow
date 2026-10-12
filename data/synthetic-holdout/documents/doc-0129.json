@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0129",
+  "filename": "doc-0129.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Scharroo",
+    "supplier_vat_number": "NL586061644B79",
+    "iban": "NL96NZLB0412264556",
+    "invoice_number": "INV-002316",
+    "invoice_date": "2026-08-13",
+    "due_date": "2026-10-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "13",
+        "unit_price": "143.75",
+        "vat_rate": "21",
+        "line_total": "1868.75"
+      },
+      {
+        "description": "Lifting equipment inspection",
+        "quantity": "13",
+        "unit_price": "354.51",
+        "vat_rate": "21",
+        "line_total": "4608.63"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "38",
+        "unit_price": "15.09",
+        "vat_rate": "21",
+        "line_total": "573.42"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "3",
+        "unit_price": "3.35",
+        "vat_rate": "21",
+        "line_total": "10.05"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "8",
+        "unit_price": "7.33",
+        "vat_rate": "9",
+        "line_total": "58.64"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "7.5",
+        "unit_price": "36.67",
+        "vat_rate": "21",
+        "line_total": "275.03"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "37",
+        "unit_price": "10.12",
+        "vat_rate": "21",
+        "line_total": "374.44"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "3",
+        "unit_price": "196.32",
+        "vat_rate": "21",
+        "line_total": "588.96"
+      }
+    ],
+    "subtotal": "8357.92",
+    "vat": "1748.13",
+    "total": "10106.05",
+    "purchase_order_reference": "PO-2026-38692"
+  },
+  "contract": null
+}

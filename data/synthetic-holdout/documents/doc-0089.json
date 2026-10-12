@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0089",
+  "filename": "doc-0089.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "00001993",
+    "invoice_date": "2026-08-12",
+    "due_date": "2026-08-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "24",
+        "unit_price": "2262.36",
+        "vat_rate": "0",
+        "line_total": "54296.64"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "11.5",
+        "unit_price": "33.07",
+        "vat_rate": "21",
+        "line_total": "380.31"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "17",
+        "unit_price": "91.99",
+        "vat_rate": "21",
+        "line_total": "1563.83"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "20",
+        "unit_price": "706.6",
+        "vat_rate": "21",
+        "line_total": "14132.00"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "20",
+        "unit_price": "65.6",
+        "vat_rate": "21",
+        "line_total": "1312.00"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "32",
+        "unit_price": "1600.09",
+        "vat_rate": "21",
+        "line_total": "51202.88"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "19",
+        "unit_price": "210.29",
+        "vat_rate": "21",
+        "line_total": "3995.51"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "29",
+        "unit_price": "363.41",
+        "vat_rate": "21",
+        "line_total": "10538.89"
+      }
+    ],
+    "subtotal": "137422.06",
+    "vat": "17456.34",
+    "total": "154878.40",
+    "purchase_order_reference": "PO-2026-37265"
+  },
+  "contract": null
+}

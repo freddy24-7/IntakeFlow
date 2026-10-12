@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0176",
+  "filename": "doc-0176.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Weijland",
+    "supplier_vat_number": "NL427254099B45",
+    "iban": "NL73POLD6813208904",
+    "invoice_number": "C00005118",
+    "invoice_date": "2026-02-15",
+    "due_date": "2026-03-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "34.5",
+        "unit_price": "140.61",
+        "vat_rate": "21",
+        "line_total": "4851.05"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "24",
+        "unit_price": "108.41",
+        "vat_rate": "21",
+        "line_total": "2601.84"
+      }
+    ],
+    "subtotal": "7452.89",
+    "vat": "1565.11",
+    "total": "9018.00",
+    "purchase_order_reference": "PO-2026-05103"
+  },
+  "contract": null
+}

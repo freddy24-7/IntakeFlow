@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0095",
+  "filename": "doc-0095.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "duplicate"
+  ],
+  "expected_failures": [
+    "duplicate_invoice"
+  ],
+  "duplicate_of": "doc-0044",
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-4370",
+    "invoice_date": "2026-04-21",
+    "due_date": "2026-05-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "20",
+        "unit_price": "9.16",
+        "vat_rate": "9",
+        "line_total": "183.20"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "5.5",
+        "unit_price": "40.3",
+        "vat_rate": "21",
+        "line_total": "221.65"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "15",
+        "unit_price": "12.61",
+        "vat_rate": "9",
+        "line_total": "189.15"
+      }
+    ],
+    "subtotal": "594.00",
+    "vat": "80.06",
+    "total": "674.06",
+    "purchase_order_reference": "PO-2026-97720"
+  },
+  "contract": null
+}

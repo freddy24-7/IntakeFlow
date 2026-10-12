@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0160",
+  "filename": "doc-0160.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor Gruijl",
+    "supplier_vat_number": "NL238301123B45",
+    "iban": "NL30NZLB2876134711",
+    "invoice_number": "RN2608896",
+    "invoice_date": "2026-08-15",
+    "due_date": "2026-10-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "37",
+        "unit_price": "10.01",
+        "vat_rate": "9",
+        "line_total": "370.37"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "35",
+        "unit_price": "302.68",
+        "vat_rate": "21",
+        "line_total": "10593.80"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "20",
+        "unit_price": "1413.82",
+        "vat_rate": "21",
+        "line_total": "28276.40"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "1",
+        "unit_price": "134.68",
+        "vat_rate": "21",
+        "line_total": "134.68"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "29",
+        "unit_price": "12.47",
+        "vat_rate": "21",
+        "line_total": "361.63"
+      }
+    ],
+    "subtotal": "39736.88",
+    "vat": "8300.30",
+    "total": "48037.18",
+    "purchase_order_reference": "PO-2026-21568"
+  },
+  "contract": null
+}

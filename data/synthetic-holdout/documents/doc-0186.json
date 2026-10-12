@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0186",
+  "filename": "doc-0186.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00001672",
+    "invoice_date": "2026-08-01",
+    "due_date": "2026-09-30",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "36",
+        "unit_price": "37.86",
+        "vat_rate": "21",
+        "line_total": "1362.96"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "17",
+        "unit_price": "123.65",
+        "vat_rate": "21",
+        "line_total": "2102.05"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "25.5",
+        "unit_price": "117.98",
+        "vat_rate": "21",
+        "line_total": "3008.49"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "3",
+        "unit_price": "9.21",
+        "vat_rate": "9",
+        "line_total": "27.63"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "1",
+        "unit_price": "8.73",
+        "vat_rate": "21",
+        "line_total": "8.73"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "19",
+        "unit_price": "549.32",
+        "vat_rate": "21",
+        "line_total": "10437.08"
+      }
+    ],
+    "subtotal": "16946.94",
+    "vat": "3555.55",
+    "total": "20502.49",
+    "purchase_order_reference": "PO-2026-41262"
+  },
+  "contract": null
+}

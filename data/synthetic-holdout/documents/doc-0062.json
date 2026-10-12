@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0062",
+  "filename": "doc-0062.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2601538",
+    "invoice_date": "2026-03-14",
+    "due_date": "2026-05-13",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "18",
+        "unit_price": "826.28",
+        "vat_rate": "0",
+        "line_total": "14873.04"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "33",
+        "unit_price": "508.62",
+        "vat_rate": "21",
+        "line_total": "16784.46"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "31",
+        "unit_price": "114.44",
+        "vat_rate": "21",
+        "line_total": "3547.64"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "34",
+        "unit_price": "3.04",
+        "vat_rate": "21",
+        "line_total": "103.36"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "25",
+        "unit_price": "9.27",
+        "vat_rate": "9",
+        "line_total": "231.75"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "37",
+        "unit_price": "186.72",
+        "vat_rate": "21",
+        "line_total": "6908.64"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "18",
+        "unit_price": "392.31",
+        "vat_rate": "21",
+        "line_total": "7061.58"
+      }
+    ],
+    "subtotal": "49510.47",
+    "vat": "7246.05",
+    "total": "56756.52",
+    "purchase_order_reference": "PO-2026-18293"
+  },
+  "contract": null
+}

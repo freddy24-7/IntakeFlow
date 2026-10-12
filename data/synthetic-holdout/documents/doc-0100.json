@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0100",
+  "filename": "doc-0100.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2607390",
+    "invoice_date": "2026-06-12",
+    "due_date": "2026-08-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "13",
+        "unit_price": "93.12",
+        "vat_rate": "21",
+        "line_total": "1210.56"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "28",
+        "unit_price": "716.23",
+        "vat_rate": "0",
+        "line_total": "20054.44"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "38",
+        "unit_price": "228.86",
+        "vat_rate": "21",
+        "line_total": "8696.68"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "37",
+        "unit_price": "12.94",
+        "vat_rate": "21",
+        "line_total": "478.78"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "24",
+        "unit_price": "86.9",
+        "vat_rate": "21",
+        "line_total": "2085.60"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "14",
+        "unit_price": "708.89",
+        "vat_rate": "21",
+        "line_total": "9924.46"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "2",
+        "unit_price": "7.18",
+        "vat_rate": "9",
+        "line_total": "14.36"
+      }
+    ],
+    "subtotal": "42464.88",
+    "vat": "4704.47",
+    "total": "47169.35",
+    "purchase_order_reference": "PO-2026-34517"
+  },
+  "contract": null
+}

@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0175",
+  "filename": "doc-0175.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-8531",
+    "invoice_date": "2026-07-26",
+    "due_date": "2026-08-09",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "17",
+        "unit_price": "205.73",
+        "vat_rate": "21",
+        "line_total": "3497.41"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "4",
+        "unit_price": "3.62",
+        "vat_rate": "21",
+        "line_total": "14.48"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "3",
+        "unit_price": "460.64",
+        "vat_rate": "21",
+        "line_total": "1381.92"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "17",
+        "unit_price": "12.81",
+        "vat_rate": "21",
+        "line_total": "217.77"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "12",
+        "unit_price": "139.88",
+        "vat_rate": "21",
+        "line_total": "1678.56"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "3",
+        "unit_price": "624.09",
+        "vat_rate": "21",
+        "line_total": "1872.27"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "26",
+        "unit_price": "365.23",
+        "vat_rate": "21",
+        "line_total": "9495.98"
+      }
+    ],
+    "subtotal": "18158.39",
+    "vat": "3813.26",
+    "total": "21971.65",
+    "purchase_order_reference": "PO-2026-36485"
+  },
+  "contract": null
+}

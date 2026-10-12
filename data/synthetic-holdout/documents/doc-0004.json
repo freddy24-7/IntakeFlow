@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0004",
+  "filename": "doc-0004.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Draaisma Koeltechniek B.V.",
+    "supplier_vat_number": "NL910919305B11",
+    "iban": "NL50POLD1884585483",
+    "invoice_number": "00005022",
+    "invoice_date": "2026-03-06",
+    "due_date": "2026-04-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "40",
+        "unit_price": "9.25",
+        "vat_rate": "21",
+        "line_total": "370.00"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "22",
+        "unit_price": "80.47",
+        "vat_rate": "21",
+        "line_total": "1770.34"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "36",
+        "unit_price": "28.46",
+        "vat_rate": "21",
+        "line_total": "1024.56"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "9",
+        "unit_price": "917.07",
+        "vat_rate": "0",
+        "line_total": "8253.63"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "21",
+        "unit_price": "71.02",
+        "vat_rate": "21",
+        "line_total": "1491.42"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "7",
+        "unit_price": "116.09",
+        "vat_rate": "21",
+        "line_total": "812.63"
+      }
+    ],
+    "subtotal": "13722.58",
+    "vat": "1148.48",
+    "total": "14871.06",
+    "purchase_order_reference": "PO-2026-01160"
+  },
+  "contract": null
+}

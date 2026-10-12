@@ -1,0 +1,71 @@
+{
+  "doc_id": "doc-0184",
+  "filename": "doc-0184.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Scharroo",
+    "supplier_vat_number": "NL586061644B79",
+    "iban": "NL96NZLB0412264556",
+    "invoice_number": "INV-001128",
+    "invoice_date": "2026-09-15",
+    "due_date": "2026-11-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "2",
+        "unit_price": "1291.98",
+        "vat_rate": "21",
+        "line_total": "2583.96"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "22",
+        "unit_price": "6.24",
+        "vat_rate": "21",
+        "line_total": "137.28"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "9",
+        "unit_price": "11.61",
+        "vat_rate": "21",
+        "line_total": "104.49"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "31",
+        "unit_price": "85.39",
+        "vat_rate": "21",
+        "line_total": "2647.09"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "36",
+        "unit_price": "14.66",
+        "vat_rate": "9",
+        "line_total": "527.76"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "18",
+        "unit_price": "86",
+        "vat_rate": "21",
+        "line_total": "1548.00"
+      }
+    ],
+    "subtotal": "7548.58",
+    "vat": "1521.87",
+    "total": "9070.45",
+    "purchase_order_reference": "PO-2026-76619"
+  },
+  "contract": null
+}

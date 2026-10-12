@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0200",
+  "filename": "doc-0200.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": -2.79,
+  "hard_cases": [
+    "scanned_skewed"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Dillen Koeltechniek B.V.",
+    "supplier_vat_number": "NL989672222B06",
+    "iban": "NL16NZLB4648456883",
+    "invoice_number": "INV-002418",
+    "invoice_date": "2026-04-17",
+    "due_date": "2026-05-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "4",
+        "unit_price": "333.95",
+        "vat_rate": "21",
+        "line_total": "1335.80"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "2",
+        "unit_price": "217.74",
+        "vat_rate": "21",
+        "line_total": "435.48"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "30",
+        "unit_price": "81.65",
+        "vat_rate": "21",
+        "line_total": "2449.50"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "13",
+        "unit_price": "10.87",
+        "vat_rate": "9",
+        "line_total": "141.31"
+      }
+    ],
+    "subtotal": "4362.09",
+    "vat": "899.08",
+    "total": "5261.17",
+    "purchase_order_reference": "PO-2026-89240"
+  },
+  "contract": null
+}

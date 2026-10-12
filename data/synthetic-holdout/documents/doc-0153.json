@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0153",
+  "filename": "doc-0153.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "CF2026-9086",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-09-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": "37",
+        "unit_price": "101.05",
+        "vat_rate": "21",
+        "line_total": "3738.85"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "21",
+        "unit_price": "103.45",
+        "vat_rate": "21",
+        "line_total": "2172.45"
+      }
+    ],
+    "subtotal": "5911.30",
+    "vat": "1241.37",
+    "total": "7152.67",
+    "purchase_order_reference": "PO-2026-05661"
+  },
+  "contract": null
+}

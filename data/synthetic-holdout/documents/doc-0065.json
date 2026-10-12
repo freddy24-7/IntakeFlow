@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0065",
+  "filename": "doc-0065.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Takkelenburg Intern Transport B.V.",
+    "supplier_vat_number": "NL531425008B94",
+    "iban": "NL63POLD2846086691",
+    "invoice_number": "F2026-1238",
+    "invoice_date": "2026-03-03",
+    "due_date": "2026-03-17",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Used euro pallets",
+        "quantity": "8",
+        "unit_price": "7.2",
+        "vat_rate": "21",
+        "line_total": "57.60"
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": "17",
+        "unit_price": "139.31",
+        "vat_rate": "21",
+        "line_total": "2368.27"
+      }
+    ],
+    "subtotal": "2425.87",
+    "vat": "509.43",
+    "total": "2935.30",
+    "purchase_order_reference": "PO-2026-58163"
+  },
+  "contract": null
+}

@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0113",
+  "filename": "doc-0113.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2609994",
+    "invoice_date": "2026-02-03",
+    "due_date": "2026-04-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "26",
+        "unit_price": "9.28",
+        "vat_rate": "9",
+        "line_total": "241.28"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "30",
+        "unit_price": "77.55",
+        "vat_rate": "21",
+        "line_total": "2326.50"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "14",
+        "unit_price": "33.61",
+        "vat_rate": "21",
+        "line_total": "470.54"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "12",
+        "unit_price": "3.84",
+        "vat_rate": "21",
+        "line_total": "46.08"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "13",
+        "unit_price": "320.91",
+        "vat_rate": "21",
+        "line_total": "4171.83"
+      }
+    ],
+    "subtotal": "7256.23",
+    "vat": "1494.86",
+    "total": "8751.09",
+    "purchase_order_reference": "PO-2026-72526"
+  },
+  "contract": null
+}

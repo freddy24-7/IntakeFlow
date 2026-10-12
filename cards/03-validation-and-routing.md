@@ -47,3 +47,12 @@ Validation caught every labelled problem: 48 of 48, in all three variants. No do
 - **The workflow has not run against Azure end to end.** Its steps were measured in stage 2 and the graph is tested with fakes. The first real upload through the graph is still to come.
 - **Contracts stop after classification** with status `processing` until stage 5 indexes them.
 - **Checkpoint tables are never cleaned up.**
+
+## Settings fixed before the hold-out run
+
+Written and committed on 12 October 2026, before the hold-out set (seed 43) was generated or run. The seed 42 results above were used to choose these, so seed 42 cannot confirm them.
+
+- **Routing: validation alone.** Auto-approve threshold 0, so a document is auto-approved when no check fails and no field is flagged. Reason: the score did not separate right from wrong on seed 42.
+- **Variant: Document Intelligence only.** Reason: most auto-approvals and fewest wrong ones on seed 42 (136 auto-approved, 1 wrong), at half the cost of combined.
+- **What will be reported:** auto-approval rate and wrong auto-approvals on the hold-out set for all three variants, with the two choices above as the result to quote, whatever it turns out to be.
+- Rules, prompts, the Document Intelligence mapping and the definition of a wrong auto-approval stay exactly as they are at this commit.

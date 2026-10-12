@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0138",
+  "filename": "doc-0138.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00007086",
+    "invoice_date": "2026-03-04",
+    "due_date": "2026-03-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "36",
+        "unit_price": "196.97",
+        "vat_rate": "21",
+        "line_total": "7090.92"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "28",
+        "unit_price": "126.37",
+        "vat_rate": "21",
+        "line_total": "3538.36"
+      }
+    ],
+    "subtotal": "10629.28",
+    "vat": "2232.15",
+    "total": "12861.43",
+    "purchase_order_reference": "PO-2026-04984"
+  },
+  "contract": null
+}

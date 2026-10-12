@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0134",
+  "filename": "doc-0134.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "C2026/01110",
+    "invoice_date": "2026-01-16",
+    "due_date": "2026-01-30",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "37",
+        "unit_price": "9.46",
+        "vat_rate": "9",
+        "line_total": "350.02"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "3",
+        "unit_price": "792.82",
+        "vat_rate": "21",
+        "line_total": "2378.46"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "13",
+        "unit_price": "238.75",
+        "vat_rate": "21",
+        "line_total": "3103.75"
+      }
+    ],
+    "subtotal": "5832.23",
+    "vat": "1182.76",
+    "total": "7014.99",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

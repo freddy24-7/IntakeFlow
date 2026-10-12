@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0091",
+  "filename": "doc-0091.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622511456",
+    "invoice_number": "CF2026-5291",
+    "invoice_date": "2026-01-17",
+    "due_date": "2026-02-16",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "35",
+        "unit_price": "7.48",
+        "vat_rate": "21",
+        "line_total": "261.80"
+      },
+      {
+        "description": "Safety shoes S3",
+        "quantity": "34",
+        "unit_price": "71.6",
+        "vat_rate": "21",
+        "line_total": "2434.40"
+      },
+      {
+        "description": "Drinking water bottles 18 litre",
+        "quantity": "12",
+        "unit_price": "10.77",
+        "vat_rate": "9",
+        "line_total": "129.24"
+      }
+    ],
+    "subtotal": "2825.44",
+    "vat": "577.83",
+    "total": "3403.27",
+    "purchase_order_reference": "PO-2026-05993"
+  },
+  "contract": null
+}

@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0121",
+  "filename": "doc-0121.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Mathol Logistiek B.V.",
+    "supplier_vat_number": "NL897792602B27",
+    "iban": "NL69WADB6216910721",
+    "invoice_number": "C2026/00395",
+    "invoice_date": "2026-06-23",
+    "due_date": "2026-08-22",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "2",
+        "unit_price": "12.18",
+        "vat_rate": "9",
+        "line_total": "24.36"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "39",
+        "unit_price": "625.6",
+        "vat_rate": "21",
+        "line_total": "24398.40"
+      }
+    ],
+    "subtotal": "24422.76",
+    "vat": "5125.85",
+    "total": "29548.61",
+    "purchase_order_reference": "PO-2026-07732"
+  },
+  "contract": null
+}

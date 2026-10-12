@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0177",
+  "filename": "doc-0177.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bresse Transport B.V.",
+    "supplier_vat_number": "NL749942761B13",
+    "iban": "NL08HAVN6281528199",
+    "invoice_number": "CRN2609771",
+    "invoice_date": "2026-09-05",
+    "due_date": "2026-10-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "37",
+        "unit_price": "9.16",
+        "vat_rate": "9",
+        "line_total": "338.92"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "36",
+        "unit_price": "100.48",
+        "vat_rate": "21",
+        "line_total": "3617.28"
+      }
+    ],
+    "subtotal": "3956.20",
+    "vat": "790.13",
+    "total": "4746.33",
+    "purchase_order_reference": "PO-2026-20574"
+  },
+  "contract": null
+}

@@ -1,0 +1,41 @@
+{
+  "doc_id": "doc-0059",
+  "filename": "doc-0059.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "modern",
+  "scanned": true,
+  "skew_degrees": -1.85,
+  "hard_cases": [
+    "invalid_vat_number",
+    "scanned_skewed"
+  ],
+  "expected_failures": [
+    "vat_number_format"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL71607076B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "CF2026-4874",
+    "invoice_date": "2026-02-13",
+    "due_date": "2026-03-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Pallet transport Rotterdam - Venlo",
+        "quantity": "21",
+        "unit_price": "83.47",
+        "vat_rate": "21",
+        "line_total": "1752.87"
+      }
+    ],
+    "subtotal": "1752.87",
+    "vat": "368.10",
+    "total": "2120.97",
+    "purchase_order_reference": "PO-2026-09569"
+  },
+  "contract": null
+}

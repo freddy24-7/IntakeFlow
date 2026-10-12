@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0096",
+  "filename": "doc-0096.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-5136",
+    "invoice_date": "2026-04-12",
+    "due_date": "2026-05-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "11",
+        "unit_price": "198.61",
+        "vat_rate": "21",
+        "line_total": "2184.71"
+      },
+      {
+        "description": "Used euro pallets",
+        "quantity": "33",
+        "unit_price": "8.95",
+        "vat_rate": "21",
+        "line_total": "295.35"
+      },
+      {
+        "description": "Forklift rental per day",
+        "quantity": "28",
+        "unit_price": "103.96",
+        "vat_rate": "21",
+        "line_total": "2910.88"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "27",
+        "unit_price": "14.41",
+        "vat_rate": "9",
+        "line_total": "389.07"
+      }
+    ],
+    "subtotal": "5780.01",
+    "vat": "1167.12",
+    "total": "6947.13",
+    "purchase_order_reference": "PO-2026-05837"
+  },
+  "contract": null
+}

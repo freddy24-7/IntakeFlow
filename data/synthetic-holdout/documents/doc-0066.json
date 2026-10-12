@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0066",
+  "filename": "doc-0066.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Pauw Intern Transport B.V.",
+    "supplier_vat_number": "NL869771677B67",
+    "iban": "NL22DELT9437944273",
+    "invoice_number": "2026/02137",
+    "invoice_date": "2026-04-04",
+    "due_date": "2026-06-03",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Warehouse cleaning",
+        "quantity": "6",
+        "unit_price": "627.25",
+        "vat_rate": "21",
+        "line_total": "3763.50"
+      },
+      {
+        "description": "Consultancy (hour)",
+        "quantity": "18",
+        "unit_price": "114.31",
+        "vat_rate": "21",
+        "line_total": "2057.58"
+      },
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "28",
+        "unit_price": "40.27",
+        "vat_rate": "21",
+        "line_total": "1127.56"
+      },
+      {
+        "description": "Container handling 40ft",
+        "quantity": "25",
+        "unit_price": "279.29",
+        "vat_rate": "21",
+        "line_total": "6982.25"
+      },
+      {
+        "description": "Packaging box 60x40x40",
+        "quantity": "2",
+        "unit_price": "2.66",
+        "vat_rate": "21",
+        "line_total": "5.32"
+      }
+    ],
+    "subtotal": "13936.21",
+    "vat": "2926.60",
+    "total": "16862.81",
+    "purchase_order_reference": "PO-2026-08958"
+  },
+  "contract": null
+}

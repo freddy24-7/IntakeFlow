@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc-0147",
+  "filename": "doc-0147.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "stamp"
+  ],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf Weijland",
+    "supplier_vat_number": "NL427254099B45",
+    "iban": "NL73POLD6813208904",
+    "invoice_number": "00006124",
+    "invoice_date": "2026-01-26",
+    "due_date": "2026-02-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "26",
+        "unit_price": "232.59",
+        "vat_rate": "21",
+        "line_total": "6047.34"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "18.5",
+        "unit_price": "37.57",
+        "vat_rate": "21",
+        "line_total": "695.05"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "21",
+        "unit_price": "1409.12",
+        "vat_rate": "0",
+        "line_total": "29591.52"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "19",
+        "unit_price": "643.04",
+        "vat_rate": "21",
+        "line_total": "12217.76"
+      }
+    ],
+    "subtotal": "48551.67",
+    "vat": "3981.63",
+    "total": "52533.30",
+    "purchase_order_reference": "PO-2026-82927"
+  },
+  "contract": null
+}

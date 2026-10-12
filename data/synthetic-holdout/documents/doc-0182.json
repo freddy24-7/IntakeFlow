@@ -1,0 +1,78 @@
+{
+  "doc_id": "doc-0182",
+  "filename": "doc-0182.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Duivenvoorde",
+    "supplier_vat_number": "NL775968148B62",
+    "iban": "NL33POLD7165953616",
+    "invoice_number": "00002617",
+    "invoice_date": "2026-02-17",
+    "due_date": "2026-04-18",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "39",
+        "unit_price": "170.61",
+        "vat_rate": "21",
+        "line_total": "6653.79"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "24",
+        "unit_price": "97.62",
+        "vat_rate": "21",
+        "line_total": "2342.88"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "40",
+        "unit_price": "13.83",
+        "vat_rate": "21",
+        "line_total": "553.20"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "24",
+        "unit_price": "11.15",
+        "vat_rate": "21",
+        "line_total": "267.60"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "24",
+        "unit_price": "14.94",
+        "vat_rate": "9",
+        "line_total": "358.56"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "31",
+        "unit_price": "121.77",
+        "vat_rate": "21",
+        "line_total": "3774.87"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "2",
+        "unit_price": "1192.81",
+        "vat_rate": "0",
+        "line_total": "2385.62"
+      }
+    ],
+    "subtotal": "16336.52",
+    "vat": "2886.66",
+    "total": "19223.18",
+    "purchase_order_reference": "PO-2026-96244"
+  },
+  "contract": null
+}

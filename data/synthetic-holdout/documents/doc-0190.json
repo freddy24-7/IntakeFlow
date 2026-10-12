@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0190",
+  "filename": "doc-0190.pdf",
+  "doc_type": "credit_note",
+  "language": "en",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "due_before_invoice"
+  ],
+  "expected_failures": [
+    "due_date_before_invoice_date"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Scharroo",
+    "supplier_vat_number": "NL586061644B79",
+    "iban": "NL96NZLB0412264556",
+    "invoice_number": "CINV-008825",
+    "invoice_date": "2026-06-02",
+    "due_date": "2026-05-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Truck tyre change",
+        "quantity": "17",
+        "unit_price": "107.55",
+        "vat_rate": "21",
+        "line_total": "1828.35"
+      }
+    ],
+    "subtotal": "1828.35",
+    "vat": "383.95",
+    "total": "2212.30",
+    "purchase_order_reference": "PO-2026-48252"
+  },
+  "contract": null
+}

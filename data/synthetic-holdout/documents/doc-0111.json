@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0111",
+  "filename": "doc-0111.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124203",
+    "invoice_number": "00004306",
+    "invoice_date": "2026-05-21",
+    "due_date": "2026-06-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "39",
+        "unit_price": "96.08",
+        "vat_rate": "21",
+        "line_total": "3747.12"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "34",
+        "unit_price": "389.78",
+        "vat_rate": "21",
+        "line_total": "13252.52"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "24",
+        "unit_price": "430.89",
+        "vat_rate": "21",
+        "line_total": "10341.36"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "24",
+        "unit_price": "12.3",
+        "vat_rate": "21",
+        "line_total": "295.20"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "29",
+        "unit_price": "1183.8",
+        "vat_rate": "21",
+        "line_total": "34330.20"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "24",
+        "unit_price": "152.21",
+        "vat_rate": "21",
+        "line_total": "3653.04"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "6",
+        "unit_price": "17.85",
+        "vat_rate": "21",
+        "line_total": "107.10"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "38",
+        "unit_price": "101.03",
+        "vat_rate": "21",
+        "line_total": "3839.14"
+      }
+    ],
+    "subtotal": "69565.68",
+    "vat": "14608.79",
+    "total": "84174.47",
+    "purchase_order_reference": "PO-2026-22570"
+  },
+  "contract": null
+}

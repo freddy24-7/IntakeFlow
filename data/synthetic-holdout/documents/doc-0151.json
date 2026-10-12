@@ -1,0 +1,43 @@
+{
+  "doc_id": "doc-0151",
+  "filename": "doc-0151.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "typewriter",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Gent & Tammerijn Techniek",
+    "supplier_vat_number": "NL235723088B16",
+    "iban": "NL86DELT0026266600",
+    "invoice_number": "RN2600002",
+    "invoice_date": "2026-01-16",
+    "due_date": "2026-02-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "9",
+        "unit_price": "4.46",
+        "vat_rate": "21",
+        "line_total": "40.14"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "14",
+        "unit_price": "65.34",
+        "vat_rate": "21",
+        "line_total": "914.76"
+      }
+    ],
+    "subtotal": "954.90",
+    "vat": "200.53",
+    "total": "1155.43",
+    "purchase_order_reference": "PO-2026-91820"
+  },
+  "contract": null
+}

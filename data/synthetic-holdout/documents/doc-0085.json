@@ -1,0 +1,40 @@
+{
+  "doc_id": "doc-0085",
+  "filename": "doc-0085.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "duplicate"
+  ],
+  "expected_failures": [
+    "duplicate_invoice"
+  ],
+  "duplicate_of": "doc-0077",
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Douanekantoor van der Horst",
+    "supplier_vat_number": "NL659191312B90",
+    "iban": "NL14WADB2470033638",
+    "invoice_number": "F2026-7000",
+    "invoice_date": "2026-06-14",
+    "due_date": "2026-06-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "4.5",
+        "unit_price": "104.89",
+        "vat_rate": "21",
+        "line_total": "472.01"
+      }
+    ],
+    "subtotal": "472.01",
+    "vat": "99.12",
+    "total": "571.13",
+    "purchase_order_reference": "PO-2026-87474"
+  },
+  "contract": null
+}

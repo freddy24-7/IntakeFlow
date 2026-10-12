@@ -1,0 +1,82 @@
+{
+  "doc_id": "doc-0054",
+  "filename": "doc-0054.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Dachgeldt & Gemen Techniek",
+    "supplier_vat_number": "NL110639116B75",
+    "iban": "NL59HAVN8920840051",
+    "invoice_number": "00008450",
+    "invoice_date": "2026-03-29",
+    "due_date": "2026-04-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "29",
+        "unit_price": "186.7",
+        "vat_rate": "21",
+        "line_total": "5414.30"
+      },
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "14",
+        "unit_price": "419.26",
+        "vat_rate": "21",
+        "line_total": "5869.64"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "12",
+        "unit_price": "9.49",
+        "vat_rate": "21",
+        "line_total": "113.88"
+      },
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "36.5",
+        "unit_price": "106.2",
+        "vat_rate": "21",
+        "line_total": "3876.30"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "6",
+        "unit_price": "92.66",
+        "vat_rate": "21",
+        "line_total": "555.96"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "12",
+        "unit_price": "9.16",
+        "vat_rate": "21",
+        "line_total": "109.92"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "17.5",
+        "unit_price": "41.75",
+        "vat_rate": "21",
+        "line_total": "730.63"
+      }
+    ],
+    "subtotal": "16670.63",
+    "vat": "3500.83",
+    "total": "20171.46",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-0020",
+  "filename": "doc-0020.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "totals_mismatch"
+  ],
+  "expected_failures": [
+    "totals_mismatch"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2606983",
+    "invoice_date": "2026-06-06",
+    "due_date": "2026-08-05",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Softwarelicentie WMS per maand",
+        "quantity": "20",
+        "unit_price": "1096.89",
+        "vat_rate": "21",
+        "line_total": "21937.80"
+      },
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "11",
+        "unit_price": "408.8",
+        "vat_rate": "21",
+        "line_total": "4496.80"
+      }
+    ],
+    "subtotal": "26434.60",
+    "vat": "5551.27",
+    "total": "32014.33",
+    "purchase_order_reference": "PO-2026-06930"
+  },
+  "contract": null
+}

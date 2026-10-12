@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0048",
+  "filename": "doc-0048.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van Drenthe & de Plantard Advies V.O.F.",
+    "supplier_vat_number": "NL189180538B08",
+    "iban": "NL65POLD8378300168",
+    "invoice_number": "RN2605709",
+    "invoice_date": "2026-08-11",
+    "due_date": "2026-10-10",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "7",
+        "unit_price": "124.26",
+        "vat_rate": "21",
+        "line_total": "869.82"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "15",
+        "unit_price": "14.69",
+        "vat_rate": "21",
+        "line_total": "220.35"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "32",
+        "unit_price": "79.52",
+        "vat_rate": "21",
+        "line_total": "2544.64"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "36",
+        "unit_price": "10.61",
+        "vat_rate": "21",
+        "line_total": "381.96"
+      }
+    ],
+    "subtotal": "4016.77",
+    "vat": "843.52",
+    "total": "4860.29",
+    "purchase_order_reference": "PO-2026-10749"
+  },
+  "contract": null
+}

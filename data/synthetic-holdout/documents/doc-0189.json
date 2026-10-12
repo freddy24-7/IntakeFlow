@@ -1,0 +1,36 @@
+{
+  "doc_id": "doc-0189",
+  "filename": "doc-0189.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "de Koning Koeltechniek B.V.",
+    "supplier_vat_number": "NL099807492B92",
+    "iban": "NL79WADB8964226506",
+    "invoice_number": "RN2603528",
+    "invoice_date": "2026-07-28",
+    "due_date": "2026-09-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "9",
+        "unit_price": "390.94",
+        "vat_rate": "21",
+        "line_total": "3518.46"
+      }
+    ],
+    "subtotal": "3518.46",
+    "vat": "738.88",
+    "total": "4257.34",
+    "purchase_order_reference": "PO-2026-75914"
+  },
+  "contract": null
+}

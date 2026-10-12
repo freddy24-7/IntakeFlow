@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0099",
+  "filename": "doc-0099.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "2026/06302",
+    "invoice_date": "2026-02-22",
+    "due_date": "2026-03-08",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Advieswerkzaamheden (uur)",
+        "quantity": "12",
+        "unit_price": "121.34",
+        "vat_rate": "21",
+        "line_total": "1456.08"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "5",
+        "unit_price": "145.38",
+        "vat_rate": "21",
+        "line_total": "726.90"
+      },
+      {
+        "description": "Onderhoud koelinstallatie",
+        "quantity": "39",
+        "unit_price": "670",
+        "vat_rate": "21",
+        "line_total": "26130.00"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "31",
+        "unit_price": "320.5",
+        "vat_rate": "21",
+        "line_total": "9935.50"
+      }
+    ],
+    "subtotal": "38248.48",
+    "vat": "8032.18",
+    "total": "46280.66",
+    "purchase_order_reference": "PO-2026-06783"
+  },
+  "contract": null
+}

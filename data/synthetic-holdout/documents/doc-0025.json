@@ -1,0 +1,64 @@
+{
+  "doc_id": "doc-0025",
+  "filename": "doc-0025.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "2026/04607",
+    "invoice_date": "2026-02-07",
+    "due_date": "2026-02-21",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "5",
+        "unit_price": "9.49",
+        "vat_rate": "21",
+        "line_total": "47.45"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "30",
+        "unit_price": "121.74",
+        "vat_rate": "21",
+        "line_total": "3652.20"
+      },
+      {
+        "description": "Veiligheidsschoenen S3",
+        "quantity": "16",
+        "unit_price": "97.18",
+        "vat_rate": "21",
+        "line_total": "1554.88"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "40",
+        "unit_price": "137.23",
+        "vat_rate": "21",
+        "line_total": "5489.20"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "26",
+        "unit_price": "7.82",
+        "vat_rate": "21",
+        "line_total": "203.32"
+      }
+    ],
+    "subtotal": "10947.05",
+    "vat": "2298.88",
+    "total": "13245.93",
+    "purchase_order_reference": "PO-2026-73657"
+  },
+  "contract": null
+}

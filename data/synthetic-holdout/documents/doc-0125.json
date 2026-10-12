@@ -1,0 +1,90 @@
+{
+  "doc_id": "doc-0125",
+  "filename": "doc-0125.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban",
+    "stamp"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2779103594",
+    "invoice_number": "00008477",
+    "invoice_date": "2026-01-11",
+    "due_date": "2026-01-25",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "17",
+        "unit_price": "2.79",
+        "vat_rate": "21",
+        "line_total": "47.43"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "11",
+        "unit_price": "10.26",
+        "vat_rate": "21",
+        "line_total": "112.86"
+      },
+      {
+        "description": "Schoonmaak bedrijfshal",
+        "quantity": "24",
+        "unit_price": "465.72",
+        "vat_rate": "21",
+        "line_total": "11177.28"
+      },
+      {
+        "description": "Brandstoftoeslag",
+        "quantity": "25",
+        "unit_price": "183.4",
+        "vat_rate": "21",
+        "line_total": "4585.00"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "27",
+        "unit_price": "1545.89",
+        "vat_rate": "0",
+        "line_total": "41739.03"
+      },
+      {
+        "description": "Lunch personeelsbijeenkomst",
+        "quantity": "30",
+        "unit_price": "16.81",
+        "vat_rate": "9",
+        "line_total": "504.30"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "17",
+        "unit_price": "13.56",
+        "vat_rate": "21",
+        "line_total": "230.52"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "17",
+        "unit_price": "404.79",
+        "vat_rate": "21",
+        "line_total": "6881.43"
+      }
+    ],
+    "subtotal": "65277.85",
+    "vat": "4882.64",
+    "total": "70160.49",
+    "purchase_order_reference": "PO-2026-75788"
+  },
+  "contract": null
+}

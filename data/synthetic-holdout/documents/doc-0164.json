@@ -1,0 +1,54 @@
+{
+  "doc_id": "doc-0164",
+  "filename": "doc-0164.pdf",
+  "doc_type": "credit_note",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "unknown_po"
+  ],
+  "expected_failures": [
+    "po_not_found"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "C2026/03298",
+    "invoice_date": "2026-02-25",
+    "due_date": "2026-03-11",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "31",
+        "unit_price": "359.52",
+        "vat_rate": "21",
+        "line_total": "11145.12"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "8",
+        "unit_price": "860.86",
+        "vat_rate": "0",
+        "line_total": "6886.88"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "16",
+        "unit_price": "12.48",
+        "vat_rate": "21",
+        "line_total": "199.68"
+      }
+    ],
+    "subtotal": "18231.68",
+    "vat": "2382.41",
+    "total": "20614.09",
+    "purchase_order_reference": "PO-2026-66400"
+  },
+  "contract": null
+}

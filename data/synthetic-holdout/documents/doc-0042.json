@@ -1,0 +1,61 @@
+{
+  "doc_id": "doc-0042",
+  "filename": "doc-0042.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "classic",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "wrong_iban"
+  ],
+  "expected_failures": [
+    "iban_checksum"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "van de Kooij & Scardino Techniek",
+    "supplier_vat_number": "NL195248876B49",
+    "iban": "NL93WADB6471124253",
+    "invoice_number": "00003901",
+    "invoice_date": "2026-02-14",
+    "due_date": "2026-02-28",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "31",
+        "unit_price": "422.09",
+        "vat_rate": "21",
+        "line_total": "13084.79"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "11.5",
+        "unit_price": "34.52",
+        "vat_rate": "21",
+        "line_total": "396.98"
+      },
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "22",
+        "unit_price": "168",
+        "vat_rate": "21",
+        "line_total": "3696.00"
+      },
+      {
+        "description": "Heftruckhuur per dag",
+        "quantity": "38",
+        "unit_price": "146.36",
+        "vat_rate": "21",
+        "line_total": "5561.68"
+      }
+    ],
+    "subtotal": "22739.45",
+    "vat": "4775.28",
+    "total": "27514.73",
+    "purchase_order_reference": "PO-2026-55442"
+  },
+  "contract": null
+}

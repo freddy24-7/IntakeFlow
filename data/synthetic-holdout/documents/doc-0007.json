@@ -1,0 +1,57 @@
+{
+  "doc_id": "doc-0007",
+  "filename": "doc-0007.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Uitzendbureau Oosterhout & Lieshout",
+    "supplier_vat_number": "NL577898986B18",
+    "iban": "NL49NZLB5705355097",
+    "invoice_number": "2026/02967",
+    "invoice_date": "2026-07-09",
+    "due_date": "2026-07-23",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "25.5",
+        "unit_price": "41",
+        "vat_rate": "21",
+        "line_total": "1045.50"
+      },
+      {
+        "description": "Drinkwater flessen 18 liter",
+        "quantity": "11",
+        "unit_price": "9.85",
+        "vat_rate": "9",
+        "line_total": "108.35"
+      },
+      {
+        "description": "Stretchfolie rol 500 mm",
+        "quantity": "20",
+        "unit_price": "15.95",
+        "vat_rate": "21",
+        "line_total": "319.00"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "38",
+        "unit_price": "10.98",
+        "vat_rate": "21",
+        "line_total": "417.24"
+      }
+    ],
+    "subtotal": "1890.09",
+    "vat": "383.92",
+    "total": "2274.01",
+    "purchase_order_reference": "PO-2026-23879"
+  },
+  "contract": null
+}

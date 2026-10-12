@@ -1,0 +1,85 @@
+{
+  "doc_id": "doc-0191",
+  "filename": "doc-0191.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Rijn Koeltechniek B.V.",
+    "supplier_vat_number": "NL785032243B20",
+    "iban": "NL25DELT2770103594",
+    "invoice_number": "00002013",
+    "invoice_date": "2026-06-20",
+    "due_date": "2026-07-04",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Containeroverslag 40ft",
+        "quantity": "14",
+        "unit_price": "260.14",
+        "vat_rate": "21",
+        "line_total": "3641.96"
+      },
+      {
+        "description": "Palletvervoer Rotterdam - Venlo",
+        "quantity": "3",
+        "unit_price": "77.52",
+        "vat_rate": "21",
+        "line_total": "232.56"
+      },
+      {
+        "description": "Opslag per palletplaats per maand",
+        "quantity": "3",
+        "unit_price": "7.13",
+        "vat_rate": "21",
+        "line_total": "21.39"
+      },
+      {
+        "description": "Verpakkingsmateriaal doos 60x40x40",
+        "quantity": "7",
+        "unit_price": "3.55",
+        "vat_rate": "21",
+        "line_total": "24.85"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "2",
+        "unit_price": "65.91",
+        "vat_rate": "21",
+        "line_total": "131.82"
+      },
+      {
+        "description": "Europallets gebruikt",
+        "quantity": "40",
+        "unit_price": "12.13",
+        "vat_rate": "21",
+        "line_total": "485.20"
+      },
+      {
+        "description": "Keuring hefmiddelen",
+        "quantity": "15",
+        "unit_price": "289.8",
+        "vat_rate": "21",
+        "line_total": "4347.00"
+      },
+      {
+        "description": "Uitzendkracht magazijn (uur)",
+        "quantity": "18.5",
+        "unit_price": "36.14",
+        "vat_rate": "21",
+        "line_total": "668.59"
+      }
+    ],
+    "subtotal": "9553.37",
+    "vat": "2006.21",
+    "total": "11559.58",
+    "purchase_order_reference": "PO-2026-54323"
+  },
+  "contract": null
+}

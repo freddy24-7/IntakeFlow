@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc-0107",
+  "filename": "doc-0107.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "modern",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [
+    "missing_po"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Perrono Transport B.V.",
+    "supplier_vat_number": "NL716070768B93",
+    "iban": "NL22WADB4622516456",
+    "invoice_number": "F2026-1935",
+    "invoice_date": "2026-03-13",
+    "due_date": "2026-04-12",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Temporary warehouse staff (hour)",
+        "quantity": "39",
+        "unit_price": "29.41",
+        "vat_rate": "21",
+        "line_total": "1146.99"
+      },
+      {
+        "description": "WMS software licence per month",
+        "quantity": "27",
+        "unit_price": "1056.1",
+        "vat_rate": "21",
+        "line_total": "28514.70"
+      },
+      {
+        "description": "Storage per pallet space per month",
+        "quantity": "14",
+        "unit_price": "9.45",
+        "vat_rate": "21",
+        "line_total": "132.30"
+      },
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "11",
+        "unit_price": "9.14",
+        "vat_rate": "9",
+        "line_total": "100.54"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": "6",
+        "unit_price": "203.07",
+        "vat_rate": "21",
+        "line_total": "1218.42"
+      },
+      {
+        "description": "Cooling unit maintenance",
+        "quantity": "32",
+        "unit_price": "403.21",
+        "vat_rate": "21",
+        "line_total": "12902.72"
+      },
+      {
+        "description": "International transport (reverse charge)",
+        "quantity": "31",
+        "unit_price": "2113.3",
+        "vat_rate": "0",
+        "line_total": "65512.30"
+      },
+      {
+        "description": "Stretch film roll 500 mm",
+        "quantity": "21",
+        "unit_price": "18.05",
+        "vat_rate": "21",
+        "line_total": "379.05"
+      }
+    ],
+    "subtotal": "109907.02",
+    "vat": "9310.83",
+    "total": "119217.85",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}

@@ -1,0 +1,50 @@
+{
+  "doc_id": "doc-0183",
+  "filename": "doc-0183.pdf",
+  "doc_type": "invoice",
+  "language": "nl",
+  "layout": "serif",
+  "scanned": false,
+  "skew_degrees": null,
+  "hard_cases": [],
+  "expected_failures": [],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Schoonmaakbedrijf van Tuijl",
+    "supplier_vat_number": "NL894468632B14",
+    "iban": "NL59WADB2279838720",
+    "invoice_number": "F2026-1334",
+    "invoice_date": "2026-03-27",
+    "due_date": "2026-04-26",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Bandenwissel vrachtwagen",
+        "quantity": "33",
+        "unit_price": "128.37",
+        "vat_rate": "21",
+        "line_total": "4236.21"
+      },
+      {
+        "description": "Internationaal transport (btw verlegd)",
+        "quantity": "36",
+        "unit_price": "724.67",
+        "vat_rate": "0",
+        "line_total": "26088.12"
+      },
+      {
+        "description": "Douaneafhandeling",
+        "quantity": "10",
+        "unit_price": "81.08",
+        "vat_rate": "21",
+        "line_total": "810.80"
+      }
+    ],
+    "subtotal": "31135.13",
+    "vat": "1059.87",
+    "total": "32195.00",
+    "purchase_order_reference": "PO-2026-22758"
+  },
+  "contract": null
+}

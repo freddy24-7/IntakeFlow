@@ -1,0 +1,41 @@
+{
+  "doc_id": "doc-0087",
+  "filename": "doc-0087.pdf",
+  "doc_type": "invoice",
+  "language": "en",
+  "layout": "classic",
+  "scanned": true,
+  "skew_degrees": 3.37,
+  "hard_cases": [
+    "missing_po",
+    "scanned_skewed"
+  ],
+  "expected_failures": [
+    "po_missing"
+  ],
+  "duplicate_of": null,
+  "other_kind": null,
+  "invoice": {
+    "supplier_name": "Bandenservice Scharroo",
+    "supplier_vat_number": "NL586061644B79",
+    "iban": "NL96NZLB0412264556",
+    "invoice_number": "INV-005891",
+    "invoice_date": "2026-07-21",
+    "due_date": "2026-09-19",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Staff meeting lunch",
+        "quantity": "6",
+        "unit_price": "14.78",
+        "vat_rate": "9",
+        "line_total": "88.68"
+      }
+    ],
+    "subtotal": "88.68",
+    "vat": "7.98",
+    "total": "96.66",
+    "purchase_order_reference": null
+  },
+  "contract": null
+}
