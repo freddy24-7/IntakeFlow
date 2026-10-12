@@ -78,3 +78,7 @@ Run on 12 October 2026, after the settings above were committed. 200 new documen
 - **Cost of the hold-out run:** about € 5.45 by token and page counts at list prices.
 
 What this leaves open: the variant. The pooled numbers slightly favour combined, and it is the only variant with a second source to disagree with, but choosing it because it did best on the hold-out set would repeat the mistake this run exposed.
+
+## Settings after the hold-out run
+
+Decided on 12 October 2026: the auto-approve threshold is now 0 (validation alone), which is the setting fixed in advance and confirmed. The pipeline keeps the combined variant. The data does not show it to be better. It is kept because it is the only variant where a second source can disagree, and that disagreement is what flags a field for the reviewer.

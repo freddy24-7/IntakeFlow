@@ -58,7 +58,7 @@ class Pipeline:
         checkpointer: Any = None,
     ) -> None:
         self.session_factory = session_factory
-        self.settings = settings or Settings(database_url="unused")
+        self.settings = settings or Settings(_env_file=None, database_url="unused")
         self.documents: Documents = [
             (truth, render_document(truth, dataset.plans[truth.doc_id])) for truth in truths
         ]
@@ -138,7 +138,8 @@ async def test_clean_invoice_is_auto_approved_and_booked(
     assert await _status(session, document_id) == DocumentStatus.AUTO_APPROVED.value
     assert await _erp_count(session) == 1
     decision = await _decision(session, document_id)
-    assert (decision.decision, decision.reasons, decision.threshold) == ("auto_approve", [], 0.9)
+    # Validation alone decides at the configured threshold of 0.
+    assert (decision.decision, decision.reasons, decision.threshold) == ("auto_approve", [], 0.0)
     assert decision.score >= 0.9
     steps_logged = (
         (await session.execute(select(AuditRecord.step).order_by(AuditRecord.seq))).scalars().all()
@@ -198,7 +199,7 @@ async def test_low_score_goes_to_review_although_every_check_passes(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
     truth = _pick(dataset)
-    strict = Settings(database_url="unused", auto_approve_threshold=0.995)
+    strict = Settings(_env_file=None, database_url="unused", auto_approve_threshold=0.995)
     pipeline = Pipeline(dataset, session_factory, [truth], settings=strict)
 
     document_id = await pipeline.process(truth)

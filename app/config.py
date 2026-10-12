@@ -11,7 +11,11 @@ class Settings(BaseSettings):
 
     database_url: str
     # Rule 3: thresholds live in configuration, and changes to them are measured.
-    auto_approve_threshold: float = 0.90
+    # 0 means validation alone decides: no failed check and no flagged field.
+    # Was 0.90 until 2026-10-12. Measured on two sets: the score did not separate
+    # right from wrong, and 0 was fixed before the hold-out run that confirmed it
+    # (cards/03-validation-and-routing.md).
+    auto_approve_threshold: float = 0.0
     # How the field scores become one document score: "mean" or "min".
     score_aggregate: str = "mean"
     # Score of a field that only the model produced (it gives no usable confidence).

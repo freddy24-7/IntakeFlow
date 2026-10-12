@@ -164,7 +164,7 @@ async def test_routing_report_on_perfect_extractions(
         session_factory, services, dataset, VARIANTS, namespace="test", concurrency=1
     )
     orders = [order.model_dump(mode="json") for order in generate(30, seed=7).purchase_orders]
-    settings = Settings(database_url="unused")
+    settings = Settings(_env_file=None, database_url="unused")
     today = date(2026, 10, 12)
 
     routed, missing = route_documents(results.documents, "combined", orders, settings, today)
@@ -212,7 +212,7 @@ async def test_routing_counts_an_extraction_error_that_slips_through_as_wrong(
         session_factory, services, dataset, VARIANTS, namespace="test", concurrency=1
     )
     orders = [order.model_dump(mode="json") for order in generate(30, seed=7).purchase_orders]
-    settings = Settings(database_url="unused")
+    settings = Settings(_env_file=None, database_url="unused")
 
     # llm_only has no Document Intelligence value to disagree with.
     routed, _ = route_documents(results.documents, "llm_only", orders, settings, date(2026, 10, 12))

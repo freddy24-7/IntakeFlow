@@ -50,7 +50,7 @@ async def client(
     app.dependency_overrides[get_storage] = lambda: storage
     app.dependency_overrides[get_dispatcher] = lambda: dispatcher
     app.dependency_overrides[get_settings] = lambda: Settings(
-        database_url="unused", max_upload_bytes=LIMIT
+        _env_file=None, database_url="unused", max_upload_bytes=LIMIT
     )
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as http:
         yield http

@@ -100,3 +100,10 @@ def test_aggregate() -> None:
     assert aggregate({}, "mean") == 0.0
     with pytest.raises(ValueError, match="unknown score aggregate"):
         aggregate(scores, "median")
+
+
+def test_configured_default_is_validation_alone() -> None:
+    """The measured setting. Changing it should be a deliberate, measured step."""
+    from app.config import Settings
+
+    assert Settings(_env_file=None, database_url="unused").auto_approve_threshold == 0.0

@@ -61,6 +61,7 @@ After the first set, two settings were written down and committed before a secon
 - The result for the settings fixed in advance: 123 of 186 auto-approved, 4 of them wrong (3.3%).
 - Routing by validation alone held up: every labelled problem was caught again, in all three variants.
 - The choice of variant did not: Document Intelligence only was the best variant on the first set and the worst on the second. Its errors cluster per supplier layout (14 wrong IBANs from two suppliers), so 186 documents from 25 suppliers are far fewer independent samples than they look.
+- Settings since then: auto-approval by validation alone (threshold 0), with the combined variant. Combined was kept because it is the only variant with a second source to disagree with, not because the data shows it to be better.
 - Over both sets (372 documents, about 50 suppliers) the three variants auto-approve 259 to 264 documents with 3 to 5 wrong. That is too close to rank them.
 
 What exists today:
