@@ -15,6 +15,7 @@ from sqlalchemy import (
     Integer,
     Numeric,
     String,
+    Text,
     UniqueConstraint,
     func,
 )
@@ -32,6 +33,7 @@ class DocumentStatus(StrEnum):
     AUTO_APPROVED = "auto_approved"
     REJECTED = "rejected"
     FAILED = "failed"
+    INDEXED = "indexed"  # a contract that is searchable
 
 
 class Document(Base):
@@ -203,3 +205,18 @@ class Review(Base):
     failures_at_approval: Mapped[list[str]] = mapped_column(JSONB)
     reason: Mapped[str | None] = mapped_column(String(500))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class ContractPassage(Base):
+    """One clause of an indexed contract. The search index holds a copy with its vector."""
+
+    __tablename__ = "contract_passages"
+
+    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id"), index=True)
+    index_name: Mapped[str] = mapped_column(String(64))
+    title: Mapped[str] = mapped_column(String(500))
+    clause_number: Mapped[int] = mapped_column(Integer)
+    heading: Mapped[str] = mapped_column(String(255))
+    page: Mapped[int] = mapped_column(Integer)
+    text: Mapped[str] = mapped_column(Text)

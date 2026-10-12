@@ -19,8 +19,13 @@ def _database_url() -> str:
     return str(override) if override else get_settings().database_url
 
 
+def _is_ours(name: str | None, type_: str, parent_names: object) -> bool:
+    """Leave alone the tables LangGraph's checkpointer creates for itself."""
+    return type_ != "table" or name in target_metadata.tables
+
+
 def _run(connection: Connection) -> None:
-    context.configure(connection=connection, target_metadata=target_metadata)
+    context.configure(connection=connection, target_metadata=target_metadata, include_name=_is_ours)
     with context.begin_transaction():
         context.run_migrations()
 

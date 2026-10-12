@@ -15,6 +15,7 @@ if [[ "$MODE" == "create" ]]; then
   # Free, and needed once per subscription before the first AI resource.
   az provider register --namespace Microsoft.CognitiveServices --wait
   az provider register --namespace Microsoft.Consumption --wait
+  az provider register --namespace Microsoft.Search --wait
 fi
 
 az deployment sub "$MODE" \
@@ -28,7 +29,10 @@ az deployment sub "$MODE" \
 if [[ "$MODE" == "create" ]]; then
   echo
   echo "Put these in .env:"
-  az deployment sub show --name intakeflow-dev \
-    --query "properties.outputs.{AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT:documentIntelligenceEndpoint.value, AZURE_OPENAI_ENDPOINT:openAiEndpoint.value}" \
-    -o tsv | awk '{print "AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=" $1 "\nAZURE_OPENAI_ENDPOINT=" $2}'
+  output() {
+    az deployment sub show --name intakeflow-dev --query "properties.outputs.$1.value" -o tsv
+  }
+  echo "AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=$(output documentIntelligenceEndpoint)"
+  echo "AZURE_OPENAI_ENDPOINT=$(output openAiEndpoint)"
+  echo "AZURE_SEARCH_ENDPOINT=$(output searchEndpoint)"
 fi

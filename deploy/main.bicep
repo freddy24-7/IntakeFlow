@@ -1,4 +1,4 @@
-// IntakeFlow, stage 2 environment: only what reading and extraction need.
+// IntakeFlow environment for stages 2 to 5: reading, extraction and contract search.
 // Everything is pay-per-use. Nothing here costs money while idle.
 //
 //   ./deploy/up.sh      create or update
@@ -8,6 +8,9 @@ targetScope = 'subscription'
 
 @description('Region for all resources. Must be in the EU.')
 param location string = 'swedencentral'
+
+@description('Region for Azure AI Search. Must be in the EU. On 2026-10-12 Sweden Central had no capacity for new search services and West Europe did not accept new customers.')
+param searchLocation string = 'northeurope'
 
 @description('Object id of the person who runs the pipeline from a laptop (az login).')
 param developerObjectId string
@@ -50,9 +53,11 @@ module ai 'ai.bicep' = {
   params: {
     location: location
     developerObjectId: developerObjectId
+    searchLocation: searchLocation
   }
 }
 
 output resourceGroup string = group.name
 output documentIntelligenceEndpoint string = ai.outputs.documentIntelligenceEndpoint
 output openAiEndpoint string = ai.outputs.openAiEndpoint
+output searchEndpoint string = ai.outputs.searchEndpoint

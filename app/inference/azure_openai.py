@@ -7,13 +7,14 @@ asked for JSON plus our own parsing and retry code.
 """
 
 import time
+from collections.abc import Sequence
 from typing import Any
 
 from azure.identity import DefaultAzureCredential, get_bearer_token_provider
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
 from pydantic import BaseModel
 
-from app.inference.interfaces import ModelUsage, StructuredResult
+from app.inference.interfaces import EmbeddingResult, ModelUsage, StructuredResult
 
 TOKEN_SCOPE = "https://cognitiveservices.azure.com/.default"
 
@@ -66,3 +67,42 @@ class AzureOpenAIChatModel:
             latency_ms=latency_ms,
         )
         return StructuredResult(value=parsed, usage=usage)
+
+
+class AzureOpenAIEmbeddingModel:
+    """Azure OpenAI embeddings behind the EmbeddingModel interface, through LangChain.
+
+    LangChain's embeddings interface returns vectors only, not token counts, so
+    the usage here is an estimate (about four characters per token). The chat
+    model above reports real counts.
+    """
+
+    def __init__(self, embeddings: Any, model_name: str) -> None:
+        self._embeddings = embeddings
+        self._model_name = model_name
+
+    @classmethod
+    def connect(
+        cls, *, endpoint: str, deployment: str, api_version: str, dimensions: int
+    ) -> "AzureOpenAIEmbeddingModel":
+        token_provider = get_bearer_token_provider(DefaultAzureCredential(), TOKEN_SCOPE)
+        embeddings = AzureOpenAIEmbeddings(
+            azure_endpoint=endpoint,
+            deployment=deployment,
+            openai_api_version=api_version,
+            azure_ad_token_provider=token_provider,
+            dimensions=dimensions,
+            max_retries=5,
+        )
+        return cls(embeddings, deployment)
+
+    async def embed(self, texts: Sequence[str]) -> EmbeddingResult:
+        started = time.perf_counter()
+        vectors = await self._embeddings.aembed_documents(list(texts))
+        usage = ModelUsage(
+            model=self._model_name,
+            input_tokens=sum(max(1, len(text) // 4) for text in texts),
+            output_tokens=0,
+            latency_ms=(time.perf_counter() - started) * 1000,
+        )
+        return EmbeddingResult(vectors=vectors, usage=usage)

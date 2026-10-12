@@ -1,5 +1,6 @@
 """The LangGraph workflow with fakes: routing, the ERP, retries, dead letters and resuming."""
 
+import dataclasses
 import uuid
 from collections.abc import AsyncIterator
 from typing import Any
@@ -12,10 +13,17 @@ from synthetic.build import Dataset
 
 from app.audit import log as audit
 from app.config import Settings
-from app.db.models import AuditRecord, Document, DocumentStatus, RoutingDecision, Validation
+from app.db.models import (
+    AuditRecord,
+    ContractPassage,
+    Document,
+    DocumentStatus,
+    RoutingDecision,
+    Validation,
+)
+from app.rag.fakes import InMemorySearchIndex
 from app.reading.fakes import FakeDocumentReader
 from app.reading.interfaces import ReadResult
-from app.workflow.steps import Services
 from tests.integration.pipeline import Pipeline, pick
 
 
@@ -149,7 +157,7 @@ async def test_duplicate_invoice_is_caught_on_the_second_copy(
     assert await _erp_count(session) == 1
 
 
-async def test_other_mail_goes_to_review_and_contracts_wait(
+async def test_other_mail_goes_to_review_and_contracts_are_indexed(
     session_factory: async_sessionmaker[AsyncSession], session: AsyncSession, dataset: Dataset
 ) -> None:
     other = pick(dataset, doc_type="other")
@@ -160,7 +168,14 @@ async def test_other_mail_goes_to_review_and_contracts_wait(
     contract_id = await pipeline.process(contract)
 
     assert await _status(session, other_id) == DocumentStatus.IN_REVIEW.value
-    assert await _status(session, contract_id) == DocumentStatus.PROCESSING.value
+    assert await _status(session, contract_id) == DocumentStatus.INDEXED.value
+    stored = (await session.execute(select(ContractPassage))).scalars().all()
+    assert contract.contract is not None
+    labelled = {(clause.number, clause.page) for clause in contract.contract.clauses}
+    assert labelled <= {(passage.clause_number, passage.page) for passage in stored}
+    index = pipeline.services.search
+    assert isinstance(index, InMemorySearchIndex)
+    assert set(index.passages) == {passage.id for passage in stored}
     assert isinstance(pipeline.services.reader, FakeDocumentReader)
     assert pipeline.services.reader.calls == ["read_text", "read_text"]
     assert await _erp_count(session) == 0
@@ -201,15 +216,7 @@ class FlakyReader:
 
 
 def _with_reader(pipeline: Pipeline, reader: Any) -> None:
-    services = pipeline.services
-    pipeline.services = Services(
-        storage=services.storage,
-        reader=reader,
-        classifier=services.classifier,
-        classifier_name=services.classifier_name,
-        extractor=services.extractor,
-        extractor_name=services.extractor_name,
-    )
+    pipeline.services = dataclasses.replace(pipeline.services, reader=reader)
     pipeline.graph = pipeline.build()
 
 

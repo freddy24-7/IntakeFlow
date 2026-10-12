@@ -11,7 +11,8 @@ from synthetic.truth import DocumentTruth
 
 from app.agents.extract import DI_FIELD_NAMES
 from app.agents.schema import ClassificationAnswer, LlmField, LlmInvoice, LlmLineItem
-from app.inference.fakes import FakeChatModel
+from app.inference.fakes import FakeChatModel, FakeEmbeddingModel
+from app.rag.fakes import InMemorySearchIndex
 from app.reading.fakes import FakeDocumentReader, content_key, extract_text_layer
 from app.reading.interfaces import PageText, ReadField, ReadResult
 from app.storage.interfaces import Storage
@@ -93,4 +94,8 @@ def oracle_services(documents: list[tuple[DocumentTruth, bytes]], storage: Stora
         classifier_name=ORACLE_MODEL,
         extractor=FakeChatModel(answers={LlmInvoice: extract}, model=ORACLE_MODEL),
         extractor_name=ORACLE_MODEL,
+        embedder=FakeEmbeddingModel(),
+        embedder_name="fake-embedding",
+        search=InMemorySearchIndex(),
+        search_name="memory",
     )

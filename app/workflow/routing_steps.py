@@ -18,14 +18,18 @@ from app.audit import log as audit
 from app.config import Settings
 from app.db.models import (
     Classification,
+    ContractPassage,
     Document,
     DocumentStatus,
     Extraction,
     PurchaseOrder,
     RoutingDecision,
+    UsageRecord,
     Validation,
 )
 from app.erp.gateway import DuplicateInvoiceError, ErpInvoice, post_to_erp
+from app.rag.chunking import chunk_contract
+from app.rag.interfaces import Passage
 from app.validation import rules, scoring
 from app.workflow import steps
 from app.workflow.steps import Services
@@ -255,16 +259,75 @@ async def apply_decision(
 
 
 async def route_non_invoice(session: AsyncSession, document_id: uuid.UUID, label: str) -> None:
-    """Documents without an invoice extraction. Unknown mail goes to a person.
-    Contracts wait for indexing, which stage 5 adds."""
+    """Mail that is neither invoice nor contract goes to a person."""
     if await audit.step_already_ran(session, document_id, STEP_NON_INVOICE):
         return
     document = await session.get_one(Document, document_id)
-    if label != "contract":
-        document.status = DocumentStatus.IN_REVIEW.value
+    document.status = DocumentStatus.IN_REVIEW.value
     await audit.append(
         session,
         step=STEP_NON_INVOICE,
         document_id=document_id,
         payload={"label": label, "status": document.status},
+    )
+
+
+async def index_contract(session: AsyncSession, services: Services, document_id: uuid.UUID) -> None:
+    """Split a contract into clauses, embed them and put them in the search index.
+
+    Passage ids are derived from the document and the clause, so indexing the
+    same contract twice replaces its passages instead of doubling them.
+    """
+    if services.embedder is None or services.search is None:
+        raise LookupError("contract search is not configured")
+    step = steps.run_key("indexed", services.search_name, services.embedder_name)
+    if await audit.step_already_ran(session, document_id, step):
+        return
+    document = await session.get_one(Document, document_id)
+    reading = await steps.stored_reading(session, document_id, steps.KIND_TEXT)
+    title, chunks = chunk_contract(reading)
+    passages = [
+        Passage(
+            id=f"{document_id}-{chunk.clause_number}",
+            document_id=str(document_id),
+            title=title,
+            clause_number=chunk.clause_number,
+            heading=chunk.heading,
+            page=chunk.page,
+            text=chunk.text,
+        )
+        for chunk in chunks
+    ]
+    if passages:
+        # Title and heading go into the embedding: the supplier's name is in the title.
+        embedded = await services.embedder.embed(
+            [f"{p.title}\n{p.heading}\n{p.text}" for p in passages]
+        )
+        await services.search.upsert(passages, embedded.vectors)
+        session.add(
+            UsageRecord(
+                document_id=document_id,
+                step=step,
+                service="embedding",
+                model=embedded.usage.model,
+                input_tokens=embedded.usage.input_tokens,
+                latency_ms=embedded.usage.latency_ms,
+            )
+        )
+        for passage in passages:
+            await session.merge(
+                ContractPassage(
+                    id=passage.id,
+                    document_id=document_id,
+                    index_name=services.search_name,
+                    title=passage.title[:500],
+                    clause_number=passage.clause_number,
+                    heading=passage.heading[:255],
+                    page=passage.page,
+                    text=passage.text,
+                )
+            )
+    document.status = DocumentStatus.INDEXED.value
+    await audit.append(
+        session, step=step, document_id=document_id, payload={"passages": len(passages)}
     )

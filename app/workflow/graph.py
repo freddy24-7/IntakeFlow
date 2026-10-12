@@ -1,7 +1,8 @@
 """The document workflow as a LangGraph graph (PRD section 5).
 
     read_text -> classify -+-> read_fields -> extract -> validate -> decide -> apply
-                           +-> non_invoice
+                           +-> index          (contracts)
+                           +-> non_invoice    (other mail)
 
 What LangGraph adds over the plain loop of stage 2: the branching is declared
 instead of written as if-statements, each node can have a retry policy, and
@@ -91,6 +92,18 @@ def build_graph(
     async def apply(session: AsyncSession, document_id: uuid.UUID) -> None:
         await routing_steps.apply_decision(session, services, document_id, variant)
 
+    async def index(session: AsyncSession, document_id: uuid.UUID) -> dict[str, str]:
+        await routing_steps.index_contract(session, services, document_id)
+        return {"decision": "indexed"}
+
+    def after_classify(state: PipelineState) -> str:
+        if steps.needs_extraction(state["label"]):
+            return "read_fields"
+        # Without contract search configured, a contract goes to a person like other mail.
+        if state["label"] == "contract" and services.search is not None:
+            return "index"
+        return "non_invoice"
+
     async def non_invoice(state: PipelineState) -> dict[str, str]:
         async with session_factory() as session:
             await routing_steps.route_non_invoice(
@@ -113,21 +126,19 @@ def build_graph(
     graph.add_node("validate", node(validate))
     graph.add_node("decide", node(decide))
     graph.add_node("apply", node(apply))
+    graph.add_node("index", node(index), retry_policy=azure_retry)
     graph.add_node("non_invoice", non_invoice)
 
     graph.add_edge(START, "read_text")
     graph.add_edge("read_text", "classify")
-    graph.add_conditional_edges(
-        "classify",
-        lambda state: "read_fields" if steps.needs_extraction(state["label"]) else "non_invoice",
-        ["read_fields", "non_invoice"],
-    )
+    graph.add_conditional_edges("classify", after_classify, ["read_fields", "index", "non_invoice"])
     graph.add_edge("read_fields", "extract")
     graph.add_edge("extract", "validate")
     graph.add_edge("validate", "decide")
     graph.add_edge("decide", "apply")
     graph.add_edge("apply", END)
     graph.add_edge("non_invoice", END)
+    graph.add_edge("index", END)
     return graph.compile(checkpointer=checkpointer)
 
 

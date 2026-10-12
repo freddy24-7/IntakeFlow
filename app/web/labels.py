@@ -45,6 +45,7 @@ STATUS_LABELS = {
     "auto_approved": "Automatisch goedgekeurd",
     "rejected": "Afgewezen",
     "failed": "Mislukt",
+    "indexed": "Doorzoekbaar",
 }
 
 TYPE_LABELS = {

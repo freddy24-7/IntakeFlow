@@ -40,6 +40,17 @@ class Settings(BaseSettings):
     # Deployment names. A cheaper model classifies, a stronger one extracts.
     azure_openai_classify_deployment: str = "gpt-4.1-mini"
     azure_openai_extract_deployment: str = "gpt-4.1"
+    # Contract search and question answering (stage 5).
+    azure_search_endpoint: str = ""
+    azure_search_index: str = "contracts"
+    azure_openai_embedding_deployment: str = "text-embedding-3-large"
+    # text-embedding-3-large can be shortened. 1024 keeps the index small.
+    embedding_dimensions: int = 1024
+    azure_openai_answer_deployment: str = "gpt-4.1"
+    # Passages offered to the model per question.
+    search_top_k: int = 5
+    # Re-rank results with the semantic ranker (free monthly allowance, then billed).
+    search_semantic_ranker: bool = False
     # Which extraction the pipeline uses: "combined", "llm_only" or "di_only".
     extraction_variant: str = "combined"
 

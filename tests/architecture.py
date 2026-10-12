@@ -22,7 +22,8 @@ MODEL_CLIENT_PREFIXES = (
     "langchain_core.language_models",
     "langchain_core.embeddings",
 )
-MODEL_CLIENT_ALLOWED_DIRS = ("app/inference", "app/reading")
+# app/rag holds the search client, behind its own interface like the other two.
+MODEL_CLIENT_ALLOWED_DIRS = ("app/inference", "app/reading", "app/rag")
 
 # Rule 4: the only files that may mention the ERP table or its model.
 ERP_MODEL_NAME = "ErpEntry"

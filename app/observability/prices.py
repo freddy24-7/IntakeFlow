@@ -19,6 +19,7 @@ PAGE_PRICES = {
 TOKEN_PRICES = {
     "gpt-4.1": (Decimal("0.0021"), Decimal("0.0085")),
     "gpt-4.1-mini": (Decimal("0.0004"), Decimal("0.0017")),
+    "text-embedding-3-large": (Decimal("0.0001"), Decimal("0")),
 }
 
 
