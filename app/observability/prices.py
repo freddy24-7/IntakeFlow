@@ -2,7 +2,8 @@
 
 Source: Azure retail prices API (prices.azure.com), region swedencentral, EUR,
 pay-as-you-go, looked up on 2026-10-11. Model prices are the regional
-(Standard) rates, which is the deployment type in deploy/ai.bicep. Prices change: look them up again before quoting a cost.
+(Standard) rates, which is the deployment type in deploy/ai.bicep. Prices
+change: look them up again before quoting a cost.
 """
 
 from decimal import Decimal
