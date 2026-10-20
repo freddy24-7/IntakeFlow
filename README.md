@@ -82,7 +82,7 @@ Three roles use it through server-rendered pages (Jinja2 and HTMX, interface tex
 
 ## Screenshots
 
-The deployed application sits behind a sign-in limited to one account, so these show what it looks like. They were taken on 12 October 2026 from the application running against the Azure services, with generated documents.
+The deployed application was removed on 21 October 2026 to stop its running cost, so these show what it looked like. They were taken on 12 October 2026 from the application running against the Azure services, with generated documents.
 
 **Review queue.** Documents that need a person, each with the reason the checks gave.
 
@@ -117,7 +117,7 @@ All seven stages of the plan in [docs/PRD.md](docs/PRD.md) are done. Each stage 
 What ran where:
 
 - **Run against real Azure services:** Document Intelligence, Azure OpenAI and Azure AI Search, on two sets of 200 synthetic documents each (October 2026). All accuracy, latency and cost figures below come from those runs.
-- **Deployed to Azure:** the application itself, on Container Apps in North Europe, on 12 October 2026. It was used through the browser with ten synthetic documents. It is a demo environment that is taken down when not in use, so there is no public link.
+- **Deployed to Azure, then removed:** the application itself ran on Container Apps in North Europe from 12 to 21 October 2026 and was used through the browser with ten synthetic documents. It was then removed with `./deploy/down-app.sh` to stop its running cost, so there is no live link. One command, `./deploy/up-app.sh`, recreates it.
 - **Tested with fakes only:** everything in CI. The models, Document Intelligence and AI Search are replaced by fakes behind the same interfaces, so the tests need no Azure.
 - **Deployed from GitHub Actions:** the deploy workflow, started by hand, built the image and updated both apps on 12 October 2026 (one successful run, after one that failed on sign-in).
 
@@ -305,6 +305,8 @@ Nodes with a pink border call Azure and have a retry policy. Nodes with a violet
 
 Everything runs in one Azure subscription (pay-as-you-go) and one resource group, `rg-intakeflow-dev`. Every resource below is created by the Bicep files in [deploy/](deploy/). The facts in this section were read from the live resources with the Azure CLI on 21 October 2026.
 
+**Current state (21 October 2026):** the application layer (everything from `ca-intakeflow-web` down in the table below) has been removed to stop its running cost. The AI layer (Azure OpenAI, Document Intelligence, AI Search and the budget) is still there. It costs nothing while it is not used, and it lets the application run from a laptop. `./deploy/up-app.sh` recreates the application layer in about fifteen minutes.
+
 ### Regions, and why two
 
 | Region | What runs there | Why |
@@ -483,7 +485,7 @@ From Azure Cost Management for October 2026, read on 21 October (billing data ru
 | Container Apps | not on the bill |
 | **Total** | **€ 10.35** |
 
-- **Almost all of it is one day.** 12 October, when the evaluation runs happened, accounts for € 9.22. Since then the bill grows by about € 0.15 a day, which is the container registry.
+- **Almost all of it is one day.** 12 October, when the evaluation runs happened, accounts for € 9.22. From 13 to 21 October the bill grew by about € 0.15 a day, which was the container registry. With the application layer removed on 21 October, nothing in the resource group costs money unless it is used.
 - **The database and Container Apps have cost nothing so far.** That is likely Azure's free allowances for this database tier and the Container Apps monthly free grant, but this was not verified. Without them, the database alone would be about € 0.42 a day at list price.
 - **The bill is lower than the project's own cost counts.** For Azure OpenAI and Document Intelligence together the usage records add up to about € 13 at the list prices of 11 October, against € 9.15 billed. Document Intelligence shows the largest gap. The cause has not been investigated, so the per-invoice costs in this README are the computed ones, and are probably on the high side.
 
@@ -491,7 +493,7 @@ From Azure Cost Management for October 2026, read on 21 October (billing data ru
 
 - **Capacity and quota decide the region, and a dry run sees neither.** Sweden Central had no quota for the planned model deployment type, no capacity for a search service and no capacity for a database. West Europe did not accept new customers for search.
 - **Keep application and database in the same region**, and let the few, slow model calls cross regions.
-- **Free and consumption tiers go a long way for a demo.** On this bill only the registry costs money while the application is idle.
+- **Free and consumption tiers go a long way for a demo.** While the application was idle, only the registry cost money. With the application removed, an unused project costs nothing.
 - **Billing data lags, and the computed cost was higher than the bill.** Measure from usage, then check against the invoice.
 - **Teardown has to be tested like everything else.** The script that removes the application had a bug that only showed on a half-finished deployment.
 

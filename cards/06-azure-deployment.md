@@ -36,6 +36,8 @@ Stage 6 of the PRD. The application itself now runs in Azure: a web application 
 - **A workflow can only be tested by running it.** Moving to newer action versions broke CI once, because one action publishes no short version tag.
 - **Scale to zero works both ways.** The worker went to zero replicas with an empty queue and started when documents arrived.
 
+- **Removed on 21 October.** After nine days the application layer was removed with `deploy/down-app.sh` to stop its running cost (€ 0.15 a day, the registry). The AI layer stays, at no cost while unused. Azure billed € 10.35 for the project in October up to that day.
+
 ## What is still open
 
 - **Cost against the real invoice**, see above.
