@@ -14,7 +14,7 @@ It is a portfolio project, not a product. The company is fictional and every doc
 | **Extraction** | 97.3% and 96.2% of invoices fully correct (all eleven fields and every line item) on two sets of 186 |
 | **Auto-approval** | About 70% of invoices approved without a person. Of those 135 and 127 documents, 3 and 0 were wrong. Every one of the 48 planted problems per set was caught |
 | **Contract Q&A** | Right answer with the right clause and page for 199 of 199 answerable questions. Declined 38 of 41 questions that have no answer |
-| **Cost** | About € 0.02 per invoice, computed from usage at list prices and not yet confirmed by an invoice |
+| **Cost** | About € 0.02 per invoice, computed from usage at list prices. Azure billed € 10.35 for the whole project in October, less than the computed amount |
 
 All figures are for the configured variant, measured on generated documents that are easier than real ones. They are upper bounds. Details and caveats are under [Measured results](#measured-results).
 
@@ -200,7 +200,7 @@ Reports: [first set](reports/routing-2026-10-12.md), [second set](reports/routin
 
 - Latency was measured per call from a laptop on the first set, so network time is included.
 - Cost is computed from page and token counts at list prices from Azure's retail price API on 11 October 2026 (Sweden Central, EUR).
-- **The cost figures are not confirmed by an Azure invoice.** The project's own counts add up to about € 15 for everything. On 12 October Azure Cost Management showed € 2.00, with most usage on that same day and billing data lagging. The comparison has to be repeated.
+- **The bill came in lower than these figures.** Azure billed € 9.15 for Azure OpenAI and Document Intelligence in October, against about € 13 computed from the usage records. The cause was not investigated, so these per-invoice costs are probably on the high side. See [Cost, as billed by Azure](#cost-as-billed-by-azure).
 
 ### In Azure
 
@@ -303,81 +303,197 @@ Nodes with a pink border call Azure and have a retry policy. Nodes with a violet
 
 ## Azure in this project
 
-### Services
+Everything runs in one Azure subscription (pay-as-you-go) and one resource group, `rg-intakeflow-dev`. Every resource below is created by the Bicep files in [deploy/](deploy/). The facts in this section were read from the live resources with the Azure CLI on 21 October 2026.
 
-| Service | Used for | Tier and region | Sign-in |
-| --- | --- | --- | --- |
-| Azure AI Document Intelligence | Reading every page (`prebuilt-read`) and invoice fields (`prebuilt-invoice`) | S0, Sweden Central | Identity, keys off |
-| Azure OpenAI | `gpt-4.1-mini` for classification, `gpt-4.1` for extraction and answering, `text-embedding-3-large` for search | Regional Standard deployments, Sweden Central | Identity, keys off |
-| Azure AI Search | Hybrid index of contract clauses | Free, North Europe | Identity, keys off |
-| Azure Container Apps | Web application and worker, both scaling to zero | Consumption, North Europe | Microsoft sign-in in front of the web application |
-| Azure Queue Storage | Work queue between web application and worker | Standard, North Europe | Identity, account keys off |
-| Azure Blob Storage | Uploaded files | Standard, North Europe | Identity, account keys off |
-| Azure Database for PostgreSQL | State, results, audit log, workflow checkpoints | Flexible Server, Burstable B1ms, North Europe | Password in Key Vault, TLS required |
-| Azure Key Vault | The one secret: the database URL | Standard, North Europe | Identity |
-| Azure Container Registry | The application's image, built in the registry | Basic, North Europe | Identity |
-| Application Insights and Log Analytics | Traces and logs through OpenTelemetry | Pay-as-you-go, North Europe | Connection string |
-| Cost Management | A budget with alerts at 50%, 80% and 100% | none | none |
+### Regions, and why two
 
-### Document Intelligence
+| Region | What runs there | Why |
+| --- | --- | --- |
+| Sweden Central | Azure OpenAI, Document Intelligence | The planned region. Model quota was available there for the regional deployment type |
+| North Europe | Everything else: Container Apps, PostgreSQL, Storage, Key Vault, Container Registry, AI Search, monitoring | Sweden Central had no capacity for a new search service or a new PostgreSQL server, and West Europe did not accept new search customers. The application sits in the same region as its database, because it makes many small database calls per document and few model calls |
 
-- **Two passes, in this order.** `prebuilt-read` runs on every document first, because a scanned PDF has no text until it is read and classification needs text. `prebuilt-invoice`, which costs about seven times as much per page, runs only on invoices and credit notes.
-- **Read, not Layout, for the first pass.** Layout costs the same as the invoice model, and classification only needs the text.
-- **S0, not the free tier.** The free tier reads only the first two pages of a file, which would cut off a three-page contract.
-- **The adapter** in [app/reading/azure_di.py](app/reading/azure_di.py) flattens the nested result into named fields such as `InvoiceTotal`, `PaymentDetails[0].IBAN` and `Items[0].Amount`, each with its confidence and page. The raw result is stored for debugging, without the per-word boxes that make up most of its size.
-- **What it does well and badly on this data:** see [Measured results](#measured-results). In short: strong on layout, including skewed scans. Unreliable on the VAT total of two-rate invoices. Errors that repeat for every document of a supplier. A confidence score that does not track correctness.
-- **Dutch** invoice labels in the synthetic layouts (factuurnummer, vervaldatum, btw and their variants) were handled by the prebuilt invoice model. Its field accuracy on them is in the reports.
+### Every resource
+
+| Resource name | Azure service | Tier | Region | Used for | Defined in |
+| --- | --- | --- | --- | --- | --- |
+| `oai-intakeflow-…` | Azure OpenAI | S0 | Sweden Central | Classification, extraction, contract answers, embeddings | [ai.bicep](deploy/ai.bicep) |
+| `di-intakeflow-…` | Azure AI Document Intelligence | S0 | Sweden Central | Reading PDFs and invoice fields | [ai.bicep](deploy/ai.bicep) |
+| `srch-intakeflow-…` | Azure AI Search | Free | North Europe | Hybrid search over contract clauses | [ai.bicep](deploy/ai.bicep) |
+| `budget-intakeflow-dev` | Cost Management budget | none | none | € 35 a month, alerts at 50%, 80% and 100% | [budget.bicep](deploy/budget.bicep) |
+| `ca-intakeflow-web` | Azure Container Apps (app) | Consumption | North Europe | The web application | [app.bicep](deploy/app.bicep) |
+| `ca-intakeflow-worker` | Azure Container Apps (app) | Consumption | North Europe | The queue worker that runs the workflow | [app.bicep](deploy/app.bicep) |
+| `cae-intakeflow-…` | Container Apps environment | Consumption profile | North Europe | Shared environment for both apps | [app.bicep](deploy/app.bicep) |
+| `psql-intakeflow-…` | Azure Database for PostgreSQL Flexible Server | Burstable B1ms, PostgreSQL 17, 32 GB | North Europe | All application data and the workflow checkpoints | [app.bicep](deploy/app.bicep) |
+| `stintake…` | Azure Storage account | Standard LRS, StorageV2 | North Europe | Blob container `documents` (uploaded PDFs) and queue `documents` (work items) | [app.bicep](deploy/app.bicep) |
+| `kv-intake-…` | Azure Key Vault | Standard | North Europe | The secret `database-url` | [app.bicep](deploy/app.bicep) |
+| `crintakeflow…` | Azure Container Registry | Basic | North Europe | The image `intakeflow`, tagged with the git commit | [app.bicep](deploy/app.bicep) |
+| `id-intakeflow-…` | User-assigned managed identity | none | North Europe | How both apps sign in to every other service | [app.bicep](deploy/app.bicep) |
+| `log-intakeflow-…` | Log Analytics workspace | Pay-as-you-go (PerGB2018), 30 days retention | North Europe | Container logs and telemetry storage | [app.bicep](deploy/app.bicep) |
+| `appi-intakeflow-…` | Application Insights | Workspace-based | North Europe | Traces, requests and logs through OpenTelemetry | [app.bicep](deploy/app.bicep) |
+| Application Insights Smart Detection | Action group | none | Global | Created by Azure automatically together with Application Insights. Not used by the project | none |
+
+The `…` stands for a suffix that Bicep derives from the resource group and region, so names are unique and stable between deployments.
 
 ### Azure OpenAI
 
-- **Three deployments**, named after their models, so the deployment name in configuration is also the model name in the cost table.
-- **Regional Standard deployments in Sweden Central.** The plan was the EU data-zone type. The subscription turned out to have zero quota for it for these models, and the first deployment failed on that. A dry run does not check quota.
-- **A cheaper model for classification.** `gpt-4.1-mini` classified 400 of 400 documents correctly at a small fraction of the cost of an extraction call.
-- **Rate limits are the practical limit.** Each deployment has 50,000 tokens a minute. Six documents in parallel were enough to exhaust the retries during evaluation.
-- **API version** `2024-10-21`, set in configuration.
+| Deployment | Model and version | Deployment type | Capacity | Used for | Code |
+| --- | --- | --- | --- | --- | --- |
+| `gpt-4.1-mini` | gpt-4.1-mini, 2025-04-14 | Standard (regional) | 50,000 tokens a minute | Classifying every document | [app/agents/classify.py](app/agents/classify.py) |
+| `gpt-4.1` | gpt-4.1, 2025-04-14 | Standard (regional) | 50,000 tokens a minute | Extracting invoice fields, answering contract questions | [app/agents/extract.py](app/agents/extract.py), [app/rag/answer.py](app/rag/answer.py) |
+| `text-embedding-3-large` | text-embedding-3-large, version 1 | Standard (regional) | 50,000 tokens a minute | Embedding contract clauses and questions, shortened to 1,024 dimensions | [app/workflow/routing_steps.py](app/workflow/routing_steps.py), [app/rag/answer.py](app/rag/answer.py) |
+
+- **How the app calls it:** through LangChain's `AzureChatOpenAI` and `AzureOpenAIEmbeddings` (`langchain-openai` 1.7.0), wrapped in [app/inference/azure_openai.py](app/inference/azure_openai.py). REST API version `2024-10-21`.
+- **Request settings:** temperature 0, structured output in strict JSON-schema mode, five retries with backoff, 120-second timeout.
+- **Deployment type:** regional Standard, so prompts are processed in Sweden Central. The plan was the EU data-zone type, but the subscription had zero quota for it for these models.
+- **Sign-in:** Microsoft Entra ID tokens, no API keys. Local (key) authentication is switched off on the resource.
+- **Settings:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_VERSION`, and one setting per deployment name (`AZURE_OPENAI_CLASSIFY_DEPLOYMENT`, `AZURE_OPENAI_EXTRACT_DEPLOYMENT`, `AZURE_OPENAI_ANSWER_DEPLOYMENT`, `AZURE_OPENAI_EMBEDDING_DEPLOYMENT`).
+- **What was seen:** classification was right for 400 of 400 documents. Rate limits are the practical limit: with six documents processed in parallel during evaluation, five failed after their retries ran out.
+
+### Azure AI Document Intelligence
+
+| Model | When it runs | Price at list (Sweden Central) |
+| --- | --- | --- |
+| `prebuilt-read` | Every document, first, because a scan has no text until it is read | € 1.32 per 1,000 pages |
+| `prebuilt-invoice` | Only invoices and credit notes, after classification | € 8.80 per 1,000 pages |
+
+- **How the app calls it:** the `azure-ai-documentintelligence` 1.0.2 SDK (REST API version `2024-11-30`), wrapped in [app/reading/azure_di.py](app/reading/azure_di.py). The SDK retries throttled calls itself.
+- **What is kept:** the text per page, every field with its confidence and page, and the raw result without the per-word boxes, for debugging and comparison.
+- **Tier S0, not Free:** the free tier reads only the first two pages of a file, which would cut off a three-page contract.
+- **Read, not Layout, for the first pass:** Layout costs as much as the invoice model, and classification only needs text.
+- **Sign-in:** Entra ID tokens. Local authentication is off.
+- **Setting:** `AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT`.
+- **What was seen:** strong on layout, including skewed scans. Its VAT total was incomplete on all 71 two-rate invoices of the first set, its errors repeat for every document of a supplier, and its confidence did not track correctness. See [Measured results](#measured-results).
 
 ### Azure AI Search
 
-- **One passage per clause**, with contract title, clause number, heading, start page, text and a 1,024-dimension vector. The index definition is in [app/rag/azure_search.py](app/rag/azure_search.py).
-- **Hybrid search:** the service runs a keyword search with the Dutch analyser (`nl.microsoft`) and a vector search (HNSW) and merges the two rankings. The application sends the question both as text and as a vector in one request.
-- **Semantic ranker** as a switch, measured both ways and left off.
-- **Everything needed worked on the free tier:** hybrid search, the semantic ranker's free allowance and keyless access. The free tier allows three indexes, and all three are in use: the application's and one per evaluation set.
+- **Tier:** Free, one replica, one partition. Every feature the project needs worked on it: hybrid search, keyless access and the semantic ranker's free allowance.
+- **Indexes:** three, which is the free tier's limit: `contracts` for the application, and `contracts-eval` and `contracts-holdout` for the two evaluation sets.
+- **Index definition** ([app/rag/azure_search.py](app/rag/azure_search.py)): fields `id`, `document_id`, `title`, `clause_number`, `heading`, `page`, `text` and `vector`. The text fields use the Dutch analyser `nl.microsoft`. The vector field has 1,024 dimensions with an HNSW profile. A semantic configuration ranks on title, text and heading.
+- **Query:** one request per question with the question as text (keyword search) and as a vector (vector search). The service merges the two rankings. The semantic ranker is a switch (`SEARCH_SEMANTIC_RANKER`), measured both ways and left off.
+- **How the app calls it:** the `azure-search-documents` 12.0.0 SDK, only inside `app/rag/` (a test enforces this).
+- **Sign-in:** Entra ID tokens. Local authentication (admin and query keys) is off.
+- **Settings:** `AZURE_SEARCH_ENDPOINT`, `AZURE_SEARCH_INDEX`, `SEARCH_TOP_K`, `SEARCH_SEMANTIC_RANKER`.
 
-### Container Apps, queue and worker
+### Azure Container Apps
 
-- **One image, two apps.** The web application serves pages and takes uploads. The worker runs `python -m app.worker`. See [Dockerfile](Dockerfile) and [app/worker.py](app/worker.py).
-- **Scale to zero.** The web application scales on requests. The worker scales on the length of the queue through a KEDA rule that signs in with the managed identity, so it runs only while documents are waiting.
-- **The queue makes processing survive a crash.** An upload puts the document's id on the queue. The worker deletes the message when the document has a result. A message that is not deleted reappears after ten minutes. After three failed runs the document is parked as failed and the message is deleted.
-- **Built-in authentication** sits in front of the web application: sign-in with Microsoft, limited to one account. The health endpoint is the only open path. The role picker inside the application is a demo and protects nothing.
-- **Migrations** are applied when the web application starts.
+| | Web application | Worker |
+| --- | --- | --- |
+| App | `ca-intakeflow-web` | `ca-intakeflow-worker` |
+| Command | `alembic upgrade head`, then `uvicorn app.main:app` on port 8000 | `python -m app.worker` |
+| Resources per replica | 0.5 vCPU, 1 GiB | 0.5 vCPU, 1 GiB |
+| Replicas | 0 to 1 | 0 to 1 |
+| Scales on | HTTP requests | Queue length: a KEDA `azure-queue` rule on the queue `documents`, one replica per waiting message, signing in with the managed identity |
+| Ingress | External, HTTPS only | None |
+| Health | Readiness probe on `/health` | none |
+| Access | Microsoft sign-in (Container Apps built-in authentication), limited to one account. `/health` is the only open path | Not reachable from outside |
 
-### Identity and secrets
+- **Image:** one image for both, built from the [Dockerfile](Dockerfile) on `python:3.12-slim`, running as a non-root user. It is built inside the registry with `az acr build` and tagged with the git commit. The apps pull it with the managed identity, and the registry's admin account is off.
+- **The queue:** an upload puts the document's id on the queue `documents`. The worker takes one message at a time and hides it for 600 seconds while it works. It deletes the message when the document has a result. A message that is not deleted reappears, so a worker that dies mid-document does not lose it. After three failed runs the document is parked with status `failed` and the message is deleted.
+- **Settings passed to both apps** (from [app.bicep](deploy/app.bicep)):
 
-- **One user-assigned managed identity** for both apps. Each of its roles is assigned on a single resource: pull images, read and write blobs, read and write queue messages, read the Key Vault secret, call Document Intelligence, call Azure OpenAI, read and write the search index, and create the index.
-- **No keys.** Local authentication is switched off on Document Intelligence, Azure OpenAI and AI Search, and account keys on storage. On a laptop the same code signs in through `az login`.
-- **One secret.** The database URL with its password lives in Key Vault and reaches the apps as a Container Apps secret reference. The deploy script generates a new 48-character password on every deploy and never prints or stores it.
-- **Nothing sensitive is in the repository.** `.env` is git-ignored and `.env.example` documents the variables.
+| Setting | Value |
+| --- | --- |
+| `DATABASE_URL` | Container Apps secret, read from Key Vault with the managed identity |
+| `AZURE_CLIENT_ID` | The managed identity, so the Azure SDKs know which identity to use |
+| `AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT`, `AZURE_OPENAI_ENDPOINT`, `AZURE_SEARCH_ENDPOINT` | The three AI services |
+| `STORAGE_BACKEND`, `AZURE_STORAGE_BLOB_URL`, `BLOB_CONTAINER` | `blob`, the storage account's blob endpoint, `documents` |
+| `DISPATCH_BACKEND`, `AZURE_STORAGE_QUEUE_URL`, `QUEUE_NAME` | `queue`, the storage account's queue endpoint, `documents` |
+| `APPLICATIONINSIGHTS_CONNECTION_STRING` | Switches telemetry on |
+| `SEED_PURCHASE_ORDERS_FILE` | The synthetic purchase orders, loaded when the web application starts |
 
-### Infrastructure as code
+### Azure Database for PostgreSQL
 
-- **Bicep**, in [deploy/](deploy/), in two layers. [deploy/ai.bicep](deploy/ai.bicep) holds the AI resources, which cost nothing while idle. [deploy/app.bicep](deploy/app.bicep) holds the application, which costs about € 0.70 a day while it exists. Each layer has one command to create and one to remove.
-- **Dry runs** (`--what-if`) before every deployment. They catch template errors. They do not catch quota or capacity.
-- **The budget alert is created before anything that can cost money.**
-- **The deploy workflow** in [.github/workflows/deploy.yml](.github/workflows/deploy.yml) is started by hand and signs in with OpenID Connect, so no Azure secret is stored in GitHub. Its rights are limited to the one resource group. Azure matches the identity GitHub presents character for character, and that identity contains the numeric ids of the owner and the repository, which the setup script looks up.
+- **Server:** Flexible Server, Burstable B1ms, PostgreSQL 17, 32 GB storage, 7 days of backups, no high availability.
+- **Holds:** documents, readings, classifications, extractions, validations, routing decisions, reviews, the mock ERP table, the hash-chained audit log, usage records, contract passages, and LangGraph's checkpoint tables.
+- **Drivers:** the application uses `asyncpg` and LangGraph's checkpointer uses `psycopg`. TLS is required (`ssl=require` and `sslmode=require` respectively).
+- **Migrations:** Alembic, applied by the web application when it starts.
+- **Access:** an administrator login with a 48-character random password. The deploy script generates a new one on every deploy and writes it straight into Key Vault inside the database URL. It is never printed or stored on disk.
+- **Network:** public endpoint with one firewall rule, "allow Azure services". That admits connections from any Azure service, not only this application. The password and TLS are what protect it. This is a known gap, see [Limits](#limits).
 
-### Observability
+### Azure Storage
 
-- **OpenTelemetry to Application Insights** through `azure-monitor-opentelemetry`, switched on by one environment variable and off everywhere else. See [app/observability/telemetry.py](app/observability/telemetry.py).
-- **Per-call usage records** in the database: pages, tokens and latency for every billable call. The cost report and the dashboard are built from these, not from telemetry.
-- **Logs carry ids, not content.** The Azure and HTTP libraries logged every request with all headers at their default level, and had to be turned down.
+- **Account:** Standard LRS, StorageV2, TLS 1.2 minimum, HTTPS only, public blob access off, and shared key (account key) access off. Only Entra ID tokens work.
+- **Blob container `documents`:** the uploaded PDFs, one blob per document, named by document id.
+- **Queue `documents`:** document ids waiting for the worker.
+- **How the app calls it:** `azure-storage-blob` 12.31.0 ([app/storage/blob.py](app/storage/blob.py)) and `azure-storage-queue` 12.18.0 ([app/workflow/queue.py](app/workflow/queue.py)).
+
+### Identity, roles and secrets
+
+The application has one user-assigned managed identity. Each role is assigned on one resource only:
+
+| Role | On | So that |
+| --- | --- | --- |
+| AcrPull | Container Registry | Both apps can pull the image |
+| Storage Blob Data Contributor | Storage account | Uploads are stored and read back |
+| Storage Queue Data Contributor | Storage account | The web application enqueues, the worker dequeues, and the KEDA rule reads the queue length |
+| Key Vault Secrets User | Key Vault | The apps can read `database-url` |
+| Cognitive Services User | Document Intelligence | Documents can be read |
+| Cognitive Services OpenAI User | Azure OpenAI | Models can be called |
+| Search Index Data Contributor | AI Search | Passages can be written and searched |
+| Search Service Contributor | AI Search | The index can be created |
+
+Two more identities have access:
+
+- **The developer's own account** (`az login`) has the same AI and search roles plus Blob Data Contributor, so the code runs from a laptop without keys.
+- **The GitHub deploy workflow** signs in with OpenID Connect through an Entra app registration with a federated credential, and has Contributor on this resource group only. Azure matches the identity GitHub presents character for character, and that includes the numeric ids of the owner and the repository (`repo:owner@id/name@id:ref:refs/heads/main`).
+
+**Secrets.** There is one: the database URL, in Key Vault (RBAC mode, 7 days soft delete). No API key, account key or connection string with a key exists anywhere. Key access is off on Azure OpenAI, Document Intelligence, AI Search and Storage. `.env` is git-ignored and holds only endpoints.
+
+**Sign-in to the web application.** An Entra app registration (`intakeflow-web-signin`) with ID-token sign-in and no client secret. The Container Apps authentication setting allows only the deploying account's object id.
+
+### Monitoring
+
+- **OpenTelemetry to Application Insights** through `azure-monitor-opentelemetry` 1.8.11, switched on by `APPLICATIONINSIGHTS_CONNECTION_STRING` and off everywhere else ([app/observability/telemetry.py](app/observability/telemetry.py)). Requests, traces and the application's log lines are exported with the service names `intakeflow-web` and `intakeflow-worker`.
+- **Container logs** go to the Log Analytics workspace, with 30 days of retention.
+- **No document content** is logged. The Azure and HTTP libraries logged every request with all headers at their default level, and are set to warnings only.
+- **Cost and latency per document** come from usage records in the database, not from telemetry.
+- **No alerts** except the budget.
+
+### Infrastructure as code and deployment
+
+| File | Scope | Creates |
+| --- | --- | --- |
+| [deploy/main.bicep](deploy/main.bicep) | Subscription | The resource group, and calls the three modules below |
+| [deploy/budget.bicep](deploy/budget.bicep) | Resource group | The budget, before anything that can cost money |
+| [deploy/ai.bicep](deploy/ai.bicep) | Resource group | Azure OpenAI with three deployments, Document Intelligence, AI Search, and the developer's roles |
+| [deploy/app.bicep](deploy/app.bicep) | Resource group | Everything tagged `part=app`: Container Apps, PostgreSQL, Storage, Key Vault, registry, identity, monitoring and all application roles |
+
+| Command | Does |
+| --- | --- |
+| `./deploy/up.sh` | Registers the resource providers, deploys the AI layer, prints the endpoints for `.env` |
+| `./deploy/up-app.sh` | Deploys the application in three steps: resources, then `az acr build`, then the two apps with sign-in |
+| `--what-if` on either | Shows what would change without changing anything |
+| `./deploy/down-app.sh` | Deletes everything tagged `part=app` and purges the Key Vault. The AI layer stays |
+| `./deploy/down.sh` | Deletes the resource group and purges the AI accounts |
+| GitHub Actions "Deploy" | Started by hand: builds a new image in the registry and updates both apps, then checks `/health` |
+
+A dry run checks the templates. It does not check quota or region capacity, which is where both failed deployments of this project went wrong.
+
+### Cost, as billed by Azure
+
+From Azure Cost Management for October 2026, read on 21 October (billing data runs about a day behind):
+
+| Service on the bill | Billed |
+| --- | --- |
+| Azure OpenAI ("Foundry Models") | € 7.71 |
+| Document Intelligence ("Foundry Tools") | € 1.44 |
+| Container Registry | € 1.20 |
+| Storage | € 0.01 |
+| PostgreSQL, AI Search, Key Vault, Log Analytics | € 0.00 |
+| Container Apps | not on the bill |
+| **Total** | **€ 10.35** |
+
+- **Almost all of it is one day.** 12 October, when the evaluation runs happened, accounts for € 9.22. Since then the bill grows by about € 0.15 a day, which is the container registry.
+- **The database and Container Apps have cost nothing so far.** That is likely Azure's free allowances for this database tier and the Container Apps monthly free grant, but this was not verified. Without them, the database alone would be about € 0.42 a day at list price.
+- **The bill is lower than the project's own cost counts.** For Azure OpenAI and Document Intelligence together the usage records add up to about € 13 at the list prices of 11 October, against € 9.15 billed. Document Intelligence shows the largest gap. The cause has not been investigated, so the per-invoice costs in this README are the computed ones, and are probably on the high side.
 
 ### What Azure taught
 
-- **Capacity and quota decide the region, and a dry run sees neither.** Sweden Central had no quota for the planned model deployment type, no capacity for a search service and no capacity for a database. West Europe did not accept new customers for search. The models ended up in Sweden Central and everything else in North Europe.
-- **Keep application and database in the same region.** The application makes many small database queries per document and few, slow model calls, so the application moved to the database's region and the models stayed.
-- **Free and consumption tiers go a long way for a demo.** Only the database and the registry cost money while idle.
-- **Billing data lags.** A day after the main runs, Cost Management showed a fraction of the computed cost.
-- **Teardown has to be tested like everything else.** The script that removes the application had a bug that only showed when it was first needed, on a half-finished deployment.
+- **Capacity and quota decide the region, and a dry run sees neither.** Sweden Central had no quota for the planned model deployment type, no capacity for a search service and no capacity for a database. West Europe did not accept new customers for search.
+- **Keep application and database in the same region**, and let the few, slow model calls cross regions.
+- **Free and consumption tiers go a long way for a demo.** On this bill only the registry costs money while the application is idle.
+- **Billing data lags, and the computed cost was higher than the bill.** Measure from usage, then check against the invoice.
+- **Teardown has to be tested like everything else.** The script that removes the application had a bug that only showed on a half-finished deployment.
 
 ## The synthetic data
 
@@ -481,7 +597,7 @@ After `./deploy/up.sh`, put the three endpoints it prints in `.env`. The full ex
 - **Synthetic documents are easier than real ones.** The scans are clean renders that were rasterised, blurred and rotated. There is no noise, handwriting or folding. The contracts share nine clause templates. Every accuracy figure is an upper bound.
 - **Small samples.** Two sets of 186 invoices from about 50 suppliers, one run each. Differences of a few documents between variants mean nothing.
 - **Results depend on the models** and may change when they are updated or retired.
-- **Costs are computed, not invoiced.** They have not been confirmed against an Azure bill.
+- **Per-document costs are computed, and the bill was lower.** Why the two differ was not investigated.
 - **Line items cannot be corrected** in the review interface, only the eleven fields, and disagreement on line items between the two sources is not flagged.
 - **Contract answers have two outcomes**, found or not found. "The contract mentions this but gives no figure" is not one of them, which is where the Q&A failures come from.
 - **Keeping an answer within the right contract rests on the prompt**, not on a filter in the search.
@@ -497,7 +613,7 @@ In this order:
 2. **Close the two security gaps** before anything beyond a demo: CSRF protection on the forms, and a private network for the database instead of "any Azure service".
 3. **Give contract answers a third outcome**, "the contract mentions this but gives no figure", and filter the search to the contract the question names. The Q&A failures come from the lack of these.
 4. **Test on harder documents.** More layouts per set, scans with noise and folds, and contracts that are not written from the same templates.
-5. **Run more than one worker**, measure processing time and waiting time separately, and compare the computed cost with an Azure invoice.
+5. **Run more than one worker**, measure processing time and waiting time separately, and find out why the computed cost is higher than the bill.
 
 ## Repository map
 
